@@ -1,0 +1,121 @@
+@use 'src/styles/vars';
+
+.header-background {
+  background-color:  #17202a ;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid vars.$neon;
+  z-index: 1;
+}
+
+.header-glow {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  animation: glowing 10s infinite alternate;
+}
+
+@keyframes glowing {
+  0%, 100% {
+      box-shadow: 0 0 5em vars.$neon, 0 0 2em white;
+  }
+  50% {
+      box-shadow: 0 0 2em vars.$neon;
+  }
+}
+
+.header-sliding-glow-left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 5em vars.$neon;
+  animation: sliding-glow-left 5s infinite linear;
+}
+
+@keyframes sliding-glow-left {
+  from {
+      left: -100px;
+  }
+  to {
+      left: calc(50vw - 300px);
+  }
+}
+
+.header-sliding-glow-right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 5em vars.$neon;
+  animation: sliding-glow-right 5s infinite linear;
+}
+
+@keyframes sliding-glow-right {
+  from {
+      left: calc(100vw + 100px);
+  }
+  to {
+      left: calc(50vw + 300px);
+  }
+}
+
+.header-rectangle {
+  background-color: vars.$dark-blue;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  border-bottom: 4px double vars.$neon;
+}
+
+.header-left-parallelogram {
+  background-color: vars.$dark-blue;
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  left: calc(50vw - 387px);
+  top: 46px;
+  transform: skew(45deg);
+  border-left: 6px double vars.$neon;
+  border-bottom: 4px double vars.$neon;
+}
+
+.header-right-parallelogram {
+  background-color: vars.$dark-blue;
+  position: absolute;
+  width: 374px;
+  height: 50px;
+  left: 50%;
+  top: 46px;
+  transform: skew(-45deg);
+  border-right: 6px double vars.$neon;
+  border-bottom: 4px double vars.$neon;
+}
+
+.header-button-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+}
+
+.header-title {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 26px;
+}
+
+.header-onoff-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  right: 0;
+  filter: contrast(70%);
+}
