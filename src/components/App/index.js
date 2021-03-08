@@ -1,10 +1,13 @@
 import React from 'react';
 
 import Header from 'src/components/Header';
-import './app.css';
+import Login from 'src/containers/Login';
 
 const App = () => (
-  <Header />
+  <div className="app">
+    <Header />
+    <Login />
+  </div>
 );
 
 export default App;
