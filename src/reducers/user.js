@@ -1,10 +1,13 @@
 import {
   UPDATE_USER_FIELD,
-} from 'src/actions/user';
+} from '/src/actions/user';
 
 const initialState = {
   username: '',
+  email: '',
   password: '',
+  matchingPassword: '',
+  isLogged: false,
 };
 
 const user = (state = initialState, action = {}) => {

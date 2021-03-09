@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+.home-empires-article {
+  position: relative;
+  margin: 0 auto;
+  top: 200px;
+  background-color: vars.$dark-blue;
+  border: 4px double vars.$neon;
+  width: 80%;
+  box-shadow: 0 0 2em vars.$neon;
+
+  &-paragraph {
+    color: white;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: justify;
+  }
+}

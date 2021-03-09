@@ -15,15 +15,26 @@ const Field = ({
     onChange(evt.target.value, name);
   };
 
+  const inputId = `field-${name}`;
+
   return (
-    <input
-      value={value}
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      onChange={handleChange}
-      className="login-field"
-    />
+    <>
+      <label
+      htmlFor={inputId}
+      className="login-field-label"
+      >
+        {placeholder}
+      </label>
+      <input
+        id={inputId}
+        value={value}
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        onChange={handleChange}
+        className="login-field"
+      />
+    </>
   );
 
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Field from './Field';
+import Field from '../Field';
 import './login.scss';
 
 const Login = ({
@@ -21,10 +21,9 @@ const Login = ({
         <Field
           name="username"
           type="text"
-          placeholder="Nom d'utilisateur"
+          placeholder="Nom d'empire"
           value={username}
           onChange={changeField}
-          autoFocus
         />
         <Field
           name="password"
@@ -33,7 +32,7 @@ const Login = ({
           value={password}
           onChange={changeField}
         />
-        <button className="login-button" type="submit">Se connecter</button>
+        <button className="login-button" type="submit">Connexion</button>
       </form>
     </div>
   );

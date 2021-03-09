@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 
-import Login from 'src/components/Login';
+import Register from 'src/components/Connection/Register';
 
-import { updateUserField, login } from 'src/actions/user';
+import { updateUserField, register } from 'src/actions/user';
 
 const mapStateToProps = (state) => ({
   username: state.user.username,
+  email: state.user.email,
   password: state.user.password,
+  matchingPassword: state.user.matchingPassword,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -14,11 +16,11 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(updateUserField(newValue, name));
   },
   handleLogin: () => {
-    dispatch(login());
+    dispatch(register());
   },
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(Register);

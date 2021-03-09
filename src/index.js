@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from 'src/components/App';
+import App from 'src/containers/App';
 import store from './store';
 
 const rootReactElement = (

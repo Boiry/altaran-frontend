@@ -1,0 +1,29 @@
+@use 'src/styles/vars';
+
+.login {
+  position: absolute;
+  top: 125px;
+  width: 350px;
+  margin: 0 auto;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-button {
+    background-color: vars.$dark-blue;
+    width: 150px;
+    margin: 10px auto;
+    padding: 10px;
+    color: white;
+    cursor: default;
+    border: 1px solid vars.$neon;
+    box-shadow: 0 14px 10px -10px vars.$neon inset, 0 0 10px 1px vars.$neon;
+    transition: background-color 1s;
+  
+    &:hover {
+      background-color: vars.$neon;
+    }
+  }
+}
