@@ -1,13 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import HomeNav from 'src/containers/HomeNav';
+import HomeNav from 'src/components/HomeNav';
+import { getPage, setPage } from 'src/utils/router';
 
 import onoffIcon from 'src/assets/onoff_icon.png';
 import './header.scss';
 
-const Header = ({ page, goToPage }) => {
+const Header = () => {
   let showConnectionIcon = true;
+  const page = getPage();
   if (page!='login' && page!='register') {showConnectionIcon = true} else {showConnectionIcon = false};
 
   return (
@@ -24,15 +25,10 @@ const Header = ({ page, goToPage }) => {
         className="header-onoff-icon"
         src={onoffIcon}
         alt="on off icon"
-        onClick={() => goToPage('login')}
+        onClick={() => setPage('login')}
       />}
     </div>
   );
-};
-
-Header.propTypes = {
-  page: PropTypes.string.isRequired,
-  goToPage: PropTypes.func.isRequired,
 };
 
 export default Header;

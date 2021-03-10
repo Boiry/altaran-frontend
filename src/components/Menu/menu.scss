@@ -1,0 +1,23 @@
+@use 'src/styles/vars';
+
+.menu {
+  position: relative;
+  width: 200px;
+  top: 200px;
+  margin: 0 auto;
+
+  &-button {
+  background-color: vars.$grey;
+  margin: 0 10px 0 10px;
+  padding: 10px;
+  color: white;
+  cursor: default;
+  border: 1px solid vars.$neon;
+  box-shadow: 0 14px 10px -10px vars.$neon inset, 0 0 10px 1px vars.$neon;
+  transition: background-color 1s;
+
+    &:hover {
+      background-color: vars.$neon;
+    }
+  }
+}

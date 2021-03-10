@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-import {
-  LOGIN,
-} from 'src/actions/user';
-import { REGISTER } from '../actions/user';
+import { LOGIN, REGISTER, } from '../actions/user';
+import { changePage } from '../actions/router';
 
 const userMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -17,12 +15,15 @@ const userMiddleware = (store) => (next) => (action) => {
           // console.log(response);
           // store.dispatch(saveUserInfo(response.data.username));
           window.sessionStorage.setItem('token', response.data.token);
+          store.dispatch(changePage('home-overview'));
           // console.log(window.localStorage.getItem('token'));
           // window.localStorage.setItem('isLogged', true);
         })
         .catch((error) => {
           // console.log(error);
-          window.alert('Les identifiants sont incorrects, veuillez les saisir à nouveau.');
+          // window.alert('Les identifiants sont incorrects, veuillez les saisir à nouveau.');
+          store.dispatch(changePage('home-overview'));
+
         });
 
       next(action);

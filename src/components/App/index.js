@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from 'src/containers/Header';
-import Connection from 'src/containers/Connection';
+import Header from 'src/components/Header';
+import Connection from 'src/components/Connection';
 import HomeOverview from 'src/components/HomeOverview';
 import HomeEmpires from 'src/components/HomeEmpires';
 import HomeStory from 'src/components/HomeStory';
 import HomeMedia from 'src/components/HomeMedia';
-
 
 const App = ({ page }) => (
   <div className="app">
@@ -21,7 +20,7 @@ const App = ({ page }) => (
   </div>
 );
 
-App.prototypes = {
+App.propTypes = {
   page: PropTypes.string.isRequired,
 };
 
