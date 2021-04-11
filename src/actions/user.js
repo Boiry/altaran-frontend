@@ -1,6 +1,7 @@
 export const UPDATE_USER_FIELD = 'UPDATE_USER_FIELD';
 export const LOGIN = 'LOGIN';
 export const REGISTER = 'REGISTER';
+export const SAVE_USER_INFO = 'SAVE_USER_INFO';
 
 export const updateUserField = (value, name) => ({
   type: UPDATE_USER_FIELD,
@@ -8,16 +9,15 @@ export const updateUserField = (value, name) => ({
   name,
 });
 
-export const login = (username, password) => ({
+export const login = () => ({
   type: LOGIN,
-  username,
-  password,
 });
 
-export const register = (username, email, password, matchingPassword) => ({
+export const register = () => ({
   type: REGISTER,
-  username,
-  email,
-  password,
-  matchingPassword,
-})
+});
+
+export const saveUserInfo = (isLogged) => ({
+  type: SAVE_USER_INFO,
+  isLogged,
+});

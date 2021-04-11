@@ -1,23 +1,38 @@
 @use 'src/styles/vars';
 
 .menu {
+  z-index: 2;
+  background-color: vars.$dark-blue;
   position: relative;
   width: 200px;
   top: 200px;
-  margin: 0 auto;
-
-  &-button {
-  background-color: vars.$grey;
-  margin: 0 10px 0 10px;
   padding: 10px;
-  color: white;
-  cursor: default;
-  border: 1px solid vars.$neon;
-  box-shadow: 0 14px 10px -10px vars.$neon inset, 0 0 10px 1px vars.$neon;
-  transition: background-color 1s;
+  border-top: 4px double vars.$neon;
+  border-right: 4px double vars.$neon;
+
+  &-item {
+    background-color: vars.$grey;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid vars.$neon;
+    cursor: default;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .6);
 
     &:hover {
       background-color: vars.$neon;
     }
+  }
+
+  &-triangle {
+    z-index: 1;
+    background-color: vars.$dark-blue;
+    position: relative;
+    top: 2px;
+    left: -85px;
+    width: 250px;
+    height: 250px;
+    border-right: 4px double vars.$neon;
+    transform: rotate(70deg);
   }
 }

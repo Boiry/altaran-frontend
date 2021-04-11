@@ -1,0 +1,64 @@
+import React from 'react';
+import { UniversalCamera, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
+import SceneComponent from "src/utils/babylonjs/sceneComponent";
+
+// import stars from 'src/assets/galaxyData';
+import stars from 'src/assets/miniGalaxyData';
+
+import './map.scss';
+
+const Map = () => {
+  const onSceneReady = (scene) => {
+    var camera = new UniversalCamera("UniversalCamera", new Vector3(0, -1500, 10), scene);
+
+    camera.angularSensibility *= -0.2;
+    camera.inertia = 0;
+    camera.speed = 50;
+    camera.inputs.addMouseWheel();
+    camera.setTarget(Vector3.Zero());
+
+    const canvas = scene.getEngine().getRenderingCanvas();
+    // This attaches the camera to the canvas
+    camera.attachControl(canvas, true);
+
+    // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
+    var light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
+    // Default intensity is 1. Let's dim the light a small amount
+    light.intensity = 0.7;
+
+    scene.useGeometryIdsMap = true;
+    scene.useMaterialMeshMap = true;
+    scene.useClonedMeshMap = true;
+    scene.blockfreeActiveMeshesAndRenderingGroups = true;
+    let originalStar = MeshBuilder.CreateSphere("star", { segments: 4, diameter: 5}, scene);
+    // let coreMat = new StandardMaterial("coreMat", scene);
+    // coreMat.emissiveColor = new Color3(.431, .627, .812); 
+    // originalStar.material = coreMat;
+    for (let i=0; i<stars.length; i++) {
+      // let star = originalStar.createInstance("star" + i);
+      let star = originalStar.clone("star" + i);
+      star.position.x = stars[i].x;
+      star.position.y = stars[i].y;
+      star.position.z = stars[i].z;
+
+      let coreMat = new StandardMaterial("coreMat", scene);
+      coreMat.emissiveColor = new Color3(stars[i].r, stars[i].g, stars[i].b); 
+      star.material = coreMat;
+    };
+    scene.blockfreeActiveMeshesAndRenderingGroups = false;
+    var gl = new GlowLayer("glow", scene, {blurKernelSize: 128});
+    gl.intensity = 1;
+    gl.customEmissiveColorSelector = function(mesh, subMesh, material, result) {
+      result.set(1, 1, 1, 0.5);
+    };
+
+  };
+
+  return (
+    <div className="map">
+      <SceneComponent antialias onSceneReady={onSceneReady} id="my-canvas" />
+    </div>
+  );
+};
+
+export default Map;

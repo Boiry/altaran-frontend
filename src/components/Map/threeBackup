@@ -1,0 +1,47 @@
+import React, { useLayoutEffect, useRef } from 'react';
+import { Canvas, extend, useThree, useFrame } from 'react-three-fiber';
+import CameraControls from 'camera-controls';
+import * as THREE from 'three';
+
+// import stars from 'src/assets/galaxyData';
+import stars from 'src/assets/miniGalaxyData';
+
+import './map.scss';
+
+function Dots() {
+  const ref = useRef()
+  useLayoutEffect(() => {
+    const transform = new THREE.Matrix4()
+
+    for (let i=0; i<stars.length; i++) {
+      const x = stars[i].x;
+      const y = stars[i].y;
+      const z = stars[i].z;
+      transform.setPosition(x, y, z)
+      ref.current.setMatrixAt(i, transform)
+    };
+  }, [])
+  return (
+    <instancedMesh ref={ref} args={[null, null, stars.length]}>
+      <sphereBufferGeometry args={[10, 30, 30]} />
+      <meshBasicMaterial />
+    </instancedMesh>
+  )
+}
+
+const Map = () => {
+  return (
+    <Canvas
+      colorManagement={false}
+      className="canvas"
+      // camera={{ position: [0, -2000, 0], far: 5000 }}
+      // orthographic={true}    
+    >
+
+      // { <color attach="background" args={['black']} /> }
+      <Dots />
+    </Canvas>
+  )
+}
+
+export default Map;

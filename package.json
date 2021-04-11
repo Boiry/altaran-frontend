@@ -55,13 +55,20 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
+    "@babylonjs/core": "^4.2.0",
+    "@babylonjs/gui": "^4.2.0",
     "axios": "^0.21.1",
+    "camera-controls": "^1.27.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
+    "react-babylonjs": "^3.0.12",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.2",
+    "react-tabs": "^3.2.1",
+    "react-three-fiber": "^5.3.19",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "three": "^0.126.1"
   }
 }

@@ -1,5 +1,6 @@
 import {
   UPDATE_USER_FIELD,
+  SAVE_USER_INFO,
 } from '/src/actions/user';
 
 const initialState = {
@@ -16,6 +17,11 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+      };
+    case SAVE_USER_INFO:
+      return {
+        ...state,
+        isLogged: action.isLogged,
       };
     default: return { ...state };
   }
