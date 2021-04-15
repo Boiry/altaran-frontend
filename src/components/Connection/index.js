@@ -9,21 +9,18 @@ import './connection.scss';
 const Connection = () => {
   const page = getPage();
   if (page === undefined) {page = "login"};
-  const loginTab = page === "login" ? "connection-login-tab-active" : "connection-login-tab-inactive";
-  const registerTab = page === "register" ? "connection-register-tab-active" : "connection-register-tab-inactive";
+  const loginTab = page === "login" ? "connection-tab-button connection-tab-active" : "connection-tab-button connection-tab-inactive";
+  const registerTab = page === "register" ? "connection-tab-button connection-tab-active" : "connection-tab-button connection-tab-inactive";
 
   return (
-    <div className="connection">
-      <div className="connection-tab"></div>
-        <div className={loginTab}>
-          <div className="connection-tab-button" onClick={() => setPage('login')}>Se connecter</div>
-        </div>
-        <div className={registerTab}>
-          <div className="connection-tab-button" onClick={() => setPage('register')}>Nouveau compte</div>
-        </div>
+    <>
+      <div className="connection-tab">
+        <button className={loginTab} onClick={() => setPage('login')}>Se connecter</button>
+        <button className={registerTab} onClick={() => setPage('register')}>Nouveau compte</button>
+      </div>
       {page === "login" && <Login />}
       {page === "register" && <Register />}
-    </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import { updateUserField, login } from 'src/actions/user';
 const mapStateToProps = (state) => ({
   username: state.user.username,
   password: state.user.password,
+  errorMessage: state.user.loginErrorMessage,
 });
 
 const mapDispatchToProps = (dispatch) => ({

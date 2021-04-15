@@ -1,0 +1,183 @@
+body {
+  line-height: 1.2rem;
+}
+
+.lock {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+}
+
+.lock1, .lock2, .lock3, .lock4, .lock5, .lock6, .lock7, .lock8, .lock9 {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: calc(100vh / 2 - 15rem);
+  left: calc(100vw / 2 - 15rem);
+  visibility: hidden;
+  filter: drop-shadow(0 0 30px white);
+}
+
+.lock1 {opacity: .7;}
+
+.lock2 {opacity: .6;}
+
+.lock3 {opacity: .5;}
+
+.lock4 {opacity: .8;}
+
+.lock5 {opacity: .8;}
+
+.lock6 {opacity: .9;}
+
+.lock7 {opacity: .8;}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterspin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lockShrink {
+  from {
+    width: 30rem;
+    height: 30rem;
+    top: calc(100vh / 2 - 15rem);
+    left: calc(100vw / 2 - 15rem);
+  }
+  to {
+    width: 15rem;
+    height: 15rem;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+@keyframes changeBackground {
+  from {
+    background: black;
+  }
+  to {
+    background: #022b55;
+  }
+}
+
+.menu-lines {
+  position: absolute;
+  visibility: hidden;
+  height: 15rem;
+  top: 1rem;
+  left: 15rem;
+  opacity: 0.7;
+}
+
+.button {
+  position: absolute;
+  visibility: hidden;
+  cursor: default;
+  color: #98e8f2;
+  width: 7rem;
+  left: 23rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-shadow: 0 0 1rem white;
+
+  &:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 2rem white;
+  }
+
+  &1 {
+    top: 0.8rem;
+  }
+
+  &2 {
+    top: 4.7rem;
+  }
+
+  &3 {
+    top: 8.6rem;
+  }
+
+  &4 {
+    top: 12.5rem;
+  }
+}
+
+.title {
+  position: absolute;
+  visibility: hidden;
+  width: 46rem;
+  top: 3rem;
+  left: 35rem;
+  color: #98e8f2;
+  font-weight: bold;
+  font-size: 5rem;
+
+}
+
+.baseline {
+  position: absolute;
+  visibility: hidden;
+  background-image: url(../../assets/images/background.svg);
+  background-size: cover;
+  top: 7rem;
+  left: 38rem;
+  padding: 1rem;
+  width: 40rem;
+  text-align: justify;
+
+  &-text {
+    position: relative;
+    color: #98e8f2;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}
+
+
+.article {
+  position: relative;
+  visibility: hidden;
+  background-image: url(../../assets/images/background.svg);
+  background-size: cover;
+  top: 5rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: justify;
+  color: white;
+  filter: drop-shadow(0 0 10px white);
+}
+

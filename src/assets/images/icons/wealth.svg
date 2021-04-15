@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (394de47547, 2021-03-26)"
+   sodipodi:docname="wealth.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="269.45826"
+     inkscape:cy="236.82121"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g993"
+       style="fill:none;fill-opacity:1;stroke:#69ffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="translate(-77.058523,-137.3686)">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#69ffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 142.62982,147.00634 c 0,0 -3.20781,-1.79345 -16.78197,-2.10802 -12.98202,-0.30085 -10.99426,14.84862 -10.99426,14.84862 l 10.24062,20.95776 2.76148,2.37991 0.8059,-0.0261 -0.23812,-1.56455 2.41767,2.13526 1.43184,0.16355 -0.35409,-1.77369 2.24042,2.26546 1.67991,0.4602 -0.41394,-1.91395 2.3798,2.0785 1.69704,0.43643 -0.12583,-1.69327 2.8273,2.33488 1.40275,0.15031 -1.77542,-4.46179 0.29973,-3.3127 c 0.7673,-8.48043 7.60087,-18.88078 11.97498,-25.21295 z"
+         id="path867"
+         sodipodi:nodetypes="cscccccccccccccccccscc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#69ffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 142.62982,147.00634 c -11.33788,-0.51442 -15.41485,11.08901 -12.69466,15.60008 l 10.3213,19.00038"
+         id="path873"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <path
+       id="path875"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#69ffff;stroke-width:2.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.0386691,21.065655 A 84.753592,84.753592 0 0 0 -77.583556,105.81965 84.753592,84.753592 0 0 0 7.1699262,190.57312 84.753592,84.753592 0 0 0 91.92341,105.81965 84.753592,84.753592 0 0 0 83.170972,68.309282 34.823754,34.823754 0 0 1 63.314302,74.525442 34.823754,34.823754 0 0 1 28.490588,39.701728 34.823754,34.823754 0 0 1 31.866611,24.743983 84.753592,84.753592 0 0 0 7.1699262,21.065655 a 84.753592,84.753592 0 0 0 -0.1312571,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.94894px;line-height:1.25;font-family:sans-serif;fill:#69ffff;fill-opacity:1;stroke:none;stroke-width:0.264583;"
+       x="10.185206"
+       y="86.557236"
+       id="text854"><tspan
+         sodipodi:role="line"
+         id="tspan852"
+         x="10.185206"
+         y="86.557236"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.155px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#69ffff;fill-opacity:1;">$</tspan></text>
+  </g>
+</svg>

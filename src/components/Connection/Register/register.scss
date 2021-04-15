@@ -1,7 +1,6 @@
 @use 'src/styles/vars';
 
 .register {
-  position: absolute;
   top: 75px;
   width: 350px;
   margin: 0 auto;
@@ -12,18 +11,22 @@
   }
 
   &-button {
-    background-color: vars.$dark-blue;
+    background: #2aa4d1;
+    border: none;
     width: 150px;
     margin: 10px auto;
     padding: 10px;
     color: white;
     cursor: default;
-    border: 1px solid vars.$neon;
-    box-shadow: 0 14px 10px -10px vars.$neon inset, 0 0 10px 1px vars.$neon;
-    transition: background-color 1s;
-  
-    &:hover {
-      background-color: vars.$neon;
-    }
+  }
+
+  &-username-error-message {
+    color: red;
+    text-align: center;
+  }
+
+  &-password-error-message {
+    color: red;
+    text-align: justify;
   }
 }

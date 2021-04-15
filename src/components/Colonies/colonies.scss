@@ -1,0 +1,89 @@
+@use 'src/styles/vars';
+
+.colonies {
+  width: 60vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left-panel right-panel";
+  grid-gap: 1rem;
+}
+
+.planet-selector {
+  position: relative;
+  grid-area: left-panel;
+  cursor: default;
+  height: calc(100vh - 8rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: vars.$neon transparent;
+}
+
+.planet-selector-planet {
+  display: block;
+  padding: .1rem;
+  width: 1.5rem;
+  transition: width .5s;
+}
+
+.selected-planet {
+  width: 3rem;
+}
+
+.soft-description {
+  position: absolute;
+  display: none;
+  background: vars.$medium-blue;
+  padding: .5rem;
+  border-radius: .5rem;
+  filter: drop-shadow(0 0 10px vars.$medium-blue);
+}
+
+.selector-planet-name {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.selector-planet-coordinates {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.colonies-content {
+  grid-area: right-panel;
+}
+
+.colonies-tab-container {
+  height: 2rem;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.colonies-tab {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: .9rem;
+  padding: .5rem 0 1.5rem 0;
+  cursor: default;
+}
+
+.colonies-tab-active {
+  border-top: 1px solid vars.$neon;
+  border-left: 1px solid vars.$neon;
+  border-right: 1px solid vars.$neon;
+  border-bottom: 1px solid transparent;
+}
+
+.colonies-tab-inactive {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid vars.$neon;
+}

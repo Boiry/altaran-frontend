@@ -9,6 +9,8 @@ const Register = ({
   email,
   password,
   matchingPassword,
+  usernameErrorMessage,
+  passwordErrorMessage,
   changeField,
   handleLogin,
 }) => {
@@ -34,6 +36,7 @@ const Register = ({
           value={email}
           onChange={changeField}
         />
+        <div className="register-username-error-message">{usernameErrorMessage}</div>
         <Field
           name="password"
           type="password"
@@ -48,6 +51,7 @@ const Register = ({
           value={matchingPassword}
           onChange={changeField}
         />
+        <div className="register-password-error-message">{passwordErrorMessage}</div>
         <button className="register-button" type="submit">Création</button>
       </form>
     </div>

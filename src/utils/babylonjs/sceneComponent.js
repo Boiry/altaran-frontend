@@ -30,6 +30,7 @@ export default (props) => {
       }
       return () => {
         scene.getEngine().dispose();
+        
         if (window) {
           window.removeEventListener("resize", resize);
         }

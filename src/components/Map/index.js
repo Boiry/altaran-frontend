@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
 import SceneComponent from "src/utils/babylonjs/sceneComponent";
 
 import Camera2DKeyboardInputs from "./camera2DKeyboardInputs";
-import Camera2DMouseInputs from "./camera2DMouseInputs";
 
 // import stars from 'src/assets/galaxyData';
 import stars from 'src/assets/miniGalaxyData';
@@ -20,6 +19,7 @@ const Map = () => {
     // camera.inputs.clear();
     // camera.inputs.addMouse();
     camera.inputs.remove(camera.inputs.attached.keyboard);
+
     camera.direction = new Vector3(0, 0, 0);
     camera.angularSensibility *= -0.2;
     camera.invertRotation = true;
@@ -78,6 +78,7 @@ const Map = () => {
 
     //Add mouse controls
     // camera.inputs.add(new Camera2DMouseInputs());
+    
   };
 
   return (

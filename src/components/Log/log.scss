@@ -1,0 +1,13 @@
+@use 'src/styles/vars';
+
+.log {
+  position: relative;
+  background: vars.$medium-blue;
+  width: 60vw;
+  height: 4rem;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: .8rem;
+  color: white;
+  opacity: 1;
+}

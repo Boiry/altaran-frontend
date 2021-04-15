@@ -1,4 +1,4 @@
-import { Vector3 } from "@babylonjs/core";
+import { Vector3, Tools } from "@babylonjs/core";
 
 export default class Camera2DKeyboardInputs {
   constructor() {
@@ -49,18 +49,19 @@ export default class Camera2DKeyboardInputs {
   }
   //Add detachment controls
   detachControl() {
-    var engine = this.camera.getEngine();
-    var element = engine.getInputElement();
-    if (this._onKeyDown) {
-      element.removeEventListener("keydown", this._onKeyDown);
-      element.removeEventListener("keyup", this._onKeyUp);
-      Tools.UnregisterTopRootEvents([
-        { name: "blur", handler: this._onLostFocus }
-      ]);
-      this._keys = [];
-      this._onKeyDown = null;
-      this._onKeyUp = null;
-    }
+    // ================ BUG !!! ==================
+    // var engine = this.camera.getEngine();
+    // var element = engine.getInputElement();
+    // if (this._onKeyDown) {
+    //   element.removeEventListener("keydown", this._onKeyDown);
+    //   element.removeEventListener("keyup", this._onKeyUp);
+    //   Tools.UnregisterTopRootEvents([
+    //     { name: "blur", handler: this._onLostFocus }
+    //   ]);
+    //   this._keys = [];
+    //   this._onKeyDown = null;
+    //   this._onKeyUp = null;
+    // }
   }
   //Keys movement control by checking inputs
   checkInputs() {

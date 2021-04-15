@@ -7,6 +7,7 @@ import './login.scss';
 const Login = ({
   username,
   password,
+  errorMessage,
   changeField,
   handleLogin,
 }) => {
@@ -32,6 +33,7 @@ const Login = ({
           value={password}
           onChange={changeField}
         />
+        <div className="login-error-message">{errorMessage}</div>
         <button className="login-button" type="submit">Connexion</button>
       </form>
     </div>

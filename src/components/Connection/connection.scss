@@ -1,56 +1,32 @@
 @use 'src/styles/vars';
 
-.connection {
-  background-color: vars.$dark-blue;
-  position: relative;
-  width: 400px;
-  height: 350px;
+.connection-tab {
+  height: 3rem;
   margin: 0 auto;
-  padding: 20px;
-  top: 200px;
-  border: 4px double vars.$neon;
-  box-shadow: 0 0 2em vars.$neon;
+  display: flex;
+  margin-bottom: 1rem;
 
-  &-login-tab-active {
-    position: absolute;
-    top: 20px;
+  &-button {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    padding: 1rem;
+    cursor: default;
   }
 
-  &-login-tab-inactive {
-    position: absolute;
-    width: 170px;
-    top: 20px;
-    background-color: vars.$dark-blue;
-    border-right: 1px solid vars.$neon;
-    border-bottom: 1px solid vars.$neon;
+  &-active {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid transparent;
   }
 
-  &-register-tab-active {
-    position: absolute;
-    top: 20px;
-    left: 192px;
-  }
-
-  &-register-tab-inactive {
-    position: absolute;
-    width: 180px;
-    top: 20px;
-    left: 192px;
-    background-color: vars.$dark-blue;
-    border-left: 1px solid vars.$neon;
-    border-bottom: 1px solid vars.$neon;
-  }
-
-  &-tab {
-    height: 300px;
-    border: 1px solid vars.$neon;
-    background-color: vars.$grey;
-
-    &-button {
-      margin-left: 10px;
-      padding: 10px;
-      color: white;
-      cursor: default;
-    }
+  &-inactive {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid white;
   }
 }

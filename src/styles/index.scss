@@ -1,7 +1,41 @@
 @use 'reset';
 @use 'vars';
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background-color: black;
-  font-family: sans-serif;
+  background: linear-gradient(30deg, vars.$dark-blue, vars.$medium-blue);
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.corner {
+  position: absolute;
+
+  &-top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  &-top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+  }
+  
+  &-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(270deg);
+  }
+  
+  &-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
 }

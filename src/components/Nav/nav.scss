@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+.nav {
+  position: absolute;
+  top: 8rem;
+  padding-left: .5rem;
+  display: flex;
+  flex-direction: column;
+
+  &-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: .7rem;
+    background: linear-gradient(30deg, vars.$deep-blue, vars.$medium-blue);
+    opacity: 1;
+    border: 1px solid vars.$neon;
+    padding: .5rem;
+    margin: .1rem;
+    width: 10rem;
+    color: white;
+    filter: drop-shadow(0 0 10px vars.$light-blue);
+    transition: font-size .2s;
+
+    &:hover {
+      background: vars.$light-blue;
+      font-size: .9rem;
+    }
+  }
+}

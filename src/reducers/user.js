@@ -1,6 +1,9 @@
 import {
   UPDATE_USER_FIELD,
   SAVE_USER_INFO,
+  SHOW_LOGIN_ERROR,
+  SHOW_USERNAME_ERROR,
+  SHOW_PASSWORD_ERROR,
 } from '/src/actions/user';
 
 const initialState = {
@@ -9,6 +12,9 @@ const initialState = {
   password: '',
   matchingPassword: '',
   isLogged: false,
+  loginErrorMessage: '',
+  usernameErrorMessage: '',
+  passwordErrorMessage: '',
 };
 
 const user = (state = initialState, action = {}) => {
@@ -22,6 +28,21 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         isLogged: action.isLogged,
+      };
+    case SHOW_LOGIN_ERROR:
+      return {
+        ...state,
+        loginErrorMessage: action.message,
+      };
+      case SHOW_USERNAME_ERROR:
+      return {
+        ...state,
+        usernameErrorMessage: action.message,
+      };
+      case SHOW_PASSWORD_ERROR:
+      return {
+        ...state,
+        passwordErrorMessage: action.message,
       };
     default: return { ...state };
   }
