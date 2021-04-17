@@ -5,6 +5,7 @@ export const SAVE_USER_INFO = 'SAVE_USER_INFO';
 export const SHOW_LOGIN_ERROR = 'SHOW_LOGIN_ERROR';
 export const SHOW_USERNAME_ERROR = 'SHOW_USERNAME_ERROR';
 export const SHOW_PASSWORD_ERROR = 'SHOW_PASSWORD_ERROR';
+export const LOGOUT = 'LOGOUT';
 
 export const updateUserField = (value, name) => ({
   type: UPDATE_USER_FIELD,
@@ -38,4 +39,8 @@ export const showUsernameError = (message) => ({
 export const showPasswordError = (message) => ({
   type: SHOW_PASSWORD_ERROR,
   message,
+});
+
+export const logout = () => ({
+  type: LOGOUT,
 });

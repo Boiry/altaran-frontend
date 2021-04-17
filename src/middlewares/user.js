@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { LOGIN, REGISTER, saveUserInfo, showLoginError, showUsernameError, showPasswordError } from '../actions/user';
+import { LOGIN, REGISTER, saveUserInfo, showLoginError, showUsernameError, showPasswordError, LOGOUT } from '../actions/user';
 import { changePage } from '../actions/router';
 
 const userMiddleware = (store) => (next) => (action) => {
@@ -22,7 +22,7 @@ const userMiddleware = (store) => (next) => (action) => {
 
       next(action);
       break;
-    }
+    };
 
     case REGISTER: {
       const { username, email, password, matchingPassword } = store.getState().user;
@@ -66,7 +66,15 @@ const userMiddleware = (store) => (next) => (action) => {
         
       next(action);
       break;
-    }
+    };
+
+    case LOGOUT: {
+      window.sessionStorage.removeItem("token");
+      store.dispatch(saveUserInfo(false));
+      store.dispatch(changePage('login'));
+      next(action);
+      break;
+    };
 
     default:
       next(action);

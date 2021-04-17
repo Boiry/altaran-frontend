@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+
+import Tab from 'src/components/Tab';
+
+const Component = () => {
+  const [subPage, changeSubPage] = useState("firstPage");
+
+  const tabs = {
+    // Tab name: page name
+    "FirstPage": "firstPage",
+    "SecondPage": "secondPage",
+    "ThirdPage": "thirdPage",
+  };
+  
+  return (
+    <>
+      <Tab name={"componentName"} tabs={tabs} page={changeSubPage} />
+      {subPage === "firstPage" && <FirstPage />}
+      {subPage === "secondPage" && <SecondPage>}
+      {subPage === "thirdPage" && <ThirdPage>}
+    </>
+  );
+};
+
+export default Component;
