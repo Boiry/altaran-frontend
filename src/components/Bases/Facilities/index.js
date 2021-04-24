@@ -60,6 +60,7 @@ const Facilities = () => {
         <img src={University} className="facilities-menu-item logistics" />
         <img src={Barracks} className="facilities-menu-item logistics" />
         <img src={Tool} className="facilities-menu-item logistics" />
+        <img src={Concentrator} className="facilities-menu-item logistics" />
       </div>
       <div className="facilities-menu-title facilities-menu-civilian">Civil</div>
       <div className="facilities-menu-items">
@@ -68,7 +69,6 @@ const Facilities = () => {
         <img src={Politics} className="facilities-menu-item civilian" />
         <img src={Obelisk} className="facilities-menu-item civilian" />
         <img src={Gear} className="facilities-menu-item civilian" />
-        <img src={Concentrator} className="facilities-menu-item civilian" />
       </div>
       <div className="facilities-menu-title facilities-menu-advanced">Avancé</div>
       <div className="facilities-menu-items">

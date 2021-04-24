@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-import { tab } from './animations.js';
+import Tab from 'src/containers/Tab';
 
 import Galaxy from './Galaxy';
-import StarSystem from './StarSystem';
+import StarSystem from 'src/containers/Map/StarSystem';
 
 import './map.scss';
 
 const Map = () => {
   const [subPage, changeSubPage] = useState("galaxy");
-  useEffect(() => {
-    tab(subPage);
-  });
+  const tabs = {
+    "Galaxie": "galaxy",
+    "Systèmes stellaires": "starSystem",
+  };
+  
   return (
     <div className="map">
-      <div className="map-tab-container">
-        <button className="map-tab map-tab-inactive" onClick={() => changeSubPage('galaxy')}>Galaxie</button>
-        <button className="map-tab map-tab-inactive" onClick={() => changeSubPage("starSystem")}>Systèmes stellaires</button>
-      </div>
+       <Tab name={"map"} tabs={tabs} dispatchSubPage={changeSubPage} />
       {subPage === "galaxy" && <Galaxy />}
       {subPage === "starSystem" && <StarSystem />}
     </div>

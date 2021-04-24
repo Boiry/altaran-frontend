@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+
+.tab-container {
+  height: 2rem;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.tab {
+  background: none;
+  color: white;
+  font-family: Orbitron, sans-serif;
+  font-size: .9rem;
+  flex-grow: 1;
+  padding: .5rem 0 1.5rem 0;
+  cursor: default;
+  text-align: center;
+  border: 1px solid transparent;
+
+  &-active {
+    border: 1px solid vars.$neon;
+    border-bottom: 1px solid transparent;
+  }
+
+  &-inactive {
+    border: 1px solid transparent;
+    border-bottom: 1px solid vars.$neon;
+  }
+}

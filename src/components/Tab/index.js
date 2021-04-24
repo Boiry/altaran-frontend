@@ -1,69 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-const Tab = (props) => {
-  const { name, tabs, page } = props;
-  
-  const [tabIndex, changetabIndex] = useState(0);
-  const tabName = name + "-tab";
-  
+import './tab.scss';
+
+const Tab = ({ stateTabs, newSubPage, name, tabs, dispatchSubPage }) => {
+  // Extracting tab names (tabsArray) and matching state values (linksArray)
   let tabsArray = [];
   let linksArray = [];
   for (const tab in tabs) {
     tabsArray.push(tab);
     linksArray.push(tabs[tab]);
   };
+
+  // Loop to create buttons
+  const Tabs = () => (
+    tabsArray.map((tabTitle, index) => {
+      const key = `${name}-tab${index}`;
+      const tabClass = linksArray[index] === stateTabs[name] ? "tab tab-active" : "tab tab-inactive";
+      return (
+        <button key={key} className={tabClass} onClick={() => (handleClick(index))}>{tabTitle}</button>
+      );
+    })
+  );
+
+  // Dispatch the new subPage to the store via the container
+  const handleClick = (index) => {
+    newSubPage(name, linksArray[index]);
+  };
   
-  function handleClick(index) {
-    page(linksArray[index]);
-    changetabIndex(index);
-  };
-
-  const Divs = () => {
-    const tabStyle = {
-      background: "none",
-      color: "white",
-      fontFamily: "Orbitron, sans-serif",
-      fontSize: ".9rem",
-      flexGrow: "1",
-      padding: ".5rem 0 1.5rem 0",
-      cursor: "default",
-      textAlign: "center",
-      border: "1px solid transparent",
-    };
-    return (
-      tabsArray.map((tabContent, index) => {
-        const key = name + "-tab" + index;
-        return (
-          <button key={key} className={tabName} style={tabStyle} onClick={() => (handleClick(index))}>{tabContent}</button>
-        )
-      })
-    )
-  };
-
-  const containerName = name + "-tab-container";
-  const containerStyle = {
-    height: "2rem",
-    margin: "0 auto",
-    display: "flex",
-    paddingBottom: "2rem",
-  };
-
+  // Dispatch new tab clicked to the parent component
   useEffect(() => {
-    for (let i=0; i<tabsArray.length; i++) {
-      const tab = document.getElementsByClassName(tabName)[i].style;
-      if (i === tabIndex) {
-        tab.border = "1px solid #5dbae0";
-        tab.borderBottom = "1px solid transparent";
-      } else {
-        tab.borderBottom = "1px solid #5dbae0";
-      }
-    }
+    for (let i=0; i<linksArray.length; i++) {
+      if (linksArray[i] === stateTabs[name]) {
+        dispatchSubPage(linksArray[i]);
+      };
+    };
   });
 
   return (
-    <div className={containerName} style={containerStyle}>
-      <Divs />
-    </div>
+   <div className="tab-container">
+     <Tabs />
+   </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Tab from 'src/components/Tab';
+import Tab from 'src/containers/Tab';
 
 const Component = () => {
   const [subPage, changeSubPage] = useState("firstPage");
@@ -14,7 +14,7 @@ const Component = () => {
   
   return (
     <>
-      <Tab name={"componentName"} tabs={tabs} page={changeSubPage} />
+      <Tab name={"componentName"} tabs={tabs} dispatchSubPage={changeSubPage} />
       {subPage === "firstPage" && <FirstPage />}
       {subPage === "secondPage" && <SecondPage>}
       {subPage === "thirdPage" && <ThirdPage>}
@@ -23,3 +23,5 @@ const Component = () => {
 };
 
 export default Component;
+
+/* ====================== DON'T FORGET TO UPDATE THE INITIAL STATE IN TAB REDUCER !! ======================== */

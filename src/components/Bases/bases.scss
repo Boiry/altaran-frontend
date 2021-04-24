@@ -1,0 +1,46 @@
+@use 'src/styles/vars';
+
+.bases {
+  width: 60vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left-panel right-panel";
+  grid-gap: 1rem;
+}
+
+.base-selector {
+  position: relative;
+  grid-area: left-panel;
+  cursor: default;
+  height: calc(100vh - 8rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: vars.$neon transparent;
+}
+
+.soft-description {
+  position: absolute;
+  display: none;
+  background: vars.$medium-blue;
+  padding: .5rem;
+  border-radius: .5rem;
+  filter: drop-shadow(0 0 10px vars.$medium-blue);
+}
+
+.selector-base-name {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.selector-base-coordinates {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.bases-content {
+  grid-area: right-panel;
+}

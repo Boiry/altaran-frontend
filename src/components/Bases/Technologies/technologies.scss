@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+.technologies-menu {
+  position: relative;
+  top: 18rem;
+}
+
+.technologies-menu-title {
+  border-bottom: 1px solid vars.$neon;
+}
+
+.technologies-menu-item {
+  background: vars.$medium-blue;
+  width: 2.5rem;
+  border: 1px solid vars.$neon;
+  border-radius: .5rem;
+  margin: .5rem .2rem;
+}

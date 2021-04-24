@@ -75,9 +75,6 @@ const Galaxy = () => {
 
     // add keyboard controls
     camera.inputs.add(new Camera2DKeyboardInputs());
-
-    //Add mouse controls
-    // camera.inputs.add(new Camera2DMouseInputs());
     
   };
 

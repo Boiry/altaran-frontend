@@ -4,12 +4,12 @@ export const init = () => {
     item.addEventListener("mouseover", () => {mouseOverItem("itemProduction"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemProduction")});
   };
-  for (let i=0; i<=5; i++) {
+  for (let i=0; i<=6; i++) {
     const item = document.getElementsByClassName("logistics")[i];
     item.addEventListener("mouseover", () => {mouseOverItem("itemLogistics"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemLogistics")});
   };
-  for (let i=0; i<=5; i++) {
+  for (let i=0; i<=4; i++) {
     const item = document.getElementsByClassName("civilian")[i];
     item.addEventListener("mouseover", () => {mouseOverItem("itemCivilian"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemCivilian")});
@@ -42,7 +42,8 @@ const mouseOverItem = function(item) {
     "Centre spatial mécanique",
     "Institution de l'instruction",
     "Base militaire",
-    "Centre de maintenance"
+    "Centre de maintenance",
+    "Concentrateur de matière noire"
   ];
 
   const civilian = [
@@ -51,7 +52,6 @@ const mouseOverItem = function(item) {
     "Institut politique",
     "Monument",
     "Centre d'avancement technologique avancé",
-    "Concentrateur de matière noire"
   ];
 
   const advanced = [

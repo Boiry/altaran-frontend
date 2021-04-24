@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  background: linear-gradient(30deg, vars.$dark-blue, vars.$medium-blue);
+  // background: linear-gradient(30deg, vars.$dark-blue, vars.$medium-blue);
   background-size: cover;
+  background: black;
   font-family: 'Orbitron', sans-serif;
   color: white;
 }

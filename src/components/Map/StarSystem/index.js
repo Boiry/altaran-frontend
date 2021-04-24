@@ -1,10 +1,17 @@
 import React from 'react';
+
+import Field from '../Field';
+
 import { HemisphericLight, ArcRotateCamera, UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, PointLight, MeshBuilder, GlowLayer, Color3, Color4, StandardMaterial } from "@babylonjs/core";
 import SceneComponent from "src/utils/babylonjs/sceneComponent";
 
 import './starSystem.scss';
 
-const StarSystem = () => {
+import ArrowLeft from 'src/assets/images/arrow-left.svg';
+import ArrowRight from 'src/assets/images/arrow-right.svg';
+
+
+const StarSystem = ({ region, sector, starSystem, changeField }) => {
   const onSceneReady = (scene) => {
     document.getElementById("canvas").focus();
     const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2.5, 95, new Vector3(25, 5, 0), scene);
@@ -74,6 +81,32 @@ const StarSystem = () => {
   return (
     <div className="star-system">
       <SceneComponent antialias onSceneReady={onSceneReady} id="canvas" tabIndex="0" />
+      <div className="star-system-navigation">
+        <img src={ArrowLeft} className="star-system-arrow" />
+        <Field
+          name="region"
+          type="string"
+          value={region}
+          onChange={changeField}
+        />
+        <span className="separator"> : </span>
+         <Field
+          name="sector"
+          type="string"
+          value={sector}
+          onChange={changeField}
+        />
+        <span className="separator"> : </span>
+        <Field
+          name="starSystem"
+          type="string"
+          value={starSystem}
+          onChange={changeField}
+        />
+        <img src={ArrowRight} className="star-system-arrow" />
+
+      </div>
+      <div className="star-system-action"></div>
     </div>
   );
 };

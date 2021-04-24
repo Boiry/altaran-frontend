@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.map-field {
+  position: relative;
+  background: white;
+  background: vars.$field-background;
+  width: 4rem;
+  text-align: center;
+  border: none;
+  color: vars.$neon;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  top: -2rem;
+}

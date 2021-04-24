@@ -14,7 +14,7 @@ const userMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           window.sessionStorage.setItem('token', response.data.token);
           store.dispatch(saveUserInfo(true));
-          store.dispatch(changePage('colonies'));
+          store.dispatch(changePage('bases'));
         })
         .catch((error) => {
           store.dispatch(showLoginError('Les identifiants sont incorrects, veuillez les saisir à nouveau.'));

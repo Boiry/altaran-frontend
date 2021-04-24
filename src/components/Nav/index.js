@@ -11,9 +11,9 @@ const Nav = ({ handleLogout }) => {
   };
   return (
     <div className="nav">
-      <button className="nav-button" onClick={() => setPage('colonies')}>Colonies</button>
-      <button className="nav-button">Empire</button>
-      <button className="nav-button">Flottes</button>
+      <button className="nav-button" onClick={() => setPage('bases')}>Colonies</button>
+      <button className="nav-button" onClick={() => setPage('empire')}>Empire</button>
+      <button className="nav-button" onClick={() => setPage('fleet')}>Flottes</button>
       <button className="nav-button">Espionnage</button>
       <button className="nav-button">Alliance</button>
       <button className="nav-button">Communications</button>
