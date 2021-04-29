@@ -1,0 +1,158 @@
+{
+  "laser":  {
+    "level": "10",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "fission": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "ballistic": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "frame1": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "propulsion": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "knowledge": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "ia": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "computer": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "geophysics": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "energy": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "security": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "nanotechnology": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "particle": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "weapon": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "frame2": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "distortion": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "geospatial": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "neuronal": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "subatomic": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "transmutation": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "expansion": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "darkmatter": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "core": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "module": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "repair": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "frame3": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "update1": {
+    "facility": "mine",
+    "time": "1619641809435"
+  },
+  "update2": {
+    "facility": "geothermy",
+    "time": "1619641809435"
+  },
+  "update3": {
+    "facility": "fusion",
+    "time": "1619641809435"
+  },
+  "update4": {
+    "facility": "catalyser",
+    "time": "1619641809435"
+  },
+  "update5": {
+    "facility": "storage",
+    "time": "1619641809435"
+  }
+}

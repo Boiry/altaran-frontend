@@ -3,17 +3,18 @@ import React, { useEffect, useState } from 'react';
 import Tab from 'src/containers/Tab';
 
 import './bases.scss';
-
-import BaseSelector from 'src/components/Bases/BaseSelector';
+import Background from 'src/assets/images/background3.jpg';
+import BaseSelector from './BaseSelector';
 import Description from './Description';
-import Facilities from './Facilities';
+import Facilities from 'src/containers/Bases/Facilities';
 import Defenses from './Defenses';
 import Ships from './Ships';
 import Infantry from './Infantry';
-import Technologies from './Technologies';
+import Technologies from 'src/containers/Bases/Technologies';
 
 const Bases = ({ selectedBase, changeSelectedBase }) => {
-  document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
+  // document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
+  document.body.style.background = `url(${Background})`;
 
   const [subPage, changeSubPage] = useState("description");
 
@@ -43,7 +44,7 @@ const Bases = ({ selectedBase, changeSelectedBase }) => {
       <div className="bases">
 
         <div className="base-selector">
-        <BaseSelector handleClick={changeSelectedBase} />
+          <BaseSelector handleClick={changeSelectedBase} />
         </div>
 
         <div className="bases-content">

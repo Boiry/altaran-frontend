@@ -1,0 +1,22 @@
+{
+  "update1": {
+    "technology": "laser",
+    "time": "1619689957615"
+  },
+  "update2": {
+    "technology": "fission",
+    "time": "1619689957615"
+  },
+  "update3": {
+    "technology": "ballistic",
+    "time": "1619689957615"
+  },
+  "update4": {
+    "technology": "frame1",
+    "time": "1619689957615"
+  },
+  "update5": {
+    "technology": "propulsion",
+    "time": "1619689957615"
+  }
+}

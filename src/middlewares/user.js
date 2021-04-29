@@ -1,6 +1,14 @@
 import axios from 'axios';
 
-import { LOGIN, REGISTER, saveUserInfo, showLoginError, showUsernameError, showPasswordError, LOGOUT } from '../actions/user';
+import {
+  LOGIN,
+  REGISTER,
+  saveUserInfo,
+  showLoginError,
+  showUsernameError,
+  showPasswordError,
+  LOGOUT
+} from '../actions/user';
 import { changePage } from '../actions/router';
 
 const userMiddleware = (store) => (next) => (action) => {
@@ -13,7 +21,7 @@ const userMiddleware = (store) => (next) => (action) => {
       })
         .then((response) => {
           window.sessionStorage.setItem('token', response.data.token);
-          store.dispatch(saveUserInfo(true));
+          store.dispatch(saveUserInfo(response.data.id, true));
           store.dispatch(changePage('bases'));
         })
         .catch((error) => {
@@ -70,7 +78,7 @@ const userMiddleware = (store) => (next) => (action) => {
 
     case LOGOUT: {
       window.sessionStorage.removeItem("token");
-      store.dispatch(saveUserInfo(false));
+      store.dispatch(saveUserInfo(null, false));
       store.dispatch(changePage('login'));
       next(action);
       break;

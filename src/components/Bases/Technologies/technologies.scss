@@ -1,18 +1,51 @@
 @use 'src/styles/vars';
 
-.technologies-menu {
-  position: relative;
-  top: 18rem;
-}
+.technologies {
+  &-main {
+    display: flex;
+    margin-top: 1rem;
+  }
 
-.technologies-menu-title {
-  border-bottom: 1px solid vars.$neon;
-}
+  &-image {
+    background: vars.$medium-blue;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 3rem 1rem 0;
+    border: 1px solid vars.$neon;
+    border-radius: .5rem;
+  }
 
-.technologies-menu-item {
-  background: vars.$medium-blue;
-  width: 2.5rem;
-  border: 1px solid vars.$neon;
-  border-radius: .5rem;
-  margin: .5rem .2rem;
+  &-actions {
+    &-title {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid vars.$neon;
+    }
+
+    &-button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      background: vars.$light-blue;
+      color: white;
+      border: 1px solid vars.$neon;
+      padding: .5rem;
+      margin-right: 1rem;
+      border-radius: .5rem;
+    }
+  }
+
+  &-research-list {
+    position: relative;
+
+    &-title {
+      border-bottom: 1px solid vars.$neon;
+    }
+  }
+
+  &-menu {
+    position: relative;
+
+    &-title {
+      border-bottom: 1px solid vars.$neon;
+    }
+  }
 }

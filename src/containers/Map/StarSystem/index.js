@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import StarSystem from 'src/components/Map/StarSystem';
 
-import { UpdateCoordinatesField } from 'src/actions/map';
+import { updateCoordinatesField } from 'src/actions/map';
 
 const mapStateToProps = (state) => ({
   region: state.map.region,

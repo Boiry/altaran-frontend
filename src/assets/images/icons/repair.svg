@@ -11,11 +11,11 @@
    height="100mm"
    viewBox="0 0 100 100"
    version="1.1"
-   id="svg859"
+   id="svg8"
    inkscape:version="1.0.2 (394de47547, 2021-03-26)"
-   sodipodi:docname="catalyser.svg">
+   sodipodi:docname="hammer.svg">
   <defs
-     id="defs853" />
+     id="defs2" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="-27.219086"
-     inkscape:cy="245.11214"
+     inkscape:zoom="1.1061374"
+     inkscape:cx="73.38276"
+     inkscape:cy="114.3134"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -36,14 +36,14 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata856">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,21 +51,10 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="fill:none;fill-rule:evenodd;stroke:#69ffff;stroke-width:1.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1422"
-       cx="50"
-       cy="50"
-       r="41.108082" />
-    <circle
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#69ffff;stroke-width:1.665;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1424"
-       cx="50"
-       cy="50"
-       r="31.552565" />
     <path
-       style="fill:#69ffff;fill-opacity:1;stroke:none;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-       d="m 50.654251,30.21206 -10.41335,20.592515 h 9.751168 L 44.400705,69.787986 59.759103,45.587974 h -9.779849 z"
-       id="path1426" />
+       style="fill:none;stroke:#69ffff;stroke-width:2.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 16.034738,90.723838 51.962992,-54.371689 9.626905,9.436605 -1.703497,1.782461 5.428032,5.320733 11.92448,-12.47723 -5.428031,-5.320733 -1.703497,1.782461 L 61.54752,12.768019 C 50.480844,5.1980954 43.342221,11.317823 34.823811,16.426542 c 6.735949,-1.5817 17.004291,1.68776 23.694865,10.633929 L 6.7247021,81.25531 Z"
+       id="path977"
+       sodipodi:nodetypes="ccccccccccccc" />
   </g>
 </svg>

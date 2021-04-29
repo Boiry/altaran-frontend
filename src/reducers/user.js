@@ -27,6 +27,7 @@ const user = (state = initialState, action = {}) => {
     case SAVE_USER_INFO:
       return {
         ...state,
+        id: action.id,
         isLogged: action.isLogged,
       };
     case SHOW_LOGIN_ERROR:

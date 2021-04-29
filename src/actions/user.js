@@ -21,8 +21,9 @@ export const register = () => ({
   type: REGISTER,
 });
 
-export const saveUserInfo = (isLogged) => ({
+export const saveUserInfo = (id, isLogged) => ({
   type: SAVE_USER_INFO,
+  id,
   isLogged,
 });
 

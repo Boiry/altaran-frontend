@@ -1,0 +1,170 @@
+{
+  "mine": {
+    "level": "10",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "geothermy": {
+    "level": "5",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000000"
+  },
+  "fusion": {
+    "level": "15",
+    "metal": "100",
+    "energy": "50",
+    "time": "10000000"
+  },
+  "catalyser": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "100000000"
+  },
+  "storage": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "alchemy": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "atomic": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "darkmatter": {
+    "level": "0",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "financial": {
+    "level": "0",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "metropolis": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "wealth": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "robot": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "server": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "mecanics": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "instruction": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "military": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "maintenance": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "concentrator": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "intelligence": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "development": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "politics": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "monument": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "technology": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "city": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "stabilizer": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "information": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "time": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  },
+  "relifer": {
+    "level": "1",
+    "metal": "100",
+    "energy": "50",
+    "time": "1000"
+  }
+}

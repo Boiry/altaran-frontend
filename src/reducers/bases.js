@@ -1,4 +1,12 @@
-import { UPDATE_SELECTED_BASE } from '../actions/bases';
+import {
+  UPDATE_SELECTED_BASE,
+  SAVE_FACILITIES_INFO,
+  CHANGE_CURRENT_FACILITY,
+  SAVE_FACILITIES_UPDATES_INFO,
+  SAVE_TECHNOLOGIES_INFO,
+  CHANGE_CURRENT_TECHNOLOGY,
+  SAVE_TECHNOLOGIES_UPDATES_INFO,
+} from '../actions/bases';
 
 const initialState = {
   selectedBase: 'base1',
@@ -10,6 +18,36 @@ const bases = (state = initialState, action = {}) => {
       return {
         ...state,
         selectedBase: action.selectedBase,
+      };
+    case SAVE_FACILITIES_INFO:
+      return {
+        ...state,
+        [action.name]: action.facilities,
+      };
+    case CHANGE_CURRENT_FACILITY:
+      return {
+        ...state,
+        [action.name]: action.item,
+      };
+    case SAVE_FACILITIES_UPDATES_INFO:
+      return {
+        ...state,
+        [action.name]: action.updates,
+      };
+    case SAVE_TECHNOLOGIES_INFO:
+      return {
+        ...state,
+        [action.name]: action.technologies,
+      };
+    case CHANGE_CURRENT_TECHNOLOGY:
+      return {
+        ...state,
+        [action.name]: action.item,
+      };
+    case SAVE_TECHNOLOGIES_UPDATES_INFO:
+      return {
+        ...state,
+        [action.name]: action.updates,
       };
     default: return { ...state };
   }

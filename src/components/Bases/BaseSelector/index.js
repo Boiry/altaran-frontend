@@ -26,7 +26,6 @@ const BaseSelector = memo(({ handleClick }) => {
 
   // Effects of hover and click
   useEffect(() => {
-    console.log("render");
     const little = "1.5rem", medium = "2.5rem", big = "3.5rem";
     let bases = document.getElementsByClassName("base-selector-base");
     const softDescription = document.getElementsByClassName("soft-description")[0];

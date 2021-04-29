@@ -6,6 +6,7 @@ import Camera2DKeyboardInputs from "./camera2DKeyboardInputs";
 
 // import stars from 'src/assets/galaxyData';
 import stars from 'src/assets/miniGalaxyData';
+import galaxyWrapper from 'src/assets/galaxyWrapper';
 
 import basicStar from "src/assets/images/basic-star50.png";
 import './galaxy.scss';
@@ -13,8 +14,9 @@ import './galaxy.scss';
 const Galaxy = () => {
   const onSceneReady = (scene) => {
     document.getElementById("canvas").focus();
-    var camera = new UniversalCamera("UniversalCamera", new Vector3(0, -1500, 0), scene);
+    var camera = new UniversalCamera("UniversalCamera", new Vector3(0, -5000, 0), scene);
     camera.upVector = new Vector3(0, -1, -1);
+    camera.maxZ = 20000;
 
     // camera.inputs.clear();
     // camera.inputs.addMouse();
@@ -71,6 +73,14 @@ const Galaxy = () => {
       }
     };
     
+    const blueMat = new StandardMaterial("blueMat", scene);
+    blueMat.emissiveColor = new Color3(0, 0, 1);
+    blueMat.alpha = .2;
+    blueMat.backFaceCulling = false;
+
+    const wrapper = MeshBuilder.CreatePolyhedron("h", {custom: galaxyWrapper}, scene);
+    wrapper.material = blueMat;
+
     scene.blockfreeActiveMeshesAndRenderingGroups = false;
 
     // add keyboard controls
@@ -79,11 +89,14 @@ const Galaxy = () => {
   };
 
   return (
-    <div className="galaxy">
-      <div className="background-opacity">
-        <SceneComponent antialias onSceneReady={onSceneReady} id="canvas" tabIndex="0" />
+    <>
+      <div className="galaxy">
+        <div className="background-opacity">
+          <SceneComponent antialias onSceneReady={onSceneReady} id="canvas" tabIndex="0" />
+        </div>
       </div>
-    </div>
+      <aside className="aside"></aside>
+    </>
   );
 };
 

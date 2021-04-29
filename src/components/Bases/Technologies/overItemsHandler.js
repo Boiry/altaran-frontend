@@ -1,16 +1,16 @@
 export const init = () => {
   for (let i=0; i<13; i++) {
-    const item = document.getElementsByClassName("technologies-elementary")[i];
+    const item = document.getElementsByClassName("elementary")[i];
     item.addEventListener("mouseover", () => {mouseOverItem("itemElementary"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemElementary")});
   };
   for (let i=0; i<9; i++) {
-    const item = document.getElementsByClassName("technologies-advanced")[i];
+    const item = document.getElementsByClassName("advanced")[i];
     item.addEventListener("mouseover", () => {mouseOverItem("itemAdvanced"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemAdvanced")});
   };
   for (let i=0; i<4; i++) {
-    const item = document.getElementsByClassName("technologies-mothership")[i];
+    const item = document.getElementsByClassName("mothership")[i];
     item.addEventListener("mouseover", () => {mouseOverItem("itemMothership"+i)});
     item.addEventListener("mouseout", () => {mouseOutItem("itemMothership")});
   };
