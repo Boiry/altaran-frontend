@@ -18,7 +18,7 @@ import Atomic from 'src/assets/images/icons/atomic.svg';
 import Darkmatter from 'src/assets/images/icons/darkmatter.svg';
 import Financial from 'src/assets/images/icons/financial.svg';
 import Metropolis from 'src/assets/images/icons/metropolis.svg';
-import Wealth from 'src/assets/images/icons/wealth.svg';
+import Luxury from 'src/assets/images/icons/luxury.svg';
 import Robot from 'src/assets/images/icons/robot.svg';
 import Server from 'src/assets/images/icons/server.svg';
 import Mecanics from 'src/assets/images/icons/mecanics.svg';
@@ -201,7 +201,7 @@ const Facilities = ({
         <Item image={Darkmatter} name="darkmatter" className="production" level={!facilities ? '' : facilities.darkmatter.level} handleClick={setCurrentFacility} />
         <Item image={Financial} name="financial" className="production" level={!facilities ? '' : facilities.financial.level} handleClick={setCurrentFacility} />
         <Item image={Metropolis} name="metropolis" className="production" level={!facilities ? '' : facilities.metropolis.level} handleClick={setCurrentFacility} />
-        <Item image={Wealth} name="wealth" className="production" level={!facilities ? '' : facilities.wealth.level} handleClick={setCurrentFacility} />
+        <Item image={Luxury} name="luxury" className="production" level={!facilities ? '' : facilities.luxury.level} handleClick={setCurrentFacility} />
         <div className="facilities-menu-title facilities-menu-logistics">Logistique</div>
         <Item image={Robot} name="robot" className="logistics" level={!facilities ? '' : facilities.robot.level} handleClick={setCurrentFacility} />
         <Item image={Server} name="server" className="logistics" level={!facilities ? '' : facilities.server.level} handleClick={setCurrentFacility} />

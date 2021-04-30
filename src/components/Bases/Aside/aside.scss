@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.resources {
+  position: absolute;
+  background-color: rgba(93, 186, 224, .2);
+  width: 17rem;
+  top: 8rem;
+  right: 1rem;
+  padding: 1rem;
+  & p {
+    font-size: .8rem;
+  }
+}
+

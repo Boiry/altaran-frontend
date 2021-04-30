@@ -8,7 +8,7 @@ import Atomic from 'src/assets/images/icons/atomic.svg';
 import Darkmatter from 'src/assets/images/icons/darkmatter.svg';
 import Financial from 'src/assets/images/icons/financial.svg';
 import Metropolis from 'src/assets/images/icons/metropolis.svg';
-import Wealth from 'src/assets/images/icons/wealth.svg';
+import Luxury from 'src/assets/images/icons/luxury.svg';
 import Robot from 'src/assets/images/icons/robot.svg';
 import Server from 'src/assets/images/icons/server.svg';
 import Mecanics from 'src/assets/images/icons/mecanics.svg';
@@ -38,7 +38,7 @@ export const cTable1 = {
   darkmatter: Darkmatter,
   financial: Financial,
   metropolis: Metropolis,
-  wealth: Wealth,
+  luxury: Luxury,
   robot: Robot,
   server: Server,
   mecanics: Mecanics,
@@ -69,7 +69,7 @@ export const cTable2 = {
   darkmatter: 'Extraction spatiale',
   financial: 'Centre financier',
   metropolis: 'Métropole',
-  wealth: 'Extraction de ressource de luxe',
+  luxury: 'Extraction de ressource de luxe',
   robot: 'Robotisation',
   server: 'Serveur mère',
   mecanics: 'Centre spatial mécanique',

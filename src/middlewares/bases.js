@@ -9,6 +9,8 @@ import {
   saveTechnologiesInfo,
   FETCH_TECHNOLOGIES_UPDATES,
   saveTechnologiesUpdatesInfo,
+  FETCH_BASE_INFOS,
+  saveBaseInfos,
 } from 'src/actions/bases';
 
 const basesMiddleware = (store) => (next) => (action) => {
@@ -61,6 +63,18 @@ const basesMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     };
+
+    case FETCH_BASE_INFOS: {
+      axios.get('/mock/base-infos.json')
+      .then((response) => {
+        store.dispatch(saveBaseInfos(`${base}Infos`, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    }
 
     default:
       next(action);

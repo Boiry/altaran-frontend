@@ -11,6 +11,7 @@ import Defenses from './Defenses';
 import Ships from './Ships';
 import Infantry from './Infantry';
 import Technologies from 'src/containers/Bases/Technologies';
+import Aside from 'src/containers/Bases/Aside';
 
 const Bases = ({ selectedBase, changeSelectedBase }) => {
   // document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
@@ -57,6 +58,8 @@ const Bases = ({ selectedBase, changeSelectedBase }) => {
           {subPage === 'technologies' && <Technologies />}
         </div>
       </div>
+
+      <Aside />
 
       <div className="soft-description">
         <p className="selector-base-name">Planète de merde</p>

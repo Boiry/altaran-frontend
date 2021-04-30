@@ -9,6 +9,8 @@ export const SAVE_TECHNOLOGIES_INFO = "SAVE_TECHNOLOGIES_INFO";
 export const CHANGE_CURRENT_TECHNOLOGY = "CHANGE_CURRENT_TECHNOLOGY";
 export const FETCH_TECHNOLOGIES_UPDATES = "FETCH_TECHNOLOGIES_UPDATES";
 export const SAVE_TECHNOLOGIES_UPDATES_INFO = "SAVE_TECHNOLOGIES_UPDATES_INFO";
+export const FETCH_BASE_INFOS = "FETCH_BASE_INFOS";
+export const SAVE_BASE_INFOS = "SAVE_BASE_INFOS";
 
 export const updateSelectedBase = (selectedBase) => ({
   type: UPDATE_SELECTED_BASE,
@@ -65,4 +67,14 @@ export const saveTechnologiesUpdatesInfo = (name, updates) => ({
   type: SAVE_TECHNOLOGIES_UPDATES_INFO,
   name,
   updates,
+});
+
+export const fetchBaseInfos = () => ({
+  type: FETCH_BASE_INFOS,
+});
+
+export const saveBaseInfos = (name, infos) => ({
+  type: SAVE_BASE_INFOS,
+  name,
+  infos,
 });

@@ -6,6 +6,7 @@ import {
   SAVE_TECHNOLOGIES_INFO,
   CHANGE_CURRENT_TECHNOLOGY,
   SAVE_TECHNOLOGIES_UPDATES_INFO,
+  SAVE_BASE_INFOS,
 } from '../actions/bases';
 
 const initialState = {
@@ -48,6 +49,11 @@ const bases = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.updates,
+      };
+    case SAVE_BASE_INFOS:
+      return {
+        ...state,
+        [action.name]: action.infos,
       };
     default: return { ...state };
   }

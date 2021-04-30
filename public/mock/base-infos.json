@@ -1,0 +1,22 @@
+{
+  "size": "2",
+  "temperature": "2",
+  "metal": "100000",
+  "metal_production": "50000",
+  "energy": "1",
+  "energy_production": "1000",
+  "alloy": "50",
+  "alloy_production": "1300",
+  "experimental": "300000",
+  "experimental_production": "5000",
+  "darkmatter": "100",
+  "darkmatter_production": "1000",
+  "antimatter": "100",
+  "antimatter_production": "2000",
+  "luxury": "100",
+  "luxury_production": "3000",
+  "population": "1000",
+  "population_growth": "1000",
+  "money": "100",
+  "money_production": "1000"
+}

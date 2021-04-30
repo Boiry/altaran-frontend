@@ -10,7 +10,8 @@
   &-button {
     font-family: 'Orbitron', sans-serif;
     font-size: .7rem;
-    background: linear-gradient(30deg, vars.$deep-blue, vars.$medium-blue);
+    // background: linear-gradient(30deg, vars.$deep-blue, vars.$medium-blue);
+    background-color: rgba(93, 186, 224, .2);
     opacity: 1;
     border: 1px solid vars.$neon;
     padding: .5rem;
