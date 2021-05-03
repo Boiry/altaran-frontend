@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import Item from '../Item';
 import { cTable1, cTable2 } from './correspondenceTable.js';
-
 import { msToDuration, msToDate, countdown, timestampToDate } from 'src/utils/Timer';
 import { init } from './animations.js';
+
 import './facilities.scss';
 
 import Empty from 'src/assets/images/icons/empty.svg';
@@ -12,7 +12,6 @@ import Mine from 'src/assets/images/icons/mine.svg';
 import Geothermy from 'src/assets/images/icons/geothermy.svg';
 import Fusion from 'src/assets/images/icons/fusion.svg';
 import Catalyser from 'src/assets/images/icons/catalyser.svg';
-import Storage from 'src/assets/images/icons/storage.svg';
 import Alchemy from 'src/assets/images/icons/alchemy.svg';
 import Atomic from 'src/assets/images/icons/atomic.svg';
 import Darkmatter from 'src/assets/images/icons/darkmatter.svg';
@@ -53,18 +52,33 @@ const Facilities = ({
     }
     if (!currentFacility) {
       setCurrentFacility("mine");
-      const currentItem = document.getElementsByClassName("item-mine")[0];
-      currentItem.classList.add("item-is-active");
     }
     if (!updates) {
       launchFetchFacilitiesUpdates();
     }
-  }, []);
+  }, [selectedBase]);
   
   // Launch animations on hover icons
   useEffect(() => {
-    if (document.getElementsByClassName('facilities-main').length !== 0) {
-      init();
+    init();
+  });
+
+  // Function for highlighting the active icon
+  const highlightIcon = (item) => {
+    const itemIcon = document.getElementsByClassName("item-icon");
+    const size = Object.keys(cTable1).length + 5;
+    for (let i=0; i<size; i++) {
+      itemIcon[i].classList.remove("item-is-active")
+    }
+    const currentItem = document.getElementsByClassName(`item-${item}`)[0];
+    currentItem.classList.add("item-is-active");
+  }
+
+  // Hightlight icon when render
+  useEffect(() => {
+    if (updates) {
+      const item = currentFacility;
+      highlightIcon(item);
     }
   });
 
@@ -72,16 +86,6 @@ const Facilities = ({
   const setCurrentFacility = (item) => {
     const name = `${selectedBase}CurrentFacility`;
     changeFacility(name, item);
-    // Highlighting the icon
-    if (updates) {
-      const itemIcon = document.getElementsByClassName("item-icon");
-      const size = Object.keys(cTable1).length + 5;
-      for (let i=0; i<size; i++) {
-        itemIcon[i].classList.remove("item-is-active")
-      }
-      const currentItem = document.getElementsByClassName(`item-${item}`)[0];
-      currentItem.classList.add("item-is-active");
-    }
   };
   
   // For rendering of the end of construction
@@ -147,7 +151,7 @@ const Facilities = ({
   return (
     <>
       <div className="facilities-main">
-        <img src={!currentFacility ? Empty : displayedImage} className="facilities-image" alt=""/>
+        <img src={currentFacility && displayedImage} className="facilities-image" alt=""/>
         <div className="facilities-actions">
           <div className="facilities-actions-title">{!currentFacility ? '' : title}</div>
           {showActions === 'showItem' &&
@@ -156,9 +160,9 @@ const Facilities = ({
               <div className="facilities-actions-energy">Énergie nécessaire : {!facilities ? '' : facilities[currentFacility].energy}</div>
               <div className="facilities-actions-time">Temps de construction : {!facilities ? '' : msToDuration(facilities[currentFacility].time)}</div>
               <div className="facilities-actions-end">Fin de construction : {endOfConstruction}</div>
-              <button className="facilities-actions-button">Augmenter d'un niveau</button>
+              <button className="facilities-actions-button">Améliorer</button>
               {facilities && facilities[currentFacility].level>0 &&
-                <button className="facilities-actions-button">Diminuer d'un niveau</button>
+                <button className="facilities-actions-button">Démanteler</button>
               }
             </>
           }
@@ -174,54 +178,84 @@ const Facilities = ({
               }
             </>
           }
-          <div className="facilities-constructions-list">
-            <div className="facilities-constructions-list-title">Liste de constructions</div>
-            {updates &&
-              <>
-                <Item image={!updates.update1 ? Empty : cTable1[updates.update1.facility]} name={`update1-${updates.update1.facility}`} handleClick={setCurrentFacility} />
-                <Item image={!updates.update2 ? Empty : cTable1[updates.update2.facility]} name={`update2-${updates.update2.facility}`} handleClick={setCurrentFacility} />
-                <Item image={!updates.update3 ? Empty : cTable1[updates.update3.facility]} name={`update3-${updates.update3.facility}`} handleClick={setCurrentFacility} />
-                <Item image={!updates.update4 ? Empty : cTable1[updates.update4.facility]} name={`update4-${updates.update4.facility}`} handleClick={setCurrentFacility} />
-                <Item image={!updates.update5 ? Empty : cTable1[updates.update5.facility]} name={`update5-${updates.update5.facility}`} handleClick={setCurrentFacility} />
-              </>
-            }
-          </div>
         </div>
       </div>
 
+      <div className="facilities-constructions-list">
+        {updates &&
+          <>
+            <div className="facilities-constructions-list-title">Liste de constructions</div>
+            <Item
+              image={typeof(updates.update1) === 'undefined' ? Empty : cTable1[updates.update1.facility]}
+              name={typeof(updates.update1) === 'undefined' ? '' : `update1-${updates.update1.facility}`}
+              handleClick={typeof(updates.update1) !== 'undefined' && setCurrentFacility}
+            />
+            <Item
+              image={typeof(updates.update2) === 'undefined' ? Empty : cTable1[updates.update2.facility]}
+              name={typeof(updates.update2) === 'undefined' ? '' : `update2-${updates.update2.facility}`}
+              handleClick={typeof(updates.update2) !== 'undefined' && setCurrentFacility}
+            />
+            <Item
+              image={typeof(updates.update3) === 'undefined' ? Empty : cTable1[updates.update3.facility]}
+              name={typeof(updates.update3) === 'undefined' ? '' : `update3-${updates.update3.facility}`}
+              handleClick={typeof(updates.update3) !== 'undefined' && setCurrentFacility}
+            />
+            <Item
+              image={typeof(updates.update4) === 'undefined' ? Empty : cTable1[updates.update4.facility]}
+              name={typeof(updates.update4) === 'undefined' ? '' : `update4-${updates.update4.facility}`}
+              handleClick={typeof(updates.update4) !== 'undefined' && setCurrentFacility}
+            />
+            <Item
+              image={typeof(updates.update5) === 'undefined' ? Empty : cTable1[updates.update5.facility]}
+              name={typeof(updates.update5) === 'undefined' ? '' : `update5-${updates.update5.facility}`}
+              handleClick={typeof(updates.update5) !== 'undefined' && setCurrentFacility}
+            />
+          </>
+        }
+      </div>
+
+      <div className="facilities-menu-main-title"></div>
+
       <div className="facilities-menu">
-        <div className="facilities-menu-title facilities-menu-production">Production</div>
-        <Item image={Mine} name="mine" className="production" level={!facilities ? '' : facilities.mine.level} handleClick={setCurrentFacility} />
-        <Item image={Geothermy} name="geothermy" className="production" level={!facilities ? '' : facilities.geothermy.level} handleClick={setCurrentFacility} />
-        <Item image={Fusion} name="fusion" className="production" level={!facilities ? '' : facilities.fusion.level} handleClick={setCurrentFacility} />
-        <Item image={Catalyser} name="catalyser" className="production" level={!facilities ? '' : facilities.catalyser.level} handleClick={setCurrentFacility} />
-        <Item image={Storage} name="storage" className="production" level={!facilities ? '' : facilities.storage.level} handleClick={setCurrentFacility} />
-        <Item image={Alchemy} name="alchemy" className="production" level={!facilities ? '' : facilities.alchemy.level} handleClick={setCurrentFacility} />
-        <Item image={Atomic} name="atomic" className="production" level={!facilities ? '' : facilities.atomic.level} handleClick={setCurrentFacility} />
-        <Item image={Darkmatter} name="darkmatter" className="production" level={!facilities ? '' : facilities.darkmatter.level} handleClick={setCurrentFacility} />
-        <Item image={Financial} name="financial" className="production" level={!facilities ? '' : facilities.financial.level} handleClick={setCurrentFacility} />
-        <Item image={Metropolis} name="metropolis" className="production" level={!facilities ? '' : facilities.metropolis.level} handleClick={setCurrentFacility} />
-        <Item image={Luxury} name="luxury" className="production" level={!facilities ? '' : facilities.luxury.level} handleClick={setCurrentFacility} />
-        <div className="facilities-menu-title facilities-menu-logistics">Logistique</div>
-        <Item image={Robot} name="robot" className="logistics" level={!facilities ? '' : facilities.robot.level} handleClick={setCurrentFacility} />
-        <Item image={Server} name="server" className="logistics" level={!facilities ? '' : facilities.server.level} handleClick={setCurrentFacility} />
-        <Item image={Mecanics} name="mecanics" className="logistics" level={!facilities ? '' : facilities.mecanics.level} handleClick={setCurrentFacility} />
-        <Item image={Instruction} name="instruction" className="logistics" level={!facilities ? '' : facilities.instruction.level} handleClick={setCurrentFacility} />
-        <Item image={Military} name="military" className="logistics" level={!facilities ? '' : facilities.military.level} handleClick={setCurrentFacility} />
-        <Item image={Maintenance} name="maintenance" className="logistics" level={!facilities ? '' : facilities.maintenance.level} handleClick={setCurrentFacility} />
-        <Item image={Concentrator} name="concentrator" className="logistics" level={!facilities ? '' : facilities.concentrator.level} handleClick={setCurrentFacility} />
-        <div className="facilities-menu-title facilities-menu-civilian">Civil</div>
-        <Item image={Intelligence} name="intelligence" className="civilian" level={!facilities ? '' : facilities.intelligence.level} handleClick={setCurrentFacility} />
-        <Item image={Development} name="development" className="civilian" level={!facilities ? '' : facilities.development.level} handleClick={setCurrentFacility} />
-        <Item image={Politics} name="politics" className="civilian" level={!facilities ? '' : facilities.politics.level} handleClick={setCurrentFacility} />
-        <Item image={Monument} name="monument" className="civilian" level={!facilities ? '' : facilities.monument.level} handleClick={setCurrentFacility} />
-        <Item image={Technology} name="technology" className="civilian" level={!facilities ? '' : facilities.technology.level} handleClick={setCurrentFacility} />
-        <div className="facilities-menu-title facilities-menu-advanced">Avancé</div>
-        <Item image={City} name="city" className="advanced" level={!facilities ? '' : facilities.city.level} handleClick={setCurrentFacility} />
-        <Item image={Stabilizer} name="stabilizer" className="advanced" level={!facilities ? '' : facilities.stabilizer.level} handleClick={setCurrentFacility} />
-        <Item image={Information} name="information" className="advanced" level={!facilities ? '' : facilities.information.level} handleClick={setCurrentFacility} />
-        <Item image={Time} name="time" className="advanced" level={!facilities ? '' : facilities.time.level} handleClick={setCurrentFacility} />
-        <Item image={Relifer} name="relifer" className="advanced" level={!facilities ? '' : facilities.relifer.level} handleClick={setCurrentFacility} />
+        <div className="facilities-menu-title-production">Production</div>
+        <div className="facilities-menu-categories facilities-menu-production">
+          <Item image={Mine} name="mine" className="facilities-menu-item production" level={!facilities ? '' : facilities.mine.level} handleClick={setCurrentFacility} />
+          <Item image={Geothermy} name="geothermy" className="facilities-menu-item production" level={!facilities ? '' : facilities.geothermy.level} handleClick={setCurrentFacility} />
+          <Item image={Fusion} name="fusion" className="facilities-menu-item production" level={!facilities ? '' : facilities.fusion.level} handleClick={setCurrentFacility} />
+          <Item image={Catalyser} name="catalyser" className="facilities-menu-item production" level={!facilities ? '' : facilities.catalyser.level} handleClick={setCurrentFacility} />
+          <Item image={Alchemy} name="alchemy" className="facilities-menu-item production" level={!facilities ? '' : facilities.alchemy.level} handleClick={setCurrentFacility} />
+          <Item image={Atomic} name="atomic" className="facilities-menu-item production" level={!facilities ? '' : facilities.atomic.level} handleClick={setCurrentFacility} />
+          <Item image={Darkmatter} name="darkmatter" className="facilities-menu-item production" level={!facilities ? '' : facilities.darkmatter.level} handleClick={setCurrentFacility} />
+          <Item image={Financial} name="financial" className="facilities-menu-item production" level={!facilities ? '' : facilities.financial.level} handleClick={setCurrentFacility} />
+          <Item image={Metropolis} name="metropolis" className="facilities-menu-item production" level={!facilities ? '' : facilities.metropolis.level} handleClick={setCurrentFacility} />
+          <Item image={Luxury} name="luxury" className="facilities-menu-item production" level={!facilities ? '' : facilities.luxury.level} handleClick={setCurrentFacility} />
+        </div>
+        <div className="facilities-menu-title-civilian">Civil</div>
+        <div className="facilities-menu-categories facilities-menu-civilian">
+          <Item image={Intelligence} name="intelligence" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.intelligence.level} handleClick={setCurrentFacility} />
+          <Item image={Development} name="development" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.development.level} handleClick={setCurrentFacility} />
+          <Item image={Politics} name="politics" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.politics.level} handleClick={setCurrentFacility} />
+          <Item image={Monument} name="monument" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.monument.level} handleClick={setCurrentFacility} />
+          <Item image={Technology} name="technology" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.technology.level} handleClick={setCurrentFacility} />
+        </div>
+        <div className="facilities-menu-title-logistics">Logistique</div>
+        <div className="facilities-menu-categories facilities-menu-logistics">
+          <Item image={Robot} name="robot" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.robot.level} handleClick={setCurrentFacility} />
+          <Item image={Server} name="server" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.server.level} handleClick={setCurrentFacility} />
+          <Item image={Mecanics} name="mecanics" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.mecanics.level} handleClick={setCurrentFacility} />
+          <Item image={Instruction} name="instruction" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.instruction.level} handleClick={setCurrentFacility} />
+          <Item image={Military} name="military" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.military.level} handleClick={setCurrentFacility} />
+          <Item image={Maintenance} name="maintenance" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.maintenance.level} handleClick={setCurrentFacility} />
+          <Item image={Concentrator} name="concentrator" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.concentrator.level} handleClick={setCurrentFacility} />
+        </div>
+        <div className="facilities-menu-title-advanced">Avancé</div>
+        <div className="facilities-menu-categories facilities-menu-advanced">
+          <Item image={City} name="city" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.city.level} handleClick={setCurrentFacility} />
+          <Item image={Stabilizer} name="stabilizer" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.stabilizer.level} handleClick={setCurrentFacility} />
+          <Item image={Information} name="information" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.information.level} handleClick={setCurrentFacility} />
+          <Item image={Time} name="time" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.time.level} handleClick={setCurrentFacility} />
+          <Item image={Relifer} name="relifer" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.relifer.level} handleClick={setCurrentFacility} />
+        </div>
       </div>
     </>
   );

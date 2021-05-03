@@ -15,7 +15,7 @@ import Aside from 'src/containers/Bases/Aside';
 
 const Bases = ({ selectedBase, changeSelectedBase }) => {
   // document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
-  document.body.style.background = `url(${Background})`;
+  // document.body.style.background = `url(${Background})`;
 
   const [subPage, changeSubPage] = useState("description");
 

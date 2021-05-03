@@ -6,6 +6,7 @@ const initialState = {
   bases: 'description',
   empire: 'statistics',
   map: 'galaxy',
+  administration: 'specialties',
 };
 
 const tab = (state = initialState, action = {}) => {

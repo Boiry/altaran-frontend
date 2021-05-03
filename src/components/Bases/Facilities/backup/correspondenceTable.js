@@ -2,6 +2,7 @@ import Mine from 'src/assets/images/icons/mine.svg';
 import Geothermy from 'src/assets/images/icons/geothermy.svg';
 import Fusion from 'src/assets/images/icons/fusion.svg';
 import Catalyser from 'src/assets/images/icons/catalyser.svg';
+import Storage from 'src/assets/images/icons/storage.svg';
 import Alchemy from 'src/assets/images/icons/alchemy.svg';
 import Atomic from 'src/assets/images/icons/atomic.svg';
 import Darkmatter from 'src/assets/images/icons/darkmatter.svg';
@@ -31,6 +32,7 @@ export const cTable1 = {
   geothermy: Geothermy,
   fusion: Fusion,
   catalyser: Catalyser,
+  storage: Storage,
   alchemy: Alchemy,
   atomic: Atomic,
   darkmatter: Darkmatter,
@@ -61,6 +63,7 @@ export const cTable2 = {
   geothermy: 'Centrale géothermique',
   fusion: 'Centrale à fusion',
   catalyser: 'Catalyseur énergétique de noyau',
+  storage: "Industrie de stockage d'énergie",
   alchemy: "Industrie d'alchimie",
   atomic: 'Industrie atomique',
   darkmatter: 'Extraction spatiale',

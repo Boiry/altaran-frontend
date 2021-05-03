@@ -1,0 +1,72 @@
+@use 'src/styles/vars';
+
+.specialties-main {
+  height: calc(100vh-15rem);
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: vars.$neon transparent;
+  padding: .5rem 0;
+  margin: .5rem 0;
+}
+
+table {
+  background-color: rgba(4, 119, 166, .5);
+  border-collapse: separate;
+  border-spacing: .5rem;
+  table-layout: auto;
+  width: 50rem;
+}
+
+th {
+  vertical-align: middle;
+}
+
+td {
+  font-size: .7rem;
+  width: 18rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: .5rem;
+  border-radius: .5rem;
+  cursor: default;
+}
+
+.specialties-level1 td {
+  background-color: rgba(93, 186, 224, .1);
+}
+
+.specialties-level2 td {
+  background-color: rgba(93, 186, 224, .45);
+}
+
+.specialties-level3 td {
+  background-color: rgba(93, 186, 224, .8);
+}
+
+.specialties-footer {
+  display: flex;
+  justify-content: space-between;
+
+  &-short {
+    background-color: rgba(93, 186, 224, .45);
+    font-size: .7rem;
+    width: 13rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: default;
+  }
+  &-long {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: .8rem;
+  }
+  &-button {
+    background-color: rgba(93, 186, 224, .45);
+    border: none;
+    color: white;
+    border-radius: .5rem;
+
+  }
+}

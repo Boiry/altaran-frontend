@@ -17,12 +17,12 @@ const mapDispatchToProps = (dispatch) => ({
   launchFetchFacilities: () => {
     dispatch(fetchFacilities());
   },
+  launchFetchFacilitiesUpdates: () => {
+    dispatch(fetchFacilitiesUpdates());
+  },
   changeFacility: (name, item) => {
     dispatch(changeCurrentFacility(name, item));
   },
-  launchFetchFacilitiesUpdates: () => {
-    dispatch(fetchFacilitiesUpdates());
-  }
 });
 
 export default connect(

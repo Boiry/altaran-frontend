@@ -23,12 +23,6 @@
     "energy": "50",
     "time": "100000000"
   },
-  "storage": {
-    "level": "1",
-    "metal": "100",
-    "energy": "50",
-    "time": "1000"
-  },
   "alchemy": {
     "level": "1",
     "metal": "100",

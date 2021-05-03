@@ -16,8 +16,8 @@ const Component = () => {
     <>
       <Tab name={"componentName"} tabs={tabs} dispatchSubPage={changeSubPage} />
       {subPage === "firstPage" && <FirstPage />}
-      {subPage === "secondPage" && <SecondPage>}
-      {subPage === "thirdPage" && <ThirdPage>}
+      {subPage === "secondPage" && <SecondPage />}
+      {subPage === "thirdPage" && <ThirdPage />}
     </>
   );
 };

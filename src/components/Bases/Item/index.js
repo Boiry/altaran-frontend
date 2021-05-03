@@ -11,7 +11,10 @@ const Item = ({
   handleClick,
 }) => (
   <span className="item">
-    <img src={image} className={`item-icon ${className} item-${name}`} onClick={() => (handleClick(name))} alt="" />
+    <img
+      src={image}
+      className={`item-icon ${className} item-${name}`}
+      onClick={() => (handleClick && handleClick(name))} alt="" />
     {level && <div className="item-level">{level}</div>}
   </span>
 );
@@ -23,7 +26,10 @@ Item.propTypes = {
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
   level: PropTypes.string,
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.bool,
+  ]).isRequired,
 };
 
 Item.defaultProps = {

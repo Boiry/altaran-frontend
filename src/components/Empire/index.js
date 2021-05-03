@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
+import Background from 'src/assets/images/background3.jpg';
+
 import Tab from 'src/containers/Tab';
 
 import './empire.scss';
 
 const Empire = () => {
+  document.body.style.background = `url(${Background})`;
+
   const [subPage, changeSubPage] = useState('statistics');
   const tabs = {
     "Statistiques": "statistics",

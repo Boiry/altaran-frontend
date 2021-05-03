@@ -6,7 +6,7 @@
     "time": "1000"
   },
   "fission": {
-    "level": "1",
+    "level": "0",
     "metal": "100",
     "energy": "50",
     "time": "1000"

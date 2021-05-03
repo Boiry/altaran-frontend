@@ -2,6 +2,7 @@
 
 .facilities {
   &-main {
+    position: relative;
     display: flex;
     margin-top: 1rem;
   }
@@ -35,6 +36,9 @@
 
   &-constructions-list {
     position: relative;
+    width: 16rem;
+    margin: 0 auto;
+    text-align: center;
 
     &-title {
       border-bottom: 1px solid vars.$neon;
@@ -43,9 +47,49 @@
 
   &-menu {
     position: relative;
-
-    &-title {
-      border-bottom: 1px solid vars.$neon;
+    top: 3rem;
+    &-main-title {
+      position: relative;
+      height: 1rem;
+      top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    &-categories {
+      border-top: 1px solid vars.$neon;
+    }
+    &-title-civilian {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &-title-logistics {
+      position: absolute;
+      top: 6.5rem;
+    }
+    &-title-advanced {
+      position: absolute;
+      top: 6.5rem;
+      right: 0;
+    }
+    &-production {
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+    }
+    &-civilian {
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+    }
+    &-logistics {
+      position: absolute;
+      top: 8rem;
+    }
+    &-advanced {
+      position: absolute;
+      top: 8rem;
+      right: 0;
     }
   }
 }

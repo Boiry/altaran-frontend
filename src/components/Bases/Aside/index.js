@@ -7,7 +7,7 @@ import Corner from 'src/assets/images/corner.svg';
 const Aside = ({ selectedBase, infos, launchFetchBaseInfos }) => {
   useEffect(() => {
     launchFetchBaseInfos();
-  }, []);
+  }, [selectedBase]);
 
   const formatize = (number) => {
     return new Intl.NumberFormat('fr-FR').format(number);
@@ -61,7 +61,6 @@ const Aside = ({ selectedBase, infos, launchFetchBaseInfos }) => {
     return () => {
       clearInterval(iterator);
     };
-
   });
 
   return (
