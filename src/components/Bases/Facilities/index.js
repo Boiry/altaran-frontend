@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Item from '../Item';
 import { cTable1, cTable2 } from './correspondenceTable.js';
@@ -45,6 +46,9 @@ const Facilities = ({
   launchFetchFacilitiesUpdates,
   updates,
 }) => {
+  // Translations
+  const { t } = useTranslation('facilities');
+
   // Initialization
   useEffect(() => {
     if (!facilities) {
@@ -140,11 +144,11 @@ const Facilities = ({
     if (test) {
       const nameArray = currentFacility.split('-');
       displayedImage = cTable1[nameArray[1]];
-      title = `${cTable2[nameArray[1]]} (prochain niveau : ${parseInt(facilities[nameArray[1]].level)+1})`;
+      title = `${cTable2[nameArray[1]]} (${t("nextLevel")} ${parseInt(facilities[nameArray[1]].level)+1})`;
     }
     else {
       displayedImage = cTable1[currentFacility];
-      title = `${cTable2[currentFacility]} (niveau ${facilities[currentFacility].level})`;
+      title = `${cTable2[currentFacility]} (${t("level")} ${facilities[currentFacility].level})`;
     }
   }
 
@@ -156,25 +160,28 @@ const Facilities = ({
           <div className="facilities-actions-title">{!currentFacility ? '' : title}</div>
           {showActions === 'showItem' &&
             <>
-              <div className="facilities-actions-metal">Métal nécessaire : {!facilities ? '' : facilities[currentFacility].metal}</div>
-              <div className="facilities-actions-energy">Énergie nécessaire : {!facilities ? '' : facilities[currentFacility].energy}</div>
-              <div className="facilities-actions-time">Temps de construction : {!facilities ? '' : msToDuration(facilities[currentFacility].time)}</div>
-              <div className="facilities-actions-end">Fin de construction : {endOfConstruction}</div>
-              <button className="facilities-actions-button">Améliorer</button>
-              {facilities && facilities[currentFacility].level>0 &&
-                <button className="facilities-actions-button">Démanteler</button>
+              <div className="facilities-actions-metal">{t("metal")} {!facilities ? '' : facilities[currentFacility].metal}</div>
+              <div className="facilities-actions-energy">{t("energy")} {!facilities ? '' : facilities[currentFacility].energy}</div>
+              {facilities && typeof(facilities[currentFacility].antimatter) !== 'undefined' &&
+                <div className="facilities-actions-antimatter">{t("antimatter")} {!facilities ? '' : facilities[currentFacility].antimatter}</div>
+              }
+              <div className="facilities-actions-time">{t("contructionTime")} {!facilities ? '' : msToDuration(facilities[currentFacility].time)}</div>
+              <div className="facilities-actions-end">{t("constructionEnd")} {endOfConstruction}</div>
+              <button className="facilities-actions-button">{t("levelUp")}</button>
+              {facilities && facilities[currentFacility].level > 0 &&
+                <button className="facilities-actions-button">{t("levelDown")}</button>
               }
             </>
           }
           {showActions === 'showConstruction' &&
             <>
-              <div className="facilities-actions-time">Temps restant : {delay}</div>
-              <div className="facilities-actions-end">Fin de construction : {timestampToDate(updates[currentFacility.split('-')[0]].time)}</div>
+              <div className="facilities-actions-time">{t("remainingTime")} {delay}</div>
+              <div className="facilities-actions-end">{t("constructionEnd")} {timestampToDate(updates[currentFacility.split('-')[0]].time)}</div>
               {currentFacility.match(/^update1/) &&
-                <button className="facilities-actions-button">Arrêter la construction</button>
+                <button className="facilities-actions-button">{t("stop")}</button>
               }
               {!currentFacility.match(/^update1/) &&
-                <button className="facilities-actions-button">Retirer de la liste</button>
+                <button className="facilities-actions-button">{t("remove")}</button>
               }
             </>
           }
@@ -184,7 +191,7 @@ const Facilities = ({
       <div className="facilities-constructions-list">
         {updates &&
           <>
-            <div className="facilities-constructions-list-title">Liste de constructions</div>
+            <div className="facilities-constructions-list-title">{t("list")}</div>
             <Item
               image={typeof(updates.update1) === 'undefined' ? Empty : cTable1[updates.update1.facility]}
               name={typeof(updates.update1) === 'undefined' ? '' : `update1-${updates.update1.facility}`}
@@ -217,7 +224,7 @@ const Facilities = ({
       <div className="facilities-menu-main-title"></div>
 
       <div className="facilities-menu">
-        <div className="facilities-menu-title-production">Production</div>
+        <div className="facilities-menu-title-production">{t("production")}</div>
         <div className="facilities-menu-categories facilities-menu-production">
           <Item image={Mine} name="mine" className="facilities-menu-item production" level={!facilities ? '' : facilities.mine.level} handleClick={setCurrentFacility} />
           <Item image={Geothermy} name="geothermy" className="facilities-menu-item production" level={!facilities ? '' : facilities.geothermy.level} handleClick={setCurrentFacility} />
@@ -230,7 +237,7 @@ const Facilities = ({
           <Item image={Metropolis} name="metropolis" className="facilities-menu-item production" level={!facilities ? '' : facilities.metropolis.level} handleClick={setCurrentFacility} />
           <Item image={Luxury} name="luxury" className="facilities-menu-item production" level={!facilities ? '' : facilities.luxury.level} handleClick={setCurrentFacility} />
         </div>
-        <div className="facilities-menu-title-civilian">Civil</div>
+        <div className="facilities-menu-title-civilian">{t("civilian")}</div>
         <div className="facilities-menu-categories facilities-menu-civilian">
           <Item image={Intelligence} name="intelligence" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.intelligence.level} handleClick={setCurrentFacility} />
           <Item image={Development} name="development" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.development.level} handleClick={setCurrentFacility} />
@@ -238,7 +245,7 @@ const Facilities = ({
           <Item image={Monument} name="monument" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.monument.level} handleClick={setCurrentFacility} />
           <Item image={Technology} name="technology" className="facilities-menu-item civilian" level={!facilities ? '' : facilities.technology.level} handleClick={setCurrentFacility} />
         </div>
-        <div className="facilities-menu-title-logistics">Logistique</div>
+        <div className="facilities-menu-title-logistics">{t("logistics")}</div>
         <div className="facilities-menu-categories facilities-menu-logistics">
           <Item image={Robot} name="robot" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.robot.level} handleClick={setCurrentFacility} />
           <Item image={Server} name="server" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.server.level} handleClick={setCurrentFacility} />
@@ -248,7 +255,7 @@ const Facilities = ({
           <Item image={Maintenance} name="maintenance" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.maintenance.level} handleClick={setCurrentFacility} />
           <Item image={Concentrator} name="concentrator" className="facilities-menu-item logistics" level={!facilities ? '' : facilities.concentrator.level} handleClick={setCurrentFacility} />
         </div>
-        <div className="facilities-menu-title-advanced">Avancé</div>
+        <div className="facilities-menu-title-advanced">{t("advanced")}</div>
         <div className="facilities-menu-categories facilities-menu-advanced">
           <Item image={City} name="city" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.city.level} handleClick={setCurrentFacility} />
           <Item image={Stabilizer} name="stabilizer" className="facilities-menu-item advanced" level={!facilities ? '' : facilities.stabilizer.level} handleClick={setCurrentFacility} />

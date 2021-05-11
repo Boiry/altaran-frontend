@@ -1,14 +1,25 @@
 @use 'src/styles/vars';
 
-.map-field {
-  position: relative;
-  background: white;
-  background: vars.$field-background;
-  width: 4rem;
-  text-align: center;
-  border: none;
-  color: vars.$neon;
-  font-size: 1.5rem;
-  padding: 0.2rem;
-  top: -2rem;
+.map {
+  &-field {
+    position: relative;
+  }
+  &-input {
+    position: relative;
+    background: white;
+    background: vars.$field-background;
+    width: 4rem;
+    text-align: center;
+    border: none;
+    color: vars.$neon;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    top: -2.3rem;
+  }
+  &-selector-arrow {
+    position: absolute;
+    width: 4rem;
+    top: 0;
+    left: 0;
+  }
 }

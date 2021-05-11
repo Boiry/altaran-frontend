@@ -14,7 +14,8 @@ const Item = ({
     <img
       src={image}
       className={`item-icon ${className} item-${name}`}
-      onClick={() => (handleClick && handleClick(name))} alt="" />
+      onClick={() => (handleClick && handleClick(name))} alt=""
+    />
     {level && <div className="item-level">{level}</div>}
   </span>
 );

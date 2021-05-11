@@ -1,6 +1,6 @@
 import {
   CHANGE_SUBPAGE,
-} from '/src/actions/tab';
+} from 'src/actions/tab';
 
 const initialState = {
   bases: 'description',

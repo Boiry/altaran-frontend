@@ -14,7 +14,7 @@ const Empire = () => {
     "Statistiques": "statistics",
     "Classement": "ranking",
   };
-  
+
   return (
     <div className="container">
       <Tab name={"empire"} tabs={tabs} dispatchSubPage={changeSubPage} />

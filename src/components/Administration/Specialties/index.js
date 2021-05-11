@@ -1,25 +1,28 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { short, long } from './text.js';
+import Arrow from 'src/assets/images/arrow-specialties.svg';
 import './specialties.scss';
 
 const Specialties = () => {
+  // Translations
+  const { t } = useTranslation('specialties');
+
   const footerShort = useRef();
   const footerLong = useRef();
   const footerButton = useRef();
 
-  const handleClick = (category, level) => {
+  const handleClick = (text) => {
     footerShort.current.style.visibility = "visible";
     footerButton.current.style.visibility = "visible";
-    footerShort.current.textContent = short[category][level];
-    footerLong.current.textContent = long[category][level];
+    footerShort.current.textContent = t(`short.${text}`);
+    footerLong.current.textContent = t(`long.${text}`);
   }
 
   useEffect(() => {
     footerShort.current.style.visibility = "hidden";
     footerButton.current.style.visibility = "hidden";
   }, []);
-
 
   return (
     <div className="specialties">
@@ -28,111 +31,122 @@ const Specialties = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Militaire</th>
-              <th>Commerce</th>
-              <th>Technologie</th>
-              <th>Espionnage</th>
-              <th>Exploration</th>
-              <th>Séclusion</th>
-              <th>Invasion</th>
+              <th>{t("military")}</th>
+              <th>{t("trading")}</th>
+              <th>{t("technology")}</th>
+              <th>{t("spying")}</th>
+              <th>{t("exploration")}</th>
+              <th>{t("seclusion")}</th>
+              <th>{t("invasion")}</th>
+            </tr>
+
+            <tr>
+              <th></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
+              <th><img src={Arrow} className="specialties-arrow" /></th>
             </tr>
 
           </thead>
           <tbody>
             <tr className="specialties-level1">
-              <th rowSpan="3" className="specialties-level">Palier 1</th>
+              <th rowSpan="3" className="specialties-level">{t("level")} 1</th>
 
-              <td onClick={() => handleClick("military", 0)}>{short.military[0]}</td>
-              <td onClick={() => handleClick("trading", 0)}>{short.trading[0]}</td>
-              <td onClick={() => handleClick("technology", 0)}>{short.technology[0]}</td>
-              <td onClick={() => handleClick("spying", 0)}>{short.spying[0]}</td>
-              <td onClick={() => handleClick("exploration", 0)}>{short.exploration[0]}</td>
-              <td onClick={() => handleClick("seclusion", 0)}>{short.seclusion[0]}</td>
-              <td onClick={() => handleClick("invasion", 0)}>{short.invasion[0]}</td>
+              <td onClick={() => handleClick("military1")}>{t("short.military1")}</td>
+              <td onClick={() => handleClick("trading1")}>{t("short.trading1")}</td>
+              <td onClick={() => handleClick("technology1")}>{t("short.technology1")}</td>
+              <td onClick={() => handleClick("spying1")}>{t("short.spying1")}</td>
+              <td onClick={() => handleClick("exploration1")}>{t("short.exploration1")}</td>
+              <td onClick={() => handleClick("seclusion1")}>{t("short.seclusion1")}</td>
+              <td onClick={() => handleClick("invasion1")}>{t("short.invasion1")}</td>
             </tr>
 
             <tr className="specialties-level1">
-              <td onClick={() => handleClick("military", 1)}>{short.military[1]}</td>
-              <td onClick={() => handleClick("trading", 1)}>{short.trading[1]}</td>
-              <td onClick={() => handleClick("technology", 1)}>{short.technology[1]}</td>
-              <td onClick={() => handleClick("spying", 1)}>{short.spying[1]}</td>
-              <td onClick={() => handleClick("exploration", 1)}>{short.exploration[1]}</td>
-              <td onClick={() => handleClick("seclusion", 1)}>{short.seclusion[1]}</td>
-              <td onClick={() => handleClick("invasion", 1)}>{short.invasion[1]}</td>
+              <td onClick={() => handleClick("military2")}>{t("short.military2")}</td>
+              <td onClick={() => handleClick("trading2")}>{t("short.trading2")}</td>
+              <td onClick={() => handleClick("technology2")}>{t("short.technology2")}</td>
+              <td onClick={() => handleClick("spying2")}>{t("short.spying2")}</td>
+              <td onClick={() => handleClick("exploration2")}>{t("short.exploration2")}</td>
+              <td onClick={() => handleClick("seclusion2")}>{t("short.seclusion2")}</td>
+              <td onClick={() => handleClick("invasion2")}>{t("short.invasion2")}</td>
             </tr>
 
             <tr className="specialties-level1">
-            <td onClick={() => handleClick("military", 2)}>{short.military[2]}</td>
-              <td onClick={() => handleClick("trading", 2)}>{short.trading[2]}</td>
-              <td onClick={() => handleClick("technology", 2)}>{short.technology[2]}</td>
-              <td onClick={() => handleClick("spying", 2)}>{short.spying[2]}</td>
-              <td onClick={() => handleClick("exploration", 2)}>{short.exploration[2]}</td>
-              <td onClick={() => handleClick("seclusion", 2)}>{short.seclusion[2]}</td>
-              <td onClick={() => handleClick("invasion", 2)}>{short.invasion[2]}</td>
+            <td onClick={() => handleClick("military3")}>{t("short.military3")}</td>
+              <td onClick={() => handleClick("trading3")}>{t("short.trading3")}</td>
+              <td onClick={() => handleClick("technology3")}>{t("short.technology3")}</td>
+              <td onClick={() => handleClick("spying3")}>{t("short.spying3")}</td>
+              <td onClick={() => handleClick("exploration3")}>{t("short.exploration3")}</td>
+              <td onClick={() => handleClick("seclusion3")}>{t("short.seclusion3")}</td>
+              <td onClick={() => handleClick("invasion3")}>{t("short.invasion3")}</td>
             </tr>
 
             <tr className="specialties-level2">
-              <th rowSpan="3">Palier 2</th>
+              <th rowSpan="3">{t("level")} 2</th>
 
-              <td onClick={() => handleClick("military", 3)}>{short.military[3]}</td>
-              <td onClick={() => handleClick("trading", 3)}>{short.trading[3]}</td>
-              <td onClick={() => handleClick("technology", 3)}>{short.technology[3]}</td>
-              <td onClick={() => handleClick("spying", 3)}>{short.spying[3]}</td>
-              <td onClick={() => handleClick("exploration", 3)}>{short.exploration[3]}</td>
-              <td onClick={() => handleClick("seclusion", 3)}>{short.seclusion[3]}</td>
-              <td onClick={() => handleClick("invasion", 3)}>{short.invasion[3]}</td>
+              <td onClick={() => handleClick("military4")}>{t("short.military4")}</td>
+              <td onClick={() => handleClick("trading4")}>{t("short.trading4")}</td>
+              <td onClick={() => handleClick("technology4")}>{t("short.technology4")}</td>
+              <td onClick={() => handleClick("spying4")}>{t("short.spying4")}</td>
+              <td onClick={() => handleClick("exploration4")}>{t("short.exploration4")}</td>
+              <td onClick={() => handleClick("seclusion4")}>{t("short.seclusion4")}</td>
+              <td onClick={() => handleClick("invasion4")}>{t("short.invasion4")}</td>
             </tr>
 
             <tr className="specialties-level2">
-            <td onClick={() => handleClick("military", 4)}>{short.military[4]}</td>
-              <td onClick={() => handleClick("trading", 4)}>{short.trading[4]}</td>
-              <td onClick={() => handleClick("technology", 4)}>{short.technology[4]}</td>
-              <td onClick={() => handleClick("spying", 4)}>{short.spying[4]}</td>
-              <td onClick={() => handleClick("exploration", 4)}>{short.exploration[4]}</td>
-              <td onClick={() => handleClick("seclusion", 4)}>{short.seclusion[4]}</td>
-              <td onClick={() => handleClick("invasion", 4)}>{short.invasion[4]}</td>
+            <td onClick={() => handleClick("military5")}>{t("short.military5")}</td>
+              <td onClick={() => handleClick("trading5")}>{t("short.trading5")}</td>
+              <td onClick={() => handleClick("technology5")}>{t("short.technology5")}</td>
+              <td onClick={() => handleClick("spying5")}>{t("short.spying5")}</td>
+              <td onClick={() => handleClick("exploration5")}>{t("short.exploration5")}</td>
+              <td onClick={() => handleClick("seclusion5")}>{t("short.seclusion5")}</td>
+              <td onClick={() => handleClick("invasion5")}>{t("short.invasion5")}</td>
             </tr>
 
             <tr className="specialties-level2">
-            <td onClick={() => handleClick("military", 5)}>{short.military[5]}</td>
-              <td onClick={() => handleClick("trading", 5)}>{short.trading[5]}</td>
-              <td onClick={() => handleClick("technology", 5)}>{short.technology[5]}</td>
-              <td onClick={() => handleClick("spying", 5)}>{short.spying[5]}</td>
-              <td onClick={() => handleClick("exploration", 5)}>{short.exploration[5]}</td>
-              <td onClick={() => handleClick("seclusion", 5)}>{short.seclusion[5]}</td>
-              <td onClick={() => handleClick("invasion", 5)}>{short.invasion[5]}</td>
+            <td onClick={() => handleClick("military6")}>{t("short.military6")}</td>
+              <td onClick={() => handleClick("trading6")}>{t("short.trading6")}</td>
+              <td onClick={() => handleClick("technology6")}>{t("short.technology6")}</td>
+              <td onClick={() => handleClick("spying6")}>{t("short.spying6")}</td>
+              <td onClick={() => handleClick("exploration6")}>{t("short.exploration6")}</td>
+              <td onClick={() => handleClick("seclusion6")}>{t("short.seclusion6")}</td>
+              <td onClick={() => handleClick("invasion6")}>{t("short.invasion6")}</td>
             </tr>
 
             <tr className="specialties-level3">
-              <th rowSpan="3">Palier 3</th>
+              <th rowSpan="3">{t("level")} 3</th>
 
-              <td onClick={() => handleClick("military", 6)}>{short.military[6]}</td>
-              <td onClick={() => handleClick("trading", 6)}>{short.trading[6]}</td>
-              <td onClick={() => handleClick("technology", 6)}>{short.technology[6]}</td>
-              <td onClick={() => handleClick("spying", 6)}>{short.spying[6]}</td>
-              <td onClick={() => handleClick("exploration", 6)}>{short.exploration[6]}</td>
-              <td onClick={() => handleClick("seclusion", 6)}>{short.seclusion[6]}</td>
-              <td onClick={() => handleClick("invasion", 6)}>{short.invasion[6]}</td>
+              <td onClick={() => handleClick("military7")}>{t("short.military7")}</td>
+              <td onClick={() => handleClick("trading7")}>{t("short.trading7")}</td>
+              <td onClick={() => handleClick("technology7")}>{t("short.technology7")}</td>
+              <td onClick={() => handleClick("spying7")}>{t("short.spying7")}</td>
+              <td onClick={() => handleClick("exploration7")}>{t("short.exploration7")}</td>
+              <td onClick={() => handleClick("seclusion7")}>{t("short.seclusion7")}</td>
+              <td onClick={() => handleClick("invasion7")}>{t("short.invasion7")}</td>
             </tr>
 
             <tr className="specialties-level3">
-            <td onClick={() => handleClick("military", 7)}>{short.military[7]}</td>
-              <td onClick={() => handleClick("trading", 7)}>{short.trading[7]}</td>
-              <td onClick={() => handleClick("technology", 7)}>{short.technology[7]}</td>
-              <td onClick={() => handleClick("spying", 7)}>{short.spying[7]}</td>
-              <td onClick={() => handleClick("exploration", 7)}>{short.exploration[7]}</td>
-              <td onClick={() => handleClick("seclusion", 7)}>{short.seclusion[7]}</td>
-              <td onClick={() => handleClick("invasion", 7)}>{short.invasion[7]}</td>
+            <td onClick={() => handleClick("military8")}>{t("short.military8")}</td>
+              <td onClick={() => handleClick("trading8")}>{t("short.trading8")}</td>
+              <td onClick={() => handleClick("technology8")}>{t("short.technology8")}</td>
+              <td onClick={() => handleClick("spying8")}>{t("short.spying8")}</td>
+              <td onClick={() => handleClick("exploration8")}>{t("short.exploration8")}</td>
+              <td onClick={() => handleClick("seclusion8")}>{t("short.seclusion8")}</td>
+              <td onClick={() => handleClick("invasion8")}>{t("short.invasion8")}</td>
             </tr>
 
             <tr className="specialties-level3">
-            <td onClick={() => handleClick("military", 8)}>{short.military[8]}</td>
-              <td onClick={() => handleClick("trading", 8)}>{short.trading[8]}</td>
-              <td onClick={() => handleClick("technology", 8)}>{short.technology[8]}</td>
-              <td onClick={() => handleClick("spying", 8)}>{short.spying[8]}</td>
-              <td onClick={() => handleClick("exploration", 8)}>{short.exploration[8]}</td>
-              <td onClick={() => handleClick("seclusion", 8)}>{short.seclusion[8]}</td>
-              <td onClick={() => handleClick("invasion", 8)}>{short.invasion[8]}</td>
+            <td onClick={() => handleClick("military9")}>{t("short.military9")}</td>
+              <td onClick={() => handleClick("trading9")}>{t("short.trading9")}</td>
+              <td onClick={() => handleClick("technology9")}>{t("short.technology9")}</td>
+              <td onClick={() => handleClick("spying9")}>{t("short.spying9")}</td>
+              <td onClick={() => handleClick("exploration9")}>{t("short.exploration9")}</td>
+              <td onClick={() => handleClick("seclusion9")}>{t("short.seclusio9")}</td>
+              <td onClick={() => handleClick("invasion9")}>{t("short.invasion9")}</td>
             </tr>
           </tbody>
         </table>
@@ -141,7 +155,7 @@ const Specialties = () => {
       <div className="specialties-footer">
         <div ref={footerShort} className="specialties-footer-short"></div>
         <div ref={footerLong} className="specialties-footer-long"></div>
-        <button ref={footerButton} className="specialties-footer-button">Sélectionner</button>
+        <button ref={footerButton} className="specialties-footer-button">{t("select")}</button>
       </div>
 
     </div>

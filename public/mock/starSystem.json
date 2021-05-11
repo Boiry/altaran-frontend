@@ -1,0 +1,171 @@
+{
+  "name": "Sargasparmenkalhena",
+  "num": 1,
+  "central": {
+      "name": "RED_DWARF25920",
+      "size": 197928.42134354293,
+      "habitability": -5.0,
+      "complexity": 5.0,
+      "temperature": 4115.021630576829,
+      "owner": null,
+      "entities": [
+          null,
+          null,
+          {
+              "name": "METALLIC_PLANET133123",
+              "size": 66.81376836002002,
+              "habitability": -1.0,
+              "complexity": 0.45,
+              "temperature": -258.39224699999386,
+              "owner": null,
+              "metalResource": 4.142603496957211,
+              "luxuryResource": 0.0,
+              "atmosphere": 23.178393470155843,
+              "moons": [],
+              "type": "METALLIC_PLANET"
+          },
+          {
+              "name": "METALLIC_PLANET40496",
+              "size": 89.59882586703094,
+              "habitability": -1.0,
+              "complexity": 0.45,
+              "temperature": 94.61839552607034,
+              "owner": null,
+              "metalResource": 4.305476378906561,
+              "luxuryResource": 0.0,
+              "atmosphere": 21.14316715438105,
+              "moons": [
+                  {
+                      "name": "MOON_HABITABLE_PLANET133973",
+                      "size": 199.88817665348807,
+                      "habitability": 1.138289233270819,
+                      "complexity": 0.0,
+                      "temperature": -16.90720625454874,
+                      "owner": null,
+                      "metalResource": 71.58561970003899,
+                      "luxuryResource": 1.8883594861595232,
+                      "atmosphere": 20146.90993687928,
+                      "type": "HABITABLE_PLANET"
+                  },
+                  {
+                      "name": "MOON_FROZEN_PLANET953865",
+                      "size": 275.8704237730982,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": -28.730054306201907,
+                      "owner": null,
+                      "metalResource": 3.5992008382913423,
+                      "luxuryResource": 3700.344557180185,
+                      "atmosphere": 38.52291421667897,
+                      "type": "FROZEN_PLANET"
+                  },
+                  {
+                      "name": "MOON_LAVA_PLANET1485024",
+                      "size": 206.2988566075964,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": 72.40995224436426,
+                      "owner": null,
+                      "metalResource": 3.2017731702939827,
+                      "luxuryResource": 3525.3809322679404,
+                      "atmosphere": 25.279448604041583,
+                      "type": "LAVA_PLANET"
+                  },
+                  {
+                      "name": "MOON_METALLIC_PLANET1777060",
+                      "size": 216.7369785292641,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": 112.1225758147778,
+                      "owner": null,
+                      "metalResource": 3.274183978393437,
+                      "luxuryResource": 3865.8200329361816,
+                      "atmosphere": 22.657138580811186,
+                      "type": "METALLIC_PLANET"
+                  },
+                  {
+                      "name": "MOON_METALLIC_PLANET1809275",
+                      "size": 180.0790338083598,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": -129.2024392220868,
+                      "owner": null,
+                      "metalResource": 3.0018959120117756,
+                      "luxuryResource": 2135.2673273776063,
+                      "atmosphere": 35.825791562620445,
+                      "type": "METALLIC_PLANET"
+                  }
+              ],
+              "type": "METALLIC_PLANET"
+          },
+          {
+              "name": "METALLIC_PLANET106068",
+              "size": 134.39416793436538,
+              "habitability": -1.0,
+              "complexity": 0.45,
+              "temperature": -143.08893257885225,
+              "owner": null,
+              "metalResource": 3.70910656671432,
+              "luxuryResource": 0.0,
+              "atmosphere": 22.455840225778395,
+              "moons": [
+                  {
+                      "name": "MOON_METALLIC_PLANET929986",
+                      "size": 173.51813918008676,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": -175.11219125166858,
+                      "owner": null,
+                      "metalResource": 3.3702887839031623,
+                      "luxuryResource": 2243.8309413626685,
+                      "atmosphere": 22.92559078512913,
+                      "type": "METALLIC_PLANET"
+                  }
+              ],
+              "type": "METALLIC_PLANET"
+          },
+          {
+              "name": "FROZEN_PLANET15214",
+              "size": 299.435703874572,
+              "habitability": -1.2,
+              "complexity": 1.6,
+              "temperature": -23.72306422264444,
+              "owner": null,
+              "metalResource": 3.0912996298500888,
+              "luxuryResource": 3353.422479798639,
+              "atmosphere": 20.852142936516014,
+              "moons": [
+                  {
+                      "name": "MOON_LAVA_PLANET874724",
+                      "size": 242.56191748859004,
+                      "habitability": -1.2,
+                      "complexity": 1.6,
+                      "temperature": -290.92058281986755,
+                      "owner": null,
+                      "metalResource": 2.668121665753775,
+                      "luxuryResource": 3335.3201656358015,
+                      "atmosphere": 35.24874593773177,
+                      "type": "LAVA_PLANET"
+                  }
+              ],
+              "type": "FROZEN_PLANET"
+          },
+          {
+              "name": "FROZEN_PLANET64934",
+              "size": 308.42864614358723,
+              "habitability": -1.2,
+              "complexity": 1.6,
+              "temperature": -157.77685022004843,
+              "owner": null,
+              "metalResource": 3.6140441412393853,
+              "luxuryResource": 3166.3459555704267,
+              "atmosphere": 39.04461503103567,
+              "moons": [],
+              "type": "FROZEN_PLANET"
+          }
+      ],
+      "type": "RED_DWARF",
+      "energyFactor": 11.398253552278632,
+      "accelerationFactor": 1.1354972504333591
+  }
+}

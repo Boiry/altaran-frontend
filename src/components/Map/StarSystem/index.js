@@ -1,112 +1,260 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import Field from '../Field';
 
-import { HemisphericLight, ArcRotateCamera, UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, PointLight, MeshBuilder, GlowLayer, Color3, Color4, StandardMaterial } from "@babylonjs/core";
-import SceneComponent from "src/utils/babylonjs/sceneComponent";
+import SceneComponent from "./sceneComponent";
 
 import './starSystem.scss';
 
 import ArrowLeft from 'src/assets/images/arrow-left.svg';
 import ArrowRight from 'src/assets/images/arrow-right.svg';
 
+const StarSystem = ({
+  region,
+  sector,
+  starSystem,
+  starSystemName,
+  changeField, 
+  launchFetchStarSystem,
+  launchFetchRegions,
+  regionsInfo,
+  launchFetchSectors,
+  sectorsInfo,
+  launchFetchStarSystems,
+  starSystemsInfo,
+  sectorsAreLoading,
+  starSystemsAreLoading,
+  setCurrentRegion,
+  currentRegion,
+  setCurrentSector,
+  currentSector,
+  setCurrentStarSystem,
+  currentStarSystem,
+  starSystemInfo,
+}) => {
 
-const StarSystem = ({ region, sector, starSystem, changeField }) => {
-  const onSceneReady = (scene) => {
-    document.getElementById("canvas").focus();
-    const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2.5, 95, new Vector3(25, 5, 0), scene);
-    // camera.inputs.clear();
+  // ================== HANDLE OF INPUTS ==================
 
-    // This positions the camera
-    camera.setPosition(new Vector3(25, 15, -40));
+  const systemName = useRef();
+  const list = useRef();
+  const [go, letsGo] = useState(false);
+  const [findLastSector, doFindLastSector] = useState(false);
+  const [findLastSystem, doFindLastSystem] = useState(false);
 
-    const canvas = scene.getEngine().getRenderingCanvas();
-    // This attaches the camera to the canvas
-    camera.attachControl(canvas, true);
-
-    // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
-    const light = new PointLight("light", new Vector3(0, 0, 0), scene);
-    light.intensity = 1;
-
-    const light2 = new HemisphericLight("light2", new Vector3(0, 1, 0), scene);
-    light2.intensity = 0.5;
-
-    // Create the star
-    const star = MeshBuilder.CreateSphere("star", {diameter: 6}, scene);
-    const glowLayer = new GlowLayer("glow", scene, { 
-      mainTextureFixedSize: 256,
-      blurKernelSize: 64
-    });
-    glowLayer.intensity = 1;
-    star.material = new StandardMaterial("red", scene);
-    star.material.emissiveColor = new Color3(0.8,0.4,0.4);
-    glowLayer.addIncludedOnlyMesh(star);
-
-    // Create orbits
-    let circlePoints = [];
-    let pointsColor = [];
-	  const makeCircle = (radius, resolution) => {
-      const pi2 = Math.PI * 2;
-      const step = pi2 / resolution;
-      for (let i=0; i<pi2; i+=step) {
-        const x = Math.cos(i) * radius;
-			  const z = Math.sin(i) * radius;
-        circlePoints.push(new Vector3(x, 0, z));
-        pointsColor.push(new Color4(1, 1, 1, .5));
-      };
-    };
-
-    for (let i=10; i<=45; i+=5) {
-      makeCircle(i, 100);
-      MeshBuilder.CreateLines("circle", {points: circlePoints, colors: pointsColor}, scene);
-      circlePoints = [];
-    };
-
-    // Create planets and moons
-    const material = new StandardMaterial(scene);
-    material.diffuseColor = new Color3(0.4, 0.9, 0.9);
-    for (let i=10; i<=45; i+=5) {
-      const planet = MeshBuilder.CreateSphere("planet", {diameter: 2}, scene);
-      planet.material = material;
-      planet.position = new Vector3(i, 0, 0);
-      planet.isPickable = true;
-      for (let j=2; j<=10; j+=2) {
-        const moon = MeshBuilder.CreateSphere("moon", {diameter: 1.3}, scene);
-        moon.material = material;
-        moon.position = new Vector3(i, j+.5, 0);
+  useEffect(() => {
+    if (sectorsInfo && starSystemsInfo && go) {
+      if (region > 0 && region < 51 &&
+        sector > 0 && sector <= sectorsInfo.length &&
+        starSystem > 0 && starSystem <= starSystemsInfo.length
+        ) {
+        launchFetchStarSystem(region, sector, starSystem);
+        setCurrentRegion(region);
+        setCurrentSector(sector);
+        setCurrentStarSystem(starSystem);
+        letsGo(false);    
+      } else {
+        systemName.current.textContent = "Ce système n'existe pas.";
+        letsGo(false);
       }
-    };
+    }
+  });
 
-  };
+  useEffect(() => {
+    if (findLastSystem && !starSystemsAreLoading) {
+      changeField(starSystemsInfo.length, 'starSystem');
+      letsGo(true);
+      doFindLastSystem(false);
+    }
+    if (findLastSector && !sectorsAreLoading) {
+      changeField(region - 1, 'region');
+      changeField(sectorsInfo.length, 'sector');
+      launchFetchStarSystems(region - 1, sectorsInfo.length);
+      doFindLastSystem(true);
+      doFindLastSector(false);
+    }
+  })
+
+  // Handle Return
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (region && sector && starSystem) {
+      if (region !== currentRegion) {
+        launchFetchSectors(region);
+      }
+      if (sector !== currentSector) {
+        launchFetchStarSystems(region, sector);
+      }
+      if (currentRegion !== region || currentSector !== sector || currentStarSystem !== starSystem) {
+        letsGo(true);
+      }
+    }
+  }
+
+  // Click on arrow
+  const handleClickArrow = (e) => {
+    switch (e.target.name) {
+      case "arrowLeft":
+        if (starSystem > 1) {
+          changeField(starSystem - 1, 'starSystem');
+          letsGo(true);
+        } else if (sector > 1) {
+          launchFetchStarSystems(region, sector - 1);
+          changeField(sector - 1, 'sector');
+          doFindLastSystem(true);
+        } else if (region > 1) {
+          launchFetchSectors(region - 1);
+          doFindLastSector(true);
+        }
+        break;
+      case "arrowRight":
+        if (starSystem < starSystemsInfo.length) {
+          changeField(parseInt(starSystem) + 1, 'starSystem');
+          letsGo(true);
+        } else if (sector < sectorsInfo.length) {
+          launchFetchStarSystems(region, parseInt(sector) + 1);
+          changeField(1, 'starSystem');
+          changeField(parseInt(sector) + 1, 'sector');
+          letsGo(true);
+        } else if (region < 50) {
+          launchFetchStarSystems(parseInt(region) + 1, 1);
+          changeField(parseInt(region) + 1, 'region');
+          changeField(1, 'sector');
+          changeField(1, 'starSystem');
+          letsGo(true);
+        }
+        break;
+    }
+  }
+
+  // Automatically display star system when component mounts
+  useEffect(() => {
+    if (region && sector && starSystem) {
+      if (!sectorsInfo) launchFetchSectors(region);
+      if (!starSystemsInfo) launchFetchStarSystems(region, sector);
+      letsGo(true);
+    }
+    launchFetchRegions();
+  }, [])
+
+
+  // =================== LISTS ====================
+
+  const [listContent, setListContent] = useState([]);
+
+  const clickOnSelector = (element) => {
+    const target = element.split('-')[1];
+    let infos;
+    switch (target) {
+      case 'region':
+        if (regionsInfo) {
+          infos = regionsInfo;
+        }
+        break;
+      case 'sector':
+        if (sectorsInfo) {
+          infos = sectorsInfo;
+        } else {
+          infos = null;
+        }
+        break;
+      case 'starSystem':
+        if (starSystemsInfo) {
+          infos = starSystemsInfo;
+        } else {
+          infos = null;
+        }
+        break;
+    }
+    if (infos) {
+      setListContent([]);
+      for (let i=0; i<infos.length; i++) {
+        setListContent(listContent => [
+          ...listContent,
+          {
+            key: `listItem${i+1}id`,
+            id: infos[i].num,
+            name: infos[i].name,
+            field: target,
+          }
+        ])
+      }
+      list.current.style.visibility = "visible";
+      list.current.focus();
+    }
+  }
+
+  
+  const hideList = () => {
+    if (list.current) {
+      list.current.style.visibility = "hidden";
+    }
+  }
+
+  const clickOnListItem = (field, item) => {
+    hideList();
+    changeField(item, field);
+    let system;
+    if (field === 'region') {
+      launchFetchSectors(item);
+      changeField('', 'sector');
+      changeField('', 'starSystem');
+    } else if (field === 'sector') {
+      launchFetchStarSystems(region, item);
+      changeField('', 'starSystem');
+    } else if (field === 'starSystem') {
+      system = item;
+    }
+    if (region && sector && system) {
+      letsGo(true);
+    }
+    
+  }
+
   return (
     <div className="star-system">
-      <SceneComponent antialias onSceneReady={onSceneReady} id="canvas" tabIndex="0" />
-      <div className="star-system-navigation">
-        <img src={ArrowLeft} className="star-system-arrow" />
+      <SceneComponent antialias id="canvas" tabIndex="0" starSystemInfo={starSystemInfo} />
+      <form className="star-system-navigation" onSubmit={handleSubmit}>
+        <img src={ArrowLeft} className="star-system-arrow" name="arrowLeft" onClick={handleClickArrow} />
         <Field
           name="region"
           type="string"
           value={region}
           onChange={changeField}
+          onClick={clickOnSelector}
         />
-        <span className="separator"> : </span>
+        <span className="star-system-separator"> : </span>
          <Field
           name="sector"
           type="string"
           value={sector}
           onChange={changeField}
+          onClick={clickOnSelector}
         />
-        <span className="separator"> : </span>
+        <span className="star-system-separator"> : </span>
         <Field
           name="starSystem"
           type="string"
           value={starSystem}
           onChange={changeField}
+          onClick={clickOnSelector}
         />
-        <img src={ArrowRight} className="star-system-arrow" />
+        <img src={ArrowRight} className="star-system-arrow" name="arrowRight" onClick={handleClickArrow} />
+        <button type="submit" className="star-system-button"></button>
+      </form>
+      <div ref={systemName} className="star-system-info">{starSystemName}</div>
 
+      <div ref={list} onBlur={hideList} tabIndex="0" className="star-system-list">
+        {listContent.map(listItem => (
+            <p
+              key={listItem.key}
+              className="star-system-list-item"
+              onClick={() => clickOnListItem(listItem.field, listItem.id)}
+            >
+              {listItem.id}. {listItem.name}
+            </p>
+        ))}
       </div>
-      <div className="star-system-action"></div>
+
     </div>
   );
 };

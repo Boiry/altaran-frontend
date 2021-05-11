@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Item from '../Item';
 import { cTable1, cTable2 } from './correspondenceTable.js';
@@ -44,6 +45,9 @@ const Technologies = ({
   launchFetchTechnologiesUpdates,
   updates,
 }) => {
+  // Translations
+  const { t } = useTranslation('technologies');
+
   // Initialization
   useEffect(() => {
     if (!technologies) {
@@ -141,11 +145,11 @@ const Technologies = ({
     if (test) {
       const nameArray = currentTechnology.split('-');
       displayedImage = cTable1[nameArray[1]];
-      title = `${cTable2[nameArray[1]]} (prochain niveau : ${parseInt(technologies[nameArray[1]].level)+1})`;
+      title = `${cTable2[nameArray[1]]} (${t("nextLevel")} ${parseInt(technologies[nameArray[1]].level)+1})`;
     }
     else {
       displayedImage = cTable1[currentTechnology];
-      title = `${cTable2[currentTechnology]} (niveau ${technologies[currentTechnology].level})`;
+      title = `${cTable2[currentTechnology]} (${t("level")} ${technologies[currentTechnology].level})`;
     }
   }
   
@@ -157,22 +161,28 @@ const Technologies = ({
           <div className="technologies-actions-title">{currentTechnology && title}</div>
           {showActions === 'showItem' &&
             <>
-              <div className="technologies-actions-metal">Métal nécessaire : {technologies && technologies[currentTechnology].metal}</div>
-              <div className="technologies-actions-energy">Énergie nécessaire : {technologies && technologies[currentTechnology].energy}</div>
-              <div className="technologies-actions-time">Temps de recherche : {technologies && msToDuration(technologies[currentTechnology].time)}</div>
-              <div className="technologies-actions-end">Fin de la recherche : {endOfResearch}</div>
-              <button className="technologies-actions-button">Rechercher</button>
+              <div className="technologies-actions-metal">{t("metal")} {technologies && technologies[currentTechnology].metal}</div>
+              <div className="technologies-actions-energy">{t("energyCost")} {technologies && technologies[currentTechnology].energy}</div>
+              {technologies && typeof(technologies[currentTechnology].antimatter) !== 'undefined' &&
+                <div className="technologies-actions-antimatter">{t("antimatter")} {!technologies ? '' : technologies[currentTechnology].antimatter}</div>
+              }
+              {technologies && typeof(technologies[currentTechnology].money) !== 'undefined' &&
+                <div className="technologies-actions-antimatter">{t("money")} {!technologies ? '' : technologies[currentTechnology].money}</div>
+              }
+              <div className="technologies-actions-time">{t("researchTime")} {technologies && msToDuration(technologies[currentTechnology].time)}</div>
+              <div className="technologies-actions-end">{t("researchEnd")} {endOfResearch}</div>
+              <button className="technologies-actions-button">{t("levelUp")}</button>
             </>
           }
           {showActions === 'showResearch' &&
             <>
-              <div className="technologies-actions-time">Temps restant : {delay}</div>
-              <div className="technologies-actions-end">Fin de la recherche : {timestampToDate(updates[currentTechnology.split('-')[0]].time)}</div>
+              <div className="technologies-actions-time">{t("remainingTime")} {delay}</div>
+              <div className="technologies-actions-end">{t("researchEnd")} {timestampToDate(updates[currentTechnology.split('-')[0]].time)}</div>
               {currentTechnology.match(/^update1/) &&
-                <button className="technologies-actions-button">Arrêter la recherche</button>
+                <button className="technologies-actions-button">{t("stop")}</button>
               }
               {!currentTechnology.match(/^update1/) &&
-                <button className="technologies-actions-button">Retirer de la liste</button>
+                <button className="technologies-actions-button">{t("remove")}</button>
               }
             </>
           }
@@ -182,7 +192,7 @@ const Technologies = ({
       <div className="technologies-researches-list">
         {updates &&
           <>
-            <div className="technologies-researches-list-title">Liste de recherches</div>
+            <div className="technologies-researches-list-title">{t("list")}</div>
             <Item
               image={typeof(updates.update1) === 'undefined' ? Empty : cTable1[updates.update1.technology]}
               name={typeof(updates.update1) === 'undefined' ? '' : `update1-${updates.update1.technology}`}
@@ -215,7 +225,7 @@ const Technologies = ({
       <div className="technologies-menu-main-title"></div>
 
       <div className="technologies-menu">
-        <div className="technologies-menu-title-elementary">Technologies élémentaires</div>
+        <div className="technologies-menu-title-elementary">{t("elementary")}</div>
         <div className="technologies-menu-categories technologies-menu-elementary">
           <Item image={Laser} name="laser" className="technologies-menu-item elementary" level={technologies && technologies.laser.level} handleClick={setCurrentTechnology} />
           <Item image={Fission} name="fission" className="technologies-menu-item elementary" level={technologies && technologies.fission.level} handleClick={setCurrentTechnology} />
@@ -231,7 +241,7 @@ const Technologies = ({
           <Item image={Nanotechnology} name="nanotechnology" className="technologies-menu-item elementary" level={technologies && technologies.nanotechnology.level} handleClick={setCurrentTechnology} />
           <Item image={Particle} name="particle" className="technologies-menu-item elementary" level={technologies && technologies.particle.level} handleClick={setCurrentTechnology} />
         </div>
-        <div className="technologies-menu-title-advanced">Technologies avancées</div>
+        <div className="technologies-menu-title-advanced">{t("advanced")}</div>
         <div className="technologies-menu-categories technologies-menu-advanced">
           <Item image={Weapon} name="weapon" className="technologies-menu-item advanced" level={technologies && technologies.weapon.level} handleClick={setCurrentTechnology} />
           <Item image={Frame2} name="frame2" className="technologies-menu-item advanced" level={technologies && technologies.frame2.level} handleClick={setCurrentTechnology} />
@@ -243,7 +253,7 @@ const Technologies = ({
           <Item image={Expansion} name="expansion" className="technologies-menu-item advanced" level={technologies && technologies.expansion.level} handleClick={setCurrentTechnology} />
           <Item image={Darkmatter} name="darkmatter" className="technologies-menu-item advanced" level={technologies && technologies.darkmatter.level} handleClick={setCurrentTechnology} />
         </div>
-        <div className="technologies-menu-title-mothership">Technologies de vaisseau mère</div>
+        <div className="technologies-menu-title-mothership">{t("mothership")}</div>
         <div className="technologies-menu-categories technologies-menu-mothership">
           <Item image={Core} name="core" className="technologies-menu-item mothership" level={technologies && technologies.core.level} handleClick={setCurrentTechnology} />
           <Item image={Module} name="module" className="technologies-menu-item mothership" level={technologies && technologies.module.level} handleClick={setCurrentTechnology} />

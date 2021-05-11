@@ -1,0 +1,5360 @@
+{
+  "createdAt": "2021-05-10T17:29:47.210Z",
+  "version": "2.8.2",
+  "runs": [
+    {
+      "webpack": {
+        "chunks": [
+          {
+            "id": "0",
+            "name": "main"
+          },
+          {
+            "id": "1",
+            "name": "runtime"
+          },
+          {
+            "id": "2",
+            "name": "vendors~main"
+          }
+        ],
+        "builtAt": "2021-05-10T17:29:47.137Z",
+        "hash": "8c033c7e28ab14d4920c"
+      },
+      "internalBuildNumber": 2
+    },
+    {
+      "internalBuildNumber": 1
+    }
+  ],
+  "summary": {
+    "webpack": [
+      {
+        "label": "Bundle Size",
+        "value": 13545781,
+        "displayValue": "12.92MB",
+        "delta": 13545781,
+        "deltaPercentage": 100,
+        "displayDelta": "+12.92MB",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Initial JS",
+        "value": 3676587,
+        "displayValue": "3.51MB",
+        "delta": 3676587,
+        "deltaPercentage": 100,
+        "displayDelta": "+3.51MB",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Initial CSS",
+        "value": 15073,
+        "displayValue": "14.72KB",
+        "delta": 15073,
+        "deltaPercentage": 100,
+        "displayDelta": "+14.72KB",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Cache Invalidation",
+        "value": 0,
+        "displayValue": "0%",
+        "delta": 0,
+        "deltaPercentage": 0,
+        "displayDelta": "0%",
+        "displayDeltaPercentage": "0%",
+        "deltaType": "NO_CHANGE"
+      },
+      {
+        "label": "Modules",
+        "value": 132,
+        "displayValue": "132",
+        "delta": 132,
+        "deltaPercentage": 100,
+        "displayDelta": "+132",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Chunks",
+        "value": 4,
+        "displayValue": "4",
+        "delta": 4,
+        "deltaPercentage": 100,
+        "displayDelta": "+4",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Assets",
+        "value": 93,
+        "displayValue": "93",
+        "delta": 93,
+        "deltaPercentage": 100,
+        "displayDelta": "+93",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Packages",
+        "value": 18,
+        "displayValue": "18",
+        "delta": 18,
+        "deltaPercentage": 100,
+        "displayDelta": "+18",
+        "displayDeltaPercentage": "+100%",
+        "deltaType": "HIGH_NEGATIVE"
+      },
+      {
+        "label": "Duplicate Packages",
+        "value": 0,
+        "displayValue": "0",
+        "delta": 0,
+        "deltaPercentage": 0,
+        "displayDelta": "0",
+        "displayDeltaPercentage": "0%",
+        "deltaType": "NO_CHANGE"
+      }
+    ]
+  },
+  "insights": {
+    "webpack": {
+      "assetsSizeTotal": {
+        "type": "INFO",
+        "data": {
+          "text": "Bundle Size — 12.92MB (+100%).",
+          "md": "*Bundle Size* — *12.92MB* (*+100%*).",
+          "info": {
+            "value": 13545781,
+            "displayValue": "12.92MB",
+            "delta": 13545781,
+            "deltaPercentage": 100,
+            "displayDelta": "+12.92MB",
+            "displayDeltaPercentage": "+100%",
+            "deltaType": "HIGH_NEGATIVE"
+          }
+        }
+      }
+    }
+  },
+  "stats": [
+    {
+      "key": "webpack.totalSizeByTypeALL",
+      "runs": [
+        {
+          "value": 13545781,
+          "displayValue": "12.92MB",
+          "delta": 13545781,
+          "deltaPercentage": 100,
+          "displayDelta": "+12.92MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Bundle Size",
+      "changed": true
+    },
+    {
+      "key": "webpack.totalInitialSizeJS",
+      "runs": [
+        {
+          "value": 3676587,
+          "displayValue": "3.51MB",
+          "delta": 3676587,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.51MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Initial JS",
+      "changed": true
+    },
+    {
+      "key": "webpack.totalInitialSizeCSS",
+      "runs": [
+        {
+          "value": 15073,
+          "displayValue": "14.72KB",
+          "delta": 15073,
+          "deltaPercentage": 100,
+          "displayDelta": "+14.72KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Initial CSS",
+      "changed": true
+    },
+    {
+      "key": "webpack.cacheInvalidation",
+      "runs": [
+        {
+          "value": 0,
+          "displayValue": "0%",
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0%",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Cache Invalidation",
+      "changed": true
+    },
+    {
+      "key": "webpack.moduleCount",
+      "runs": [
+        {
+          "value": 132,
+          "displayValue": "132",
+          "delta": 132,
+          "deltaPercentage": 100,
+          "displayDelta": "+132",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Modules",
+      "changed": true
+    },
+    {
+      "key": "webpack.chunkCount",
+      "runs": [
+        {
+          "value": 4,
+          "displayValue": "4",
+          "delta": 4,
+          "deltaPercentage": 100,
+          "displayDelta": "+4",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Chunks",
+      "changed": true
+    },
+    {
+      "key": "webpack.assetCount",
+      "runs": [
+        {
+          "value": 93,
+          "displayValue": "93",
+          "delta": 93,
+          "deltaPercentage": 100,
+          "displayDelta": "+93",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Assets",
+      "changed": true
+    },
+    {
+      "key": "webpack.packageCount",
+      "runs": [
+        {
+          "value": 18,
+          "displayValue": "18",
+          "delta": 18,
+          "deltaPercentage": 100,
+          "displayDelta": "+18",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Packages",
+      "changed": true
+    },
+    {
+      "key": "webpack.duplicatePackagesCount",
+      "runs": [
+        {
+          "value": 0,
+          "displayValue": "0",
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Duplicate Packages",
+      "changed": true
+    }
+  ],
+  "sizes": [
+    {
+      "key": "webpack.sizes.totalSizeByTypeJS",
+      "runs": [
+        {
+          "value": 3676587,
+          "displayValue": "3.51MB",
+          "delta": 3676587,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.51MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "JS",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeCSS",
+      "runs": [
+        {
+          "value": 15073,
+          "displayValue": "14.72KB",
+          "delta": 15073,
+          "deltaPercentage": 100,
+          "displayDelta": "+14.72KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "CSS",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeIMG",
+      "runs": [
+        {
+          "value": 9828556,
+          "displayValue": "9.37MB",
+          "delta": 9828556,
+          "deltaPercentage": 100,
+          "displayDelta": "+9.37MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "IMG",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeMEDIA",
+      "runs": [
+        {
+          "value": 0,
+          "displayValue": "0B",
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0B",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Media",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeFONT",
+      "runs": [
+        {
+          "value": 0,
+          "displayValue": "0B",
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0B",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Fonts",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeHTML",
+      "runs": [
+        {
+          "value": 690,
+          "displayValue": "690B",
+          "delta": 690,
+          "deltaPercentage": 100,
+          "displayDelta": "+690B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "HTML",
+      "changed": true
+    },
+    {
+      "key": "webpack.sizes.totalSizeByTypeOTHER",
+      "runs": [
+        {
+          "value": 24875,
+          "displayValue": "24.29KB",
+          "delta": 24875,
+          "deltaPercentage": 100,
+          "displayDelta": "+24.29KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "Other",
+      "changed": true
+    }
+  ],
+  "assets": [
+    {
+      "key": "css/main.css",
+      "runs": [
+        {
+          "name": "css/main.css",
+          "value": 15073,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "0",
+          "displayValue": "14.72KB",
+          "delta": 15073,
+          "deltaPercentage": 100,
+          "displayDelta": "+14.72KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "css/main.css",
+      "changed": true
+    },
+    {
+      "key": "favicon.ico",
+      "runs": [
+        {
+          "name": "favicon.ico",
+          "value": 16958,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "16.56KB",
+          "delta": 16958,
+          "deltaPercentage": 100,
+          "displayDelta": "+16.56KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "favicon.ico",
+      "changed": true
+    },
+    {
+      "key": "images/0ed331344dc8cea4abd743a9ac9cbc67.svg",
+      "runs": [
+        {
+          "name": "images/0ed331344dc8cea4abd743a9ac9cbc67.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/0ed331344dc8cea4abd743a9ac9cbc67.svg",
+      "changed": true
+    },
+    {
+      "key": "images/12738313ac4e4d1baba680b6ef2909fb.svg",
+      "runs": [
+        {
+          "name": "images/12738313ac4e4d1baba680b6ef2909fb.svg",
+          "value": 2327,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.27KB",
+          "delta": 2327,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.27KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/12738313ac4e4d1baba680b6ef2909fb.svg",
+      "changed": true
+    },
+    {
+      "key": "images/138356e53095453e3a252b48374d6788.png",
+      "runs": [
+        {
+          "name": "images/138356e53095453e3a252b48374d6788.png",
+          "value": 3897,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.81KB",
+          "delta": 3897,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.81KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/138356e53095453e3a252b48374d6788.png",
+      "changed": true
+    },
+    {
+      "key": "images/156fd1f8cb116802752356b8a10d44b5.svg",
+      "runs": [
+        {
+          "name": "images/156fd1f8cb116802752356b8a10d44b5.svg",
+          "value": 3291,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.21KB",
+          "delta": 3291,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.21KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/156fd1f8cb116802752356b8a10d44b5.svg",
+      "changed": true
+    },
+    {
+      "key": "images/1a917e91a168e3c4b2d74596871b7ed3.svg",
+      "runs": [
+        {
+          "name": "images/1a917e91a168e3c4b2d74596871b7ed3.svg",
+          "value": 2139,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.09KB",
+          "delta": 2139,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.09KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/1a917e91a168e3c4b2d74596871b7ed3.svg",
+      "changed": true
+    },
+    {
+      "key": "images/1d127f64ccd6d26e78ccca1809dc3dee.svg",
+      "runs": [
+        {
+          "name": "images/1d127f64ccd6d26e78ccca1809dc3dee.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/1d127f64ccd6d26e78ccca1809dc3dee.svg",
+      "changed": true
+    },
+    {
+      "key": "images/20103c22295bd371465d29fff932ea49.svg",
+      "runs": [
+        {
+          "name": "images/20103c22295bd371465d29fff932ea49.svg",
+          "value": 396527,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "387.23KB",
+          "delta": 396527,
+          "deltaPercentage": 100,
+          "displayDelta": "+387.23KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/20103c22295bd371465d29fff932ea49.svg",
+      "changed": true
+    },
+    {
+      "key": "images/211a8379122c2d6bbfe9f1956da618cf.svg",
+      "runs": [
+        {
+          "name": "images/211a8379122c2d6bbfe9f1956da618cf.svg",
+          "value": 1553,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.52KB",
+          "delta": 1553,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.52KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/211a8379122c2d6bbfe9f1956da618cf.svg",
+      "changed": true
+    },
+    {
+      "key": "images/26de1e2a27dbb8a63c0d0160d9577219.svg",
+      "runs": [
+        {
+          "name": "images/26de1e2a27dbb8a63c0d0160d9577219.svg",
+          "value": 27455,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.81KB",
+          "delta": 27455,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.81KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/26de1e2a27dbb8a63c0d0160d9577219.svg",
+      "changed": true
+    },
+    {
+      "key": "images/288ecb2fbad1b78c92ee19a4b627aee8.svg",
+      "runs": [
+        {
+          "name": "images/288ecb2fbad1b78c92ee19a4b627aee8.svg",
+          "value": 3495,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.41KB",
+          "delta": 3495,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.41KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/288ecb2fbad1b78c92ee19a4b627aee8.svg",
+      "changed": true
+    },
+    {
+      "key": "images/2e3809e9a271e356c358e56bae2bf5cc.svg",
+      "runs": [
+        {
+          "name": "images/2e3809e9a271e356c358e56bae2bf5cc.svg",
+          "value": 2031,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.98KB",
+          "delta": 2031,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.98KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/2e3809e9a271e356c358e56bae2bf5cc.svg",
+      "changed": true
+    },
+    {
+      "key": "images/302ec862cb5ff1c103775795c291d88e.svg",
+      "runs": [
+        {
+          "name": "images/302ec862cb5ff1c103775795c291d88e.svg",
+          "value": 4396,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.29KB",
+          "delta": 4396,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.29KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/302ec862cb5ff1c103775795c291d88e.svg",
+      "changed": true
+    },
+    {
+      "key": "images/3221b421c82fd47f08f1bba19d8d90f7.svg",
+      "runs": [
+        {
+          "name": "images/3221b421c82fd47f08f1bba19d8d90f7.svg",
+          "value": 4256,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.16KB",
+          "delta": 4256,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.16KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/3221b421c82fd47f08f1bba19d8d90f7.svg",
+      "changed": true
+    },
+    {
+      "key": "images/338328054bbffe9801a8fb271a474156.svg",
+      "runs": [
+        {
+          "name": "images/338328054bbffe9801a8fb271a474156.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/338328054bbffe9801a8fb271a474156.svg",
+      "changed": true
+    },
+    {
+      "key": "images/339a11bed45f55173609c39ae2c28a15.svg",
+      "runs": [
+        {
+          "name": "images/339a11bed45f55173609c39ae2c28a15.svg",
+          "value": 4414,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.31KB",
+          "delta": 4414,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.31KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/339a11bed45f55173609c39ae2c28a15.svg",
+      "changed": true
+    },
+    {
+      "key": "images/33a2a1240a99e4472f01e9f848491fa0.svg",
+      "runs": [
+        {
+          "name": "images/33a2a1240a99e4472f01e9f848491fa0.svg",
+          "value": 1954,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.91KB",
+          "delta": 1954,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.91KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/33a2a1240a99e4472f01e9f848491fa0.svg",
+      "changed": true
+    },
+    {
+      "key": "images/353d2624fafbe55a703e57ff10f2334e.svg",
+      "runs": [
+        {
+          "name": "images/353d2624fafbe55a703e57ff10f2334e.svg",
+          "value": 2378,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.32KB",
+          "delta": 2378,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.32KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/353d2624fafbe55a703e57ff10f2334e.svg",
+      "changed": true
+    },
+    {
+      "key": "images/36754ab95a6b748f6c9ef9d71181ea7c.svg",
+      "runs": [
+        {
+          "name": "images/36754ab95a6b748f6c9ef9d71181ea7c.svg",
+          "value": 2046,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2KB",
+          "delta": 2046,
+          "deltaPercentage": 100,
+          "displayDelta": "+2KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/36754ab95a6b748f6c9ef9d71181ea7c.svg",
+      "changed": true
+    },
+    {
+      "key": "images/39c39b6bce8bde2410bfd6f80c378ccf.png",
+      "runs": [
+        {
+          "name": "images/39c39b6bce8bde2410bfd6f80c378ccf.png",
+          "value": 5044,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.93KB",
+          "delta": 5044,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.93KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/39c39b6bce8bde2410bfd6f80c378ccf.png",
+      "changed": true
+    },
+    {
+      "key": "images/3f0b0880446b4bed87fd4f8d9f1a5f82.jpg",
+      "runs": [
+        {
+          "name": "images/3f0b0880446b4bed87fd4f8d9f1a5f82.jpg",
+          "value": 558796,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "545.7KB",
+          "delta": 558796,
+          "deltaPercentage": 100,
+          "displayDelta": "+545.7KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/3f0b0880446b4bed87fd4f8d9f1a5f82.jpg",
+      "changed": true
+    },
+    {
+      "key": "images/44816a08b32e930f1488625577eb1973.svg",
+      "runs": [
+        {
+          "name": "images/44816a08b32e930f1488625577eb1973.svg",
+          "value": 4444,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.34KB",
+          "delta": 4444,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.34KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/44816a08b32e930f1488625577eb1973.svg",
+      "changed": true
+    },
+    {
+      "key": "images/468f6337e1502778e9c16f23b861e9bb.svg",
+      "runs": [
+        {
+          "name": "images/468f6337e1502778e9c16f23b861e9bb.svg",
+          "value": 1135,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.11KB",
+          "delta": 1135,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.11KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/468f6337e1502778e9c16f23b861e9bb.svg",
+      "changed": true
+    },
+    {
+      "key": "images/4754ab6a28cffb62a5ff7b9cc02c3eb5.svg",
+      "runs": [
+        {
+          "name": "images/4754ab6a28cffb62a5ff7b9cc02c3eb5.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/4754ab6a28cffb62a5ff7b9cc02c3eb5.svg",
+      "changed": true
+    },
+    {
+      "key": "images/47ff425b497eb34810c0400b49459b3b.svg",
+      "runs": [
+        {
+          "name": "images/47ff425b497eb34810c0400b49459b3b.svg",
+          "value": 2021,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.97KB",
+          "delta": 2021,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.97KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/47ff425b497eb34810c0400b49459b3b.svg",
+      "changed": true
+    },
+    {
+      "key": "images/4be2470e3a30aad91d241284f00c04ec.svg",
+      "runs": [
+        {
+          "name": "images/4be2470e3a30aad91d241284f00c04ec.svg",
+          "value": 3419,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.34KB",
+          "delta": 3419,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.34KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/4be2470e3a30aad91d241284f00c04ec.svg",
+      "changed": true
+    },
+    {
+      "key": "images/4bf8dc543bd892f143b4f00c04a99d5b.png",
+      "runs": [
+        {
+          "name": "images/4bf8dc543bd892f143b4f00c04a99d5b.png",
+          "value": 15000,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "14.65KB",
+          "delta": 15000,
+          "deltaPercentage": 100,
+          "displayDelta": "+14.65KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/4bf8dc543bd892f143b4f00c04a99d5b.png",
+      "changed": true
+    },
+    {
+      "key": "images/4c9432905f605e62b0991401c1be04b7.svg",
+      "runs": [
+        {
+          "name": "images/4c9432905f605e62b0991401c1be04b7.svg",
+          "value": 10099,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "9.86KB",
+          "delta": 10099,
+          "deltaPercentage": 100,
+          "displayDelta": "+9.86KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/4c9432905f605e62b0991401c1be04b7.svg",
+      "changed": true
+    },
+    {
+      "key": "images/4cf8c2b0a79e4c57c439e558076a277c.svg",
+      "runs": [
+        {
+          "name": "images/4cf8c2b0a79e4c57c439e558076a277c.svg",
+          "value": 117393,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "114.64KB",
+          "delta": 117393,
+          "deltaPercentage": 100,
+          "displayDelta": "+114.64KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/4cf8c2b0a79e4c57c439e558076a277c.svg",
+      "changed": true
+    },
+    {
+      "key": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+      "runs": [
+        {
+          "name": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+          "value": 2039,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.99KB",
+          "delta": 2039,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.99KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+      "changed": true
+    },
+    {
+      "key": "images/595b76d6a6f768cd62ba84d1d8b42168.svg",
+      "runs": [
+        {
+          "name": "images/595b76d6a6f768cd62ba84d1d8b42168.svg",
+          "value": 4063,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.97KB",
+          "delta": 4063,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.97KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/595b76d6a6f768cd62ba84d1d8b42168.svg",
+      "changed": true
+    },
+    {
+      "key": "images/5b8eebd00a1b5317a3294bbfd457dd16.svg",
+      "runs": [
+        {
+          "name": "images/5b8eebd00a1b5317a3294bbfd457dd16.svg",
+          "value": 2469166,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.35MB",
+          "delta": 2469166,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.35MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/5b8eebd00a1b5317a3294bbfd457dd16.svg",
+      "changed": true
+    },
+    {
+      "key": "images/5e43313be13fbe87e1930a4c2e53a13c.png",
+      "runs": [
+        {
+          "name": "images/5e43313be13fbe87e1930a4c2e53a13c.png",
+          "value": 290025,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "283.23KB",
+          "delta": 290025,
+          "deltaPercentage": 100,
+          "displayDelta": "+283.23KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/5e43313be13fbe87e1930a4c2e53a13c.png",
+      "changed": true
+    },
+    {
+      "key": "images/66435c9e533b4ae1df324c9fd45431f3.svg",
+      "runs": [
+        {
+          "name": "images/66435c9e533b4ae1df324c9fd45431f3.svg",
+          "value": 5859,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "5.72KB",
+          "delta": 5859,
+          "deltaPercentage": 100,
+          "displayDelta": "+5.72KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/66435c9e533b4ae1df324c9fd45431f3.svg",
+      "changed": true
+    },
+    {
+      "key": "images/68064dd134ea294100885996290c167b.svg",
+      "runs": [
+        {
+          "name": "images/68064dd134ea294100885996290c167b.svg",
+          "value": 3368,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.29KB",
+          "delta": 3368,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.29KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/68064dd134ea294100885996290c167b.svg",
+      "changed": true
+    },
+    {
+      "key": "images/6d345edff731700522290630bff23818.svg",
+      "runs": [
+        {
+          "name": "images/6d345edff731700522290630bff23818.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/6d345edff731700522290630bff23818.svg",
+      "changed": true
+    },
+    {
+      "key": "images/7207c90acb22898f4d046f2bc232e9f1.png",
+      "runs": [
+        {
+          "name": "images/7207c90acb22898f4d046f2bc232e9f1.png",
+          "value": 619636,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "605.11KB",
+          "delta": 619636,
+          "deltaPercentage": 100,
+          "displayDelta": "+605.11KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/7207c90acb22898f4d046f2bc232e9f1.png",
+      "changed": true
+    },
+    {
+      "key": "images/736d5af02bbf982a168b00e660c87673.svg",
+      "runs": [
+        {
+          "name": "images/736d5af02bbf982a168b00e660c87673.svg",
+          "value": 2552,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.49KB",
+          "delta": 2552,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.49KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/736d5af02bbf982a168b00e660c87673.svg",
+      "changed": true
+    },
+    {
+      "key": "images/74ded1d3382b09695176bcd480e09230.png",
+      "runs": [
+        {
+          "name": "images/74ded1d3382b09695176bcd480e09230.png",
+          "value": 741,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "741B",
+          "delta": 741,
+          "deltaPercentage": 100,
+          "displayDelta": "+741B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/74ded1d3382b09695176bcd480e09230.png",
+      "changed": true
+    },
+    {
+      "key": "images/7b4060cae51884af83d006c348b80d70.svg",
+      "runs": [
+        {
+          "name": "images/7b4060cae51884af83d006c348b80d70.svg",
+          "value": 4471,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.37KB",
+          "delta": 4471,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.37KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/7b4060cae51884af83d006c348b80d70.svg",
+      "changed": true
+    },
+    {
+      "key": "images/81b56d23bd56daa01dd76ad64b502b24.svg",
+      "runs": [
+        {
+          "name": "images/81b56d23bd56daa01dd76ad64b502b24.svg",
+          "value": 3425,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.34KB",
+          "delta": 3425,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.34KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/81b56d23bd56daa01dd76ad64b502b24.svg",
+      "changed": true
+    },
+    {
+      "key": "images/825e73a16a1d220b8ad0ac9eebbcdd4c.svg",
+      "runs": [
+        {
+          "name": "images/825e73a16a1d220b8ad0ac9eebbcdd4c.svg",
+          "value": 3651,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.57KB",
+          "delta": 3651,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.57KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/825e73a16a1d220b8ad0ac9eebbcdd4c.svg",
+      "changed": true
+    },
+    {
+      "key": "images/85807fea1afb4c5edfcffd3f5c307339.svg",
+      "runs": [
+        {
+          "name": "images/85807fea1afb4c5edfcffd3f5c307339.svg",
+          "value": 2236,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.18KB",
+          "delta": 2236,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.18KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/85807fea1afb4c5edfcffd3f5c307339.svg",
+      "changed": true
+    },
+    {
+      "key": "images/8595f435e594114d7fb8ad9a57c9c7c1.svg",
+      "runs": [
+        {
+          "name": "images/8595f435e594114d7fb8ad9a57c9c7c1.svg",
+          "value": 2718,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.65KB",
+          "delta": 2718,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.65KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/8595f435e594114d7fb8ad9a57c9c7c1.svg",
+      "changed": true
+    },
+    {
+      "key": "images/8741e6cb86c470cd06962f206ab104ea.svg",
+      "runs": [
+        {
+          "name": "images/8741e6cb86c470cd06962f206ab104ea.svg",
+          "value": 293897,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "287.01KB",
+          "delta": 293897,
+          "deltaPercentage": 100,
+          "displayDelta": "+287.01KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/8741e6cb86c470cd06962f206ab104ea.svg",
+      "changed": true
+    },
+    {
+      "key": "images/88d87e841c5305ec7c362afc56c40a52.svg",
+      "runs": [
+        {
+          "name": "images/88d87e841c5305ec7c362afc56c40a52.svg",
+          "value": 3461,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.38KB",
+          "delta": 3461,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.38KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/88d87e841c5305ec7c362afc56c40a52.svg",
+      "changed": true
+    },
+    {
+      "key": "images/890b4b8b34684e2a41cb7fe5b48df25f.svg",
+      "runs": [
+        {
+          "name": "images/890b4b8b34684e2a41cb7fe5b48df25f.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/890b4b8b34684e2a41cb7fe5b48df25f.svg",
+      "changed": true
+    },
+    {
+      "key": "images/8b37b6fb0ff248d3f84cc2137796301f.svg",
+      "runs": [
+        {
+          "name": "images/8b37b6fb0ff248d3f84cc2137796301f.svg",
+          "value": 117429,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "114.68KB",
+          "delta": 117429,
+          "deltaPercentage": 100,
+          "displayDelta": "+114.68KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/8b37b6fb0ff248d3f84cc2137796301f.svg",
+      "changed": true
+    },
+    {
+      "key": "images/946a11429775d658362194ed0c9394ca.svg",
+      "runs": [
+        {
+          "name": "images/946a11429775d658362194ed0c9394ca.svg",
+          "value": 4941,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.83KB",
+          "delta": 4941,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/946a11429775d658362194ed0c9394ca.svg",
+      "changed": true
+    },
+    {
+      "key": "images/950a3b6bfacf25c099e048cef633c2ce.svg",
+      "runs": [
+        {
+          "name": "images/950a3b6bfacf25c099e048cef633c2ce.svg",
+          "value": 4027,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.93KB",
+          "delta": 4027,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.93KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/950a3b6bfacf25c099e048cef633c2ce.svg",
+      "changed": true
+    },
+    {
+      "key": "images/9944da3f9a78a9c4473f5157d9f8ef90.svg",
+      "runs": [
+        {
+          "name": "images/9944da3f9a78a9c4473f5157d9f8ef90.svg",
+          "value": 1982,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.94KB",
+          "delta": 1982,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.94KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/9944da3f9a78a9c4473f5157d9f8ef90.svg",
+      "changed": true
+    },
+    {
+      "key": "images/9b26d35c2d7e0a902c349ee03fe5d7fe.png",
+      "runs": [
+        {
+          "name": "images/9b26d35c2d7e0a902c349ee03fe5d7fe.png",
+          "value": 141882,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "138.56KB",
+          "delta": 141882,
+          "deltaPercentage": 100,
+          "displayDelta": "+138.56KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/9b26d35c2d7e0a902c349ee03fe5d7fe.png",
+      "changed": true
+    },
+    {
+      "key": "images/9e37fbf27de90ab176462c6786645566.svg",
+      "runs": [
+        {
+          "name": "images/9e37fbf27de90ab176462c6786645566.svg",
+          "value": 117429,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "114.68KB",
+          "delta": 117429,
+          "deltaPercentage": 100,
+          "displayDelta": "+114.68KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/9e37fbf27de90ab176462c6786645566.svg",
+      "changed": true
+    },
+    {
+      "key": "images/a2d6cc0d30bef0fe98187c4be8afc036.svg",
+      "runs": [
+        {
+          "name": "images/a2d6cc0d30bef0fe98187c4be8afc036.svg",
+          "value": 2370,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.31KB",
+          "delta": 2370,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.31KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/a2d6cc0d30bef0fe98187c4be8afc036.svg",
+      "changed": true
+    },
+    {
+      "key": "images/a5ad4e914efcd5d6f7a9113a970f61bd.svg",
+      "runs": [
+        {
+          "name": "images/a5ad4e914efcd5d6f7a9113a970f61bd.svg",
+          "value": 2237,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.18KB",
+          "delta": 2237,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.18KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/a5ad4e914efcd5d6f7a9113a970f61bd.svg",
+      "changed": true
+    },
+    {
+      "key": "images/a661d2774ea70ddebc284387014426e6.svg",
+      "runs": [
+        {
+          "name": "images/a661d2774ea70ddebc284387014426e6.svg",
+          "value": 3744,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.66KB",
+          "delta": 3744,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.66KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/a661d2774ea70ddebc284387014426e6.svg",
+      "changed": true
+    },
+    {
+      "key": "images/aa0dae53749afe552da68ed50855cd2b.svg",
+      "runs": [
+        {
+          "name": "images/aa0dae53749afe552da68ed50855cd2b.svg",
+          "value": 1802,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.76KB",
+          "delta": 1802,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.76KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/aa0dae53749afe552da68ed50855cd2b.svg",
+      "changed": true
+    },
+    {
+      "key": "images/b5c9739c729ad96e0667f032363b9f34.png",
+      "runs": [
+        {
+          "name": "images/b5c9739c729ad96e0667f032363b9f34.png",
+          "value": 206380,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "201.54KB",
+          "delta": 206380,
+          "deltaPercentage": 100,
+          "displayDelta": "+201.54KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/b5c9739c729ad96e0667f032363b9f34.png",
+      "changed": true
+    },
+    {
+      "key": "images/b69c35c5835d0fe65ac73fa6740cac09.svg",
+      "runs": [
+        {
+          "name": "images/b69c35c5835d0fe65ac73fa6740cac09.svg",
+          "value": 7525,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "7.35KB",
+          "delta": 7525,
+          "deltaPercentage": 100,
+          "displayDelta": "+7.35KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/b69c35c5835d0fe65ac73fa6740cac09.svg",
+      "changed": true
+    },
+    {
+      "key": "images/ba1f3a5f9e02c195d86d1807ad6ffcdd.svg",
+      "runs": [
+        {
+          "name": "images/ba1f3a5f9e02c195d86d1807ad6ffcdd.svg",
+          "value": 151891,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "148.33KB",
+          "delta": 151891,
+          "deltaPercentage": 100,
+          "displayDelta": "+148.33KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ba1f3a5f9e02c195d86d1807ad6ffcdd.svg",
+      "changed": true
+    },
+    {
+      "key": "images/ba467219cb8bb7f041c4a9ac3c31306d.svg",
+      "runs": [
+        {
+          "name": "images/ba467219cb8bb7f041c4a9ac3c31306d.svg",
+          "value": 2541,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.48KB",
+          "delta": 2541,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.48KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ba467219cb8bb7f041c4a9ac3c31306d.svg",
+      "changed": true
+    },
+    {
+      "key": "images/bd7e23b06560c1dc11c6d26aefc121f5.svg",
+      "runs": [
+        {
+          "name": "images/bd7e23b06560c1dc11c6d26aefc121f5.svg",
+          "value": 27470,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.83KB",
+          "delta": 27470,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/bd7e23b06560c1dc11c6d26aefc121f5.svg",
+      "changed": true
+    },
+    {
+      "key": "images/c33b301b15809569ffd63397ecef65a5.svg",
+      "runs": [
+        {
+          "name": "images/c33b301b15809569ffd63397ecef65a5.svg",
+          "value": 1988,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.94KB",
+          "delta": 1988,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.94KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/c33b301b15809569ffd63397ecef65a5.svg",
+      "changed": true
+    },
+    {
+      "key": "images/c3be8cf730cd23f4f72325ef7a2f4908.jpg",
+      "runs": [
+        {
+          "name": "images/c3be8cf730cd23f4f72325ef7a2f4908.jpg",
+          "value": 295621,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "288.69KB",
+          "delta": 295621,
+          "deltaPercentage": 100,
+          "displayDelta": "+288.69KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/c3be8cf730cd23f4f72325ef7a2f4908.jpg",
+      "changed": true
+    },
+    {
+      "key": "images/c8e832370f9b1b33264624c16fe0479c.svg",
+      "runs": [
+        {
+          "name": "images/c8e832370f9b1b33264624c16fe0479c.svg",
+          "value": 2379,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.32KB",
+          "delta": 2379,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.32KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/c8e832370f9b1b33264624c16fe0479c.svg",
+      "changed": true
+    },
+    {
+      "key": "images/ca5d438cb5e0b173b0d06f99fdafacbd.png",
+      "runs": [
+        {
+          "name": "images/ca5d438cb5e0b173b0d06f99fdafacbd.png",
+          "value": 1236210,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.18MB",
+          "delta": 1236210,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.18MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ca5d438cb5e0b173b0d06f99fdafacbd.png",
+      "changed": true
+    },
+    {
+      "key": "images/cd527ad1f8ef936500ebcf9af9cfc88d.jpg",
+      "runs": [
+        {
+          "name": "images/cd527ad1f8ef936500ebcf9af9cfc88d.jpg",
+          "value": 321667,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "314.13KB",
+          "delta": 321667,
+          "deltaPercentage": 100,
+          "displayDelta": "+314.13KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/cd527ad1f8ef936500ebcf9af9cfc88d.jpg",
+      "changed": true
+    },
+    {
+      "key": "images/ce7f016ff775ad3ddd1ec5d81ad37f45.svg",
+      "runs": [
+        {
+          "name": "images/ce7f016ff775ad3ddd1ec5d81ad37f45.svg",
+          "value": 4367,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.26KB",
+          "delta": 4367,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.26KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ce7f016ff775ad3ddd1ec5d81ad37f45.svg",
+      "changed": true
+    },
+    {
+      "key": "images/d833ea7e77246349d2e2f8dceaeb1ea3.svg",
+      "runs": [
+        {
+          "name": "images/d833ea7e77246349d2e2f8dceaeb1ea3.svg",
+          "value": 4569,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.46KB",
+          "delta": 4569,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.46KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/d833ea7e77246349d2e2f8dceaeb1ea3.svg",
+      "changed": true
+    },
+    {
+      "key": "images/db7563ac6155a99ccea78aef19a5b8e7.svg",
+      "runs": [
+        {
+          "name": "images/db7563ac6155a99ccea78aef19a5b8e7.svg",
+          "value": 32559,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "31.8KB",
+          "delta": 32559,
+          "deltaPercentage": 100,
+          "displayDelta": "+31.8KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/db7563ac6155a99ccea78aef19a5b8e7.svg",
+      "changed": true
+    },
+    {
+      "key": "images/e2933521bf828473b2bcb09359acb284.svg",
+      "runs": [
+        {
+          "name": "images/e2933521bf828473b2bcb09359acb284.svg",
+          "value": 2515,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.46KB",
+          "delta": 2515,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.46KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/e2933521bf828473b2bcb09359acb284.svg",
+      "changed": true
+    },
+    {
+      "key": "images/ead0ed8baad92ea1a25f3ba74209984e.png",
+      "runs": [
+        {
+          "name": "images/ead0ed8baad92ea1a25f3ba74209984e.png",
+          "value": 822526,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "803.25KB",
+          "delta": 822526,
+          "deltaPercentage": 100,
+          "displayDelta": "+803.25KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ead0ed8baad92ea1a25f3ba74209984e.png",
+      "changed": true
+    },
+    {
+      "key": "images/ee1aa18366d02af1ea7dc78c36d1f159.svg",
+      "runs": [
+        {
+          "name": "images/ee1aa18366d02af1ea7dc78c36d1f159.svg",
+          "value": 9933,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "9.7KB",
+          "delta": 9933,
+          "deltaPercentage": 100,
+          "displayDelta": "+9.7KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ee1aa18366d02af1ea7dc78c36d1f159.svg",
+      "changed": true
+    },
+    {
+      "key": "images/ee61ce5ad22ad60591649a861a815b35.svg",
+      "runs": [
+        {
+          "name": "images/ee61ce5ad22ad60591649a861a815b35.svg",
+          "value": 27455,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "26.81KB",
+          "delta": 27455,
+          "deltaPercentage": 100,
+          "displayDelta": "+26.81KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/ee61ce5ad22ad60591649a861a815b35.svg",
+      "changed": true
+    },
+    {
+      "key": "images/efa840e2c1514ffda5688f0279f5e65f.svg",
+      "runs": [
+        {
+          "name": "images/efa840e2c1514ffda5688f0279f5e65f.svg",
+          "value": 3624,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.54KB",
+          "delta": 3624,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.54KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/efa840e2c1514ffda5688f0279f5e65f.svg",
+      "changed": true
+    },
+    {
+      "key": "images/f6537a074df99ca81f372a2c12927f52.svg",
+      "runs": [
+        {
+          "name": "images/f6537a074df99ca81f372a2c12927f52.svg",
+          "value": 4020,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "3.93KB",
+          "delta": 4020,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.93KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/f6537a074df99ca81f372a2c12927f52.svg",
+      "changed": true
+    },
+    {
+      "key": "images/f6e7662148070cf9ba56cc83d67d98bc.svg",
+      "runs": [
+        {
+          "name": "images/f6e7662148070cf9ba56cc83d67d98bc.svg",
+          "value": 1169296,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.12MB",
+          "delta": 1169296,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.12MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/f6e7662148070cf9ba56cc83d67d98bc.svg",
+      "changed": true
+    },
+    {
+      "key": "images/f7b0104d1c5180c2c8b2b98d25449ca3.svg",
+      "runs": [
+        {
+          "name": "images/f7b0104d1c5180c2c8b2b98d25449ca3.svg",
+          "value": 23581,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "23.03KB",
+          "delta": 23581,
+          "deltaPercentage": 100,
+          "displayDelta": "+23.03KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/f7b0104d1c5180c2c8b2b98d25449ca3.svg",
+      "changed": true
+    },
+    {
+      "key": "index.html",
+      "runs": [
+        {
+          "name": "index.html",
+          "value": 690,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "690B",
+          "delta": 690,
+          "deltaPercentage": 100,
+          "displayDelta": "+690B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "index.html",
+      "changed": true
+    },
+    {
+      "key": "js/main.js",
+      "runs": [
+        {
+          "name": "js/main.e3b27176b795be538826.js",
+          "value": 206497,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "0",
+          "displayValue": "201.66KB",
+          "delta": 206497,
+          "deltaPercentage": 100,
+          "displayDelta": "+201.66KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "js/main.js",
+      "changed": true
+    },
+    {
+      "key": "js/runtime.js",
+      "runs": [
+        {
+          "name": "js/runtime.786383f064c4ea0ce592.js",
+          "value": 1493,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "1",
+          "displayValue": "1.46KB",
+          "delta": 1493,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.46KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "js/runtime.js",
+      "changed": true
+    },
+    {
+      "key": "js/vendors~main.js",
+      "runs": [
+        {
+          "name": "js/vendors~main.7b1fb09b0b5b66282be8.js",
+          "value": 3468597,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "2",
+          "displayValue": "3.31MB",
+          "delta": 3468597,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.31MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "js/vendors~main.js",
+      "changed": true
+    },
+    {
+      "key": "locales/fr/facilities.json",
+      "runs": [
+        {
+          "name": "locales/fr/facilities.json",
+          "value": 1642,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.6KB",
+          "delta": 1642,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.6KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "locales/fr/facilities.json",
+      "changed": true
+    },
+    {
+      "key": "locales/fr/specialties.json",
+      "runs": [
+        {
+          "name": "locales/fr/specialties.json",
+          "value": 8574,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "8.37KB",
+          "delta": 8574,
+          "deltaPercentage": 100,
+          "displayDelta": "+8.37KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "locales/fr/specialties.json",
+      "changed": true
+    },
+    {
+      "key": "locales/fr/technologies.json",
+      "runs": [
+        {
+          "name": "locales/fr/technologies.json",
+          "value": 1462,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.43KB",
+          "delta": 1462,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.43KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "locales/fr/technologies.json",
+      "changed": true
+    },
+    {
+      "key": "mock/base-infos.json",
+      "runs": [
+        {
+          "name": "mock/base-infos.json",
+          "value": 521,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "521B",
+          "delta": 521,
+          "deltaPercentage": 100,
+          "displayDelta": "+521B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/base-infos.json",
+      "changed": true
+    },
+    {
+      "key": "mock/facilities.json",
+      "runs": [
+        {
+          "name": "mock/facilities.json",
+          "value": 2719,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.66KB",
+          "delta": 2719,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.66KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/facilities.json",
+      "changed": true
+    },
+    {
+      "key": "mock/starSystem.json",
+      "runs": [
+        {
+          "name": "mock/starSystem.json",
+          "value": 6657,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "6.5KB",
+          "delta": 6657,
+          "deltaPercentage": 100,
+          "displayDelta": "+6.5KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/starSystem.json",
+      "changed": true
+    },
+    {
+      "key": "mock/technologies-updates.json",
+      "runs": [
+        {
+          "name": "mock/technologies-updates.json",
+          "value": 390,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "390B",
+          "delta": 390,
+          "deltaPercentage": 100,
+          "displayDelta": "+390B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/technologies-updates.json",
+      "changed": true
+    },
+    {
+      "key": "mock/technologies.json",
+      "runs": [
+        {
+          "name": "mock/technologies.json",
+          "value": 2550,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "2.49KB",
+          "delta": 2550,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.49KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/technologies.json",
+      "changed": true
+    },
+    {
+      "key": "mock/updates.json",
+      "runs": [
+        {
+          "name": "mock/updates.json",
+          "value": 303,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "303B",
+          "delta": 303,
+          "deltaPercentage": 100,
+          "displayDelta": "+303B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "mock/updates.json",
+      "changed": true
+    },
+    {
+      "key": "robots.txt",
+      "runs": [
+        {
+          "name": "robots.txt",
+          "value": 57,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "57B",
+          "delta": 57,
+          "deltaPercentage": 100,
+          "displayDelta": "+57B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "robots.txt",
+      "changed": true
+    }
+  ],
+  "modules": [
+    {
+      "chunkId": "0",
+      "chunkNames": [
+        "main",
+        null
+      ],
+      "modules": [
+        {
+          "key": "./src/components/Home/animations.js",
+          "runs": [
+            {
+              "name": "./src/components/Home/animations.js",
+              "value": 10273,
+              "displayValue": "10.03KB",
+              "delta": 10273,
+              "deltaPercentage": 100,
+              "displayDelta": "+10.03KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Home/animations.js",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/basic-star50.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/basic-star50.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/basic-star50.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/gas_cloud.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/gas_cloud.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/gas_cloud.png",
+          "changed": true
+        },
+        {
+          "key": "./public/locales/fr/facilities.json",
+          "runs": [
+            {
+              "name": "./public/locales/fr/facilities.json",
+              "value": 1642,
+              "displayValue": "1.6KB",
+              "delta": 1642,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.6KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./public/locales/fr/facilities.json",
+          "changed": true
+        },
+        {
+          "key": "./public/locales/fr/technologies.json",
+          "runs": [
+            {
+              "name": "./public/locales/fr/technologies.json",
+              "value": 1462,
+              "displayValue": "1.43KB",
+              "delta": 1462,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.43KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./public/locales/fr/technologies.json",
+          "changed": true
+        },
+        {
+          "key": "./public/locales/fr/specialties.json",
+          "runs": [
+            {
+              "name": "./public/locales/fr/specialties.json",
+              "value": 8574,
+              "displayValue": "8.37KB",
+              "delta": 8574,
+              "deltaPercentage": 100,
+              "displayDelta": "+8.37KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./public/locales/fr/specialties.json",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/background.jpg",
+          "runs": [
+            {
+              "name": "./src/assets/images/background.jpg",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/background.jpg",
+          "changed": true
+        },
+        {
+          "key": "multi ./src/styles/index.scss ./src/index.js",
+          "runs": [
+            {
+              "name": "multi ./src/styles/index.scss ./src/index.js",
+              "value": 40,
+              "displayValue": "40B",
+              "delta": 40,
+              "deltaPercentage": 100,
+              "displayDelta": "+40B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "multi ./src/styles/index.scss ./src/index.js",
+          "changed": true
+        },
+        {
+          "key": "./src/styles/index.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/styles/index.scss",
+              "value": 1439,
+              "displayValue": "1.41KB",
+              "delta": 1439,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.41KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/styles/index.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images sync ^\\.\\/.*\\.png$",
+          "runs": [
+            {
+              "name": "./src/assets/images sync ^\\.\\/.*\\.png$",
+              "value": 353,
+              "displayValue": "353B",
+              "delta": 353,
+              "deltaPercentage": 100,
+              "displayDelta": "+353B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images sync ^\\.\\/.*\\.png$",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/basic-star.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/basic-star.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/basic-star.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/onoff_icon.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/onoff_icon.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/onoff_icon.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet1.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet1.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet1.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet2.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet2.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet2.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet3.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet3.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet3.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet4.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet4.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet4.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet5.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet5.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet5.png",
+          "changed": true
+        },
+        {
+          "key": "./src/assets/images/planet6.png",
+          "runs": [
+            {
+              "name": "./src/assets/images/planet6.png",
+              "value": 87,
+              "displayValue": "87B",
+              "delta": 87,
+              "deltaPercentage": 100,
+              "displayDelta": "+87B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/assets/images/planet6.png",
+          "changed": true
+        },
+        {
+          "key": "./src/index.js",
+          "runs": [
+            {
+              "name": "./src/index.js + 166 modules",
+              "value": 320128,
+              "displayValue": "312.63KB",
+              "delta": 320128,
+              "deltaPercentage": 100,
+              "displayDelta": "+312.63KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/index.js",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Administration/administration.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Administration/administration.scss",
+              "value": 41,
+              "displayValue": "41B",
+              "delta": 41,
+              "deltaPercentage": 100,
+              "displayDelta": "+41B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Administration/administration.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Empire/empire.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Empire/empire.scss",
+              "value": 36,
+              "displayValue": "36B",
+              "delta": 36,
+              "deltaPercentage": 100,
+              "displayDelta": "+36B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Empire/empire.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Home/home.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Home/home.scss",
+              "value": 2794,
+              "displayValue": "2.73KB",
+              "delta": 2794,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.73KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Home/home.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Log/log.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Log/log.scss",
+              "value": 155,
+              "displayValue": "155B",
+              "delta": 155,
+              "deltaPercentage": 100,
+              "displayDelta": "+155B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Log/log.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Map/map.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/map.scss",
+              "value": 481,
+              "displayValue": "481B",
+              "delta": 481,
+              "deltaPercentage": 100,
+              "displayDelta": "+481B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Map/map.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Administration/Politics/politics.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Administration/Politics/politics.scss",
+              "value": 0,
+              "displayValue": "0B",
+              "delta": 0,
+              "deltaPercentage": 0,
+              "displayDelta": "0B",
+              "displayDeltaPercentage": "0%",
+              "deltaType": "NO_CHANGE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Administration/Politics/politics.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Administration/Specialties/specialties.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Administration/Specialties/specialties.scss",
+              "value": 1152,
+              "displayValue": "1.13KB",
+              "delta": 1152,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.13KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Administration/Specialties/specialties.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/bases.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/bases.scss",
+              "value": 637,
+              "displayValue": "637B",
+              "delta": 637,
+              "deltaPercentage": 100,
+              "displayDelta": "+637B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/bases.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Connection/connection.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/connection.scss",
+              "value": 427,
+              "displayValue": "427B",
+              "delta": 427,
+              "deltaPercentage": 100,
+              "displayDelta": "+427B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Connection/connection.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/MiniChat/miniChat.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/MiniChat/miniChat.scss",
+              "value": 768,
+              "displayValue": "768B",
+              "delta": 768,
+              "deltaPercentage": 100,
+              "displayDelta": "+768B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/MiniChat/miniChat.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Nav/nav.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Nav/nav.scss",
+              "value": 584,
+              "displayValue": "584B",
+              "delta": 584,
+              "deltaPercentage": 100,
+              "displayDelta": "+584B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Nav/nav.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/BaseSelector/baseSelector.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/BaseSelector/baseSelector.scss",
+              "value": 111,
+              "displayValue": "111B",
+              "delta": 111,
+              "deltaPercentage": 100,
+              "displayDelta": "+111B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/BaseSelector/baseSelector.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Map/Galaxy/galaxy.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/Galaxy/galaxy.scss",
+              "value": 700,
+              "displayValue": "700B",
+              "delta": 700,
+              "deltaPercentage": 100,
+              "displayDelta": "+700B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Map/Galaxy/galaxy.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Map/StarSystem/starSystem.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/StarSystem/starSystem.scss",
+              "value": 912,
+              "displayValue": "912B",
+              "delta": 912,
+              "deltaPercentage": 100,
+              "displayDelta": "+912B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Map/StarSystem/starSystem.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Tab/tab.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Tab/tab.scss",
+              "value": 470,
+              "displayValue": "470B",
+              "delta": 470,
+              "deltaPercentage": 100,
+              "displayDelta": "+470B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Tab/tab.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/Aside/aside.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/Aside/aside.scss",
+              "value": 139,
+              "displayValue": "139B",
+              "delta": 139,
+              "deltaPercentage": 100,
+              "displayDelta": "+139B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/Aside/aside.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/Facilities/facilities.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/Facilities/facilities.scss",
+              "value": 1279,
+              "displayValue": "1.25KB",
+              "delta": 1279,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.25KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/Facilities/facilities.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/Technologies/technologies.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/Technologies/technologies.scss",
+              "value": 1177,
+              "displayValue": "1.15KB",
+              "delta": 1177,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.15KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/Technologies/technologies.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Connection/Login/login.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/Login/login.scss",
+              "value": 357,
+              "displayValue": "357B",
+              "delta": 357,
+              "deltaPercentage": 100,
+              "displayDelta": "+357B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Connection/Login/login.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Connection/Register/register.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/Register/register.scss",
+              "value": 457,
+              "displayValue": "457B",
+              "delta": 457,
+              "deltaPercentage": 100,
+              "displayDelta": "+457B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Connection/Register/register.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Map/Field/field.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/Field/field.scss",
+              "value": 258,
+              "displayValue": "258B",
+              "delta": 258,
+              "deltaPercentage": 100,
+              "displayDelta": "+258B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Map/Field/field.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Bases/Item/item.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Bases/Item/item.scss",
+              "value": 631,
+              "displayValue": "631B",
+              "delta": 631,
+              "deltaPercentage": 100,
+              "displayDelta": "+631B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Bases/Item/item.scss",
+          "changed": true
+        },
+        {
+          "key": "./src/components/Connection/Field/field.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/Field/field.scss",
+              "value": 83,
+              "displayValue": "83B",
+              "delta": 83,
+              "deltaPercentage": 100,
+              "displayDelta": "+83B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Connection/Field/field.scss",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "chunkId": "2",
+      "chunkNames": [
+        "vendors~main",
+        null
+      ],
+      "modules": [
+        {
+          "key": "./node_modules/tslib/tslib.es6.js",
+          "runs": [
+            {
+              "name": "./node_modules/tslib/tslib.es6.js",
+              "value": 11605,
+              "displayValue": "11.33KB",
+              "delta": 11605,
+              "deltaPercentage": 100,
+              "displayDelta": "+11.33KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/tslib/tslib.es6.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/react/index.js",
+              "value": 190,
+              "displayValue": "190B",
+              "delta": 190,
+              "deltaPercentage": 100,
+              "displayDelta": "+190B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Materials/effect.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Materials/effect.js",
+              "value": 50451,
+              "displayValue": "49.27KB",
+              "delta": 50451,
+              "deltaPercentage": 100,
+              "displayDelta": "+49.27KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Materials/effect.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/observable.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/observable.js",
+              "value": 17240,
+              "displayValue": "16.84KB",
+              "delta": 17240,
+              "deltaPercentage": 100,
+              "displayDelta": "+16.84KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/observable.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/logger.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/logger.js",
+              "value": 4163,
+              "displayValue": "4.07KB",
+              "delta": 4163,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.07KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/logger.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/engine.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/engine.js",
+              "value": 70097,
+              "displayValue": "68.45KB",
+              "delta": 70097,
+              "deltaPercentage": 100,
+              "displayDelta": "+68.45KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/engine.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/devTools.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/devTools.js",
+              "value": 347,
+              "displayValue": "347B",
+              "delta": 347,
+              "deltaPercentage": 100,
+              "displayDelta": "+347B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/devTools.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/engineStore.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/engineStore.js",
+              "value": 1488,
+              "displayValue": "1.45KB",
+              "delta": 1488,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.45KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/engineStore.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/i18next/dist/esm/i18next.js",
+          "runs": [
+            {
+              "name": "./node_modules/i18next/dist/esm/i18next.js + 9 modules",
+              "value": 81610,
+              "displayValue": "79.7KB",
+              "delta": 81610,
+              "deltaPercentage": 100,
+              "displayDelta": "+79.7KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/i18next/dist/esm/i18next.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/index.js + 851 modules",
+              "value": 8239810,
+              "displayValue": "7.86MB",
+              "delta": 8239810,
+              "deltaPercentage": 100,
+              "displayDelta": "+7.86MB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/thinEngine.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/thinEngine.js + 1 modules",
+              "value": 175032,
+              "displayValue": "170.93KB",
+              "delta": 175032,
+              "deltaPercentage": 100,
+              "displayDelta": "+170.93KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/thinEngine.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Materials/Textures/internalTexture.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Materials/Textures/internalTexture.js",
+              "value": 18192,
+              "displayValue": "17.77KB",
+              "delta": 18192,
+              "deltaPercentage": 100,
+              "displayDelta": "+17.77KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Materials/Textures/internalTexture.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/prop-types/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/prop-types/index.js",
+              "value": 710,
+              "displayValue": "710B",
+              "delta": 710,
+              "deltaPercentage": 100,
+              "displayDelta": "+710B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/prop-types/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/stringTools.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/stringTools.js",
+              "value": 3264,
+              "displayValue": "3.19KB",
+              "delta": 3264,
+              "deltaPercentage": 100,
+              "displayDelta": "+3.19KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/stringTools.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/domManagement.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/domManagement.js",
+              "value": 1477,
+              "displayValue": "1.44KB",
+              "delta": 1477,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.44KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/domManagement.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-redux/es/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-redux/es/index.js + 25 modules",
+              "value": 53219,
+              "displayValue": "51.97KB",
+              "delta": 53219,
+              "deltaPercentage": 100,
+              "displayDelta": "+51.97KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-redux/es/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/perfCounter.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/perfCounter.js",
+              "value": 6415,
+              "displayValue": "6.26KB",
+              "delta": 6415,
+              "deltaPercentage": 100,
+              "displayDelta": "+6.26KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/perfCounter.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/precisionDate.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/precisionDate.js",
+              "value": 791,
+              "displayValue": "791B",
+              "delta": 791,
+              "deltaPercentage": 100,
+              "displayDelta": "+791B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/precisionDate.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/canvasGenerator.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/canvasGenerator.js",
+              "value": 845,
+              "displayValue": "845B",
+              "delta": 845,
+              "deltaPercentage": 100,
+              "displayDelta": "+845B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/canvasGenerator.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/index.js",
+              "value": 40,
+              "displayValue": "40B",
+              "delta": 40,
+              "deltaPercentage": 100,
+              "displayDelta": "+40B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/utils.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/utils.js",
+              "value": 8947,
+              "displayValue": "8.74KB",
+              "delta": 8947,
+              "deltaPercentage": 100,
+              "displayDelta": "+8.74KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/utils.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/performanceConfigurator.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/performanceConfigurator.js",
+              "value": 1635,
+              "displayValue": "1.6KB",
+              "delta": 1635,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.6KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/performanceConfigurator.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Meshes/WebGL/webGLDataBuffer.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Meshes/WebGL/webGLDataBuffer.js",
+              "value": 686,
+              "displayValue": "686B",
+              "delta": 686,
+              "deltaPercentage": 100,
+              "displayDelta": "+686B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Meshes/WebGL/webGLDataBuffer.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Meshes/dataBuffer.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Meshes/dataBuffer.js",
+              "value": 867,
+              "displayValue": "867B",
+              "delta": 867,
+              "deltaPercentage": 100,
+              "displayDelta": "+867B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Meshes/dataBuffer.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Materials/Textures/renderTargetCreationOptions.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Materials/Textures/renderTargetCreationOptions.js",
+              "value": 329,
+              "displayValue": "329B",
+              "delta": 329,
+              "deltaPercentage": 100,
+              "displayDelta": "+329B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Materials/Textures/renderTargetCreationOptions.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/WebGL/webGL2ShaderProcessors.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/WebGL/webGL2ShaderProcessors.js",
+              "value": 1975,
+              "displayValue": "1.93KB",
+              "delta": 1975,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.93KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/WebGL/webGL2ShaderProcessors.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/redux/es/redux.js",
+          "runs": [
+            {
+              "name": "./node_modules/redux/es/redux.js + 1 modules",
+              "value": 27991,
+              "displayValue": "27.33KB",
+              "delta": 27991,
+              "deltaPercentage": 100,
+              "displayDelta": "+27.33KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/redux/es/redux.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/Extensions/engine.alpha.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/Extensions/engine.alpha.js",
+              "value": 5512,
+              "displayValue": "5.38KB",
+              "delta": 5512,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.38KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/Extensions/engine.alpha.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/Extensions/engine.dynamicBuffer.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/Extensions/engine.dynamicBuffer.js",
+              "value": 1981,
+              "displayValue": "1.93KB",
+              "delta": 1981,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.93KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/Extensions/engine.dynamicBuffer.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/Processors/shaderProcessor.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/Processors/shaderProcessor.js + 9 modules",
+              "value": 28831,
+              "displayValue": "28.16KB",
+              "delta": 28831,
+              "deltaPercentage": 100,
+              "displayDelta": "+28.16KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/Processors/shaderProcessor.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-i18next/dist/es/context.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-i18next/dist/es/context.js",
+              "value": 3489,
+              "displayValue": "3.41KB",
+              "delta": 3489,
+              "deltaPercentage": 100,
+              "displayDelta": "+3.41KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-i18next/dist/es/context.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/Extensions/engine.readTexture.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/Extensions/engine.readTexture.js",
+              "value": 1758,
+              "displayValue": "1.72KB",
+              "delta": 1758,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.72KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/Extensions/engine.readTexture.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-dom/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-dom/index.js",
+              "value": 1363,
+              "displayValue": "1.33KB",
+              "delta": 1363,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.33KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-dom/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/States/depthCullingState.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/States/depthCullingState.js",
+              "value": 6127,
+              "displayValue": "5.98KB",
+              "delta": 6127,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.98KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/States/depthCullingState.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/States/stencilState.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/States/stencilState.js",
+              "value": 6349,
+              "displayValue": "6.2KB",
+              "delta": 6349,
+              "deltaPercentage": 100,
+              "displayDelta": "+6.2KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/States/stencilState.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/States/alphaCullingState.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/States/alphaCullingState.js",
+              "value": 4864,
+              "displayValue": "4.75KB",
+              "delta": 4864,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.75KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/States/alphaCullingState.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/WebGL/webGLPipelineContext.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/WebGL/webGLPipelineContext.js",
+              "value": 1608,
+              "displayValue": "1.57KB",
+              "delta": 1608,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.57KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/WebGL/webGLPipelineContext.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Misc/performanceMonitor.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Misc/performanceMonitor.js",
+              "value": 7893,
+              "displayValue": "7.71KB",
+              "delta": 7893,
+              "deltaPercentage": 100,
+              "displayDelta": "+7.71KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Misc/performanceMonitor.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+              "value": 269,
+              "displayValue": "269B",
+              "delta": 269,
+              "deltaPercentage": 100,
+              "displayDelta": "+269B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/defineProperty.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/defineProperty.js",
+              "value": 367,
+              "displayValue": "367B",
+              "delta": 367,
+              "deltaPercentage": 100,
+              "displayDelta": "+367B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/defineProperty.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-is/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-is/index.js",
+              "value": 196,
+              "displayValue": "196B",
+              "delta": 196,
+              "deltaPercentage": 100,
+              "displayDelta": "+196B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-is/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+          "runs": [
+            {
+              "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+              "value": 2743,
+              "displayValue": "2.68KB",
+              "delta": 2743,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.68KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/object-assign/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/object-assign/index.js",
+              "value": 2108,
+              "displayValue": "2.06KB",
+              "delta": 2108,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.06KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/object-assign/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/bind.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/bind.js",
+              "value": 256,
+              "displayValue": "256B",
+              "delta": 256,
+              "deltaPercentage": 100,
+              "displayDelta": "+256B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/bind.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/buildURL.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/buildURL.js",
+              "value": 1644,
+              "displayValue": "1.61KB",
+              "delta": 1644,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.61KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/buildURL.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/cancel/isCancel.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/cancel/isCancel.js",
+              "value": 102,
+              "displayValue": "102B",
+              "delta": 102,
+              "deltaPercentage": 100,
+              "displayDelta": "+102B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/cancel/isCancel.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/defaults.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/defaults.js",
+              "value": 2563,
+              "displayValue": "2.5KB",
+              "delta": 2563,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.5KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/defaults.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/adapters/xhr.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/adapters/xhr.js",
+              "value": 5869,
+              "displayValue": "5.73KB",
+              "delta": 5869,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.73KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/adapters/xhr.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/createError.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/createError.js",
+              "value": 625,
+              "displayValue": "625B",
+              "delta": 625,
+              "deltaPercentage": 100,
+              "displayDelta": "+625B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/createError.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/mergeConfig.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/mergeConfig.js",
+              "value": 2895,
+              "displayValue": "2.83KB",
+              "delta": 2895,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.83KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/mergeConfig.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/cancel/Cancel.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/cancel/Cancel.js",
+              "value": 385,
+              "displayValue": "385B",
+              "delta": 385,
+              "deltaPercentage": 100,
+              "displayDelta": "+385B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/cancel/Cancel.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babylonjs/core/Engines/nullEngine.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babylonjs/core/Engines/nullEngine.js",
+              "value": 33852,
+              "displayValue": "33.06KB",
+              "delta": 33852,
+              "deltaPercentage": 100,
+              "displayDelta": "+33.06KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babylonjs/core/Engines/nullEngine.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/typeof.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/typeof.js",
+              "value": 723,
+              "displayValue": "723B",
+              "delta": 723,
+              "deltaPercentage": 100,
+              "displayDelta": "+723B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/typeof.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/classCallCheck.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/classCallCheck.js",
+              "value": 274,
+              "displayValue": "274B",
+              "delta": 274,
+              "deltaPercentage": 100,
+              "displayDelta": "+274B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/classCallCheck.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/createClass.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/createClass.js",
+              "value": 674,
+              "displayValue": "674B",
+              "delta": 674,
+              "deltaPercentage": 100,
+              "displayDelta": "+674B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/createClass.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/redux-devtools-extension/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/redux-devtools-extension/index.js",
+              "value": 671,
+              "displayValue": "671B",
+              "delta": 671,
+              "deltaPercentage": 100,
+              "displayDelta": "+671B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/redux-devtools-extension/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/slicedToArray.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/slicedToArray.js",
+              "value": 522,
+              "displayValue": "522B",
+              "delta": 522,
+              "deltaPercentage": 100,
+              "displayDelta": "+522B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/slicedToArray.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react/cjs/react.production.min.js",
+          "runs": [
+            {
+              "name": "./node_modules/react/cjs/react.production.min.js",
+              "value": 6675,
+              "displayValue": "6.52KB",
+              "delta": 6675,
+              "deltaPercentage": 100,
+              "displayDelta": "+6.52KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react/cjs/react.production.min.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+              "value": 118737,
+              "displayValue": "115.95KB",
+              "delta": 118737,
+              "deltaPercentage": 100,
+              "displayDelta": "+115.95KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-dom/node_modules/scheduler/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-dom/node_modules/scheduler/index.js",
+              "value": 198,
+              "displayValue": "198B",
+              "delta": 198,
+              "deltaPercentage": 100,
+              "displayDelta": "+198B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-dom/node_modules/scheduler/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.production.min.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.production.min.js",
+              "value": 5041,
+              "displayValue": "4.92KB",
+              "delta": 5041,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.92KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.production.min.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/prop-types/factoryWithThrowingShims.js",
+          "runs": [
+            {
+              "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+              "value": 1621,
+              "displayValue": "1.58KB",
+              "delta": 1621,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.58KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/prop-types/factoryWithThrowingShims.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+          "runs": [
+            {
+              "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+              "value": 314,
+              "displayValue": "314B",
+              "delta": 314,
+              "deltaPercentage": 100,
+              "displayDelta": "+314B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-is/cjs/react-is.production.min.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+              "value": 2554,
+              "displayValue": "2.49KB",
+              "delta": 2554,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.49KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-is/cjs/react-is.production.min.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/axios.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/axios.js",
+              "value": 1503,
+              "displayValue": "1.47KB",
+              "delta": 1503,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.47KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/axios.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/Axios.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/Axios.js",
+              "value": 2648,
+              "displayValue": "2.59KB",
+              "delta": 2648,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.59KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/Axios.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/InterceptorManager.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/InterceptorManager.js",
+              "value": 1251,
+              "displayValue": "1.22KB",
+              "delta": 1251,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.22KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/InterceptorManager.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/dispatchRequest.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/dispatchRequest.js",
+              "value": 1934,
+              "displayValue": "1.89KB",
+              "delta": 1934,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.89KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/dispatchRequest.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/transformData.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/transformData.js",
+              "value": 550,
+              "displayValue": "550B",
+              "delta": 550,
+              "deltaPercentage": 100,
+              "displayDelta": "+550B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/transformData.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/process/browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/process/browser.js",
+              "value": 5418,
+              "displayValue": "5.29KB",
+              "delta": 5418,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.29KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/process/browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+              "value": 357,
+              "displayValue": "357B",
+              "delta": 357,
+              "deltaPercentage": 100,
+              "displayDelta": "+357B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/settle.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/settle.js",
+              "value": 706,
+              "displayValue": "706B",
+              "delta": 706,
+              "deltaPercentage": 100,
+              "displayDelta": "+706B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/settle.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/enhanceError.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/enhanceError.js",
+              "value": 1049,
+              "displayValue": "1.02KB",
+              "delta": 1049,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.02KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/enhanceError.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/cookies.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/cookies.js",
+              "value": 1435,
+              "displayValue": "1.4KB",
+              "delta": 1435,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.4KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/cookies.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/core/buildFullPath.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/core/buildFullPath.js",
+              "value": 695,
+              "displayValue": "695B",
+              "delta": 695,
+              "deltaPercentage": 100,
+              "displayDelta": "+695B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/core/buildFullPath.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+              "value": 563,
+              "displayValue": "563B",
+              "delta": 563,
+              "deltaPercentage": 100,
+              "displayDelta": "+563B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/combineURLs.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/combineURLs.js",
+              "value": 380,
+              "displayValue": "380B",
+              "delta": 380,
+              "deltaPercentage": 100,
+              "displayDelta": "+380B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/combineURLs.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/parseHeaders.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/parseHeaders.js",
+              "value": 1393,
+              "displayValue": "1.36KB",
+              "delta": 1393,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.36KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/parseHeaders.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+              "value": 2305,
+              "displayValue": "2.25KB",
+              "delta": 2305,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.25KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/cancel/CancelToken.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/cancel/CancelToken.js",
+              "value": 1240,
+              "displayValue": "1.21KB",
+              "delta": 1240,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.21KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/cancel/CancelToken.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/spread.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/spread.js",
+              "value": 564,
+              "displayValue": "564B",
+              "delta": 564,
+              "deltaPercentage": 100,
+              "displayDelta": "+564B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/spread.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/axios/lib/helpers/isAxiosError.js",
+          "runs": [
+            {
+              "name": "./node_modules/axios/lib/helpers/isAxiosError.js",
+              "value": 343,
+              "displayValue": "343B",
+              "delta": 343,
+              "deltaPercentage": 100,
+              "displayDelta": "+343B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/axios/lib/helpers/isAxiosError.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
+              "value": 184,
+              "displayValue": "184B",
+              "delta": 184,
+              "deltaPercentage": 100,
+              "displayDelta": "+184B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
+              "value": 699,
+              "displayValue": "699B",
+              "delta": 699,
+              "deltaPercentage": 100,
+              "displayDelta": "+699B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js",
+              "value": 609,
+              "displayValue": "609B",
+              "delta": 609,
+              "deltaPercentage": 100,
+              "displayDelta": "+609B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js",
+              "value": 312,
+              "displayValue": "312B",
+              "delta": 312,
+              "deltaPercentage": 100,
+              "displayDelta": "+312B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
+          "runs": [
+            {
+              "name": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
+              "value": 309,
+              "displayValue": "309B",
+              "delta": 309,
+              "deltaPercentage": 100,
+              "displayDelta": "+309B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
+          "changed": true
+        },
+        {
+          "key": "(webpack)/buildin/global.js",
+          "runs": [
+            {
+              "name": "(webpack)/buildin/global.js",
+              "value": 472,
+              "displayValue": "472B",
+              "delta": 472,
+              "deltaPercentage": 100,
+              "displayDelta": "+472B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "(webpack)/buildin/global.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/earcut/src/earcut.js",
+          "runs": [
+            {
+              "name": "./node_modules/earcut/src/earcut.js",
+              "value": 20423,
+              "displayValue": "19.94KB",
+              "delta": 20423,
+              "deltaPercentage": 100,
+              "displayDelta": "+19.94KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/earcut/src/earcut.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-i18next/dist/es/useTranslation.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-i18next/dist/es/useTranslation.js + 1 modules",
+              "value": 6830,
+              "displayValue": "6.67KB",
+              "delta": 6830,
+              "deltaPercentage": 100,
+              "displayDelta": "+6.67KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-i18next/dist/es/useTranslation.js",
+          "changed": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "key": "tslib",
+      "runs": [
+        {
+          "path": "./node_modules/tslib",
+          "value": 11605,
+          "displayValue": "11.33KB",
+          "delta": 11605,
+          "deltaPercentage": 100,
+          "displayDelta": "+11.33KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "tslib",
+      "changed": true
+    },
+    {
+      "key": "react",
+      "runs": [
+        {
+          "path": "./node_modules/react",
+          "value": 6865,
+          "displayValue": "6.7KB",
+          "delta": 6865,
+          "deltaPercentage": 100,
+          "displayDelta": "+6.7KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react",
+      "changed": true
+    },
+    {
+      "key": "@babylonjs/core",
+      "runs": [
+        {
+          "path": "./node_modules/@babylonjs/core",
+          "value": 8693879,
+          "displayValue": "8.29MB",
+          "delta": 8693879,
+          "deltaPercentage": 100,
+          "displayDelta": "+8.29MB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "@babylonjs/core",
+      "changed": true
+    },
+    {
+      "key": "i18next",
+      "runs": [
+        {
+          "path": "./node_modules/i18next",
+          "value": 81610,
+          "displayValue": "79.7KB",
+          "delta": 81610,
+          "deltaPercentage": 100,
+          "displayDelta": "+79.7KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "i18next",
+      "changed": true
+    },
+    {
+      "key": "prop-types",
+      "runs": [
+        {
+          "path": "./node_modules/prop-types",
+          "value": 2645,
+          "displayValue": "2.58KB",
+          "delta": 2645,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.58KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "prop-types",
+      "changed": true
+    },
+    {
+      "key": "react-redux",
+      "runs": [
+        {
+          "path": "./node_modules/react-redux",
+          "value": 53219,
+          "displayValue": "51.97KB",
+          "delta": 53219,
+          "deltaPercentage": 100,
+          "displayDelta": "+51.97KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-redux",
+      "changed": true
+    },
+    {
+      "key": "axios",
+      "runs": [
+        {
+          "path": "./node_modules/axios",
+          "value": 42242,
+          "displayValue": "41.25KB",
+          "delta": 42242,
+          "deltaPercentage": 100,
+          "displayDelta": "+41.25KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "axios",
+      "changed": true
+    },
+    {
+      "key": "redux",
+      "runs": [
+        {
+          "path": "./node_modules/redux",
+          "value": 27991,
+          "displayValue": "27.33KB",
+          "delta": 27991,
+          "deltaPercentage": 100,
+          "displayDelta": "+27.33KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "redux",
+      "changed": true
+    },
+    {
+      "key": "react-i18next",
+      "runs": [
+        {
+          "path": "./node_modules/react-i18next",
+          "value": 10319,
+          "displayValue": "10.08KB",
+          "delta": 10319,
+          "deltaPercentage": 100,
+          "displayDelta": "+10.08KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-i18next",
+      "changed": true
+    },
+    {
+      "key": "react-dom",
+      "runs": [
+        {
+          "path": "./node_modules/react-dom",
+          "value": 120100,
+          "displayValue": "117.29KB",
+          "delta": 120100,
+          "deltaPercentage": 100,
+          "displayDelta": "+117.29KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-dom",
+      "changed": true
+    },
+    {
+      "key": "@babel/runtime",
+      "runs": [
+        {
+          "path": "./node_modules/@babel/runtime",
+          "value": 4942,
+          "displayValue": "4.83KB",
+          "delta": 4942,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.83KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "@babel/runtime",
+      "changed": true
+    },
+    {
+      "key": "react-is",
+      "runs": [
+        {
+          "path": "./node_modules/react-is",
+          "value": 2750,
+          "displayValue": "2.69KB",
+          "delta": 2750,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.69KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-is",
+      "changed": true
+    },
+    {
+      "key": "hoist-non-react-statics",
+      "runs": [
+        {
+          "path": "./node_modules/hoist-non-react-statics",
+          "value": 2743,
+          "displayValue": "2.68KB",
+          "delta": 2743,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.68KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "hoist-non-react-statics",
+      "changed": true
+    },
+    {
+      "key": "object-assign",
+      "runs": [
+        {
+          "path": "./node_modules/object-assign",
+          "value": 2108,
+          "displayValue": "2.06KB",
+          "delta": 2108,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.06KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "object-assign",
+      "changed": true
+    },
+    {
+      "key": "redux-devtools-extension",
+      "runs": [
+        {
+          "path": "./node_modules/redux-devtools-extension",
+          "value": 671,
+          "displayValue": "671B",
+          "delta": 671,
+          "deltaPercentage": 100,
+          "displayDelta": "+671B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "redux-devtools-extension",
+      "changed": true
+    },
+    {
+      "key": "react-dom:scheduler",
+      "runs": [
+        {
+          "path": "./node_modules/react-dom/node_modules/scheduler",
+          "value": 5239,
+          "displayValue": "5.12KB",
+          "delta": 5239,
+          "deltaPercentage": 100,
+          "displayDelta": "+5.12KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-dom:scheduler",
+      "changed": true
+    },
+    {
+      "key": "process",
+      "runs": [
+        {
+          "path": "./node_modules/process",
+          "value": 5418,
+          "displayValue": "5.29KB",
+          "delta": 5418,
+          "deltaPercentage": 100,
+          "displayDelta": "+5.29KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "process",
+      "changed": true
+    },
+    {
+      "key": "earcut",
+      "runs": [
+        {
+          "path": "./node_modules/earcut",
+          "value": 20423,
+          "displayValue": "19.94KB",
+          "delta": 20423,
+          "deltaPercentage": 100,
+          "displayDelta": "+19.94KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "earcut",
+      "changed": true
+    }
+  ]
+}

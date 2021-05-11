@@ -39,6 +39,7 @@
     "level": "0",
     "metal": "100",
     "energy": "50",
+    "antimatter": "500",
     "time": "1000"
   },
   "financial": {
@@ -98,6 +99,7 @@
   "concentrator": {
     "level": "1",
     "metal": "100",
+    "antimatter": "500",
     "energy": "50",
     "time": "1000"
   },

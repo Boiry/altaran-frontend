@@ -1,38 +1,74 @@
 @use 'src/styles/vars';
 
-.star-system {
-  position: relative;
-  // background: #151618;
-  width: 60vw;
-  height: 70vh;
-  top: 1rem;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 #canvas {
   width: 100%;
   height: 100%;
 }
 
-.star-system-navigation {
-  // background: vars.$field-background;
-  position: absolute;
-  width: 25rem;
-  top: 2rem;
-  text-align: center;
-  // border: 1px solid vars.$neon;
-  left: calc(50% - 12rem);
-}
-
-.separator {
+.star-system {
   position: relative;
-  font-size: 1.5rem;
-  color: vars.$neon;
-  top: -2rem;
-}
+  width: 60vw;
+  height: 70vh;
+  top: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
 
-.star-system-arrow {
-  width: 3rem;
-  margin: 1rem;
+  &-navigation {
+    position: absolute;
+    width: 25rem;
+    top: 2rem;
+    text-align: center;
+    left: calc(50% - 12rem);
+  }
+
+  &-separator {
+    position: relative;
+    font-size: 1.5rem;
+    color: vars.$neon;
+    top: -2rem;
+  }
+
+  &-arrow {
+    width: 3rem;
+    margin: 1rem;
+  }
+
+  &-button {
+    display: none;
+  }
+
+  &-info {
+    position: absolute;
+    background: vars.$light-blue;
+    border: 1px solid vars.$neon;
+    top: 25rem;
+    width: 18rem;
+    left: calc(50% - 9rem);
+    padding: .5rem;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  &-list {
+    position: absolute;
+    background: vars.$field-background;
+    top: 9rem;
+    width: 20rem;
+    left: calc(50% - 10rem);
+    height: calc(100% - 9rem);
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
+    visibility: hidden;
+
+    &-item {
+      cursor: default;
+      &:hover {
+        background: vars.$field-background;
+      }
+    }
+  }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Tab from 'src/containers/Tab';
 
-import Galaxy from './Galaxy';
+import Galaxy from 'src/containers/Map/Galaxy';
 import StarSystem from 'src/containers/Map/StarSystem';
 
 import './map.scss';

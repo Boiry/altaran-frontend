@@ -19,7 +19,13 @@ module.exports = merge(common, {
       filename: 'css/[name].css',
     }),
     // Stats bundle
-    new BundleStatsWebpackPlugin(),
+    new BundleStatsWebpackPlugin({
+      compare: true,
+      baseline: true,
+      html: true,
+      json: true,
+      outDir: '../stats/',
+  }),
   ],
   module: {
     rules: [
@@ -49,10 +55,13 @@ module.exports = merge(common, {
   stats: {
     assets: true,
     entrypoints: true,
-    chunks: true,
+    chunks: false,
     modules: true,
     builtAt: true,
     hash: true,
+    performance: true,
+    timings: true,
+    version: true,
   },
 
   optimization: {

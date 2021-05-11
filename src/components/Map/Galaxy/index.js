@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
 import SceneComponent from "src/utils/babylonjs/sceneComponent";
 
@@ -11,10 +11,62 @@ import galaxyWrapper from 'src/assets/galaxyWrapper';
 import basicStar from "src/assets/images/basic-star50.png";
 import './galaxy.scss';
 
-const Galaxy = () => {
+const Galaxy = ({
+  launchFetchStarSystem,
+  goToStarSystemPage,
+  starSystemName,
+  changeField,
+  launchDeleteStarSystemName,
+}) => {
+  // ==================== INPUTS ======================
+
+  const info = useRef();
+  const name = useRef();
+  const coordinates = useRef();
+  let [regionSelected, setRegionSelected] = useState();
+  let [sectorSelected, setSectorSelected] = useState();
+  let [starSystemSelected, setStarSystemSelected] = useState();
+  
+  const showStarSystemInfo = (region, sector, starSystem) => {
+    launchDeleteStarSystemName();
+    launchFetchStarSystem(region, sector, starSystem);
+    setRegionSelected(region);
+    setSectorSelected(sector);
+    setStarSystemSelected(starSystem);
+    const coordinatesString = `${region} : ${sector} : ${starSystem}`;
+    coordinates.current.textContent = coordinatesString;
+    name.current.style.fontSize = "1rem";
+    name.current.style.fontStyle = "italic";
+    name.current.textContent = "Loading...";
+    info.current.style.display = "block";
+    setTimeout(() => {info.current.focus()}, 500);
+  }
+
+  useEffect(() => {
+    name.current.style.fontSize = "1.4rem";
+    name.current.style.fontStyle = "none";
+    name.current.textContent = starSystemName;
+  }, [starSystemName])
+
+  const clickOnGoStarSystem = () => {
+    changeField(regionSelected, 'region');
+    changeField(sectorSelected, 'sector');
+    changeField(starSystemSelected, 'starSystem');
+    goToStarSystemPage();
+  }
+
+  const hideInfo = () => {
+    info.current.style.display = "none";
+  }
+
+  useEffect(() => {
+    hideInfo();
+  }, [])
+
+  // ================ BABYLON =================
   const onSceneReady = (scene) => {
     document.getElementById("canvas").focus();
-    var camera = new UniversalCamera("UniversalCamera", new Vector3(0, -5000, 0), scene);
+    var camera = new UniversalCamera("UniversalCamera", new Vector3(0, -2000, 0), scene);
     camera.upVector = new Vector3(0, -1, -1);
     camera.maxZ = 20000;
 
@@ -55,7 +107,7 @@ const Galaxy = () => {
     
     const spriteManagerStars = new SpriteManager("starsManager", basicStar, stars.length, {width: 50, height: 50});
     spriteManagerStars.isPickable = true;
-    
+
     for (let i = 0; i < stars.length; i++) {
       const star = new Sprite(("star"+i), spriteManagerStars);
       star.width = 2;
@@ -64,12 +116,18 @@ const Galaxy = () => {
       star.position.y = stars[i].y;
       star.position.z = stars[i].z;
       star.isPickable = true;
+      star.region = stars[i].region_num;
+      star.sector = stars[i].sector_num;
+      star.system = stars[i].system_num;
     };
     
     scene.onPointerDown = function (evt) {
       const pickResult = scene.pickSprite(this.pointerX, this.pointerY);
       if (pickResult.hit) {
-        console.log(pickResult.pickedSprite.name);
+        const region = pickResult.pickedSprite.region;
+        const sector = pickResult.pickedSprite.sector;
+        const starSystem = pickResult.pickedSprite.system;
+        showStarSystemInfo(region, sector, starSystem);
       }
     };
     
@@ -78,8 +136,8 @@ const Galaxy = () => {
     blueMat.alpha = .2;
     blueMat.backFaceCulling = false;
 
-    const wrapper = MeshBuilder.CreatePolyhedron("h", {custom: galaxyWrapper}, scene);
-    wrapper.material = blueMat;
+    // const wrapper = MeshBuilder.CreatePolyhedron("h", {custom: galaxyWrapper}, scene);
+    // wrapper.material = blueMat;
 
     scene.blockfreeActiveMeshesAndRenderingGroups = false;
 
@@ -94,6 +152,11 @@ const Galaxy = () => {
         <div className="background-opacity">
           <SceneComponent antialias onSceneReady={onSceneReady} id="canvas" tabIndex="0" />
         </div>
+      </div>
+      <div ref={info} className="galaxy-star-info" tabIndex="1" onBlur={hideInfo}>
+        <p ref={name} className="galaxy-star-info-name">Test</p>
+        <p ref={coordinates} className="galaxy-star-into-coordinates">Test test test</p>
+        <button className="galaxy-star-info-button" onMouseDown={() => clickOnGoStarSystem()}>Y aller</button>
       </div>
       <aside className="aside"></aside>
     </>

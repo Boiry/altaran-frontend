@@ -3,7 +3,7 @@
 .minichat {
   background-color: rgba(93, 186, 224, .2);
   position: absolute;
-  width: 17rem;
+  width: 17vw;
   height: 20rem;
   margin: 1rem;
   right: 0;
@@ -35,12 +35,9 @@
       font-size: .8rem;
       border-radius: .5rem;
     }
-
-    &-message1 {
-    }
     
     &-message2 {
-      margin-left: 3rem;
+      margin-left: 2.5vw;
       text-align: right;
     }
   }
@@ -48,7 +45,7 @@
   &-field {
     background-color: vars.$field-background;
     position: absolute;
-    width: 16rem;
+    width: 16vw;
     bottom: 0;
     margin: .5rem;
     padding: .5rem;

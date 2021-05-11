@@ -1,6 +1,6 @@
 import {
   CHANGE_PAGE,
-} from '/src/actions/router';
+} from 'src/actions/router';
 
 const initialState = {
   page: 'login',

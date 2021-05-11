@@ -4,7 +4,7 @@ import {
   SHOW_LOGIN_ERROR,
   SHOW_USERNAME_ERROR,
   SHOW_PASSWORD_ERROR,
-} from '/src/actions/user';
+} from 'src/actions/user';
 
 const initialState = {
   username: '',

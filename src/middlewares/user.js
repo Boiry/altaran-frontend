@@ -22,10 +22,14 @@ const userMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           window.sessionStorage.setItem('token', response.data.token);
           store.dispatch(saveUserInfo(response.data.id, true));
-          store.dispatch(changePage('bases'));
+          store.dispatch(changePage('empire'));
         })
         .catch((error) => {
-          store.dispatch(showLoginError('Les identifiants sont incorrects, veuillez les saisir à nouveau.'));
+          if (error.message === "Network Error") {
+            store.dispatch(showLoginError('Le serveur est indisponible pour le moment.'));
+          } else {
+            store.dispatch(showLoginError('Les identifiants sont incorrects, veuillez les saisir à nouveau.'));
+          }
         });
 
       next(action);

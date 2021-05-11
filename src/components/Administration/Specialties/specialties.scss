@@ -1,12 +1,17 @@
 @use 'src/styles/vars';
 
-.specialties-main {
+.specialties {
+  &-main {
   height: calc(100vh-15rem);
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: vars.$neon transparent;
   padding: .5rem 0;
   margin: .5rem 0;
+  }
+  &-arrow {
+    width: 1.5rem;
+  }
 }
 
 table {
@@ -15,10 +20,12 @@ table {
   border-spacing: .5rem;
   table-layout: auto;
   width: 50rem;
+  margin: 0 auto;
 }
 
 th {
   vertical-align: middle;
+  font-size: .9rem;
 }
 
 td {

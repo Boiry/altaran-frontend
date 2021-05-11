@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from 'src/reducers';
 import userMiddleware from 'src/middlewares/user';
 import basesMiddleware from 'src/middlewares/bases';
+import mapMiddleware from 'src/middlewares/map';
 
 const store = createStore(
   reducer,
@@ -11,6 +12,7 @@ const store = createStore(
     applyMiddleware(
       userMiddleware,
       basesMiddleware,
+      mapMiddleware,
     ),
   ),
 );
