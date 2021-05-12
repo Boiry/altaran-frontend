@@ -8,6 +8,7 @@ import './empire.scss';
 
 const Empire = () => {
   document.body.style.background = `url(${Background})`;
+  document.body.style.backgroundSize = 'cover';
 
   const [subPage, changeSubPage] = useState('statistics');
   const tabs = {

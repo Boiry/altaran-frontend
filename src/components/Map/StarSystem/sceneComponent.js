@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useMemo } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Engine, Scene, HemisphericLight, ArcRotateCamera, Mesh, VertexData, ParticleSystem, Texture, BlurPostProcess, PolygonMeshBuilder, UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, PointLight, MeshBuilder, GlowLayer, Color3, Color4, StandardMaterial, SpriteSceneComponent, Vector2 } from "@babylonjs/core";
 import * as earcut from "earcut";
 
@@ -219,9 +219,10 @@ export default (props) => {
             if (entities[i].moons) {
               const moonSpec = entities[i].moons;
               if (moonSpec[j]) {
+                specs = planetsSpecs[moonSpec[j].type];
                 const material = new StandardMaterial(scene);
-                material.diffuseColor = new Color3(1, 1, 1);
-                const moon = MeshBuilder.CreateSphere("moon", {diameter: 1.3}, scene);
+                material.diffuseColor = new Color3(specs.r, specs.g, specs.b);
+                const moon = MeshBuilder.CreateSphere("moon", {diameter: specs.diameter / 1.5}, scene);
                 moon.material = material;
                 const y = 2 * j + 2.5;
                 moon.position = new Vector3(x, y, 0);

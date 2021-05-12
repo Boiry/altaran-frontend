@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Tab from 'src/containers/Tab';
 
 import './bases.scss';
-import Background from 'src/assets/images/background3.jpg';
 import BaseSelector from './BaseSelector';
 import Description from './Description';
 import Facilities from 'src/containers/Bases/Facilities';
@@ -15,17 +15,17 @@ import Aside from 'src/containers/Bases/Aside';
 
 const Bases = ({ selectedBase, changeSelectedBase }) => {
   // document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
-  // document.body.style.background = `url(${Background})`;
 
+  const { t } = useTranslation('bases');
   const [subPage, changeSubPage] = useState("description");
 
   const tabs = {
-    "Description": "description",
-    "Bâtiments": "facilities",
-    "Défenses": "defenses",
-    "Flotte": "ships",
-    "Troupes": "infantry",
-    "Technologies": "technologies"
+    [t("description")]: "description",
+    [t("facilities")]: "facilities",
+    [t("defenses")]: "defenses",
+    [t("ships")]: "ships",
+    [t("infantry")]: "infantry",
+    [t("technologies")]: "technologies"
   };
 
 

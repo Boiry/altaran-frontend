@@ -19,7 +19,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    // new WebpackWarPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         { 

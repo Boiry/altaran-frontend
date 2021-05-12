@@ -3,8 +3,9 @@ import {
 } from 'src/actions/tab';
 
 const initialState = {
-  bases: 'description',
   empire: 'statistics',
+  bases: 'description',
+  communications: "intCom",
   map: 'galaxy',
   administration: 'specialties',
 };

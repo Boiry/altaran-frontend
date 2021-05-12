@@ -92,37 +92,39 @@ const StarSystem = ({
 
   // Click on arrow
   const handleClickArrow = (e) => {
-    switch (e.target.name) {
-      case "arrowLeft":
-        if (starSystem > 1) {
-          changeField(starSystem - 1, 'starSystem');
-          letsGo(true);
-        } else if (sector > 1) {
-          launchFetchStarSystems(region, sector - 1);
-          changeField(sector - 1, 'sector');
-          doFindLastSystem(true);
-        } else if (region > 1) {
-          launchFetchSectors(region - 1);
-          doFindLastSector(true);
-        }
-        break;
-      case "arrowRight":
-        if (starSystem < starSystemsInfo.length) {
-          changeField(parseInt(starSystem) + 1, 'starSystem');
-          letsGo(true);
-        } else if (sector < sectorsInfo.length) {
-          launchFetchStarSystems(region, parseInt(sector) + 1);
-          changeField(1, 'starSystem');
-          changeField(parseInt(sector) + 1, 'sector');
-          letsGo(true);
-        } else if (region < 50) {
-          launchFetchStarSystems(parseInt(region) + 1, 1);
-          changeField(parseInt(region) + 1, 'region');
-          changeField(1, 'sector');
-          changeField(1, 'starSystem');
-          letsGo(true);
-        }
-        break;
+    if (region && sector && starSystem) {
+      switch (e.target.name) {
+        case "arrowLeft":
+          if (starSystem > 1) {
+            changeField(starSystem - 1, 'starSystem');
+            letsGo(true);
+          } else if (sector > 1) {
+            launchFetchStarSystems(region, sector - 1);
+            changeField(sector - 1, 'sector');
+            doFindLastSystem(true);
+          } else if (region > 1) {
+            launchFetchSectors(region - 1);
+            doFindLastSector(true);
+          }
+          break;
+        case "arrowRight":
+          if (starSystem < starSystemsInfo.length) {
+            changeField(parseInt(starSystem) + 1, 'starSystem');
+            letsGo(true);
+          } else if (sector < sectorsInfo.length) {
+            launchFetchStarSystems(region, parseInt(sector) + 1);
+            changeField(1, 'starSystem');
+            changeField(parseInt(sector) + 1, 'sector');
+            letsGo(true);
+          } else if (region < 50) {
+            launchFetchStarSystems(parseInt(region) + 1, 1);
+            changeField(parseInt(region) + 1, 'region');
+            changeField(1, 'sector');
+            changeField(1, 'starSystem');
+            letsGo(true);
+          }
+          break;
+      }
     }
   }
 
@@ -182,10 +184,10 @@ const StarSystem = ({
       list.current.focus();
     }
   }
-
   
   const hideList = () => {
     if (list.current) {
+      list.current.scrollTop = 0;
       list.current.style.visibility = "hidden";
     }
   }
@@ -207,7 +209,6 @@ const StarSystem = ({
     if (region && sector && system) {
       letsGo(true);
     }
-    
   }
 
   return (

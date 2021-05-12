@@ -17,7 +17,7 @@ const Nav = ({ handleLogout }) => {
       <button className="nav-button" onClick={() => setPage('fleet')}>Flottes</button>
       <button className="nav-button">Espionnage</button>
       <button className="nav-button">Alliance</button>
-      <button className="nav-button">Communications</button>
+      <button className="nav-button" onClick={() => setPage('communications')}>Communications</button>
       <button className="nav-button" onClick={() => setPage('map')}>Cartographie</button>
       <button className="nav-button">Commerce</button>
       <button className="nav-button" onClick={() => setPage('administration')}>Administration</button>

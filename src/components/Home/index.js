@@ -21,7 +21,7 @@ import Lock9 from '../../assets/images/lock/lock9.svg';
 import MenuLines from '../../assets/images/menu-lines.svg';
 import Corner from '../../assets/images/corner.svg';
 
-const Home = () => {
+const Home = ({ waiting }) => {
   useEffect(() => {
     if (window.localStorage.firstVisit === undefined) {
       firstAnimation();

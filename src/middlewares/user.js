@@ -3,10 +3,13 @@ import axios from 'axios';
 import {
   LOGIN,
   REGISTER,
+  waiting,
   saveUserInfo,
   showLoginError,
+  deletePassword,
   showUsernameError,
   showPasswordError,
+  registerSuccess,
   LOGOUT
 } from '../actions/user';
 import { changePage } from '../actions/router';
@@ -14,6 +17,7 @@ import { changePage } from '../actions/router';
 const userMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
+      store.dispatch(waiting(true));
       const { username, password } = store.getState().user;
       axios.post(`http://dyn.estydral.ovh:9090/praland-backend/api/auth/signin`, {
         username,
@@ -22,6 +26,7 @@ const userMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           window.sessionStorage.setItem('token', response.data.token);
           store.dispatch(saveUserInfo(response.data.id, true));
+          store.dispatch(deletePassword());
           store.dispatch(changePage('empire'));
         })
         .catch((error) => {
@@ -30,6 +35,9 @@ const userMiddleware = (store) => (next) => (action) => {
           } else {
             store.dispatch(showLoginError('Les identifiants sont incorrects, veuillez les saisir à nouveau.'));
           }
+        })
+        .finally(() => {
+          store.dispatch(waiting(false));
         });
 
       next(action);
@@ -37,6 +45,7 @@ const userMiddleware = (store) => (next) => (action) => {
     };
 
     case REGISTER: {
+      store.dispatch(waiting(true));
       const { username, email, password, matchingPassword } = store.getState().user;
       axios.post(`http://dyn.estydral.ovh:9090/praland-backend/user/registration`, {
         username,
@@ -46,6 +55,8 @@ const userMiddleware = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response);
+          // If success
+          store.dispatch(registerSuccess(true));
         })
         .catch((error) => {
           const message = error.response.data.message;
@@ -74,6 +85,9 @@ const userMiddleware = (store) => (next) => (action) => {
             }
           }
           store.dispatch(showPasswordError(passwordErrorMessage));
+        })
+        .finally(() => {
+          store.dispatch(waiting(false));
         });
         
       next(action);

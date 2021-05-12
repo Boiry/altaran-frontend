@@ -30,3 +30,9 @@
     border-bottom: 1px solid white;
   }
 }
+
+.connection-waiting-wheel {
+  position: relative;
+  width: 5rem;
+  left: calc(175px - 2.5rem);
+}
