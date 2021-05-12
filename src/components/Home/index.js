@@ -20,6 +20,7 @@ import Lock8 from '../../assets/images/lock/lock8.svg';
 import Lock9 from '../../assets/images/lock/lock9.svg';
 import MenuLines from '../../assets/images/menu-lines.svg';
 import Corner from '../../assets/images/corner.svg';
+import Construction from 'src/assets/images/construction.svg';
 
 const Home = ({ waiting }) => {
   useEffect(() => {
@@ -72,6 +73,10 @@ const Home = ({ waiting }) => {
           <h2 className="baseline-text">Le jeu qui tchue !<br />Parce qu'un jeu qui tchue c'est mieux qu'un jeu qui tchue pas, Praland c'est trop bien, jouez-y ou on vous pend haut et court.</h2>
         </div>
       </header>
+
+      <div className="home-construction">
+        <img src={Construction} className="home-construction-image" />
+      </div>
 
       <article className="article">
         <img src={Corner} className="corner corner-top-left" />

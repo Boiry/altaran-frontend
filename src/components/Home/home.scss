@@ -167,13 +167,22 @@ body {
   }
 }
 
+.home-construction {
+  position: relative;
+  top : 2rem;
+  text-align: center;
+  &-image {
+    width: 40vw;
+    
+  }
+}
 
 .article {
   position: relative;
   visibility: hidden;
   background-image: url(../../assets/images/background.svg);
   background-size: cover;
-  top: 5rem;
+  top: 3rem;
   margin: 0 auto;
   padding: 2rem;
   text-align: justify;
