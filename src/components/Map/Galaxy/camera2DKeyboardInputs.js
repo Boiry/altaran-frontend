@@ -66,28 +66,22 @@ export default class Camera2DKeyboardInputs {
   //Keys movement control by checking inputs
   checkInputs() {
     if (this._onKeyDown) {
-      var camera = this.camera;
-      for (var index = 0; index < this._keys.length; index++) {
-        var keyCode = this._keys[index];
-        var speed = camera.speed;
+      const camera = this.camera;
+      for (let index = 0; index < this._keys.length; index++) {
+        const keyCode = this._keys[index];
+        const speed = camera.speed;
         if (this.keysLeft.indexOf(keyCode) !== -1) {
-          camera.direction.copyFromFloats(-speed, 0, 0);
+          camera.position.x -= speed;
         }
         else if (this.keysUp.indexOf(keyCode) !== -1) {
-          camera.direction.copyFromFloats(0, speed, 0);
+          camera.position.z -= speed;
         }
         else if (this.keysRight.indexOf(keyCode) !== -1) {
-          camera.direction.copyFromFloats(speed, 0, 0);
+          camera.position.x += speed;
         }
         else if (this.keysDown.indexOf(keyCode) !== -1) {
-          camera.direction.copyFromFloats(0, -speed, 0);
+          camera.position.z += speed;
         }
-        if (camera.getScene().useRightHandedSystem) {
-          camera.direction.z *= -1;
-        }
-        camera.getViewMatrix().invertToRef(camera._cameraTransformMatrix);
-        Vector3.TransformNormalToRef(camera.direction, camera._cameraTransformMatrix, camera._transformedDirection);
-        camera.cameraDirection.addInPlace(camera._transformedDirection);
       }
     }
   }
