@@ -12,8 +12,6 @@ const Galaxy = ({
   launchDeleteStarSystemName,
   getCameraPosition,
   setCameraPosition,
-  getCameraDirection,
-  setCameraDirection,
 }) => {
 
   // ==================== INPUTS ======================
@@ -71,8 +69,6 @@ const Galaxy = ({
           showStarSystemInfo={showStarSystemInfo}
           cameraPosition={getCameraPosition}
           setCameraPosition={setCameraPosition}
-          cameraDirection={getCameraDirection}
-          setCameraDirection={setCameraDirection}
         />
       </div>
       <div ref={info} className="galaxy-star-info" tabIndex="1" onBlur={hideInfo}>

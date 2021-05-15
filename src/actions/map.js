@@ -14,7 +14,6 @@ export const SAVE_CURRENT_SECTOR = "SAVE_CURRENT_SECTOR";
 export const SAVE_CURRENT_STAR_SYSTEM = "SAVE_CURRENT_STAR_SYSTEM";
 export const DELETE_STAR_SYSTEM_NAME = "DELETE_STAR_SYSTEM_NAME";
 export const SET_CAMERA_POSITION = "SET_CAMERA_POSITION";
-export const SET_CAMERA_DIRECTION = "SET_CAMERA_DIRECTION";
 
 export const updateCoordinatesField = (value, name) => ({
   type: UPDATE_COORDINATES_FIELD,
@@ -96,9 +95,4 @@ export const deleteStarSystemName = () => ({
 export const setCameraPosition = (position) => ({
   type: SET_CAMERA_POSITION,
   position,
-});
-
-export const setCameraDirection = (direction) => ({
-  type: SET_CAMERA_DIRECTION,
-  direction,
 });

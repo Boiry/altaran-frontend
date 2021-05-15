@@ -11,7 +11,6 @@ import {
   SAVE_CURRENT_STAR_SYSTEM,
   DELETE_STAR_SYSTEM_NAME,
   SET_CAMERA_POSITION,
-  SET_CAMERA_DIRECTION,
 } from 'src/actions/map';
 
 const initialState = {
@@ -28,7 +27,6 @@ const initialState = {
   currentSector: '',
   currentStarSystem: '',
   cameraPosition: '',
-  cameraDirection: '',
 };
 
 const map = (state = initialState, action = {}) => {
@@ -92,11 +90,6 @@ const map = (state = initialState, action = {}) => {
       return {
         ...state,
         cameraPosition: action.position,
-      };
-    case SET_CAMERA_DIRECTION:
-      return {
-        ...state,
-        cameraDirection: action.direction,
       };
 
     default: return { ...state };

@@ -5,6 +5,7 @@ import reducer from 'src/reducers';
 import userMiddleware from 'src/middlewares/user';
 import basesMiddleware from 'src/middlewares/bases';
 import mapMiddleware from 'src/middlewares/map';
+import chatMiddleware from 'src/middlewares/chat';
 
 const store = createStore(
   reducer,
@@ -13,6 +14,7 @@ const store = createStore(
       userMiddleware,
       basesMiddleware,
       mapMiddleware,
+      chatMiddleware,
     ),
   ),
 );

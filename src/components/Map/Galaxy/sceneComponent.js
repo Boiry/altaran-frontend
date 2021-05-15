@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Engine, Scene, Color4, UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
+import { Engine, Scene, Color4, UniversalCamera, FreeCameraInputsManager, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
 
 import Camera2DKeyboardInputs from "./camera2DKeyboardInputs";
+import Camera2DMouseInputs from './camera2DMouseInputs';
 
 // import stars from 'src/assets/galaxyData';
 import stars from 'src/assets/miniGalaxyData';
@@ -16,8 +17,6 @@ export default (props) => {
     showStarSystemInfo,
     cameraPosition,
     setCameraPosition,
-    cameraDirection,
-    setCameraDirection,
      ...rest } = props;
   useEffect(() => {
     if (reactCanvas.current) {
@@ -27,12 +26,11 @@ export default (props) => {
       setScene(scene);
 
       document.getElementById("canvas").focus();
-      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -2000, 0), scene);
+      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -3000, 0), scene);
       setCamera(camera);
       scene.addCamera(camera);
-      if (cameraPosition && cameraDirection) {
+      if (cameraPosition) {
         camera.position = cameraPosition;
-        camera.setTarget(cameraDirection);
       }
 
       engine.runRenderLoop(() => {
@@ -48,8 +46,9 @@ export default (props) => {
         window.addEventListener("resize", resize);
       }
       return () => {
-        setCameraDirection(camera.getTarget());
         setCameraPosition(camera.position);
+        scene.detachControl();
+        scene.dispose();
         scene.getEngine().dispose();
         
         if (window) {
@@ -61,20 +60,12 @@ export default (props) => {
 
   useEffect(() => {
     if (scene) {
-      // camera.upVector = new Vector3(0, -1, -1);
+      camera.upVector = new Vector3(0, -1, -1);
       camera.maxZ = 20000
-      camera.inputs.remove(camera.inputs.attached.keyboard);
-      camera.direction = new Vector3(0, 0, 0);
-      camera.angularSensibility *= -0.2;
-      camera.invertRotation = true;
-      camera.inverseRotationSpeed = .5;
-      camera.noRotationConstraint = true;
+      camera.setTarget(new Vector3(camera.position.x, 0, camera.position.z));
       camera.inertia = 0;
       camera.speed = 10;
       camera.fov = 0.8;
-      camera.inputs.addMouseWheel();
-      camera.inputs.attached.mousewheel.wheelPrecisionY = 100;
-      camera.setTarget(Vector3.Zero());
 
       // Disable default menu from right click
       document.oncontextmenu = function() { return false };
@@ -103,14 +94,14 @@ export default (props) => {
         star.width = 2;
         star.height = 2;
         star.position.x = stars[i].x;
-        star.position.y = stars[i].y;
+        star.position.y = stars[i].y - 2000;
         star.position.z = stars[i].z;
         star.isPickable = true;
         star.region = stars[i].region_num;
         star.sector = stars[i].sector_num;
         star.system = stars[i].system_num;
       };
-      
+
       scene.onPointerDown = function (evt) {
         const pickResult = scene.pickSprite(this.pointerX, this.pointerY);
         if (pickResult.hit) {
@@ -120,22 +111,36 @@ export default (props) => {
           showStarSystemInfo(region, sector, starSystem);
         }
       };
-      
-      const blueMat = new StandardMaterial("blueMat", scene);
-      blueMat.emissiveColor = new Color3(0, 0, 1);
-      blueMat.alpha = .2;
-      blueMat.backFaceCulling = false;
 
+      // const blueMat = new StandardMaterial("blueMat", scene);
+      // blueMat.emissiveColor = new Color3(0, 0, 1);
+      // blueMat.alpha = .2;
+      // blueMat.backFaceCulling = false;
       // const wrapper = MeshBuilder.CreatePolyhedron("h", {custom: galaxyWrapper}, scene);
       // wrapper.material = blueMat;
 
       scene.blockfreeActiveMeshesAndRenderingGroups = false;
 
+      camera.inputs.remove(camera.inputs.attached.keyboard);
+      camera.inputs.remove(camera.inputs.attached.mouse);
+      
+      camera.inputs.addMouseWheel();
+      camera.inputs.attached.mousewheel.wheelPrecisionY = 100;
+
       // add keyboard controls
       camera.inputs.add(new Camera2DKeyboardInputs());
+
+      // add mouse controls
+      camera.inputs.add(new Camera2DMouseInputs(scene));
     }
 
-  });
+    return () => {
+      if (camera) {
+        camera.inputs.removeByType("Camera2DMouseInputs");
+      
+      }
+    }
+  }, [scene]);
 
   return <canvas ref={reactCanvas} {...rest} />;
 };

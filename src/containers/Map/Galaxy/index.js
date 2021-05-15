@@ -7,7 +7,6 @@ import {
   fetchStarSystem,
   deleteStarSystemName,
   setCameraPosition,
-  setCameraDirection,
 } from 'src/actions/map';
 
 import { changeSubPage } from 'src/actions/tab';
@@ -15,7 +14,6 @@ import { changeSubPage } from 'src/actions/tab';
 const mapStateToProps = (state) => ({
   starSystemName: state.map.starSystemInfo.name,
   getCameraPosition: state.map.cameraPosition,
-  getCameraDirection: state.map.cameraDirection,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -33,9 +31,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setCameraPosition: (position) => {
     dispatch(setCameraPosition(position));
-  },
-  setCameraDirection: (direction) => {
-    dispatch(setCameraDirection(direction));
   },
 });
 

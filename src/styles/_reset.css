@@ -157,3 +157,9 @@ input,
 button {
   outline: 0;
 }
+
+/* Personal adds : */
+button {
+  background: none;
+  border: none;
+}

@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="109.40784mm"
-   height="23.492935mm"
-   viewBox="0 0 109.40784 23.492935"
+   height="50mm"
+   viewBox="0 0 109.40784 50"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2 (394de47547, 2021-03-26)"
@@ -58,7 +58,7 @@
      transform="translate(-53,-122)">
     <path
        style="fill:#5dbae0;fill-opacity:0.5;stroke:#5dbae0;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5"
-       d="m 53,123 h 107 l -21,21.07877 -21,-20.91879"
+       d="m 53,139.08311 h 107 l -21,21.07877 -21,-20.91879"
        id="path833"
        sodipodi:nodetypes="cccc" />
   </g>
