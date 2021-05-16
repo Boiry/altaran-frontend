@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Message from './Message';
 import './chat.scss';
@@ -6,6 +6,8 @@ import './chat.scss';
 import Corner from 'src/assets/images/corner.svg';
 
 const Chat = ({ webSocketConnect, updateFieldValue, fieldValue, sendMessage, chatContent }) => {
+  const messages = useRef();
+
   // WebSocket Connection
   useEffect(() => {
     webSocketConnect();
@@ -22,10 +24,14 @@ const Chat = ({ webSocketConnect, updateFieldValue, fieldValue, sendMessage, cha
     }
   }
 
+  useEffect(() => {
+    messages.current.scrollTop = messages.current.scrollHeight;
+  }, [chatContent]);
+
   return (
     <>
       <main className="chat">
-        <div className="chat-messages">
+        <div ref={messages} className="chat-messages">
         {chatContent.map((message) => (
           <Message
             key={message.key}

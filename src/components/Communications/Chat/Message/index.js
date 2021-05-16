@@ -18,7 +18,7 @@ const Message = ({ author, date, content }) => {
   return (
     <div className="chat-message">
       <span className="chat-message-author">{author}</span>
-      <span className="chat-message-date"> le {formatDate(date)}</span>
+      <span className="chat-message-date">{formatDate(date)}</span>
       <p className="chat-message-content">{content}</p>
     </div>
   )

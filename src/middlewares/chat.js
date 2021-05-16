@@ -51,8 +51,12 @@ const chatMiddleware = (store) => (next) => (action) => {
     };
 
     case SEND_MESSAGE: {
+      let sender = store.getState().user.username;
+      if (!sender) {
+        sender = sessionStorage.getItem('username');
+      }
       const message = {
-        sender: store.getState().user.username,
+        sender: sender,
         content: store.getState().chat.fieldValue,
         type: "CHAT",
       }
