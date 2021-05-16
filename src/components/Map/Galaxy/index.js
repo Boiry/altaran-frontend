@@ -33,7 +33,7 @@ const Galaxy = ({
     coordinates.current.textContent = coordinatesString;
     name.current.style.fontSize = "1rem";
     name.current.style.fontStyle = "italic";
-    name.current.textContent = "Loading...";
+    name.current.textContent = "Chargement...";
     info.current.style.display = "block";
     setTimeout(() => {info.current.focus()}, 500);
   }
@@ -72,8 +72,8 @@ const Galaxy = ({
         />
       </div>
       <div ref={info} className="galaxy-star-info" tabIndex="1" onBlur={hideInfo}>
-        <p ref={name} className="galaxy-star-info-name">Test</p>
-        <p ref={coordinates} className="galaxy-star-into-coordinates">Test test test</p>
+        <p ref={name} className="galaxy-star-info-name"></p>
+        <p ref={coordinates} className="galaxy-star-into-coordinates"></p>
         <button className="galaxy-star-info-button" onMouseDown={() => clickOnGoStarSystem()}>Y aller</button>
       </div>
       <aside className="aside"></aside>

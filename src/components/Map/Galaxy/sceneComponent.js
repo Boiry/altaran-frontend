@@ -137,7 +137,6 @@ export default (props) => {
     return () => {
       if (camera) {
         camera.inputs.removeByType("Camera2DMouseInputs");
-      
       }
     }
   }, [scene]);

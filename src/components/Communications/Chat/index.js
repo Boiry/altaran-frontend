@@ -1,19 +1,43 @@
 import React, { useEffect } from 'react';
 
+import Message from './Message';
 import './chat.scss';
 
 import Corner from 'src/assets/images/corner.svg';
 
-const Chat = ({ webSocketConnect }) => {
-
+const Chat = ({ webSocketConnect, updateFieldValue, fieldValue, sendMessage, chatContent }) => {
+  // WebSocket Connection
   useEffect(() => {
     webSocketConnect();
-  })
+  }, []);
+
+  const changeFieldValue = (e) => {
+    updateFieldValue(e.target.value);
+  }
+
+  const submitMessage = (e) => {
+    e.preventDefault();
+    if (fieldValue) {
+      sendMessage();
+    }
+  }
 
   return (
     <>
       <main className="chat">
-        <div className="messages"></div>
+        <div className="chat-messages">
+        {chatContent.map((message) => (
+          <Message
+            key={message.key}
+            author={message.author}
+            date={message.date}
+            content={message.content}
+          />
+        ))}
+        </div>
+        <form className="chat-messages-form" onSubmit={submitMessage}>
+          <input className="chat-messages-field" onChange={changeFieldValue} value={fieldValue} />
+        </form>
         <img src={Corner} className="corner corner-top-left" />
         <img src={Corner} className="corner corner-top-right" />
         <img src={Corner} className="corner corner-bottom-left" />

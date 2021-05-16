@@ -9,6 +9,29 @@
   margin: 2rem auto 0 auto;
   padding: 2rem;
 
+  &-messages {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
+
+    &-form {
+      position: absolute;
+      width: calc(100% - 4rem);
+      bottom: 0;
+      margin: 1rem 0;
+    }
+
+    &-field {
+      background: vars.$main-background;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      border: none;
+      padding: .5rem;
+      width: 100%;
+    }
+  }
+
   &-channels {
     position: absolute;
     background-color: vars.$main-background;
