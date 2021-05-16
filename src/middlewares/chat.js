@@ -14,28 +14,26 @@ let socket, stompClient;
 
 const token = sessionStorage.getItem('token');
   const authorization = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+    Authorization: `Bearer ${token}`,
   };
 
 const chatMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT: {
       // socket = new SockJS('http://dyn.estydral.ovh:9090/praland-backend/ws', null, authorization);
-      socket = new SockJS('http://dyn.estydral.ovh:9090/praland-backend/ws/');
+      socket = new SockJS(`${process.env.API_URL}ws/`);
       // socket = new WebSocket('ws://dyn.estydral.ovh:9090/praland-backend/ws');
       // socket = io('http://dyn.estydral.ovh:9090/praland-backend/ws');
       // socket = new SockJsClient('wss://echo.websocket.org');
 
-      stompClient = Stomp.over(socket);
-
-      stompClient.connect({}, onConnected, onError);
+      if (!stompClient) {
+        stompClient = Stomp.over(socket);
+        stompClient.connect(authorization, onConnected, onError);
+      }
 
       function onConnected() {
         stompClient.subscribe('/topic/pubic', onMessageReceived);
-
-      };
+      }
 
       function onError() {
         console.log("Connection error")

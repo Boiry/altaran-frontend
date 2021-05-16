@@ -1,5 +1,5 @@
 {
-  "createdAt": "2021-05-12T15:20:53.403Z",
+  "createdAt": "2021-05-16T15:56:05.284Z",
   "version": "2.8.2",
   "runs": [
     {
@@ -18,8 +18,8 @@
             "name": "vendors~main"
           }
         ],
-        "builtAt": "2021-05-12T15:20:53.295Z",
-        "hash": "8864f4b5a18b15122606"
+        "builtAt": "2021-05-16T15:56:05.141Z",
+        "hash": "9a7077c36bc5720d2095"
       },
       "internalBuildNumber": 2
     },
@@ -39,8 +39,8 @@
             "name": "vendors~main"
           }
         ],
-        "builtAt": "2021-05-11T23:31:06.551Z",
-        "hash": "f25341ee0b2de34af725"
+        "builtAt": "2021-05-12T15:20:53.295Z",
+        "hash": "8864f4b5a18b15122606"
       },
       "internalBuildNumber": 1
     }
@@ -49,53 +49,53 @@
     "webpack": [
       {
         "label": "Bundle Size",
-        "value": 13554731,
-        "displayValue": "12.93MB",
-        "delta": 6274,
-        "deltaPercentage": 0.04630786,
-        "displayDelta": "+6.13KB",
-        "displayDeltaPercentage": "+0.05%",
+        "value": 13721411,
+        "displayValue": "13.09MB",
+        "delta": 166680,
+        "deltaPercentage": 1.22968136,
+        "displayDelta": "+162.77KB",
+        "displayDeltaPercentage": "+1.23%",
         "deltaType": "LOW_NEGATIVE"
       },
       {
         "label": "Initial JS",
-        "value": 3680813,
-        "displayValue": "3.51MB",
-        "delta": 1786,
-        "deltaPercentage": 0.04854544,
-        "displayDelta": "+1.74KB",
-        "displayDeltaPercentage": "+0.05%",
+        "value": 3836859,
+        "displayValue": "3.66MB",
+        "delta": 156046,
+        "deltaPercentage": 4.23944384,
+        "displayDelta": "+152.39KB",
+        "displayDeltaPercentage": "+4.24%",
         "deltaType": "LOW_NEGATIVE"
       },
       {
         "label": "Initial CSS",
-        "value": 15170,
-        "displayValue": "14.81KB",
-        "delta": 81,
-        "deltaPercentage": 0.5368149,
-        "displayDelta": "+81B",
-        "displayDeltaPercentage": "+0.54%",
-        "deltaType": "LOW_NEGATIVE"
+        "value": 16258,
+        "displayValue": "15.88KB",
+        "delta": 1088,
+        "deltaPercentage": 7.1720501,
+        "displayDelta": "+1.06KB",
+        "displayDeltaPercentage": "+7.17%",
+        "deltaType": "NEGATIVE"
       },
       {
         "label": "Cache Invalidation",
-        "value": 1.65,
-        "displayValue": "1.65%",
-        "delta": 1.65,
+        "value": 27.26,
+        "displayValue": "27.26%",
+        "delta": 27.26,
         "deltaPercentage": 100,
-        "displayDelta": "+1.65%",
+        "displayDelta": "+27.26%",
         "displayDeltaPercentage": "+100%",
         "deltaType": "HIGH_NEGATIVE"
       },
       {
         "label": "Modules",
-        "value": 135,
-        "displayValue": "135",
-        "delta": 0,
-        "deltaPercentage": 0,
-        "displayDelta": "0",
-        "displayDeltaPercentage": "0%",
-        "deltaType": "NO_CHANGE"
+        "value": 316,
+        "displayValue": "316",
+        "delta": 181,
+        "deltaPercentage": 134.07407407,
+        "displayDelta": "+181",
+        "displayDeltaPercentage": "+134.07%",
+        "deltaType": "HIGH_NEGATIVE"
       },
       {
         "label": "Chunks",
@@ -109,23 +109,23 @@
       },
       {
         "label": "Assets",
-        "value": 96,
-        "displayValue": "96",
+        "value": 97,
+        "displayValue": "97",
         "delta": 1,
-        "deltaPercentage": 1.05263158,
+        "deltaPercentage": 1.04166667,
         "displayDelta": "+1",
-        "displayDeltaPercentage": "+1.05%",
+        "displayDeltaPercentage": "+1.04%",
         "deltaType": "LOW_NEGATIVE"
       },
       {
         "label": "Packages",
-        "value": 18,
-        "displayValue": "18",
-        "delta": 0,
-        "deltaPercentage": 0,
-        "displayDelta": "0",
-        "displayDeltaPercentage": "0%",
-        "deltaType": "NO_CHANGE"
+        "value": 47,
+        "displayValue": "47",
+        "delta": 29,
+        "deltaPercentage": 161.11111111,
+        "displayDelta": "+29",
+        "displayDeltaPercentage": "+161.11%",
+        "deltaType": "HIGH_NEGATIVE"
       },
       {
         "label": "Duplicate Packages",
@@ -144,15 +144,15 @@
       "assetsSizeTotal": {
         "type": "INFO",
         "data": {
-          "text": "Bundle Size — 12.93MB (+0.05%).",
-          "md": "*Bundle Size* — *12.93MB* (*+0.05%*).",
+          "text": "Bundle Size — 13.09MB (+1.23%).",
+          "md": "*Bundle Size* — *13.09MB* (*+1.23%*).",
           "info": {
-            "value": 13554731,
-            "displayValue": "12.93MB",
-            "delta": 6274,
-            "deltaPercentage": 0.04630786,
-            "displayDelta": "+6.13KB",
-            "displayDeltaPercentage": "+0.05%",
+            "value": 13721411,
+            "displayValue": "13.09MB",
+            "delta": 166680,
+            "deltaPercentage": 1.22968136,
+            "displayDelta": "+162.77KB",
+            "displayDeltaPercentage": "+1.23%",
             "deltaType": "LOW_NEGATIVE"
           }
         }
@@ -164,17 +164,17 @@
       "key": "webpack.totalSizeByTypeALL",
       "runs": [
         {
-          "value": 13554731,
-          "displayValue": "12.93MB",
-          "delta": 6274,
-          "deltaPercentage": 0.04630786,
-          "displayDelta": "+6.13KB",
-          "displayDeltaPercentage": "+0.05%",
+          "value": 13721411,
+          "displayValue": "13.09MB",
+          "delta": 166680,
+          "deltaPercentage": 1.22968136,
+          "displayDelta": "+162.77KB",
+          "displayDeltaPercentage": "+1.23%",
           "deltaType": "LOW_NEGATIVE"
         },
         {
-          "value": 13548457,
-          "displayValue": "12.92MB"
+          "value": 13554731,
+          "displayValue": "12.93MB"
         }
       ],
       "biggerIsBetter": false,
@@ -185,16 +185,16 @@
       "key": "webpack.totalInitialSizeJS",
       "runs": [
         {
-          "value": 3680813,
-          "displayValue": "3.51MB",
-          "delta": 1786,
-          "deltaPercentage": 0.04854544,
-          "displayDelta": "+1.74KB",
-          "displayDeltaPercentage": "+0.05%",
+          "value": 3836859,
+          "displayValue": "3.66MB",
+          "delta": 156046,
+          "deltaPercentage": 4.23944384,
+          "displayDelta": "+152.39KB",
+          "displayDeltaPercentage": "+4.24%",
           "deltaType": "LOW_NEGATIVE"
         },
         {
-          "value": 3679027,
+          "value": 3680813,
           "displayValue": "3.51MB"
         }
       ],
@@ -206,17 +206,17 @@
       "key": "webpack.totalInitialSizeCSS",
       "runs": [
         {
-          "value": 15170,
-          "displayValue": "14.81KB",
-          "delta": 81,
-          "deltaPercentage": 0.5368149,
-          "displayDelta": "+81B",
-          "displayDeltaPercentage": "+0.54%",
-          "deltaType": "LOW_NEGATIVE"
+          "value": 16258,
+          "displayValue": "15.88KB",
+          "delta": 1088,
+          "deltaPercentage": 7.1720501,
+          "displayDelta": "+1.06KB",
+          "displayDeltaPercentage": "+7.17%",
+          "deltaType": "NEGATIVE"
         },
         {
-          "value": 15089,
-          "displayValue": "14.74KB"
+          "value": 15170,
+          "displayValue": "14.81KB"
         }
       ],
       "biggerIsBetter": false,
@@ -227,11 +227,11 @@
       "key": "webpack.cacheInvalidation",
       "runs": [
         {
-          "value": 1.65,
-          "displayValue": "1.65%",
-          "delta": 1.65,
+          "value": 27.26,
+          "displayValue": "27.26%",
+          "delta": 27.26,
           "deltaPercentage": 100,
-          "displayDelta": "+1.65%",
+          "displayDelta": "+27.26%",
           "displayDeltaPercentage": "+100%",
           "deltaType": "HIGH_NEGATIVE"
         },
@@ -248,13 +248,13 @@
       "key": "webpack.moduleCount",
       "runs": [
         {
-          "value": 135,
-          "displayValue": "135",
-          "delta": 0,
-          "deltaPercentage": 0,
-          "displayDelta": "0",
-          "displayDeltaPercentage": "0%",
-          "deltaType": "NO_CHANGE"
+          "value": 316,
+          "displayValue": "316",
+          "delta": 181,
+          "deltaPercentage": 134.07407407,
+          "displayDelta": "+181",
+          "displayDeltaPercentage": "+134.07%",
+          "deltaType": "HIGH_NEGATIVE"
         },
         {
           "value": 135,
@@ -263,7 +263,7 @@
       ],
       "biggerIsBetter": false,
       "label": "Modules",
-      "changed": false
+      "changed": true
     },
     {
       "key": "webpack.chunkCount",
@@ -290,17 +290,17 @@
       "key": "webpack.assetCount",
       "runs": [
         {
-          "value": 96,
-          "displayValue": "96",
+          "value": 97,
+          "displayValue": "97",
           "delta": 1,
-          "deltaPercentage": 1.05263158,
+          "deltaPercentage": 1.04166667,
           "displayDelta": "+1",
-          "displayDeltaPercentage": "+1.05%",
+          "displayDeltaPercentage": "+1.04%",
           "deltaType": "LOW_NEGATIVE"
         },
         {
-          "value": 95,
-          "displayValue": "95"
+          "value": 96,
+          "displayValue": "96"
         }
       ],
       "biggerIsBetter": false,
@@ -311,13 +311,13 @@
       "key": "webpack.packageCount",
       "runs": [
         {
-          "value": 18,
-          "displayValue": "18",
-          "delta": 0,
-          "deltaPercentage": 0,
-          "displayDelta": "0",
-          "displayDeltaPercentage": "0%",
-          "deltaType": "NO_CHANGE"
+          "value": 47,
+          "displayValue": "47",
+          "delta": 29,
+          "deltaPercentage": 161.11111111,
+          "displayDelta": "+29",
+          "displayDeltaPercentage": "+161.11%",
+          "deltaType": "HIGH_NEGATIVE"
         },
         {
           "value": 18,
@@ -326,7 +326,7 @@
       ],
       "biggerIsBetter": false,
       "label": "Packages",
-      "changed": false
+      "changed": true
     },
     {
       "key": "webpack.duplicatePackagesCount",
@@ -355,16 +355,16 @@
       "key": "webpack.sizes.totalSizeByTypeJS",
       "runs": [
         {
-          "value": 3680813,
-          "displayValue": "3.51MB",
-          "delta": 1786,
-          "deltaPercentage": 0.04854544,
-          "displayDelta": "+1.74KB",
-          "displayDeltaPercentage": "+0.05%",
+          "value": 3836859,
+          "displayValue": "3.66MB",
+          "delta": 156046,
+          "deltaPercentage": 4.23944384,
+          "displayDelta": "+152.39KB",
+          "displayDeltaPercentage": "+4.24%",
           "deltaType": "LOW_NEGATIVE"
         },
         {
-          "value": 3679027,
+          "value": 3680813,
           "displayValue": "3.51MB"
         }
       ],
@@ -376,17 +376,17 @@
       "key": "webpack.sizes.totalSizeByTypeCSS",
       "runs": [
         {
-          "value": 15170,
-          "displayValue": "14.81KB",
-          "delta": 81,
-          "deltaPercentage": 0.5368149,
-          "displayDelta": "+81B",
-          "displayDeltaPercentage": "+0.54%",
-          "deltaType": "LOW_NEGATIVE"
+          "value": 16258,
+          "displayValue": "15.88KB",
+          "delta": 1088,
+          "deltaPercentage": 7.1720501,
+          "displayDelta": "+1.06KB",
+          "displayDeltaPercentage": "+7.17%",
+          "deltaType": "NEGATIVE"
         },
         {
-          "value": 15089,
-          "displayValue": "14.74KB"
+          "value": 15170,
+          "displayValue": "14.81KB"
         }
       ],
       "biggerIsBetter": false,
@@ -397,17 +397,17 @@
       "key": "webpack.sizes.totalSizeByTypeIMG",
       "runs": [
         {
-          "value": 9832963,
-          "displayValue": "9.38MB",
-          "delta": 4407,
-          "deltaPercentage": 0.04483873,
-          "displayDelta": "+4.3KB",
-          "displayDeltaPercentage": "+0.04%",
+          "value": 9842509,
+          "displayValue": "9.39MB",
+          "delta": 9546,
+          "deltaPercentage": 0.09708162,
+          "displayDelta": "+9.32KB",
+          "displayDeltaPercentage": "+0.1%",
           "deltaType": "LOW_NEGATIVE"
         },
         {
-          "value": 9828556,
-          "displayValue": "9.37MB"
+          "value": 9832963,
+          "displayValue": "9.38MB"
         }
       ],
       "biggerIsBetter": false,
@@ -505,26 +505,26 @@
       "runs": [
         {
           "name": "css/main.css",
+          "value": 16258,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "0",
+          "displayValue": "15.88KB",
+          "delta": 1088,
+          "deltaPercentage": 7.1720501,
+          "displayDelta": "+1.06KB",
+          "displayDeltaPercentage": "+7.17%",
+          "deltaType": "NEGATIVE"
+        },
+        {
+          "name": "css/main.css",
           "value": 15170,
           "isEntry": true,
           "isInitial": true,
           "isChunk": true,
           "chunkId": "0",
-          "displayValue": "14.81KB",
-          "delta": 81,
-          "deltaPercentage": 0.5368149,
-          "displayDelta": "+81B",
-          "displayDeltaPercentage": "+0.54%",
-          "deltaType": "LOW_NEGATIVE"
-        },
-        {
-          "name": "css/main.css",
-          "value": 15089,
-          "isEntry": true,
-          "isInitial": true,
-          "isChunk": true,
-          "chunkId": "0",
-          "displayValue": "14.74KB"
+          "displayValue": "14.81KB"
         }
       ],
       "biggerIsBetter": false,
@@ -588,6 +588,28 @@
       "biggerIsBetter": false,
       "label": "images/0ed331344dc8cea4abd743a9ac9cbc67.svg",
       "changed": false
+    },
+    {
+      "key": "images/110dc8d5ce074a0d25b4418c2c858ccd.svg",
+      "runs": [
+        {
+          "name": "images/110dc8d5ce074a0d25b4418c2c858ccd.svg",
+          "value": 9554,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "9.33KB",
+          "delta": 9554,
+          "deltaPercentage": 100,
+          "displayDelta": "+9.33KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/110dc8d5ce074a0d25b4418c2c858ccd.svg",
+      "changed": true
     },
     {
       "key": "images/12738313ac4e4d1baba680b6ef2909fb.svg",
@@ -1373,35 +1395,6 @@
       "changed": false
     },
     {
-      "key": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
-      "runs": [
-        {
-          "name": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
-          "value": 2039,
-          "isEntry": false,
-          "isInitial": false,
-          "isChunk": false,
-          "displayValue": "1.99KB",
-          "delta": 0,
-          "deltaPercentage": 0,
-          "displayDelta": "0B",
-          "displayDeltaPercentage": "0%",
-          "deltaType": "NO_CHANGE"
-        },
-        {
-          "name": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
-          "value": 2039,
-          "isEntry": false,
-          "isInitial": false,
-          "isChunk": false,
-          "displayValue": "1.99KB"
-        }
-      ],
-      "biggerIsBetter": false,
-      "label": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
-      "changed": false
-    },
-    {
       "key": "images/595b76d6a6f768cd62ba84d1d8b42168.svg",
       "runs": [
         {
@@ -1933,17 +1926,24 @@
           "isInitial": false,
           "isChunk": false,
           "displayValue": "4.3KB",
-          "delta": 4407,
-          "deltaPercentage": 100,
-          "displayDelta": "+4.3KB",
-          "displayDeltaPercentage": "+100%",
-          "deltaType": "HIGH_NEGATIVE"
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0B",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
         },
-        null
+        {
+          "name": "images/906f4cf3d2064169bb2501abf5a41051.svg",
+          "value": 4407,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "4.3KB"
+        }
       ],
       "biggerIsBetter": false,
       "label": "images/906f4cf3d2064169bb2501abf5a41051.svg",
-      "changed": true
+      "changed": false
     },
     {
       "key": "images/946a11429775d658362194ed0c9394ca.svg",
@@ -2263,6 +2263,28 @@
       "biggerIsBetter": false,
       "label": "images/b69c35c5835d0fe65ac73fa6740cac09.svg",
       "changed": false
+    },
+    {
+      "key": "images/b81638d16e7cfb5fb192ae20010fbe34.svg",
+      "runs": [
+        {
+          "name": "images/b81638d16e7cfb5fb192ae20010fbe34.svg",
+          "value": 2031,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.98KB",
+          "delta": 2031,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.98KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "images/b81638d16e7cfb5fb192ae20010fbe34.svg",
+      "changed": true
     },
     {
       "key": "images/ba1f3a5f9e02c195d86d1807ad6ffcdd.svg",
@@ -2848,27 +2870,27 @@
       "key": "js/main.js",
       "runs": [
         {
+          "name": "js/main.07177384067c16eabd17.js",
+          "value": 217526,
+          "isEntry": true,
+          "isInitial": true,
+          "isChunk": true,
+          "chunkId": "0",
+          "displayValue": "212.43KB",
+          "delta": 6806,
+          "deltaPercentage": 3.22987851,
+          "displayDelta": "+6.65KB",
+          "displayDeltaPercentage": "+3.23%",
+          "deltaType": "LOW_NEGATIVE"
+        },
+        {
           "name": "js/main.b41c51037388ee6b492b.js",
           "value": 210720,
           "isEntry": true,
           "isInitial": true,
           "isChunk": true,
           "chunkId": "0",
-          "displayValue": "205.78KB",
-          "delta": 1786,
-          "deltaPercentage": 0.8548154,
-          "displayDelta": "+1.74KB",
-          "displayDeltaPercentage": "+0.85%",
-          "deltaType": "LOW_NEGATIVE"
-        },
-        {
-          "name": "js/main.92cebc5c51742144f82e.js",
-          "value": 208934,
-          "isEntry": true,
-          "isInitial": true,
-          "isChunk": true,
-          "chunkId": "0",
-          "displayValue": "204.04KB"
+          "displayValue": "205.78KB"
         }
       ],
       "biggerIsBetter": false,
@@ -2910,18 +2932,18 @@
       "key": "js/vendors~main.js",
       "runs": [
         {
-          "name": "js/vendors~main.18a61cd403021ec42b12.js",
-          "value": 3468599,
+          "name": "js/vendors~main.7ae87d7da63aec195a3b.js",
+          "value": 3617839,
           "isEntry": true,
           "isInitial": true,
           "isChunk": true,
           "chunkId": "2",
-          "displayValue": "3.31MB",
-          "delta": 0,
-          "deltaPercentage": 0,
-          "displayDelta": "0B",
-          "displayDeltaPercentage": "0%",
-          "deltaType": "NO_CHANGE"
+          "displayValue": "3.45MB",
+          "delta": 149240,
+          "deltaPercentage": 4.30260171,
+          "displayDelta": "+145.74KB",
+          "displayDeltaPercentage": "+4.3%",
+          "deltaType": "LOW_NEGATIVE"
         },
         {
           "name": "js/vendors~main.18a61cd403021ec42b12.js",
@@ -2935,7 +2957,7 @@
       ],
       "biggerIsBetter": false,
       "label": "js/vendors~main.js",
-      "changed": false
+      "changed": true
     },
     {
       "key": "locales/fr/bases.json",
@@ -3284,6 +3306,23 @@
       "biggerIsBetter": false,
       "label": "robots.txt",
       "changed": false
+    },
+    {
+      "key": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+      "runs": [
+        null,
+        {
+          "name": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+          "value": 2039,
+          "isEntry": false,
+          "isInitial": false,
+          "isChunk": false,
+          "displayValue": "1.99KB"
+        }
+      ],
+      "biggerIsBetter": false,
+      "label": "images/50bc1e0ce961bc17ea6b9dbf14ba0e26.svg",
+      "changed": true
     }
   ],
   "modules": [
@@ -3528,13 +3567,13 @@
           "runs": [
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/styles/index.scss",
-              "value": 1439,
-              "displayValue": "1.41KB",
-              "delta": 0,
-              "deltaPercentage": 0,
-              "displayDelta": "0B",
-              "displayDeltaPercentage": "0%",
-              "deltaType": "NO_CHANGE"
+              "value": 1474,
+              "displayValue": "1.44KB",
+              "delta": 35,
+              "deltaPercentage": 2.43224461,
+              "displayDelta": "+35B",
+              "displayDeltaPercentage": "+2.43%",
+              "deltaType": "LOW_NEGATIVE"
             },
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/styles/index.scss",
@@ -3544,7 +3583,7 @@
           ],
           "biggerIsBetter": false,
           "label": "./src/styles/index.scss",
-          "changed": false
+          "changed": true
         },
         {
           "key": "./src/assets/images sync ^\\.\\/.*\\.png$",
@@ -3757,19 +3796,19 @@
           "key": "./src/index.js",
           "runs": [
             {
-              "name": "./src/index.js + 170 modules",
-              "value": 328684,
-              "displayValue": "320.98KB",
-              "delta": 3993,
-              "deltaPercentage": 1.22978463,
-              "displayDelta": "+3.9KB",
-              "displayDeltaPercentage": "+1.23%",
+              "name": "./src/index.js + 180 modules",
+              "value": 343749,
+              "displayValue": "335.69KB",
+              "delta": 15065,
+              "deltaPercentage": 4.58342968,
+              "displayDelta": "+14.71KB",
+              "displayDeltaPercentage": "+4.58%",
               "deltaType": "LOW_NEGATIVE"
             },
             {
-              "name": "./src/index.js + 168 modules",
-              "value": 324691,
-              "displayValue": "317.08KB"
+              "name": "./src/index.js + 170 modules",
+              "value": 328684,
+              "displayValue": "320.98KB"
             }
           ],
           "biggerIsBetter": false,
@@ -3850,13 +3889,13 @@
           "runs": [
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Home/home.scss",
-              "value": 2794,
-              "displayValue": "2.73KB",
-              "delta": 0,
-              "deltaPercentage": 0,
-              "displayDelta": "0B",
-              "displayDeltaPercentage": "0%",
-              "deltaType": "NO_CHANGE"
+              "value": 2894,
+              "displayValue": "2.83KB",
+              "delta": 100,
+              "deltaPercentage": 3.57909807,
+              "displayDelta": "+100B",
+              "displayDeltaPercentage": "+3.58%",
+              "deltaType": "LOW_NEGATIVE"
             },
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Home/home.scss",
@@ -3866,7 +3905,7 @@
           ],
           "biggerIsBetter": false,
           "label": "./src/components/Home/home.scss",
-          "changed": false
+          "changed": true
         },
         {
           "key": "./src/components/Log/log.scss",
@@ -3990,21 +4029,21 @@
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/connection.scss",
               "value": 508,
               "displayValue": "508B",
-              "delta": 81,
-              "deltaPercentage": 18.96955504,
-              "displayDelta": "+81B",
-              "displayDeltaPercentage": "+18.97%",
-              "deltaType": "NEGATIVE"
+              "delta": 0,
+              "deltaPercentage": 0,
+              "displayDelta": "0B",
+              "displayDeltaPercentage": "0%",
+              "deltaType": "NO_CHANGE"
             },
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Connection/connection.scss",
-              "value": 427,
-              "displayValue": "427B"
+              "value": 508,
+              "displayValue": "508B"
             }
           ],
           "biggerIsBetter": false,
           "label": "./src/components/Connection/connection.scss",
-          "changed": true
+          "changed": false
         },
         {
           "key": "./src/components/MiniChat/miniChat.scss",
@@ -4074,6 +4113,25 @@
           "biggerIsBetter": false,
           "label": "./src/components/Bases/BaseSelector/baseSelector.scss",
           "changed": false
+        },
+        {
+          "key": "./src/components/Communications/Chat/chat.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Communications/Chat/chat.scss",
+              "value": 759,
+              "displayValue": "759B",
+              "delta": 759,
+              "deltaPercentage": 100,
+              "displayDelta": "+759B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Communications/Chat/chat.scss",
+          "changed": true
         },
         {
           "key": "./src/components/Map/Galaxy/galaxy.scss",
@@ -4214,6 +4272,25 @@
           "changed": false
         },
         {
+          "key": "./src/components/Communications/Chat/Message/message.scss",
+          "runs": [
+            {
+              "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Communications/Chat/Message/message.scss",
+              "value": 164,
+              "displayValue": "164B",
+              "delta": 164,
+              "deltaPercentage": 100,
+              "displayDelta": "+164B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./src/components/Communications/Chat/Message/message.scss",
+          "changed": true
+        },
+        {
           "key": "./src/components/Connection/Login/login.scss",
           "runs": [
             {
@@ -4264,13 +4341,13 @@
           "runs": [
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/Field/field.scss",
-              "value": 258,
-              "displayValue": "258B",
-              "delta": 0,
-              "deltaPercentage": 0,
-              "displayDelta": "0B",
-              "displayDeltaPercentage": "0%",
-              "deltaType": "NO_CHANGE"
+              "value": 263,
+              "displayValue": "263B",
+              "delta": 5,
+              "deltaPercentage": 1.9379845,
+              "displayDelta": "+5B",
+              "displayDeltaPercentage": "+1.94%",
+              "deltaType": "LOW_NEGATIVE"
             },
             {
               "name": "css ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js??ref--7-4!./src/components/Map/Field/field.scss",
@@ -4280,7 +4357,7 @@
           ],
           "biggerIsBetter": false,
           "label": "./src/components/Map/Field/field.scss",
-          "changed": false
+          "changed": true
         },
         {
           "key": "./src/components/Bases/Item/item.scss",
@@ -4682,6 +4759,25 @@
           "changed": false
         },
         {
+          "key": "./node_modules/inherits/inherits_browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/inherits/inherits_browser.js",
+              "value": 753,
+              "displayValue": "753B",
+              "delta": 753,
+              "deltaPercentage": 100,
+              "displayDelta": "+753B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/inherits/inherits_browser.js",
+          "changed": true
+        },
+        {
           "key": "./node_modules/react-redux/es/index.js",
           "runs": [
             {
@@ -4702,6 +4798,29 @@
           ],
           "biggerIsBetter": false,
           "label": "./node_modules/react-redux/es/index.js",
+          "changed": false
+        },
+        {
+          "key": "(webpack)/buildin/global.js",
+          "runs": [
+            {
+              "name": "(webpack)/buildin/global.js",
+              "value": 472,
+              "displayValue": "472B",
+              "delta": 0,
+              "deltaPercentage": 0,
+              "displayDelta": "0B",
+              "displayDeltaPercentage": "0%",
+              "deltaType": "NO_CHANGE"
+            },
+            {
+              "name": "(webpack)/buildin/global.js",
+              "value": 472,
+              "displayValue": "472B"
+            }
+          ],
+          "biggerIsBetter": false,
+          "label": "(webpack)/buildin/global.js",
           "changed": false
         },
         {
@@ -4749,6 +4868,25 @@
           "biggerIsBetter": false,
           "label": "./node_modules/@babylonjs/core/Misc/precisionDate.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/event/emitter.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/event/emitter.js",
+              "value": 1270,
+              "displayValue": "1.24KB",
+              "delta": 1270,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.24KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/event/emitter.js",
+          "changed": true
         },
         {
           "key": "./node_modules/@babylonjs/core/Misc/canvasGenerator.js",
@@ -4843,6 +4981,44 @@
           "changed": false
         },
         {
+          "key": "./node_modules/sockjs-client/lib/utils/url.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/url.js",
+              "value": 1116,
+              "displayValue": "1.09KB",
+              "delta": 1116,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.09KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/url.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/debug/src/browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/debug/src/browser.js",
+              "value": 6010,
+              "displayValue": "5.87KB",
+              "delta": 6010,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.87KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/debug/src/browser.js",
+          "changed": true
+        },
+        {
           "key": "./node_modules/@babylonjs/core/Meshes/WebGL/webGLDataBuffer.js",
           "runs": [
             {
@@ -4889,6 +5065,44 @@
           "changed": false
         },
         {
+          "key": "./node_modules/json3/lib/json3.js",
+          "runs": [
+            {
+              "name": "./node_modules/json3/lib/json3.js",
+              "value": 43065,
+              "displayValue": "42.06KB",
+              "delta": 43065,
+              "deltaPercentage": 100,
+              "displayDelta": "+42.06KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/json3/lib/json3.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/event.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/event.js",
+              "value": 2000,
+              "displayValue": "1.95KB",
+              "delta": 2000,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.95KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/event.js",
+          "changed": true
+        },
+        {
           "key": "./node_modules/@babylonjs/core/Materials/Textures/renderTargetCreationOptions.js",
           "runs": [
             {
@@ -4910,6 +5124,44 @@
           "biggerIsBetter": false,
           "label": "./node_modules/@babylonjs/core/Materials/Textures/renderTargetCreationOptions.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/random.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/random.js",
+              "value": 721,
+              "displayValue": "721B",
+              "delta": 721,
+              "deltaPercentage": 100,
+              "displayDelta": "+721B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/random.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/lib/ajax-based.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/lib/ajax-based.js",
+              "value": 1310,
+              "displayValue": "1.28KB",
+              "delta": 1310,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.28KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/lib/ajax-based.js",
+          "changed": true
         },
         {
           "key": "./node_modules/@babylonjs/core/Engines/WebGL/webGL2ShaderProcessors.js",
@@ -4956,6 +5208,101 @@
           "biggerIsBetter": false,
           "label": "./node_modules/redux/es/redux.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/sender/xhr-local.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/sender/xhr-local.js",
+              "value": 352,
+              "displayValue": "352B",
+              "delta": 352,
+              "deltaPercentage": 100,
+              "displayDelta": "+352B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/sender/xhr-local.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/browser.js",
+              "value": 560,
+              "displayValue": "560B",
+              "delta": 560,
+              "deltaPercentage": 100,
+              "displayDelta": "+560B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/iframe.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/iframe.js",
+              "value": 5038,
+              "displayValue": "4.92KB",
+              "delta": 5038,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.92KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/iframe.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-parser/lib/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-parser/lib/index.js",
+              "value": 1211,
+              "displayValue": "1.18KB",
+              "delta": 1211,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.18KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-parser/lib/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/component-emitter/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/component-emitter/index.js",
+              "value": 3468,
+              "displayValue": "3.39KB",
+              "delta": 3468,
+              "deltaPercentage": 100,
+              "displayDelta": "+3.39KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/component-emitter/index.js",
+          "changed": true
         },
         {
           "key": "./node_modules/@babylonjs/core/Engines/Extensions/engine.alpha.js",
@@ -5048,6 +5395,120 @@
           "biggerIsBetter": false,
           "label": "./node_modules/react-i18next/dist/es/context.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/receiver/xhr.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/receiver/xhr.js",
+              "value": 1583,
+              "displayValue": "1.55KB",
+              "delta": 1583,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.55KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/receiver/xhr.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/sender/xhr-cors.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/sender/xhr-cors.js",
+              "value": 343,
+              "displayValue": "343B",
+              "delta": 343,
+              "deltaPercentage": 100,
+              "displayDelta": "+343B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/sender/xhr-cors.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/globalThis.browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/globalThis.browser.js",
+              "value": 204,
+              "displayValue": "204B",
+              "delta": 204,
+              "deltaPercentage": 100,
+              "displayDelta": "+204B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/globalThis.browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_nativeCreate.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_nativeCreate.js",
+              "value": 187,
+              "displayValue": "187B",
+              "delta": 187,
+              "deltaPercentage": 100,
+              "displayDelta": "+187B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_nativeCreate.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_assocIndexOf.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_assocIndexOf.js",
+              "value": 487,
+              "displayValue": "487B",
+              "delta": 487,
+              "deltaPercentage": 100,
+              "displayDelta": "+487B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_assocIndexOf.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_getMapData.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_getMapData.js",
+              "value": 400,
+              "displayValue": "400B",
+              "delta": 400,
+              "deltaPercentage": 100,
+              "displayDelta": "+400B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_getMapData.js",
+          "changed": true
         },
         {
           "key": "./node_modules/@babylonjs/core/Engines/Extensions/engine.readTexture.js",
@@ -5257,6 +5718,215 @@
           "changed": false
         },
         {
+          "key": "./node_modules/sockjs-client/lib/transport/sender/xdr.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/sender/xdr.js",
+              "value": 2456,
+              "displayValue": "2.4KB",
+              "delta": 2456,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.4KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/sender/xdr.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/lib/iframe-wrap.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/lib/iframe-wrap.js",
+              "value": 981,
+              "displayValue": "981B",
+              "delta": 981,
+              "deltaPercentage": 100,
+              "displayDelta": "+981B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/lib/iframe-wrap.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/object.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/object.js",
+              "value": 532,
+              "displayValue": "532B",
+              "delta": 532,
+              "deltaPercentage": 100,
+              "displayDelta": "+532B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/object.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/event/event.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/event/event.js",
+              "value": 477,
+              "displayValue": "477B",
+              "delta": 477,
+              "deltaPercentage": 100,
+              "displayDelta": "+477B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/event/event.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transport.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transport.js",
+              "value": 2145,
+              "displayValue": "2.09KB",
+              "delta": 2145,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.09KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transport.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/parseqs/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/parseqs/index.js",
+              "value": 708,
+              "displayValue": "708B",
+              "delta": 708,
+              "deltaPercentage": 100,
+              "displayDelta": "+708B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/parseqs/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-parser/dist/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-parser/dist/index.js",
+              "value": 8919,
+              "displayValue": "8.71KB",
+              "delta": 8919,
+              "deltaPercentage": 100,
+              "displayDelta": "+8.71KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-parser/dist/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_getNative.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_getNative.js",
+              "value": 483,
+              "displayValue": "483B",
+              "delta": 483,
+              "deltaPercentage": 100,
+              "displayDelta": "+483B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_getNative.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_Symbol.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_Symbol.js",
+              "value": 118,
+              "displayValue": "118B",
+              "delta": 118,
+              "deltaPercentage": 100,
+              "displayDelta": "+118B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_Symbol.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_root.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_root.js",
+              "value": 300,
+              "displayValue": "300B",
+              "delta": 300,
+              "deltaPercentage": 100,
+              "displayDelta": "+300B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_root.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isObjectLike.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isObjectLike.js",
+              "value": 614,
+              "displayValue": "614B",
+              "delta": 614,
+              "deltaPercentage": 100,
+              "displayDelta": "+614B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isObjectLike.js",
+          "changed": true
+        },
+        {
           "key": "./node_modules/react-is/index.js",
           "runs": [
             {
@@ -5278,6 +5948,44 @@
           "biggerIsBetter": false,
           "label": "./node_modules/react-is/index.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/entry.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/entry.js",
+              "value": 244,
+              "displayValue": "244B",
+              "delta": 244,
+              "deltaPercentage": 100,
+              "displayDelta": "+244B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/entry.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/stompjs/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/stompjs/index.js",
+              "value": 491,
+              "displayValue": "491B",
+              "delta": 491,
+              "deltaPercentage": 100,
+              "displayDelta": "+491B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/stompjs/index.js",
+          "changed": true
         },
         {
           "key": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
@@ -5418,6 +6126,29 @@
           "changed": false
         },
         {
+          "key": "./node_modules/process/browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/process/browser.js",
+              "value": 5418,
+              "displayValue": "5.29KB",
+              "delta": 0,
+              "deltaPercentage": 0,
+              "displayDelta": "0B",
+              "displayDeltaPercentage": "0%",
+              "deltaType": "NO_CHANGE"
+            },
+            {
+              "name": "./node_modules/process/browser.js",
+              "value": 5418,
+              "displayValue": "5.29KB"
+            }
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/process/browser.js",
+          "changed": false
+        },
+        {
           "key": "./node_modules/axios/lib/adapters/xhr.js",
           "runs": [
             {
@@ -5508,6 +6239,614 @@
           "biggerIsBetter": false,
           "label": "./node_modules/axios/lib/cancel/Cancel.js",
           "changed": false
+        },
+        {
+          "key": "./node_modules/url-parse/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/url-parse/index.js",
+              "value": 13077,
+              "displayValue": "12.77KB",
+              "delta": 13077,
+              "deltaPercentage": 100,
+              "displayDelta": "+12.77KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/url-parse/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/event/eventtarget.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/event/eventtarget.js",
+              "value": 1855,
+              "displayValue": "1.81KB",
+              "delta": 1855,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.81KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/event/eventtarget.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/lib/sender-receiver.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/lib/sender-receiver.js",
+              "value": 1175,
+              "displayValue": "1.15KB",
+              "delta": 1175,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.15KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/lib/sender-receiver.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/browser/abstract-xhr.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/browser/abstract-xhr.js",
+              "value": 4796,
+              "displayValue": "4.68KB",
+              "delta": 4796,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.68KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/browser/abstract-xhr.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/xdr-streaming.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/xdr-streaming.js",
+              "value": 984,
+              "displayValue": "984B",
+              "delta": 984,
+              "deltaPercentage": 100,
+              "displayDelta": "+984B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/xdr-streaming.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/eventsource.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/eventsource.js",
+              "value": 766,
+              "displayValue": "766B",
+              "delta": 766,
+              "deltaPercentage": 100,
+              "displayDelta": "+766B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/eventsource.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/browser/eventsource.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/browser/eventsource.js",
+              "value": 37,
+              "displayValue": "37B",
+              "delta": 37,
+              "deltaPercentage": 100,
+              "displayDelta": "+37B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/browser/eventsource.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/iframe.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/iframe.js",
+              "value": 3835,
+              "displayValue": "3.75KB",
+              "delta": 3835,
+              "deltaPercentage": 100,
+              "displayDelta": "+3.75KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/iframe.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/version.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/version.js",
+              "value": 26,
+              "displayValue": "26B",
+              "delta": 26,
+              "deltaPercentage": 100,
+              "displayDelta": "+26B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/version.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/htmlfile.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/htmlfile.js",
+              "value": 710,
+              "displayValue": "710B",
+              "delta": 710,
+              "deltaPercentage": 100,
+              "displayDelta": "+710B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/htmlfile.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/xhr-polling.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/xhr-polling.js",
+              "value": 894,
+              "displayValue": "894B",
+              "delta": 894,
+              "deltaPercentage": 100,
+              "displayDelta": "+894B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/xhr-polling.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/location.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/location.js",
+              "value": 178,
+              "displayValue": "178B",
+              "delta": 178,
+              "deltaPercentage": 100,
+              "displayDelta": "+178B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/location.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/info-iframe-receiver.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/info-iframe-receiver.js",
+              "value": 791,
+              "displayValue": "791B",
+              "delta": 791,
+              "deltaPercentage": 100,
+              "displayDelta": "+791B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/info-iframe-receiver.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/info-ajax.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/info-ajax.js",
+              "value": 1032,
+              "displayValue": "1.01KB",
+              "delta": 1032,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.01KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/info-ajax.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/parseuri/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/parseuri/index.js",
+              "value": 1823,
+              "displayValue": "1.78KB",
+              "delta": 1823,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.78KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/parseuri/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/manager.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/manager.js",
+              "value": 11043,
+              "displayValue": "10.78KB",
+              "delta": 11043,
+              "deltaPercentage": 100,
+              "displayDelta": "+10.78KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/manager.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/index.js",
+              "value": 1080,
+              "displayValue": "1.05KB",
+              "delta": 1080,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.05KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/xmlhttprequest.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/xmlhttprequest.js",
+              "value": 1263,
+              "displayValue": "1.23KB",
+              "delta": 1263,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.23KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/xmlhttprequest.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/polling.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/polling.js",
+              "value": 4459,
+              "displayValue": "4.35KB",
+              "delta": 4459,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.35KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/polling.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-parser/lib/commons.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-parser/lib/commons.js",
+              "value": 557,
+              "displayValue": "557B",
+              "delta": 557,
+              "deltaPercentage": 100,
+              "displayDelta": "+557B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-parser/lib/commons.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/yeast/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/yeast/index.js",
+              "value": 1352,
+              "displayValue": "1.32KB",
+              "delta": 1352,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.32KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/yeast/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/util.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/util.js",
+              "value": 168,
+              "displayValue": "168B",
+              "delta": 168,
+              "deltaPercentage": 100,
+              "displayDelta": "+168B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/util.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/socket.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/socket.js",
+              "value": 12638,
+              "displayValue": "12.34KB",
+              "delta": 12638,
+              "deltaPercentage": 100,
+              "displayDelta": "+12.34KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/socket.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-parser/dist/is-binary.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-parser/dist/is-binary.js",
+              "value": 1746,
+              "displayValue": "1.71KB",
+              "delta": 1746,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.71KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-parser/dist/is-binary.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/on.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/on.js",
+              "value": 231,
+              "displayValue": "231B",
+              "delta": 231,
+              "deltaPercentage": 100,
+              "displayDelta": "+231B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/on.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/typed-events.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/typed-events.js",
+              "value": 2206,
+              "displayValue": "2.15KB",
+              "delta": 2206,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.15KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/typed-events.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/stompjs/lib/stomp.js",
+          "runs": [
+            {
+              "name": "./node_modules/stompjs/lib/stomp.js",
+              "value": 15722,
+              "displayValue": "15.35KB",
+              "delta": 15722,
+              "deltaPercentage": 100,
+              "displayDelta": "+15.35KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/stompjs/lib/stomp.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/net/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/net/index.js",
+              "value": 1210,
+              "displayValue": "1.18KB",
+              "delta": 1210,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.18KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/net/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isFunction.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isFunction.js",
+              "value": 993,
+              "displayValue": "993B",
+              "delta": 993,
+              "deltaPercentage": 100,
+              "displayDelta": "+993B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isFunction.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseGetTag.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseGetTag.js",
+              "value": 792,
+              "displayValue": "792B",
+              "delta": 792,
+              "deltaPercentage": 100,
+              "displayDelta": "+792B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseGetTag.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isObject.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isObject.js",
+              "value": 733,
+              "displayValue": "733B",
+              "delta": 733,
+              "deltaPercentage": 100,
+              "displayDelta": "+733B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isObject.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/identity.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/identity.js",
+              "value": 370,
+              "displayValue": "370B",
+              "delta": 370,
+              "deltaPercentage": 100,
+              "displayDelta": "+370B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/identity.js",
+          "changed": true
         },
         {
           "key": "./node_modules/@babylonjs/core/Engines/nullEngine.js",
@@ -5924,29 +7263,6 @@
           "changed": false
         },
         {
-          "key": "./node_modules/process/browser.js",
-          "runs": [
-            {
-              "name": "./node_modules/process/browser.js",
-              "value": 5418,
-              "displayValue": "5.29KB",
-              "delta": 0,
-              "deltaPercentage": 0,
-              "displayDelta": "0B",
-              "displayDeltaPercentage": "0%",
-              "deltaType": "NO_CHANGE"
-            },
-            {
-              "name": "./node_modules/process/browser.js",
-              "value": 5418,
-              "displayValue": "5.29KB"
-            }
-          ],
-          "biggerIsBetter": false,
-          "label": "./node_modules/process/browser.js",
-          "changed": false
-        },
-        {
           "key": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
           "runs": [
             {
@@ -6223,6 +7539,2191 @@
           "changed": false
         },
         {
+          "key": "./node_modules/sockjs-client/lib/transport-list.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport-list.js",
+              "value": 613,
+              "displayValue": "613B",
+              "delta": 613,
+              "deltaPercentage": 100,
+              "displayDelta": "+613B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport-list.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/websocket.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/websocket.js",
+              "value": 2723,
+              "displayValue": "2.66KB",
+              "delta": 2723,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.66KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/websocket.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/browser-crypto.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/browser-crypto.js",
+              "value": 438,
+              "displayValue": "438B",
+              "delta": 438,
+              "deltaPercentage": 100,
+              "displayDelta": "+438B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/browser-crypto.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/requires-port/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/requires-port/index.js",
+              "value": 753,
+              "displayValue": "753B",
+              "delta": 753,
+              "deltaPercentage": 100,
+              "displayDelta": "+753B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/requires-port/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/querystringify/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/querystringify/index.js",
+              "value": 2564,
+              "displayValue": "2.5KB",
+              "delta": 2564,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.5KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/querystringify/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/browser/websocket.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/browser/websocket.js",
+              "value": 210,
+              "displayValue": "210B",
+              "delta": 210,
+              "deltaPercentage": 100,
+              "displayDelta": "+210B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/browser/websocket.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/xhr-streaming.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/xhr-streaming.js",
+              "value": 1248,
+              "displayValue": "1.22KB",
+              "delta": 1248,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.22KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/xhr-streaming.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/lib/buffered-sender.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/lib/buffered-sender.js",
+              "value": 2296,
+              "displayValue": "2.24KB",
+              "delta": 2296,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.24KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/lib/buffered-sender.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/lib/polling.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/lib/polling.js",
+              "value": 1316,
+              "displayValue": "1.29KB",
+              "delta": 1316,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.29KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/lib/polling.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/receiver/eventsource.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/receiver/eventsource.js",
+              "value": 1585,
+              "displayValue": "1.55KB",
+              "delta": 1585,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.55KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/receiver/eventsource.js",
+          "changed": true
+        },
+        {
+          "key": "(webpack)/buildin/module.js",
+          "runs": [
+            {
+              "name": "(webpack)/buildin/module.js",
+              "value": 497,
+              "displayValue": "497B",
+              "delta": 497,
+              "deltaPercentage": 100,
+              "displayDelta": "+497B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "(webpack)/buildin/module.js",
+          "changed": true
+        },
+        {
+          "key": "(webpack)/buildin/amd-options.js",
+          "runs": [
+            {
+              "name": "(webpack)/buildin/amd-options.js",
+              "value": 80,
+              "displayValue": "80B",
+              "delta": 80,
+              "deltaPercentage": 100,
+              "displayDelta": "+80B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "(webpack)/buildin/amd-options.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/receiver/htmlfile.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/receiver/htmlfile.js",
+              "value": 2204,
+              "displayValue": "2.15KB",
+              "delta": 2204,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.15KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/receiver/htmlfile.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/xdr-polling.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/xdr-polling.js",
+              "value": 712,
+              "displayValue": "712B",
+              "delta": 712,
+              "deltaPercentage": 100,
+              "displayDelta": "+712B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/xdr-polling.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/jsonp-polling.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/jsonp-polling.js",
+              "value": 1016,
+              "displayValue": "1016B",
+              "delta": 1016,
+              "deltaPercentage": 100,
+              "displayDelta": "+1016B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/jsonp-polling.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/receiver/jsonp.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/receiver/jsonp.js",
+              "value": 5570,
+              "displayValue": "5.44KB",
+              "delta": 5570,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.44KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/receiver/jsonp.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/sender/jsonp.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/sender/jsonp.js",
+              "value": 2464,
+              "displayValue": "2.41KB",
+              "delta": 2464,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.41KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/sender/jsonp.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/main.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/main.js",
+              "value": 12174,
+              "displayValue": "11.89KB",
+              "delta": 12174,
+              "deltaPercentage": 100,
+              "displayDelta": "+11.89KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/main.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/shims.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/shims.js",
+              "value": 17204,
+              "displayValue": "16.8KB",
+              "delta": 17204,
+              "deltaPercentage": 100,
+              "displayDelta": "+16.8KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/shims.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/escape.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/escape.js",
+              "value": 2388,
+              "displayValue": "2.33KB",
+              "delta": 2388,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.33KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/escape.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/transport.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/transport.js",
+              "value": 1354,
+              "displayValue": "1.32KB",
+              "delta": 1354,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.32KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/transport.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/utils/log.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/utils/log.js",
+              "value": 450,
+              "displayValue": "450B",
+              "delta": 450,
+              "deltaPercentage": 100,
+              "displayDelta": "+450B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/utils/log.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/event/close.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/event/close.js",
+              "value": 295,
+              "displayValue": "295B",
+              "delta": 295,
+              "deltaPercentage": 100,
+              "displayDelta": "+295B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/event/close.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/event/trans-message.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/event/trans-message.js",
+              "value": 292,
+              "displayValue": "292B",
+              "delta": 292,
+              "deltaPercentage": 100,
+              "displayDelta": "+292B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/event/trans-message.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/info-receiver.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/info-receiver.js",
+              "value": 2223,
+              "displayValue": "2.17KB",
+              "delta": 2223,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.17KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/info-receiver.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/transport/sender/xhr-fake.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/transport/sender/xhr-fake.js",
+              "value": 456,
+              "displayValue": "456B",
+              "delta": 456,
+              "deltaPercentage": 100,
+              "displayDelta": "+456B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/transport/sender/xhr-fake.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/info-iframe.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/info-iframe.js",
+              "value": 1520,
+              "displayValue": "1.48KB",
+              "delta": 1520,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.48KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/info-iframe.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/iframe-bootstrap.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/iframe-bootstrap.js",
+              "value": 2901,
+              "displayValue": "2.83KB",
+              "delta": 2901,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.83KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/iframe-bootstrap.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/sockjs-client/lib/facade.js",
+          "runs": [
+            {
+              "name": "./node_modules/sockjs-client/lib/facade.js",
+              "value": 723,
+              "displayValue": "723B",
+              "delta": 723,
+              "deltaPercentage": 100,
+              "displayDelta": "+723B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/sockjs-client/lib/facade.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/index.js",
+              "value": 2084,
+              "displayValue": "2.04KB",
+              "delta": 2084,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.04KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-client/build/url.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-client/build/url.js",
+              "value": 1968,
+              "displayValue": "1.92KB",
+              "delta": 1968,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.92KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-client/build/url.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/debug/src/common.js",
+          "runs": [
+            {
+              "name": "./node_modules/debug/src/common.js",
+              "value": 6029,
+              "displayValue": "5.89KB",
+              "delta": 6029,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.89KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/debug/src/common.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/ms/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/ms/index.js",
+              "value": 3023,
+              "displayValue": "2.95KB",
+              "delta": 3023,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.95KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/ms/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/index.js",
+              "value": 432,
+              "displayValue": "432B",
+              "delta": 432,
+              "deltaPercentage": 100,
+              "displayDelta": "+432B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/socket.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/socket.js",
+              "value": 16736,
+              "displayValue": "16.34KB",
+              "delta": 16736,
+              "deltaPercentage": 100,
+              "displayDelta": "+16.34KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/socket.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/has-cors/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/has-cors/index.js",
+              "value": 396,
+              "displayValue": "396B",
+              "delta": 396,
+              "deltaPercentage": 100,
+              "displayDelta": "+396B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/has-cors/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/polling-xhr.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/polling-xhr.js",
+              "value": 7197,
+              "displayValue": "7.03KB",
+              "delta": 7197,
+              "deltaPercentage": 100,
+              "displayDelta": "+7.03KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/polling-xhr.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-parser/lib/encodePacket.browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-parser/lib/encodePacket.browser.js",
+              "value": 1369,
+              "displayValue": "1.34KB",
+              "delta": 1369,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.34KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-parser/lib/encodePacket.browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-parser/lib/decodePacket.browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-parser/lib/decodePacket.browser.js",
+              "value": 1444,
+              "displayValue": "1.41KB",
+              "delta": 1444,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.41KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-parser/lib/decodePacket.browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/base64-arraybuffer/lib/base64-arraybuffer.js",
+          "runs": [
+            {
+              "name": "./node_modules/base64-arraybuffer/lib/base64-arraybuffer.js",
+              "value": 1704,
+              "displayValue": "1.66KB",
+              "delta": 1704,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.66KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/base64-arraybuffer/lib/base64-arraybuffer.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/polling-jsonp.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/polling-jsonp.js",
+              "value": 4621,
+              "displayValue": "4.51KB",
+              "delta": 4621,
+              "deltaPercentage": 100,
+              "displayDelta": "+4.51KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/polling-jsonp.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/websocket.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/websocket.js",
+              "value": 5793,
+              "displayValue": "5.66KB",
+              "delta": 5793,
+              "deltaPercentage": 100,
+              "displayDelta": "+5.66KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/websocket.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/buffer/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/buffer/index.js",
+              "value": 48590,
+              "displayValue": "47.45KB",
+              "delta": 48590,
+              "deltaPercentage": 100,
+              "displayDelta": "+47.45KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/buffer/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/base64-js/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/base64-js/index.js",
+              "value": 3932,
+              "displayValue": "3.84KB",
+              "delta": 3932,
+              "deltaPercentage": 100,
+              "displayDelta": "+3.84KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/base64-js/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/ieee754/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/ieee754/index.js",
+              "value": 2154,
+              "displayValue": "2.1KB",
+              "delta": 2154,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.1KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/ieee754/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/isarray/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/isarray/index.js",
+              "value": 132,
+              "displayValue": "132B",
+              "delta": 132,
+              "deltaPercentage": 100,
+              "displayDelta": "+132B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/isarray/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/engine.io-client/lib/transports/websocket-constructor.browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/engine.io-client/lib/transports/websocket-constructor.browser.js",
+              "value": 196,
+              "displayValue": "196B",
+              "delta": 196,
+              "deltaPercentage": 100,
+              "displayDelta": "+196B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/engine.io-client/lib/transports/websocket-constructor.browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/socket.io-parser/dist/binary.js",
+          "runs": [
+            {
+              "name": "./node_modules/socket.io-parser/dist/binary.js",
+              "value": 2679,
+              "displayValue": "2.62KB",
+              "delta": 2679,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.62KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/socket.io-parser/dist/binary.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/backo2/index.js",
+          "runs": [
+            {
+              "name": "./node_modules/backo2/index.js",
+              "value": 1399,
+              "displayValue": "1.37KB",
+              "delta": 1399,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.37KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/backo2/index.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/react-stomp/dist/client.js",
+          "runs": [
+            {
+              "name": "./node_modules/react-stomp/dist/client.js",
+              "value": 11945,
+              "displayValue": "11.67KB",
+              "delta": 11945,
+              "deltaPercentage": 100,
+              "displayDelta": "+11.67KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/react-stomp/dist/client.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/stompjs/lib/stomp-node.js",
+          "runs": [
+            {
+              "name": "./node_modules/stompjs/lib/stomp-node.js",
+              "value": 2569,
+              "displayValue": "2.51KB",
+              "delta": 2569,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.51KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/stompjs/lib/stomp-node.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/websocket/lib/browser.js",
+          "runs": [
+            {
+              "name": "./node_modules/websocket/lib/browser.js",
+              "value": 1394,
+              "displayValue": "1.36KB",
+              "delta": 1394,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.36KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/websocket/lib/browser.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/es5-ext/global.js",
+          "runs": [
+            {
+              "name": "./node_modules/es5-ext/global.js",
+              "value": 1137,
+              "displayValue": "1.11KB",
+              "delta": 1137,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.11KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/es5-ext/global.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/websocket/lib/version.js",
+          "runs": [
+            {
+              "name": "./node_modules/websocket/lib/version.js",
+              "value": 53,
+              "displayValue": "53B",
+              "delta": 53,
+              "deltaPercentage": 100,
+              "displayDelta": "+53B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/websocket/lib/version.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/websocket/package.json",
+          "runs": [
+            {
+              "name": "./node_modules/websocket/package.json",
+              "value": 2336,
+              "displayValue": "2.28KB",
+              "delta": 2336,
+              "deltaPercentage": 100,
+              "displayDelta": "+2.28KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/websocket/package.json",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/difference.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/difference.js",
+              "value": 1063,
+              "displayValue": "1.04KB",
+              "delta": 1063,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.04KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/difference.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseDifference.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseDifference.js",
+              "value": 1917,
+              "displayValue": "1.87KB",
+              "delta": 1917,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.87KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseDifference.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_SetCache.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_SetCache.js",
+              "value": 632,
+              "displayValue": "632B",
+              "delta": 632,
+              "deltaPercentage": 100,
+              "displayDelta": "+632B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_SetCache.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_MapCache.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_MapCache.js",
+              "value": 869,
+              "displayValue": "869B",
+              "delta": 869,
+              "deltaPercentage": 100,
+              "displayDelta": "+869B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_MapCache.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_mapCacheClear.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_mapCacheClear.js",
+              "value": 393,
+              "displayValue": "393B",
+              "delta": 393,
+              "deltaPercentage": 100,
+              "displayDelta": "+393B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_mapCacheClear.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_Hash.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_Hash.js",
+              "value": 747,
+              "displayValue": "747B",
+              "delta": 747,
+              "deltaPercentage": 100,
+              "displayDelta": "+747B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_Hash.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_hashClear.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_hashClear.js",
+              "value": 281,
+              "displayValue": "281B",
+              "delta": 281,
+              "deltaPercentage": 100,
+              "displayDelta": "+281B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_hashClear.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseIsNative.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseIsNative.js",
+              "value": 1417,
+              "displayValue": "1.38KB",
+              "delta": 1417,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.38KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseIsNative.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_freeGlobal.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_freeGlobal.js",
+              "value": 173,
+              "displayValue": "173B",
+              "delta": 173,
+              "deltaPercentage": 100,
+              "displayDelta": "+173B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_freeGlobal.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_getRawTag.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_getRawTag.js",
+              "value": 1139,
+              "displayValue": "1.11KB",
+              "delta": 1139,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.11KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_getRawTag.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_objectToString.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_objectToString.js",
+              "value": 565,
+              "displayValue": "565B",
+              "delta": 565,
+              "deltaPercentage": 100,
+              "displayDelta": "+565B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_objectToString.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_isMasked.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_isMasked.js",
+              "value": 564,
+              "displayValue": "564B",
+              "delta": 564,
+              "deltaPercentage": 100,
+              "displayDelta": "+564B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_isMasked.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_coreJsData.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_coreJsData.js",
+              "value": 157,
+              "displayValue": "157B",
+              "delta": 157,
+              "deltaPercentage": 100,
+              "displayDelta": "+157B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_coreJsData.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_toSource.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_toSource.js",
+              "value": 556,
+              "displayValue": "556B",
+              "delta": 556,
+              "deltaPercentage": 100,
+              "displayDelta": "+556B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_toSource.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_getValue.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_getValue.js",
+              "value": 325,
+              "displayValue": "325B",
+              "delta": 325,
+              "deltaPercentage": 100,
+              "displayDelta": "+325B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_getValue.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_hashDelete.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_hashDelete.js",
+              "value": 445,
+              "displayValue": "445B",
+              "delta": 445,
+              "deltaPercentage": 100,
+              "displayDelta": "+445B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_hashDelete.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_hashGet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_hashGet.js",
+              "value": 772,
+              "displayValue": "772B",
+              "delta": 772,
+              "deltaPercentage": 100,
+              "displayDelta": "+772B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_hashGet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_hashHas.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_hashHas.js",
+              "value": 626,
+              "displayValue": "626B",
+              "delta": 626,
+              "deltaPercentage": 100,
+              "displayDelta": "+626B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_hashHas.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_hashSet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_hashSet.js",
+              "value": 598,
+              "displayValue": "598B",
+              "delta": 598,
+              "deltaPercentage": 100,
+              "displayDelta": "+598B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_hashSet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_ListCache.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_ListCache.js",
+              "value": 869,
+              "displayValue": "869B",
+              "delta": 869,
+              "deltaPercentage": 100,
+              "displayDelta": "+869B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_ListCache.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_listCacheClear.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_listCacheClear.js",
+              "value": 218,
+              "displayValue": "218B",
+              "delta": 218,
+              "deltaPercentage": 100,
+              "displayDelta": "+218B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_listCacheClear.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_listCacheDelete.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_listCacheDelete.js",
+              "value": 775,
+              "displayValue": "775B",
+              "delta": 775,
+              "deltaPercentage": 100,
+              "displayDelta": "+775B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_listCacheDelete.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/eq.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/eq.js",
+              "value": 799,
+              "displayValue": "799B",
+              "delta": 799,
+              "deltaPercentage": 100,
+              "displayDelta": "+799B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/eq.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_listCacheGet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_listCacheGet.js",
+              "value": 420,
+              "displayValue": "420B",
+              "delta": 420,
+              "deltaPercentage": 100,
+              "displayDelta": "+420B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_listCacheGet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_listCacheHas.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_listCacheHas.js",
+              "value": 403,
+              "displayValue": "403B",
+              "delta": 403,
+              "deltaPercentage": 100,
+              "displayDelta": "+403B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_listCacheHas.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_listCacheSet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_listCacheSet.js",
+              "value": 553,
+              "displayValue": "553B",
+              "delta": 553,
+              "deltaPercentage": 100,
+              "displayDelta": "+553B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_listCacheSet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_Map.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_Map.js",
+              "value": 195,
+              "displayValue": "195B",
+              "delta": 195,
+              "deltaPercentage": 100,
+              "displayDelta": "+195B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_Map.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_mapCacheDelete.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_mapCacheDelete.js",
+              "value": 450,
+              "displayValue": "450B",
+              "delta": 450,
+              "deltaPercentage": 100,
+              "displayDelta": "+450B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_mapCacheDelete.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_isKeyable.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_isKeyable.js",
+              "value": 430,
+              "displayValue": "430B",
+              "delta": 430,
+              "deltaPercentage": 100,
+              "displayDelta": "+430B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_isKeyable.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_mapCacheGet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_mapCacheGet.js",
+              "value": 330,
+              "displayValue": "330B",
+              "delta": 330,
+              "deltaPercentage": 100,
+              "displayDelta": "+330B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_mapCacheGet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_mapCacheHas.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_mapCacheHas.js",
+              "value": 382,
+              "displayValue": "382B",
+              "delta": 382,
+              "deltaPercentage": 100,
+              "displayDelta": "+382B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_mapCacheHas.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_mapCacheSet.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_mapCacheSet.js",
+              "value": 489,
+              "displayValue": "489B",
+              "delta": 489,
+              "deltaPercentage": 100,
+              "displayDelta": "+489B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_mapCacheSet.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_setCacheAdd.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_setCacheAdd.js",
+              "value": 424,
+              "displayValue": "424B",
+              "delta": 424,
+              "deltaPercentage": 100,
+              "displayDelta": "+424B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_setCacheAdd.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_setCacheHas.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_setCacheHas.js",
+              "value": 316,
+              "displayValue": "316B",
+              "delta": 316,
+              "deltaPercentage": 100,
+              "displayDelta": "+316B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_setCacheHas.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_arrayIncludes.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_arrayIncludes.js",
+              "value": 526,
+              "displayValue": "526B",
+              "delta": 526,
+              "deltaPercentage": 100,
+              "displayDelta": "+526B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_arrayIncludes.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseIndexOf.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseIndexOf.js",
+              "value": 659,
+              "displayValue": "659B",
+              "delta": 659,
+              "deltaPercentage": 100,
+              "displayDelta": "+659B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseIndexOf.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseFindIndex.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseFindIndex.js",
+              "value": 766,
+              "displayValue": "766B",
+              "delta": 766,
+              "deltaPercentage": 100,
+              "displayDelta": "+766B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseFindIndex.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseIsNaN.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseIsNaN.js",
+              "value": 296,
+              "displayValue": "296B",
+              "delta": 296,
+              "deltaPercentage": 100,
+              "displayDelta": "+296B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseIsNaN.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_strictIndexOf.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_strictIndexOf.js",
+              "value": 600,
+              "displayValue": "600B",
+              "delta": 600,
+              "deltaPercentage": 100,
+              "displayDelta": "+600B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_strictIndexOf.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_arrayIncludesWith.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_arrayIncludesWith.js",
+              "value": 615,
+              "displayValue": "615B",
+              "delta": 615,
+              "deltaPercentage": 100,
+              "displayDelta": "+615B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_arrayIncludesWith.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_arrayMap.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_arrayMap.js",
+              "value": 556,
+              "displayValue": "556B",
+              "delta": 556,
+              "deltaPercentage": 100,
+              "displayDelta": "+556B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_arrayMap.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseUnary.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseUnary.js",
+              "value": 332,
+              "displayValue": "332B",
+              "delta": 332,
+              "deltaPercentage": 100,
+              "displayDelta": "+332B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseUnary.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_cacheHas.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_cacheHas.js",
+              "value": 337,
+              "displayValue": "337B",
+              "delta": 337,
+              "deltaPercentage": 100,
+              "displayDelta": "+337B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_cacheHas.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseFlatten.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseFlatten.js",
+              "value": 1201,
+              "displayValue": "1.17KB",
+              "delta": 1201,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.17KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseFlatten.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_arrayPush.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_arrayPush.js",
+              "value": 437,
+              "displayValue": "437B",
+              "delta": 437,
+              "deltaPercentage": 100,
+              "displayDelta": "+437B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_arrayPush.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_isFlattenable.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_isFlattenable.js",
+              "value": 608,
+              "displayValue": "608B",
+              "delta": 608,
+              "deltaPercentage": 100,
+              "displayDelta": "+608B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_isFlattenable.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isArguments.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isArguments.js",
+              "value": 1026,
+              "displayValue": "1KB",
+              "delta": 1026,
+              "deltaPercentage": 100,
+              "displayDelta": "+1KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isArguments.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseIsArguments.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseIsArguments.js",
+              "value": 488,
+              "displayValue": "488B",
+              "delta": 488,
+              "deltaPercentage": 100,
+              "displayDelta": "+488B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseIsArguments.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isArray.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isArray.js",
+              "value": 488,
+              "displayValue": "488B",
+              "delta": 488,
+              "deltaPercentage": 100,
+              "displayDelta": "+488B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isArray.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseRest.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseRest.js",
+              "value": 559,
+              "displayValue": "559B",
+              "delta": 559,
+              "deltaPercentage": 100,
+              "displayDelta": "+559B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseRest.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_overRest.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_overRest.js",
+              "value": 1096,
+              "displayValue": "1.07KB",
+              "delta": 1096,
+              "deltaPercentage": 100,
+              "displayDelta": "+1.07KB",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_overRest.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_apply.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_apply.js",
+              "value": 714,
+              "displayValue": "714B",
+              "delta": 714,
+              "deltaPercentage": 100,
+              "displayDelta": "+714B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_apply.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_setToString.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_setToString.js",
+              "value": 392,
+              "displayValue": "392B",
+              "delta": 392,
+              "deltaPercentage": 100,
+              "displayDelta": "+392B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_setToString.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_baseSetToString.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_baseSetToString.js",
+              "value": 641,
+              "displayValue": "641B",
+              "delta": 641,
+              "deltaPercentage": 100,
+              "displayDelta": "+641B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_baseSetToString.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/constant.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/constant.js",
+              "value": 528,
+              "displayValue": "528B",
+              "delta": 528,
+              "deltaPercentage": 100,
+              "displayDelta": "+528B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/constant.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_defineProperty.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_defineProperty.js",
+              "value": 233,
+              "displayValue": "233B",
+              "delta": 233,
+              "deltaPercentage": 100,
+              "displayDelta": "+233B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_defineProperty.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/_shortOut.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/_shortOut.js",
+              "value": 941,
+              "displayValue": "941B",
+              "delta": 941,
+              "deltaPercentage": 100,
+              "displayDelta": "+941B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/_shortOut.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isArrayLikeObject.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isArrayLikeObject.js",
+              "value": 742,
+              "displayValue": "742B",
+              "delta": 742,
+              "deltaPercentage": 100,
+              "displayDelta": "+742B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isArrayLikeObject.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isArrayLike.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isArrayLike.js",
+              "value": 830,
+              "displayValue": "830B",
+              "delta": 830,
+              "deltaPercentage": 100,
+              "displayDelta": "+830B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isArrayLike.js",
+          "changed": true
+        },
+        {
+          "key": "./node_modules/lodash/isLength.js",
+          "runs": [
+            {
+              "name": "./node_modules/lodash/isLength.js",
+              "value": 802,
+              "displayValue": "802B",
+              "delta": 802,
+              "deltaPercentage": 100,
+              "displayDelta": "+802B",
+              "displayDeltaPercentage": "+100%",
+              "deltaType": "HIGH_NEGATIVE"
+            },
+            null
+          ],
+          "biggerIsBetter": false,
+          "label": "./node_modules/lodash/isLength.js",
+          "changed": true
+        },
+        {
           "key": "./node_modules/@babel/runtime/helpers/arrayWithHoles.js",
           "runs": [
             {
@@ -6335,29 +9836,6 @@
           ],
           "biggerIsBetter": false,
           "label": "./node_modules/@babel/runtime/helpers/nonIterableRest.js",
-          "changed": false
-        },
-        {
-          "key": "(webpack)/buildin/global.js",
-          "runs": [
-            {
-              "name": "(webpack)/buildin/global.js",
-              "value": 472,
-              "displayValue": "472B",
-              "delta": 0,
-              "deltaPercentage": 0,
-              "displayDelta": "0B",
-              "displayDeltaPercentage": "0%",
-              "deltaType": "NO_CHANGE"
-            },
-            {
-              "name": "(webpack)/buildin/global.js",
-              "value": 472,
-              "displayValue": "472B"
-            }
-          ],
-          "biggerIsBetter": false,
-          "label": "(webpack)/buildin/global.js",
           "changed": false
         },
         {
@@ -6526,6 +10004,25 @@
       "changed": false
     },
     {
+      "key": "inherits",
+      "runs": [
+        {
+          "path": "./node_modules/inherits",
+          "value": 753,
+          "displayValue": "753B",
+          "delta": 753,
+          "deltaPercentage": 100,
+          "displayDelta": "+753B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "inherits",
+      "changed": true
+    },
+    {
       "key": "react-redux",
       "runs": [
         {
@@ -6547,6 +10044,25 @@
       "biggerIsBetter": false,
       "label": "react-redux",
       "changed": false
+    },
+    {
+      "key": "sockjs-client",
+      "runs": [
+        {
+          "path": "./node_modules/sockjs-client",
+          "value": 100437,
+          "displayValue": "98.08KB",
+          "delta": 100437,
+          "deltaPercentage": 100,
+          "displayDelta": "+98.08KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "sockjs-client",
+      "changed": true
     },
     {
       "key": "axios",
@@ -6572,6 +10088,44 @@
       "changed": false
     },
     {
+      "key": "debug",
+      "runs": [
+        {
+          "path": "./node_modules/debug",
+          "value": 12039,
+          "displayValue": "11.76KB",
+          "delta": 12039,
+          "deltaPercentage": 100,
+          "displayDelta": "+11.76KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "debug",
+      "changed": true
+    },
+    {
+      "key": "json3",
+      "runs": [
+        {
+          "path": "./node_modules/json3",
+          "value": 43065,
+          "displayValue": "42.06KB",
+          "delta": 43065,
+          "deltaPercentage": 100,
+          "displayDelta": "+42.06KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "json3",
+      "changed": true
+    },
+    {
       "key": "redux",
       "runs": [
         {
@@ -6595,6 +10149,44 @@
       "changed": false
     },
     {
+      "key": "engine.io-parser",
+      "runs": [
+        {
+          "path": "./node_modules/engine.io-parser",
+          "value": 4581,
+          "displayValue": "4.47KB",
+          "delta": 4581,
+          "deltaPercentage": 100,
+          "displayDelta": "+4.47KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "engine.io-parser",
+      "changed": true
+    },
+    {
+      "key": "component-emitter",
+      "runs": [
+        {
+          "path": "./node_modules/component-emitter",
+          "value": 3468,
+          "displayValue": "3.39KB",
+          "delta": 3468,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.39KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "component-emitter",
+      "changed": true
+    },
+    {
       "key": "react-i18next",
       "runs": [
         {
@@ -6616,6 +10208,44 @@
       "biggerIsBetter": false,
       "label": "react-i18next",
       "changed": false
+    },
+    {
+      "key": "engine.io-client",
+      "runs": [
+        {
+          "path": "./node_modules/engine.io-client",
+          "value": 44294,
+          "displayValue": "43.26KB",
+          "delta": 44294,
+          "deltaPercentage": 100,
+          "displayDelta": "+43.26KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "engine.io-client",
+      "changed": true
+    },
+    {
+      "key": "lodash",
+      "runs": [
+        {
+          "path": "./node_modules/lodash",
+          "value": 42182,
+          "displayValue": "41.19KB",
+          "delta": 42182,
+          "deltaPercentage": 100,
+          "displayDelta": "+41.19KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "lodash",
+      "changed": true
     },
     {
       "key": "react-dom",
@@ -6664,6 +10294,44 @@
       "changed": false
     },
     {
+      "key": "parseqs",
+      "runs": [
+        {
+          "path": "./node_modules/parseqs",
+          "value": 708,
+          "displayValue": "708B",
+          "delta": 708,
+          "deltaPercentage": 100,
+          "displayDelta": "+708B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "parseqs",
+      "changed": true
+    },
+    {
+      "key": "socket.io-parser",
+      "runs": [
+        {
+          "path": "./node_modules/socket.io-parser",
+          "value": 13344,
+          "displayValue": "13.03KB",
+          "delta": 13344,
+          "deltaPercentage": 100,
+          "displayDelta": "+13.03KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "socket.io-parser",
+      "changed": true
+    },
+    {
       "key": "react-is",
       "runs": [
         {
@@ -6685,6 +10353,25 @@
       "biggerIsBetter": false,
       "label": "react-is",
       "changed": false
+    },
+    {
+      "key": "stompjs",
+      "runs": [
+        {
+          "path": "./node_modules/stompjs",
+          "value": 18782,
+          "displayValue": "18.34KB",
+          "delta": 18782,
+          "deltaPercentage": 100,
+          "displayDelta": "+18.34KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "stompjs",
+      "changed": true
     },
     {
       "key": "hoist-non-react-statics",
@@ -6733,6 +10420,124 @@
       "changed": false
     },
     {
+      "key": "process",
+      "runs": [
+        {
+          "path": "./node_modules/process",
+          "value": 5418,
+          "displayValue": "5.29KB",
+          "delta": 0,
+          "deltaPercentage": 0,
+          "displayDelta": "0B",
+          "displayDeltaPercentage": "0%",
+          "deltaType": "NO_CHANGE"
+        },
+        {
+          "path": "./node_modules/process",
+          "value": 5418,
+          "displayValue": "5.29KB"
+        }
+      ],
+      "biggerIsBetter": false,
+      "label": "process",
+      "changed": false
+    },
+    {
+      "key": "url-parse",
+      "runs": [
+        {
+          "path": "./node_modules/url-parse",
+          "value": 13077,
+          "displayValue": "12.77KB",
+          "delta": 13077,
+          "deltaPercentage": 100,
+          "displayDelta": "+12.77KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "url-parse",
+      "changed": true
+    },
+    {
+      "key": "parseuri",
+      "runs": [
+        {
+          "path": "./node_modules/parseuri",
+          "value": 1823,
+          "displayValue": "1.78KB",
+          "delta": 1823,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.78KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "parseuri",
+      "changed": true
+    },
+    {
+      "key": "socket.io-client",
+      "runs": [
+        {
+          "path": "./node_modules/socket.io-client",
+          "value": 30170,
+          "displayValue": "29.46KB",
+          "delta": 30170,
+          "deltaPercentage": 100,
+          "displayDelta": "+29.46KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "socket.io-client",
+      "changed": true
+    },
+    {
+      "key": "yeast",
+      "runs": [
+        {
+          "path": "./node_modules/yeast",
+          "value": 1352,
+          "displayValue": "1.32KB",
+          "delta": 1352,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.32KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "yeast",
+      "changed": true
+    },
+    {
+      "key": "net",
+      "runs": [
+        {
+          "path": "./node_modules/net",
+          "value": 1210,
+          "displayValue": "1.18KB",
+          "delta": 1210,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.18KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "net",
+      "changed": true
+    },
+    {
       "key": "redux-devtools-extension",
       "runs": [
         {
@@ -6779,27 +10584,251 @@
       "changed": false
     },
     {
-      "key": "process",
+      "key": "requires-port",
       "runs": [
         {
-          "path": "./node_modules/process",
-          "value": 5418,
-          "displayValue": "5.29KB",
-          "delta": 0,
-          "deltaPercentage": 0,
-          "displayDelta": "0B",
-          "displayDeltaPercentage": "0%",
-          "deltaType": "NO_CHANGE"
+          "path": "./node_modules/requires-port",
+          "value": 753,
+          "displayValue": "753B",
+          "delta": 753,
+          "deltaPercentage": 100,
+          "displayDelta": "+753B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
         },
-        {
-          "path": "./node_modules/process",
-          "value": 5418,
-          "displayValue": "5.29KB"
-        }
+        null
       ],
       "biggerIsBetter": false,
-      "label": "process",
-      "changed": false
+      "label": "requires-port",
+      "changed": true
+    },
+    {
+      "key": "querystringify",
+      "runs": [
+        {
+          "path": "./node_modules/querystringify",
+          "value": 2564,
+          "displayValue": "2.5KB",
+          "delta": 2564,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.5KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "querystringify",
+      "changed": true
+    },
+    {
+      "key": "ms",
+      "runs": [
+        {
+          "path": "./node_modules/ms",
+          "value": 3023,
+          "displayValue": "2.95KB",
+          "delta": 3023,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.95KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "ms",
+      "changed": true
+    },
+    {
+      "key": "has-cors",
+      "runs": [
+        {
+          "path": "./node_modules/has-cors",
+          "value": 396,
+          "displayValue": "396B",
+          "delta": 396,
+          "deltaPercentage": 100,
+          "displayDelta": "+396B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "has-cors",
+      "changed": true
+    },
+    {
+      "key": "base64-arraybuffer",
+      "runs": [
+        {
+          "path": "./node_modules/base64-arraybuffer",
+          "value": 1704,
+          "displayValue": "1.66KB",
+          "delta": 1704,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.66KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "base64-arraybuffer",
+      "changed": true
+    },
+    {
+      "key": "buffer",
+      "runs": [
+        {
+          "path": "./node_modules/buffer",
+          "value": 48590,
+          "displayValue": "47.45KB",
+          "delta": 48590,
+          "deltaPercentage": 100,
+          "displayDelta": "+47.45KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "buffer",
+      "changed": true
+    },
+    {
+      "key": "base64-js",
+      "runs": [
+        {
+          "path": "./node_modules/base64-js",
+          "value": 3932,
+          "displayValue": "3.84KB",
+          "delta": 3932,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.84KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "base64-js",
+      "changed": true
+    },
+    {
+      "key": "ieee754",
+      "runs": [
+        {
+          "path": "./node_modules/ieee754",
+          "value": 2154,
+          "displayValue": "2.1KB",
+          "delta": 2154,
+          "deltaPercentage": 100,
+          "displayDelta": "+2.1KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "ieee754",
+      "changed": true
+    },
+    {
+      "key": "isarray",
+      "runs": [
+        {
+          "path": "./node_modules/isarray",
+          "value": 132,
+          "displayValue": "132B",
+          "delta": 132,
+          "deltaPercentage": 100,
+          "displayDelta": "+132B",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "isarray",
+      "changed": true
+    },
+    {
+      "key": "backo2",
+      "runs": [
+        {
+          "path": "./node_modules/backo2",
+          "value": 1399,
+          "displayValue": "1.37KB",
+          "delta": 1399,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.37KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "backo2",
+      "changed": true
+    },
+    {
+      "key": "react-stomp",
+      "runs": [
+        {
+          "path": "./node_modules/react-stomp",
+          "value": 11945,
+          "displayValue": "11.67KB",
+          "delta": 11945,
+          "deltaPercentage": 100,
+          "displayDelta": "+11.67KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "react-stomp",
+      "changed": true
+    },
+    {
+      "key": "websocket",
+      "runs": [
+        {
+          "path": "./node_modules/websocket",
+          "value": 3783,
+          "displayValue": "3.69KB",
+          "delta": 3783,
+          "deltaPercentage": 100,
+          "displayDelta": "+3.69KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "websocket",
+      "changed": true
+    },
+    {
+      "key": "es5-ext",
+      "runs": [
+        {
+          "path": "./node_modules/es5-ext",
+          "value": 1137,
+          "displayValue": "1.11KB",
+          "delta": 1137,
+          "deltaPercentage": 100,
+          "displayDelta": "+1.11KB",
+          "displayDeltaPercentage": "+100%",
+          "deltaType": "HIGH_NEGATIVE"
+        },
+        null
+      ],
+      "biggerIsBetter": false,
+      "label": "es5-ext",
+      "changed": true
     },
     {
       "key": "earcut",

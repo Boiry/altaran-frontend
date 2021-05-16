@@ -26,7 +26,7 @@ const mapMiddleware = (store) => (next) => (action) => {
       const region = action.region;
       const sector = action.sector;
       const starSystem = action.starSystem;
-      axios.get(`http://dyn.estydral.ovh:9090/praland-backend/api/exploration/regions/${region}/sectors/${sector}/starsystems/${starSystem}`, authorization)
+      axios.get(`${process.env.API_URL}api/exploration/regions/${region}/sectors/${sector}/starsystems/${starSystem}`, authorization)
       .then((response) => {
         store.dispatch(saveStarSystemInfo(response.data));
       })
@@ -38,7 +38,7 @@ const mapMiddleware = (store) => (next) => (action) => {
     }
 
     case FETCH_REGIONS: {
-      axios.get(`http://dyn.estydral.ovh:9090/praland-backend/api/exploration/regions`, authorization)
+      axios.get(`${process.env.API_URL}api/exploration/regions`, authorization)
       .then((response) => {
         store.dispatch(saveRegionsInfo(response.data));
       })
@@ -52,7 +52,7 @@ const mapMiddleware = (store) => (next) => (action) => {
     case FETCH_SECTORS: {
       const region = action.region;
       store.dispatch(setSectorsLoading(true));
-      axios.get(`http://dyn.estydral.ovh:9090/praland-backend/api/exploration/regions/${region}/sectors`, authorization)
+      axios.get(`${process.env.API_URL}api/exploration/regions/${region}/sectors`, authorization)
       .then((response) => {
         store.dispatch(saveSectorsInfo(response.data));
       })
@@ -70,7 +70,7 @@ const mapMiddleware = (store) => (next) => (action) => {
       const region = action.region;
       const sector = action.sector;
       store.dispatch(setStarSystemsLoading(true));
-      axios.get(`http://dyn.estydral.ovh:9090/praland-backend/api/exploration/regions/${region}/sectors/${sector}/starsystems`, authorization)
+      axios.get(`${process.env.API_URL}api/exploration/regions/${region}/sectors/${sector}/starsystems`, authorization)
       .then((response) => {
         store.dispatch(saveStarSystemsInfo(response.data));
       })

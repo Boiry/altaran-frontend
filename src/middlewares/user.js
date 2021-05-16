@@ -19,7 +19,7 @@ const userMiddleware = (store) => (next) => (action) => {
     case LOGIN: {
       store.dispatch(waiting(true));
       const { username, password } = store.getState().user;
-      axios.post(`http://dyn.estydral.ovh:9090/praland-backend/api/auth/signin`, {
+      axios.post(`${process.env.API_URL}api/auth/signin`, {
         username,
         password,
       })
@@ -48,7 +48,7 @@ const userMiddleware = (store) => (next) => (action) => {
     case REGISTER: {
       store.dispatch(waiting(true));
       const { username, email, password, matchingPassword } = store.getState().user;
-      axios.post(`http://dyn.estydral.ovh:9090/praland-backend/user/registration`, {
+      axios.post(`${process.env.API_URL}user/registration`, {
         username,
         email,
         password,
