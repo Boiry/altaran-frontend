@@ -1,64 +1,80 @@
 import SockJS from 'sockjs-client';
-import { io } from 'socket.io-client';
-import SockJsClient from 'react-stomp';
-import Stomp from 'stompjs';
+import { Client, Stomp } from '@stomp/stompjs';
 
 import {
   WEBSOCKET_CONNECT,
   SEND_MESSAGE,
+  messageTyping,
+  messageStopTyping,
   messageReceived,
-
 } from 'src/actions/chat';
 
 let socket, stompClient;
-
 const token = sessionStorage.getItem('token');
-  const authorization = {
-    Authorization: `Bearer ${token}`,
-  };
 
 const chatMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT: {
-      // socket = new SockJS('http://dyn.estydral.ovh:9090/praland-backend/ws', null, authorization);
       socket = new SockJS(`${process.env.API_URL}ws/`);
-      // socket = new WebSocket('ws://dyn.estydral.ovh:9090/praland-backend/ws');
-      // socket = io('http://dyn.estydral.ovh:9090/praland-backend/ws');
-      // socket = new SockJsClient('wss://echo.websocket.org');
 
       if (!stompClient) {
-        stompClient = Stomp.over(socket);
-        stompClient.connect(authorization, onConnected, onError);
+        stompClient = new Client();
+        stompClient.webSocketFactory = () => (socket);
+        stompClient.connectHeaders = {Authorization: `Bearer ${token}`};
+        stompClient.activate();
       }
 
-      function onConnected() {
+      // stompClient.debug = function(str) {
+      //   console.log(str);
+      // };
+
+      stompClient.onConnect = function (frame) {
         stompClient.subscribe('/topic/pubic', onMessageReceived);
       }
 
-      function onError() {
-        console.log("Connection error")
+      stompClient.onStompError = (frame) => {
+        console.log('Broker reported error: ' + frame.headers['message']);
+        console.log('Additional details: ' + frame.body);
       }
 
       function onMessageReceived(newMessage) {
         const message = JSON.parse(newMessage.body);
-        const key = message.sender + message.dateTime;
-        store.dispatch(messageReceived(key, message.content, message.sender, message.dateTime));
+        if (message.type === "TYPING") {
+          store.dispatch(messageTyping(message.sender));
+        } else if (message.type === "STOPTYPING") {
+          store.dispatch(messageStopTyping(message.sender));
+        } else if (message.type === "SEND") {
+          const key = newMessage.headers['message-id'];
+          store.dispatch(messageReceived(key, message.content, message.sender, message.date));
+        }
       }
+
       next(action);
       break;
     };
 
     case SEND_MESSAGE: {
-      let sender = store.getState().user.username;
-      if (!sender) {
-        sender = sessionStorage.getItem('username');
+      const sender = sessionStorage.getItem('username');
+      let message;
+      if (action.action === "TYPING") {
+        message = {
+          sender,
+          type: "TYPING",
+        }
+      } else if (action.action === "STOPTYPING") {
+        message = {
+          sender,
+          type: "STOPTYPING",
+        }
+      } else if (action.action === "SEND") {
+        message = {
+          sender,
+          date: Date.now(),
+          content: store.getState().chat.fieldValue,
+          type: "SEND",
+        }
       }
-      const message = {
-        sender: sender,
-        content: store.getState().chat.fieldValue,
-        type: "CHAT",
-      }
-      stompClient.send("/app/sendMessage", {}, JSON.stringify(message));
+      stompClient.publish({destination: '/topic/pubic', body: JSON.stringify(message)});
       next(action);
       break;
     };
