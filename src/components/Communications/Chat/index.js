@@ -63,9 +63,27 @@ const Chat = ({
     e.preventDefault();
     if (fieldValue) {
       sendMessage("SEND");
+      setReady(false);
     }
   }
-
+  
+  // Deals with name and date to display or not
+  // Don't ask me for the useState, it works, that's it
+  const [isReady, setReady] = useState();
+  useEffect(() => {
+    if (chatContent.length > 1) {
+      const currentMessage = chatContent[chatContent.length-1];
+      const lastMessage = chatContent[chatContent.length-2];
+      const offsetDate = currentMessage.date - lastMessage.date;
+      if (currentMessage.author === lastMessage.author && offsetDate < 600000) {
+        currentMessage.hide = true;
+      } else {
+        currentMessage.hide = false;
+      }
+      setReady(true);
+    }
+  }, [chatContent])
+  
   // Scroll to bottom when new message appears
   useEffect(() => {
     messages.current.scrollTop = messages.current.scrollHeight;
@@ -75,14 +93,15 @@ const Chat = ({
     <>
       <main className="chat">
         <div ref={messages} className="chat-messages">
-        {chatContent.map((message) => (
-          <Message
-            key={message.key}
-            author={message.author}
-            date={message.date}
-            content={message.content}
-          />
-        ))}
+          {chatContent.map((message) => (
+            <Message
+              key={message.key}
+              author={message.author}
+              date={message.date}
+              content={message.content}
+              hide={message.hide}
+            />
+          ))}
         </div>
         <form className="chat-messages-form" onSubmit={submitMessage}>
           <input className="chat-messages-field" onChange={changeFieldValue} value={fieldValue} />

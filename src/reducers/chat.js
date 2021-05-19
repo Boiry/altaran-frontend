@@ -14,6 +14,7 @@ const initialState = {
 };
 
 const chat = (state = initialState, action = {}) => {
+  const user = sessionStorage.getItem('username');
   switch (action.type) {
     case CHANGE_CHANNEL:
       return {
@@ -28,7 +29,6 @@ const chat = (state = initialState, action = {}) => {
       }
 
     case MESSAGE_TYPING:
-      const user = sessionStorage.getItem('username');
       if (action.sender !== user && state.messageTyping.indexOf(action.sender) === -1) {
         return {
           ...state,
@@ -50,11 +50,18 @@ const chat = (state = initialState, action = {}) => {
         content: action.message,
         date: action.date,
       }
-      return {
-        ...state,
-        chatContent: [...state.chatContent, message],
-        messageTyping: state.messageTyping.filter(sender => sender !== action.sender),
-        fieldValue: '',
+      if (action.sender === user) {
+        return {
+          ...state,
+          chatContent: [...state.chatContent, message],
+          fieldValue: '',
+        }
+      } else {
+        return {
+          ...state,
+          chatContent: [...state.chatContent, message],
+          messageTyping: state.messageTyping.filter(sender => sender !== action.sender),
+        }
       }
 
     default: return { ...state };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './message.scss';
 
-const Message = ({ author, date, content }) => {
+const Message = ({ author, date, content, hide }) => {
   const formatDate = (timestamp) => {
     const options = {
       weekday: 'long',
@@ -17,8 +17,10 @@ const Message = ({ author, date, content }) => {
   }
   return (
     <div className="chat-message">
-      <span className="chat-message-author">{author}</span>
-      <span className="chat-message-date">{formatDate(date)}</span>
+      <div className="chat-message-author-date" style={hide ? {display: 'none'} : {}}>
+        <span className="chat-message-author">{author}</span>
+        <span className="chat-message-date">{formatDate(date)}</span>
+      </div>
       <p className="chat-message-content">{content}</p>
     </div>
   )

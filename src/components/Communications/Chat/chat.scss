@@ -10,7 +10,7 @@
   padding: 2rem;
 
   &-messages {
-    height: calc(100vh - 19rem);
+    height: calc(100vh - 21rem);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: vars.$neon transparent;

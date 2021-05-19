@@ -1,8 +1,10 @@
 @use 'src/styles/vars';
 
 .chat-message {
-  padding: 1rem 0;
-  
+  &-author-date {
+    margin-top: 1rem;
+  }
+
   &-author {
     font-size: 1.2rem;
     font-weight: bold;
