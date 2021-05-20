@@ -1,4 +1,5 @@
 export const WEBSOCKET_CONNECT = "WEBSOCKET_CONNECT";
+export const WEBSOCKET_CONNECTED = "WEBSOCKET_CONNECTED";
 export const CHANGE_CHANNEL = "CHANGE_CHANNEL";
 export const UPDATE_FIELD_VALUE = "UPDATE_FIELD_VALUE";
 export const SEND_MESSAGE = "SEND_MESSAGE";
@@ -11,30 +12,35 @@ export const webSocketConnect = () => ({
   type: WEBSOCKET_CONNECT,
 });
 
+export const webSocketConnected = (value) => ({
+  type: WEBSOCKET_CONNECTED,
+  value,
+});
+
 export const changeChannel = (channel) => ({
   type: CHANGE_CHANNEL,
   channel,
-})
+});
 
 export const updateFieldValue = (value) => ({
   type: UPDATE_FIELD_VALUE,
   value,
-})
+});
 
 export const sendMessage = (action) => ({
   type: SEND_MESSAGE,
   action,
-})
+});
 
 export const messageTyping = (sender) => ({
   type: MESSAGE_TYPING,
   sender,
-})
+});
 
 export const messageStopTyping = (sender) => ({
   type: MESSAGE_STOP_TYPING,
   sender,
-})
+});
 
 export const messageReceived = (key, message, sender, date) => ({
   type: MESSAGE_RECEIVED,
@@ -42,9 +48,9 @@ export const messageReceived = (key, message, sender, date) => ({
   message,
   sender,
   date,
-})
+});
 
 export const updateChatContent = (content) => ({
   type: UPDATE_CHAT_CONTENT,
   content,
-})
+});

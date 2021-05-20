@@ -7,6 +7,7 @@ import Corner from 'src/assets/images/corner.svg';
 
 const Chat = ({
   webSocketConnect,
+  webSocketConnected,
   changeChannel,
   updateFieldValue,
   messageTyping,
@@ -19,7 +20,9 @@ const Chat = ({
 
   // WebSocket Connection
   useEffect(() => {
-    webSocketConnect();
+    if (!webSocketConnected) {
+      webSocketConnect();
+    }
   }, []);
 
   // Handle the change of channel

@@ -26,9 +26,8 @@ const userMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           window.sessionStorage.setItem('token', response.data.token);
           window.sessionStorage.setItem('username', store.getState().user.username);
-          store.dispatch(saveUserInfo(response.data.id, true));
+          store.dispatch(saveUserInfo(response.data.id, false));
           store.dispatch(deletePassword());
-          store.dispatch(changePage('empire'));
         })
         .catch((error) => {
           if (error.message === "Network Error") {

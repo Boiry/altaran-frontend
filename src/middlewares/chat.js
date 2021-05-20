@@ -3,6 +3,7 @@ import { Client, Stomp } from '@stomp/stompjs';
 
 import {
   WEBSOCKET_CONNECT,
+  webSocketConnected,
   SEND_MESSAGE,
   messageTyping,
   messageStopTyping,
@@ -30,6 +31,7 @@ const chatMiddleware = (store) => (next) => (action) => {
 
       stompClient.onConnect = function (frame) {
         stompClient.subscribe('/topic/pubic', onMessageReceived);
+        store.dispatch(webSocketConnected(true));
       }
 
       stompClient.onStompError = (frame) => {

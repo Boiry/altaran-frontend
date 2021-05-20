@@ -1,4 +1,5 @@
 import {
+  WEBSOCKET_CONNECTED,
   CHANGE_CHANNEL,
   UPDATE_FIELD_VALUE,
   MESSAGE_TYPING,
@@ -7,6 +8,7 @@ import {
 } from 'src/actions/chat';
 
 const initialState = {
+  webSocketConnected: false,
   channel: 'main',
   fieldValue: '',
   messageTyping: [],
@@ -16,6 +18,11 @@ const initialState = {
 const chat = (state = initialState, action = {}) => {
   const user = sessionStorage.getItem('username');
   switch (action.type) {
+    case WEBSOCKET_CONNECTED:
+      return {
+        ...state,
+        webSocketConnected: action.value,
+      }
     case CHANGE_CHANNEL:
       return {
         ...state,

@@ -4,6 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
+const env = process.env.NODE_ENV;
+
 module.exports = {
   entry: [
     // SCSS
@@ -19,7 +21,9 @@ module.exports = {
     },
   },
   plugins: [
-    new Dotenv(),
+    new Dotenv({
+      path: `./.env.${env === "production" ? "production" : "development"}`,
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [

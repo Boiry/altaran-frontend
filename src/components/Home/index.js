@@ -1,11 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { getPage, setPage } from 'src/utils/router';
 import Connection from 'src/components/Connection';
 import Presentation from 'src/components/Presentation';
 import Media from 'src/components/Media';
 import Community from 'src/components/Community';
-import { firstAnimation, secondAnimation, button1Animation, button2Animation, button3Animation, button4Animation } from './animations.js';
+import Loader from 'src/containers/Loader';
+import { firstAnimation,
+  secondAnimation,
+  button1Animation,
+  button2Animation,
+  button3Animation,
+  button4Animation,
+  lastAnimation,
+} from './animations.js';
 
 import './home.scss';
 
@@ -22,7 +30,7 @@ import MenuLines from '../../assets/images/menu-lines.svg';
 import Corner from '../../assets/images/corner.svg';
 import Construction from 'src/assets/images/construction.svg';
 
-const Home = ({ waiting }) => {
+const Home = ({ id }) => {
   useEffect(() => {
     if (window.localStorage.firstVisit === undefined) {
       firstAnimation();
@@ -42,8 +50,21 @@ const Home = ({ waiting }) => {
     };
   });
 
+  // Launch the loader after a while
+  const [rerender, setRerender] = useState(false);
+  useEffect(() => {
+    if (id) {
+      lastAnimation();
+      setTimeout(() => {
+        setPage("loader");
+        setRerender(true);
+      }, 1200);
+    }
+  }, [id]);
+
   return (
     <>
+      <>{page === "loader" && <Loader />}</>
       <nav className="navigation">
         <div className="lock">
           <img src={Lock1} className="lock1" />
@@ -89,6 +110,7 @@ const Home = ({ waiting }) => {
         {page === "media" && <Media />}
         {page === "community" && <Community />}
       </article>
+      <div className="page-opacity"></div>
     </>
   );
 };

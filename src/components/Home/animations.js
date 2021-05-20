@@ -25,7 +25,7 @@ const findElements = function() {
 };
 
 // FIRST VISIT ANIMATION
-export const firstAnimation = function() {
+export const firstAnimation = function () {
   findElements();
   setTimeout(() => {
     lock9.visibility = "visible";
@@ -167,7 +167,7 @@ setTimeout(() => {
 };
 
 // SECOND ANIMATION
-export const secondAnimation = function() {
+export const secondAnimation = function () {
   document.body.style.background = "#022b55";
   findElements();
   document.body.style.backgroundImage = "url('" + Background + "')";
@@ -232,7 +232,7 @@ export const secondAnimation = function() {
 };
 
 // BUTTON 1 ANIMATION
-export const button1Animation = function() {
+export const button1Animation = function () {
   findElements();
   buttonsAnimation();
   lock1.animation = "spin 3s linear 1";
@@ -254,7 +254,7 @@ export const button1Animation = function() {
 };
 
 // BUTTON 2 ANIMATION
-export const button2Animation = function() {
+export const button2Animation = function () {
   findElements();
   buttonsAnimation();
   lock2.animation = "counterspin 2.5s linear 1";
@@ -279,7 +279,7 @@ export const button2Animation = function() {
 };
 
 // BUTTON 3 ANIMATION
-export const button3Animation = function() {
+export const button3Animation = function () {
   findElements();
   buttonsAnimation();
   lock2.animation = "spin 3s linear 1";
@@ -301,7 +301,7 @@ export const button3Animation = function() {
 };
 
 // BUTTON 4 ANIMATION
-export const button4Animation = function() {
+export const button4Animation = function () {
   findElements();
   buttonsAnimation();
   lock2.animation = "counterspin 2s linear 1";
@@ -326,7 +326,7 @@ export const button4Animation = function() {
 };
 
 // UTILITIES FOR BUTTON ANIMATION
-const buttonsAnimation = function() {
+const buttonsAnimation = function () {
   setTimeout(() => {
     lock9.visibility = "hidden";
   }, 500);
@@ -349,4 +349,17 @@ const buttonsAnimation = function() {
     lock7.animation = "none";
     lock8.animation = "none";
   }, 6000);
+}
+
+// Last animation when leaving Home
+export const lastAnimation = function () {
+  document.getElementsByClassName("page-opacity")[0].style.display = "block";
+  document.getElementsByClassName("page-opacity")[0].style.animation = "fadein 1s linear 1";
+  setTimeout(() => {
+    document.getElementsByClassName("navigation")[0].style.display = "none";
+    document.getElementsByClassName("header")[0].style.display = "none";
+    document.getElementsByClassName("article")[0].style.display = "none";
+    document.body.style.background = "black";
+
+  }, 1000);
 }

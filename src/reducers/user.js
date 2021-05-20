@@ -11,6 +11,7 @@ import {
 
 const initialState = {
   username: '',
+  id: '',
   email: '',
   password: '',
   matchingPassword: '',
@@ -48,7 +49,7 @@ const user = (state = initialState, action = {}) => {
     case DELETE_PASSWORD:
       return {
         ...state,
-        password: '',
+        password: 'password',
       }
     case SHOW_USERNAME_ERROR:
       return {
