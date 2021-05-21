@@ -29,12 +29,20 @@
       font-size: 1.2rem;
       border: none;
       padding: .5rem;
-      width: 100%;
+      width: calc(100% - 2rem);
     }
 
     &-typing {
       position: absolute;
       bottom: 1rem;
+    }
+
+    &-emoticons {
+      position: absolute;
+      top: .6rem;
+      right: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
   }
 
@@ -55,4 +63,8 @@
       cursor: pointer;
     }
   }
+}
+
+.emoji-picker-react {
+  visibility: hidden;
 }

@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Picker from 'emoji-picker-react';
+import { useTranslation } from 'react-i18next';
 
 import Message from './Message';
 import './chat.scss';
@@ -13,7 +15,7 @@ const Chat = ({
   messageTyping,
   fieldValue,
   sendMessage,
-  chatContent
+  chatContent,
 }) => {
   const messages = useRef();
   const typing = useRef();
@@ -23,6 +25,7 @@ const Chat = ({
     if (!webSocketConnected) {
       webSocketConnect();
     }
+    field.current.focus();
   }, []);
 
   // Handle the change of channel
@@ -87,6 +90,56 @@ const Chat = ({
     }
   }, [chatContent])
   
+  // Handle the opening and closing of the emoticons picker
+  const [status, setStatus] = useState("closed");
+  const openPicker = () => {
+    if (status === "closed") {
+      document.getElementsByClassName("emoji-picker-react")[0].style.visibility = "visible";
+      setStatus("opened");
+    } else {
+      document.getElementsByClassName("emoji-picker-react")[0].style.visibility = "hidden";
+      setStatus("closed");
+    }
+  }
+
+  // Emoticons picker settings
+  const [chosenEmoji, setChosenEmoji] = useState(null);
+  const pickerStyle = {"position": "absolute", "right": "1rem", "top": "calc(100% - 320px - 7rem)"};
+  const onEmojiClick = (event, emojiObject) => {
+    setChosenEmoji(emojiObject);
+    document.getElementsByClassName("emoji-picker-react")[0].style.visibility = "hidden";
+    setStatus("closed");
+    field.current.focus();
+  };
+
+  // i18n
+  const { t } = useTranslation('chat');
+  const groupNames = {
+    smileys_people: t("smileys_people"),
+    animals_nature: t("animals_nature"),
+    food_drink: t("food_drink"),
+    travel_places: t("travel_places"),
+    activities: t("activities"),
+    objects: t("objects"),
+    symbols: t("symbols"),
+    flags: t("flags"),
+    recently_used: t("recently_used")
+  };
+
+  // Includes the emoticon at the cursor position
+  const field = useRef();
+
+  useEffect(() => {
+    if (chosenEmoji) {
+      const fieldArray = fieldValue.split('');
+      const position = field.current.selectionStart;
+      fieldArray.splice(position, 0, chosenEmoji.emoji)
+      const newFieldContent = fieldArray.join('');
+      updateFieldValue(newFieldContent);
+      setChosenEmoji(null);
+    }
+  })
+
   // Scroll to bottom when new message appears
   useEffect(() => {
     messages.current.scrollTop = messages.current.scrollHeight;
@@ -107,8 +160,10 @@ const Chat = ({
           ))}
         </div>
         <form className="chat-messages-form" onSubmit={submitMessage}>
-          <input className="chat-messages-field" onChange={changeFieldValue} value={fieldValue} />
+          <input ref={field} className="chat-messages-field" onChange={changeFieldValue} value={fieldValue} />
+          <div className="chat-messages-emoticons" onClick={() => (openPicker())}>&#128512;</div>
         </form>
+        <Picker groupNames={groupNames} className="chat-messages-picker" native="true" pickerStyle={pickerStyle} onEmojiClick={onEmojiClick} />
         <div ref={typing} className="chat-messages-typing"></div>
         <img src={Corner} className="corner corner-top-left" />
         <img src={Corner} className="corner corner-top-right" />

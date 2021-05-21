@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import { setPage } from 'src/utils/router';
 
@@ -12,13 +12,21 @@ import Lock7 from 'src/assets/images/lock/lock7.svg';
 import Lock8 from 'src/assets/images/lock/lock8.svg';
 import Lock9 from 'src/assets/images/lock/lock9.svg';
 
+
 const Loader = ({ webSocketConnect, webSocketConnected, id, setIsLogged }) => {
+  const [elapsedTime, setElapsedTime] = useState('');
   useEffect(() => {
     webSocketConnect();
+    const timeout = setTimeout(() => {
+      setElapsedTime("tooLong");
+    }, 10000);
+    return () => {
+      clearTimeout(timeout);
+    }
   }, []);
 
   useEffect(() => {
-    if (webSocketConnected) {
+    if (webSocketConnected || elapsedTime) {
       lock2.current.style.animationPlayState = "paused";
       lock3.current.style.animationPlayState = "paused";
       lock4.current.style.animationPlayState = "paused";

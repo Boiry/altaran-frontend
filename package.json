@@ -64,6 +64,7 @@
     "camera-controls": "^1.27.0",
     "classnames": "^2.2.6",
     "earcut": "^2.2.2",
+    "emoji-picker-react": "^3.4.5",
     "i18next": "^20.2.2",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.0",

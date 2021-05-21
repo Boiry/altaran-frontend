@@ -4,7 +4,7 @@ import {
   UPDATE_FIELD_VALUE,
   MESSAGE_TYPING,
   MESSAGE_STOP_TYPING,
-  MESSAGE_RECEIVED
+  MESSAGE_RECEIVED,
 } from 'src/actions/chat';
 
 const initialState = {
@@ -70,7 +70,7 @@ const chat = (state = initialState, action = {}) => {
           messageTyping: state.messageTyping.filter(sender => sender !== action.sender),
         }
       }
-
+    
     default: return { ...state };
   }
 };

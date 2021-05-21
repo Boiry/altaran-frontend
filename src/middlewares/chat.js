@@ -1,5 +1,5 @@
 import SockJS from 'sockjs-client';
-import { Client, Stomp } from '@stomp/stompjs';
+import { Client } from '@stomp/stompjs';
 
 import {
   WEBSOCKET_CONNECT,
@@ -11,18 +11,19 @@ import {
 } from 'src/actions/chat';
 
 let socket, stompClient;
-const token = sessionStorage.getItem('token');
 
 const chatMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT: {
+      const token = sessionStorage.getItem('token');
       socket = new SockJS(`${process.env.API_URL}ws/`);
-
+      
       if (!stompClient) {
         stompClient = new Client();
         stompClient.webSocketFactory = () => (socket);
         stompClient.connectHeaders = {Authorization: `Bearer ${token}`};
         stompClient.activate();
+        // stompClient.connectionTimeout = 1000;
       }
 
       // stompClient.debug = function(str) {

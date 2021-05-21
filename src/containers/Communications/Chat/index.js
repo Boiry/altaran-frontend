@@ -2,7 +2,12 @@ import { connect } from 'react-redux';
 
 import Chat from 'src/components/Communications/Chat';
 
-import { webSocketConnect, webSocketConnected, changeChannel, updateFieldValue, sendMessage } from 'src/actions/chat';
+import {
+  webSocketConnect,
+  changeChannel,
+  updateFieldValue,
+  sendMessage,
+} from 'src/actions/chat';
 
 const mapStateToProps = (state) => ({
   webSocketConnected: state.chat.webSocketConnected,
@@ -23,7 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   sendMessage: (action) => {
     dispatch(sendMessage(action));
-  }
+  },
 });
 
 export default connect(
