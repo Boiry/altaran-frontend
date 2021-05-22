@@ -7,6 +7,7 @@ import {
   SHOW_USERNAME_ERROR,
   SHOW_PASSWORD_ERROR,
   REGISTER_SUCCESS,
+  CONFIRM_SUCCESS,
 } from 'src/actions/user';
 
 const initialState = {
@@ -21,6 +22,7 @@ const initialState = {
   usernameErrorMessage: '',
   passwordErrorMessage: '',
   registerSuccess: false,
+  confirmSuccess: '',
 };
 
 const user = (state = initialState, action = {}) => {
@@ -65,6 +67,11 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         registerSuccess: action.success,
+      }
+    case CONFIRM_SUCCESS:
+      return {
+        ...state,
+        confirmSuccess: action.success,
       }
     default: return { ...state };
   }

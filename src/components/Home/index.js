@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { getPage, setPage } from 'src/utils/router';
+import { setPage } from 'src/utils/router';
 import Connection from 'src/components/Connection';
 import Presentation from 'src/components/Presentation';
 import Media from 'src/components/Media';
@@ -30,7 +30,7 @@ import MenuLines from '../../assets/images/menu-lines.svg';
 import Corner from '../../assets/images/corner.svg';
 import Construction from 'src/assets/images/construction.svg';
 
-const Home = ({ id }) => {
+const Home = ({ id, page }) => {
   useEffect(() => {
     if (window.localStorage.firstVisit === undefined) {
       firstAnimation();
@@ -40,8 +40,7 @@ const Home = ({ id }) => {
     window.localStorage.firstVisit = false;
     
   }, [Home]);
-  
-  const page = getPage();
+
   useEffect(() => {
     if (page === "login" || page === "register") {
       document.getElementsByClassName("article")[0].style.width = "40rem";

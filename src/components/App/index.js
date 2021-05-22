@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Administration from 'src/components/Administration';
+import Bases from 'src/containers/Bases';
+import Communications from 'src/components/Communications';
+import Confirmation from 'src/containers/Confirmation';
+import Empire from 'src/components/Empire';
 import Home from 'src/containers/Home';
 import Log from 'src/components/Log';
-import Nav from 'src/containers/Nav';
-import MiniChat from 'src/containers/MiniChat';
-import Bases from 'src/containers/Bases';
-import Empire from 'src/components/Empire';
-import Communications from 'src/components/Communications';
 import Map from 'src/components/Map';
-import Administration from 'src/components/Administration';
+import MiniChat from 'src/containers/MiniChat';
+import Nav from 'src/containers/Nav';
 
 const App = ({ page, isLogged, miniChat }) => {
   // if (window.sessionStorage.token) {
   //   isLogged = true;
   // }
+  const [location, setLocation] = useState();
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.substring(0, 20) === '/registrationConfirm') {
+      setLocation("confirmation");
+    }
+  }, [])
   return (
     <>
-      {isLogged === false && <Home />}
+      {location === "confirmation" && <Confirmation />}
+      {isLogged === false && location !== "confirmation" && <Home />}
       {isLogged === true && <Log />}
       {isLogged === true && <Nav />}
       {isLogged === true && page !== "communications" && miniChat && <MiniChat />}

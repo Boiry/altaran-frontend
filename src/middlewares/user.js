@@ -10,7 +10,9 @@ import {
   showUsernameError,
   showPasswordError,
   registerSuccess,
-  LOGOUT
+  CONFIRM,
+  confirmSuccess,
+  LOGOUT,
 } from '../actions/user';
 import { changePage } from '../actions/router';
 
@@ -93,6 +95,19 @@ const userMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     };
+
+    case CONFIRM: {
+      const token = action.token;
+      axios.get(`${process.env.API_URL}registrationConfirm?token=${token}`)
+        .then((response) => {
+          store.dispatch(confirmSuccess(true));
+        })
+        .catch((error) => {
+          store.dispatch(confirmSuccess(false));
+        });
+      next(action);
+      break;
+    }
 
     case LOGOUT: {
       window.sessionStorage.removeItem("token");

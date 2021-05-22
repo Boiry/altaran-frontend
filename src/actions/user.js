@@ -8,6 +8,8 @@ export const DELETE_PASSWORD = 'DELETE_PASSWORD';
 export const SHOW_USERNAME_ERROR = 'SHOW_USERNAME_ERROR';
 export const SHOW_PASSWORD_ERROR = 'SHOW_PASSWORD_ERROR';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const CONFIRM = 'CONFIRM';
+export const CONFIRM_SUCCESS = 'CONFIRM_SUCCESS';
 export const LOGOUT = 'LOGOUT';
 
 export const updateUserField = (value, name) => ({
@@ -57,8 +59,19 @@ export const showPasswordError = (message) => ({
 export const registerSuccess = (success) => ({
   type: REGISTER_SUCCESS,
   success,
+});
+
+export const confirm = (token) => ({
+  type: CONFIRM,
+  token,
+});
+
+export const confirmSuccess = (success) => ({
+  type: CONFIRM_SUCCESS,
+  success,
 })
 
 export const logout = () => ({
   type: LOGOUT,
 });
+
