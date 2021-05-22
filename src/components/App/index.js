@@ -11,7 +11,7 @@ import Communications from 'src/components/Communications';
 import Map from 'src/components/Map';
 import Administration from 'src/components/Administration';
 
-const App = ({ page, isLogged }) => {
+const App = ({ page, isLogged, miniChat }) => {
   // if (window.sessionStorage.token) {
   //   isLogged = true;
   // }
@@ -20,7 +20,7 @@ const App = ({ page, isLogged }) => {
       {isLogged === false && <Home />}
       {isLogged === true && <Log />}
       {isLogged === true && <Nav />}
-      {isLogged === true && page !== "communications" && <MiniChat />}
+      {isLogged === true && page !== "communications" && miniChat && <MiniChat />}
       {isLogged === true && page === "empire" && <Empire />}
       {isLogged === true && page === "bases" && <Bases />}
       {isLogged === true && page === "communications" && <Communications />}

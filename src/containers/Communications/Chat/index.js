@@ -14,6 +14,8 @@ const mapStateToProps = (state) => ({
   fieldValue: state.chat.fieldValue,
   messageTyping: state.chat.messageTyping,
   chatContent: state.chat.chatContent,
+  channels: state.chat.channels,
+  selectedChannel: state.chat.channel,
 });
 
 const mapDispatchToProps = (dispatch) => ({

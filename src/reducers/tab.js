@@ -2,6 +2,8 @@ import {
   CHANGE_SUBPAGE,
 } from 'src/actions/tab';
 
+import { SET_TAB } from 'src/actions/miniChat';
+
 const initialState = {
   empire: 'statistics',
   bases: 'description',
@@ -17,6 +19,12 @@ const tab = (state = initialState, action = {}) => {
         ...state,
         [action.name]: action.subPage,
       };
+
+    case SET_TAB:
+      return {
+        ...state,
+        communications: "extCom",
+      }
     default: return { ...state };
   }
 };

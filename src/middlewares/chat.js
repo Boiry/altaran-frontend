@@ -23,7 +23,6 @@ const chatMiddleware = (store) => (next) => (action) => {
         stompClient.webSocketFactory = () => (socket);
         stompClient.connectHeaders = {Authorization: `Bearer ${token}`};
         stompClient.activate();
-        // stompClient.connectionTimeout = 1000;
       }
 
       // stompClient.debug = function(str) {
@@ -31,7 +30,9 @@ const chatMiddleware = (store) => (next) => (action) => {
       // };
 
       stompClient.onConnect = function (frame) {
-        stompClient.subscribe('/topic/pubic', onMessageReceived);
+        stompClient.subscribe('/topic/main', onMessageReceived);
+        stompClient.subscribe('/topic/help', onMessageReceived);
+        stompClient.subscribe('/topic/alliance', onMessageReceived);
         store.dispatch(webSocketConnected(true));
       }
 
@@ -77,7 +78,8 @@ const chatMiddleware = (store) => (next) => (action) => {
           type: "SEND",
         }
       }
-      stompClient.publish({destination: '/topic/pubic', body: JSON.stringify(message)});
+      const destination = store.getState().chat.channel;
+      stompClient.publish({destination: `/topic/${destination}`, body: JSON.stringify(message)});
       next(action);
       break;
     };

@@ -4,7 +4,7 @@
   background-color: rgba(93, 186, 224, .2);
   position: absolute;
   width: 17vw;
-  height: 20rem;
+  height: 45vh;
   margin: 1rem;
   right: 0;
   bottom: 0;
@@ -13,6 +13,8 @@
     background-color: rgba(4, 119, 166, .7);
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
 
     &-channel {
       margin: .5rem;
@@ -25,32 +27,43 @@
   }
 
   &-content {
+    position: relative;
+    height: 35vh;
+    width: 17vw;
     padding: .5rem;
-
-    &-message {
-      background-color: rgba(4, 119, 166, .7);
-      width: 13rem;
-      padding: .5rem;
-      margin: .5rem 0;
-      font-size: .8rem;
-      border-radius: .5rem;
-    }
-    
-    &-message2 {
-      margin-left: 2.5vw;
-      text-align: right;
-    }
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
   }
 
   &-field {
     background-color: vars.$field-background;
     position: absolute;
     width: 16vw;
+    height: 2rem;
     bottom: 0;
     margin: .5rem;
     padding: .5rem;
     border: none;
     font-family: "Orbitron", sans-serif;
     color: white;
+  }
+
+  &-channels-window {
+    display: none;
+    background-color: rgba(4, 119, 166, .7);
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+    padding: 1rem;
+
+    &-item {
+      padding: .5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: vars.$neon;
+      }
+    }
   }
 }

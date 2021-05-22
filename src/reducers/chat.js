@@ -9,6 +9,9 @@ import {
 
 const initialState = {
   webSocketConnected: false,
+  channels: [
+    "main", "help", "alliance"
+  ],
   channel: 'main',
   fieldValue: '',
   messageTyping: [],

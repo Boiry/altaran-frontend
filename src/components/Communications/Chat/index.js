@@ -16,7 +16,10 @@ const Chat = ({
   fieldValue,
   sendMessage,
   chatContent,
+  channels,
+  selectedChannel,
 }) => {
+  const { t } = useTranslation('chat');
   const messages = useRef();
   const typing = useRef();
 
@@ -25,15 +28,34 @@ const Chat = ({
     if (!webSocketConnected) {
       webSocketConnect();
     }
+  }, []);
+  
+  // Initialization
+  useEffect(() => {
     field.current.focus();
+    const elements = document.getElementsByClassName('chat-channels-channel');
+    for (let i=0; i<elements.length; i++) {
+      if (elements[i].getAttribute('name') === selectedChannel) {
+        elements[i].classList.add('chat-channels-channel-active');
+      }
+    }
   }, []);
 
   // Handle the change of channel
   const clickOnChannel = (channel) => {
     changeChannel(channel);
+    const elements = document.getElementsByClassName('chat-channels-channel');
+    for (let i=0; i<elements.length; i++) {
+      if (elements[i].classList.contains('chat-channels-channel-active')) {
+        elements[i].classList.remove('chat-channels-channel-active');
+      }
+      if (elements[i].getAttribute('name') === channel) {
+        elements[i].classList.add('chat-channels-channel-active');
+      }
+    }
   }
 
-  // Handle of typing in input
+  // Handle the typing in input
   let [timeout, set] = useState();
   const changeFieldValue = (e) => {
     updateFieldValue(e.target.value);
@@ -64,7 +86,7 @@ const Chat = ({
     }
   }, [messageTyping])
 
-  // Handle of the submit button
+  // Handle the submit button
   const submitMessage = (e) => {
     e.preventDefault();
     if (fieldValue) {
@@ -112,8 +134,7 @@ const Chat = ({
     field.current.focus();
   };
 
-  // i18n
-  const { t } = useTranslation('chat');
+  // i18n for Emoji Picker
   const groupNames = {
     smileys_people: t("smileys_people"),
     animals_nature: t("animals_nature"),
@@ -128,7 +149,6 @@ const Chat = ({
 
   // Includes the emoticon at the cursor position
   const field = useRef();
-
   useEffect(() => {
     if (chosenEmoji) {
       const fieldArray = fieldValue.split('');
@@ -171,9 +191,13 @@ const Chat = ({
         <img src={Corner} className="corner corner-bottom-right" />
       </main>
       <aside className="chat-channels">
-        <div className="chat-channels-channel" onClick={() => clickOnChannel('main')}>Général</div>
-        <div className="chat-channels-channel" onClick={() => clickOnChannel('help')}>Aide</div>
-        <div className="chat-channels-channel" onClick={() => clickOnChannel('alliance')}>Alliance</div>
+        {channels.map((channel, index) => {
+          if (channel === "main" || channel === "help" || channel === "alliance") {
+            return <div key={`channel${index}`} className="chat-channels-channel chat-channels-public-channel" name={channel} onClick={() => clickOnChannel(channel)}>{t(channel)}</div>
+          } else {
+            return <div key={`channel${index}`} className="chat-channels-channel chat-channels-private-channel" name={channel} onClick={() => clickOnChannel(channel)}>{channel}</div>
+          }
+        })}
         <img src={Corner} className="corner corner-top-left" />
         <img src={Corner} className="corner corner-top-right" />
         <img src={Corner} className="corner corner-bottom-left" />

@@ -55,12 +55,18 @@
     height: calc(100vh -12rem);
     padding: 1rem;
 
-    &-channel {
-      background-color: vars.$field-background;
+    &-public-channel {
+      background-color: vars.$main-background;
       padding: .5rem;
       margin-bottom: .5rem;
       border-radius: .2rem;
       cursor: pointer;
+    }
+
+    &-channel-active {
+      background-color: vars.$field-background;
+      border: 2px solid vars.$neon;
+      box-shadow: 0 0 10px rgba(255, 255, 255, .5);
     }
   }
 }
