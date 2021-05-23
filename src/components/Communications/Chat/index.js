@@ -109,6 +109,8 @@ const Chat = ({
         currentMessage.hide = false;
       }
       setReady(true);
+    } else if (chatContent.length === 1) {
+      chatContent[0].hide = false;
     }
   }, [chatContent])
   

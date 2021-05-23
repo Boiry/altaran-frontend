@@ -17,13 +17,18 @@ const chatMiddleware = (store) => (next) => (action) => {
     case WEBSOCKET_CONNECT: {
       const token = sessionStorage.getItem('token');
       socket = new SockJS(`${process.env.API_URL}ws/`);
-      
+
       if (!stompClient) {
         stompClient = new Client();
         stompClient.webSocketFactory = () => (socket);
         stompClient.connectHeaders = {Authorization: `Bearer ${token}`};
         stompClient.activate();
       }
+
+      // stompClient = new Client();
+      // stompClient.brokerURL = "ws://dyn.estydral.ovh:9090/praland-backend/ws";
+      // stompClient.connectHeaders = {Authorization: `Bearer ${token}`};
+      // stompClient.activate();
 
       // stompClient.debug = function(str) {
       //   console.log(str);

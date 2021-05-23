@@ -16,6 +16,8 @@ const Message = ({ author, date, content, hide }) => {
     return date.toLocaleDateString('fr-FR', options);
   }
   return (
+    <>
+    {hide !== undefined &&
     <div className="chat-message">
       <div className="chat-message-author-date" style={hide ? {display: 'none'} : {}}>
         <span className="chat-message-author">{author}</span>
@@ -23,6 +25,8 @@ const Message = ({ author, date, content, hide }) => {
       </div>
       <p className="chat-message-content">{content}</p>
     </div>
+    }
+    </>
   )
 };
 

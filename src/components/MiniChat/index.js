@@ -68,16 +68,39 @@ const MiniChat = ({
     closeMiniChat();
   }
 
+  // Handle the typing in input
+  let [timeout, set] = useState();
   const changeFieldValue = (e) => {
     updateFieldValue(e.target.value);
+    set(clearTimeout(timeout));
+    set(timeout = setTimeout(() => sendMessage("STOPTYPING"), 2000));
+    sendMessage("TYPING");
   }
-
+  
+  // Handle the submit button
   const submitMessage = (e) => {
     e.preventDefault();
     if (fieldValue) {
       sendMessage("SEND");
     }
   }
+
+  // Deals with name and date to display or not
+  // Don't ask me for the useState, it works, that's it
+  const [isReady, setReady] = useState();
+  useEffect(() => {
+    if (chatContent.length > 1) {
+      const currentMessage = chatContent[chatContent.length-1];
+      const lastMessage = chatContent[chatContent.length-2];
+      const offsetDate = currentMessage.date - lastMessage.date;
+      if (currentMessage.author === lastMessage.author && offsetDate < 600000) {
+        currentMessage.hide = true;
+      } else {
+        currentMessage.hide = false;
+      }
+      setReady(true);
+    }
+  }, [chatContent])
 
   // Scroll to bottom when new message appears
   useEffect(() => {
