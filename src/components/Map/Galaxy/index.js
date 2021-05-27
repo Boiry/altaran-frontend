@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
+import Aside from 'src/containers/Map/Galaxy/Aside';
 import SceneComponent from "./sceneComponent";
 
 import './galaxy.scss';
@@ -12,6 +13,14 @@ const Galaxy = ({
   launchDeleteStarSystemName,
   getCameraPosition,
   setCameraPosition,
+  galaxySelector,
+  galaxyRegion,
+  galaxySector,
+  galaxyStarSystem,
+  highlight,
+  isolate,
+  goAndSee,
+  setGoAndSee,
 }) => {
 
   // ==================== INPUTS ======================
@@ -69,6 +78,14 @@ const Galaxy = ({
           showStarSystemInfo={showStarSystemInfo}
           cameraPosition={getCameraPosition}
           setCameraPosition={setCameraPosition}
+          galaxySelector={galaxySelector}
+          galaxyRegion={galaxyRegion}
+          galaxySector={galaxySector}
+          galaxyStarSystem={galaxyStarSystem}
+          highlight={highlight}
+          isolate={isolate}
+          goAndSee={goAndSee}
+          setGoAndSee={setGoAndSee}
         />
       </div>
       <div ref={info} className="galaxy-star-info" tabIndex="1" onBlur={hideInfo}>
@@ -76,7 +93,7 @@ const Galaxy = ({
         <p ref={coordinates} className="galaxy-star-into-coordinates"></p>
         <button className="galaxy-star-info-button" onMouseDown={() => clickOnGoStarSystem()}>Y aller</button>
       </div>
-      <aside className="aside"></aside>
+      <Aside />
     </>
   );
 };

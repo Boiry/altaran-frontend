@@ -7,6 +7,10 @@ export const MESSAGE_TYPING = "MESSAGE_TYPING";
 export const MESSAGE_STOP_TYPING = "MESSAGE_STOP_TYPING";
 export const MESSAGE_RECEIVED = "MESSAGE_RECEIVED";
 export const UPDATE_CHAT_CONTENT = "UPDATE_CHAT_CONTENT";
+export const SEARCH_USER = "SEARCH_USER";
+export const SEARCH_USER_RESULT = "SEARCH_USER_RESULT";
+export const SUBSCRIBE = "SUBSCRIBE";
+export const CREATE_NEW_CHANNEL = "CREATE_NEW_CHANNEL";
 
 export const webSocketConnect = () => ({
   type: WEBSOCKET_CONNECT,
@@ -27,9 +31,10 @@ export const updateFieldValue = (value) => ({
   value,
 });
 
-export const sendMessage = (action) => ({
+export const sendMessage = (action, payload) => ({
   type: SEND_MESSAGE,
   action,
+  payload,
 });
 
 export const messageTyping = (sender) => ({
@@ -54,3 +59,25 @@ export const updateChatContent = (content) => ({
   type: UPDATE_CHAT_CONTENT,
   content,
 });
+
+export const searchUser = (value) => ({
+  type: SEARCH_USER,
+  value,
+});
+
+export const searchUserResult = (result) => ({
+  type: SEARCH_USER_RESULT,
+  result,
+})
+
+export const subscribe = (userId, userName, createChannel) => ({
+  type: SUBSCRIBE,
+  userId,
+  userName,
+  createChannel,
+})
+
+export const createNewChannel = (channel) => ({
+  type: CREATE_NEW_CHANNEL,
+  channel,
+})

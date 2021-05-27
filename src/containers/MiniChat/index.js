@@ -7,7 +7,7 @@ import { changeChannel, updateFieldValue, sendMessage } from 'src/actions/chat';
 
 const mapStateToProps = (state) => ({
   channels: state.chat.channels,
-  selectedChannel: state.chat.channel,
+  selectedChannel: state.chat.channel.name,
   fieldValue: state.chat.fieldValue,
   chatContent: state.chat.chatContent,
 });

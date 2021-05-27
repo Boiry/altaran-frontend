@@ -18,6 +18,12 @@ const Chat = ({
   chatContent,
   channels,
   selectedChannel,
+  searchUser,
+  searchUserValue,
+  searchUserResult,
+  subscribe,
+  userId,
+  userName,
 }) => {
   const { t } = useTranslation('chat');
   const messages = useRef();
@@ -35,7 +41,7 @@ const Chat = ({
     field.current.focus();
     const elements = document.getElementsByClassName('chat-channels-channel');
     for (let i=0; i<elements.length; i++) {
-      if (elements[i].getAttribute('name') === selectedChannel) {
+      if (elements[i].getAttribute('name') === selectedChannel.name) {
         elements[i].classList.add('chat-channels-channel-active');
       }
     }
@@ -49,7 +55,7 @@ const Chat = ({
       if (elements[i].classList.contains('chat-channels-channel-active')) {
         elements[i].classList.remove('chat-channels-channel-active');
       }
-      if (elements[i].getAttribute('name') === channel) {
+      if (elements[i].getAttribute('name') === channel.name) {
         elements[i].classList.add('chat-channels-channel-active');
       }
     }
@@ -167,6 +173,34 @@ const Chat = ({
     messages.current.scrollTop = messages.current.scrollHeight;
   }, [chatContent]);
 
+  // When typing in search for users input
+  const inputSearchUser = (e) => {
+    searchUser(e.target.value);
+  }
+
+  const clickOnUser = (id, username) => {
+    subscribe(id, username, true);
+    sendMessage("JOIN", [userId, userName]);
+    searchUser('');
+  }
+
+  const searchResult = useRef();
+  useEffect(() => {
+    while (searchResult.current.firstChild) {
+      searchResult.current.removeChild(searchResult.current.firstChild);
+    }
+    if (searchUserResult) {
+      searchUserResult.forEach(result => {
+        const newDiv = document.createElement("div");
+        const text = document.createTextNode(result.username);
+        newDiv.appendChild(text);
+        newDiv.setAttribute('class', 'chat-channels-search-result-item');
+        newDiv.onclick = () => clickOnUser(result.id, result.username);
+        searchResult.current.appendChild(newDiv);
+      })
+    }
+  })
+
   return (
     <>
       <main className="chat">
@@ -192,14 +226,26 @@ const Chat = ({
         <img src={Corner} className="corner corner-bottom-left" />
         <img src={Corner} className="corner corner-bottom-right" />
       </main>
+
       <aside className="chat-channels">
         {channels.map((channel, index) => {
-          if (channel === "main" || channel === "help" || channel === "alliance") {
-            return <div key={`channel${index}`} className="chat-channels-channel chat-channels-public-channel" name={channel} onClick={() => clickOnChannel(channel)}>{t(channel)}</div>
+          if (channel.path === "main" || channel.path === "help") {
+            return <div key={`channel.path${index}`} className="chat-channels-channel chat-channels-public-channel" name={channel.name} onClick={() => clickOnChannel(channel)}>{t(channel.name)}</div>
+
+          } else if (channel.path === "alliance") {
+            return (
+              <React.Fragment key="fragment">
+                <div key={`channel.path${index}`} className="chat-channels-channel chat-channels-public-channel" name={channel.name} onClick={() => clickOnChannel(channel)}>{t(channel.name)}</div>
+                <hr key="hr" />
+                <input key="searchInput" className="chat-channels-search" placeholder="Rechercher" value={searchUserValue} onChange={inputSearchUser}></input>
+                <div ref={searchResult} key="searchUserResult" className="chat-channels-search-result"></div>
+              </React.Fragment>
+            )
           } else {
-            return <div key={`channel${index}`} className="chat-channels-channel chat-channels-private-channel" name={channel} onClick={() => clickOnChannel(channel)}>{channel}</div>
+            return <div key={`channel.path${index}`} className="chat-channels-channel chat-channels-private-channel" name={channel.name} onClick={() => clickOnChannel(channel)}>{channel.name}</div>
           }
         })}
+
         <img src={Corner} className="corner corner-top-left" />
         <img src={Corner} className="corner corner-top-right" />
         <img src={Corner} className="corner corner-bottom-left" />

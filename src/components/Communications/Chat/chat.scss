@@ -54,9 +54,20 @@
     width: 18vw;
     height: calc(100vh -12rem);
     padding: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
 
     &-public-channel {
       background-color: vars.$main-background;
+      padding: .5rem;
+      margin-bottom: .5rem;
+      border-radius: .2rem;
+      cursor: pointer;
+    }
+
+    &-private-channel {
+      border: 2px solid vars.$main-background;
       padding: .5rem;
       margin-bottom: .5rem;
       border-radius: .2rem;
@@ -68,9 +79,33 @@
       border: 2px solid vars.$neon;
       box-shadow: 0 0 10px rgba(255, 255, 255, .5);
     }
+
+    &-search {
+      background: vars.$field-background;
+      color: white;
+      width: 15vw;
+      border: none;
+      padding: .5rem;
+      margin-bottom: .5rem;
+
+      &-result {
+        position: absolute;
+        z-index: 1;
+        background: vars.$field-background;
+        width: 15vw;
+        &-item {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
 .emoji-picker-react {
   visibility: hidden;
+}
+
+hr {
+  max-width: 17vw;
+  color: vars.$neon;
 }

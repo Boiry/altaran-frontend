@@ -218,6 +218,7 @@ const StarSystem = ({
         <img src={ArrowLeft} className="star-system-arrow" name="arrowLeft" onClick={handleClickArrow} />
         <Field
           name="region"
+          CSSName="starSystem"
           type="string"
           value={region}
           onChange={changeField}
@@ -226,6 +227,7 @@ const StarSystem = ({
         <span className="star-system-separator"> : </span>
          <Field
           name="sector"
+          CSSName="starSystem"
           type="string"
           value={sector}
           onChange={changeField}
@@ -234,6 +236,7 @@ const StarSystem = ({
         <span className="star-system-separator"> : </span>
         <Field
           name="starSystem"
+          CSSName="starSystem"
           type="string"
           value={starSystem}
           onChange={changeField}

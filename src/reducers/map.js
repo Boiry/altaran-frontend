@@ -11,6 +11,11 @@ import {
   SAVE_CURRENT_STAR_SYSTEM,
   DELETE_STAR_SYSTEM_NAME,
   SET_CAMERA_POSITION,
+  SET_GALAXY_SELECTOR,
+  CHANGE_GALAXY_FIELD,
+  SET_HIGHLIGHT,
+  SET_ISOLATE,
+  GO_AND_SEE,
 } from 'src/actions/map';
 
 const initialState = {
@@ -27,6 +32,13 @@ const initialState = {
   currentSector: '',
   currentStarSystem: '',
   cameraPosition: '',
+  galaxySelector: 'region',
+  galaxyRegion: '',
+  galaxySector: '',
+  galaxyStarSystem: '',
+  highlight: false,
+  isolate: false,
+  goAndSee: false,
 };
 
 const map = (state = initialState, action = {}) => {
@@ -91,7 +103,31 @@ const map = (state = initialState, action = {}) => {
         ...state,
         cameraPosition: action.position,
       };
-
+    case SET_GALAXY_SELECTOR:
+      return {
+        ...state,
+        galaxySelector: action.selected,
+      }
+    case CHANGE_GALAXY_FIELD:
+      return {
+        ...state,
+        [action.name]: action.value,
+      };
+    case SET_HIGHLIGHT:
+      return {
+        ...state,
+        highlight: action.value,
+      };
+    case SET_ISOLATE:
+      return {
+        ...state,
+        isolate: action.value,
+      };
+    case GO_AND_SEE:
+      return {
+        ...state,
+        goAndSee: action.value,
+      };
     default: return { ...state };
   }
 };

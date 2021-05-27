@@ -1,13 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Engine, Scene, Color4, UniversalCamera, FreeCameraInputsManager, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
+import { Engine, Scene, Color4, UniversalCamera, Animation, FreeCameraInputsManager, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
 
 import Camera2DKeyboardInputs from "./camera2DKeyboardInputs";
 import Camera2DMouseInputs from './camera2DMouseInputs';
 
 // import stars from 'src/assets/galaxyData';
-import stars from 'src/assets/miniGalaxyData';
+// import stars from 'src/assets/miniGalaxyData';
+
+// import * as stars from 'src/assets/galaxy';
+import * as stars from 'src/assets/miniGalaxy';
+
 import galaxyWrapper from 'src/assets/galaxyWrapper';
 import basicStar from "src/assets/images/basic-star50.png";
+import basicStarHighlight from 'src/assets/images/basic-star-highlight50.png';
 
 export default (props) => {
   const reactCanvas = useRef(null);
@@ -17,12 +22,20 @@ export default (props) => {
     showStarSystemInfo,
     cameraPosition,
     setCameraPosition,
+    galaxySelector,
+    galaxyRegion,
+    galaxySector,
+    galaxyStarSystem,
+    highlight,
+    isolate,
+    goAndSee,
+    setGoAndSee,
      ...rest } = props;
   useEffect(() => {
     if (reactCanvas.current) {
       const engine = new Engine(reactCanvas.current, antialias, engineOptions, adaptToDeviceRatio);
       const scene = new Scene(engine, sceneOptions);
-      scene.clearColor = new Color4(0, 0, 0, 0.7);
+      scene.clearColor = new Color4(0, 0, 0, 0.9);
       setScene(scene);
 
       document.getElementById("canvas").focus();
@@ -85,22 +98,6 @@ export default (props) => {
       scene.useMaterialMeshMap = true;
       scene.useClonedMeshMap = true;
       scene.blockfreeActiveMeshesAndRenderingGroups = true;
-      
-      const spriteManagerStars = new SpriteManager("starsManager", basicStar, stars.length, {width: 50, height: 50});
-      spriteManagerStars.isPickable = true;
-
-      for (let i = 0; i < stars.length; i++) {
-        const star = new Sprite(("star"+i), spriteManagerStars);
-        star.width = 2;
-        star.height = 2;
-        star.position.x = stars[i].x;
-        star.position.y = stars[i].y - 2000;
-        star.position.z = stars[i].z;
-        star.isPickable = true;
-        star.region = stars[i].region_num;
-        star.sector = stars[i].sector_num;
-        star.system = stars[i].system_num;
-      };
 
       scene.onPointerDown = function (evt) {
         const pickResult = scene.pickSprite(this.pointerX, this.pointerY);
@@ -140,6 +137,254 @@ export default (props) => {
       }
     }
   }, [scene]);
+
+  // ============== FILTERS ===============
+  const [selectedStars, pushSelectedStars] = useState([]);
+  const [otherStars, pushOtherStars] = useState([]);
+  useEffect(() => {
+    pushSelectedStars([]);
+    pushOtherStars([]);
+    if (galaxyRegion) {
+      for (let i=1; i<=50; i++) {
+        if (galaxyRegion === i) {
+          pushSelectedStars(arr => [...arr, stars[`r${i}`]]);
+        } else {
+          pushOtherStars(arr => [...arr, stars[`r${i}`]]);
+        }
+      }
+    }
+    switch (galaxySelector) {
+      case "sector": {
+        if (galaxyRegion && galaxySector) {
+          pushSelectedStars([]);
+          const region = `r${galaxyRegion}`;
+          for (let i=0, length=stars[region].length; i<length; i++) {
+            if (stars[region][i].sector_num === galaxySector) {
+              pushSelectedStars(arr => [...arr, stars[region][i]]);
+            } else {
+              pushOtherStars(arr => [...arr, stars[region][i]]);
+            }
+          }
+        }
+        break;
+      }
+      case "starSystem": {
+        if (galaxyRegion && galaxySector && galaxyStarSystem) {
+          pushSelectedStars([]);
+          const region = `r${galaxyRegion}`;
+          for (let i=0, length=stars[region].length; i<length; i++) {
+            if (stars[region][i].sector_num === galaxySector && stars[region][i].system_num === galaxyStarSystem) {
+              pushSelectedStars(arr => [...arr, stars[region][i]]);
+            } else {
+              pushOtherStars(arr => [...arr, stars[region][i]]);
+            }
+          }
+        }
+        break;
+      }
+    }
+  }, [galaxySelector, galaxyRegion, galaxySector, galaxyStarSystem])
+
+  useEffect(() => {
+    let spriteManager;
+    let highlightSpriteManager;
+
+    // Without any filters
+    if (!highlight && !isolate) {
+      let nbStars = 0;
+      for (let i=1; i<=50; i++) {
+        nbStars += stars[`r${i}`].length;
+      }
+      spriteManager = new SpriteManager("starsManager", basicStar, nbStars, {width: 50, height: 50});
+      spriteManager.isPickable = true;
+      for (let i=1; i<=50; i++) {
+        for (let j=0, length=stars[`r${i}`].length; j<length; j++) {
+          const star = new Sprite(("star"), spriteManager);
+          star.width = 2;
+          star.height = 2;
+          star.position.x = stars[`r${i}`][j].x;
+          star.position.y = stars[`r${i}`][j].y - 2000;
+          star.position.z = stars[`r${i}`][j].z;
+          star.isPickable = true;
+          star.region = stars[`r${i}`][j].region_num;
+          star.sector = stars[`r${i}`][j].sector_num;
+          star.system = stars[`r${i}`][j].system_num;
+        }
+      }
+
+    // With filter
+    } else if (highlight) {
+      let selected, others = 0;
+      if (galaxySelector === "region") {
+        selected = selectedStars[0].length;
+        for (let i=0, length=otherStars.length; i<length; i++) {
+          others += otherStars[i].length;
+        }
+      } else {
+        selected = selectedStars.length;
+        for (let i=0, length=otherStars.length; i<length; i++) {
+          if (Array.isArray(otherStars[i])) {
+            others += otherStars[i].length;
+          } else {
+            others++;
+          }
+        }
+      }
+
+      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selected, {width: 50, height: 50});
+      highlightSpriteManager.isPickable = true;
+      for (let i=0, length=selectedStars.length; i<length; i++) {
+        if (Array.isArray(selectedStars[i])) {
+          for (let j=0, jLength=selectedStars[i].length; j<jLength; j++) {
+            const star = new Sprite(("star"), highlightSpriteManager);
+            star.width = 2;
+            star.height = 2;
+            star.position.x = selectedStars[i][j].x;
+            star.position.y = selectedStars[i][j].y - 2000;
+            star.position.z = selectedStars[i][j].z;
+            star.isPickable = true;
+            star.region = selectedStars[i][j].region_num;
+            star.sector = selectedStars[i][j].sector_num;
+            star.system = selectedStars[i][j].system_num;
+          }
+        } else {
+        const star = new Sprite(("star"), highlightSpriteManager);
+        star.width = 2;
+        star.height = 2;
+        star.position.x = selectedStars[i].x;
+        star.position.y = selectedStars[i].y - 2000;
+        star.position.z = selectedStars[i].z;
+        star.isPickable = true;
+        star.region = selectedStars[i].region_num;
+        star.sector = selectedStars[i].sector_num;
+        star.system = selectedStars[i].system_num;
+        }
+      }
+
+      spriteManager = new SpriteManager("starsManager", basicStar, others, {width: 50, height: 50});
+      spriteManager.isPickable = true;
+      for (let i=0, length=otherStars.length; i<length; i++) {
+        if (Array.isArray(otherStars[i])) {
+          for (let j=0, jLength=otherStars[i].length; j<jLength; j++) {
+            const star = new Sprite(("star"), spriteManager);
+            star.width = 2;
+            star.height = 2;
+            star.position.x = otherStars[i][j].x;
+            star.position.y = otherStars[i][j].y - 2000;
+            star.position.z = otherStars[i][j].z;
+            star.isPickable = true;
+            star.region = otherStars[i][j].region_num;
+            star.sector = otherStars[i][j].sector_num;
+            star.system = otherStars[i][j].system_num;
+          }
+        } else {
+          const star = new Sprite(("star"), spriteManager);
+          star.width = 2;
+          star.height = 2;
+          star.position.x = otherStars[i].x;
+          star.position.y = otherStars[i].y - 2000;
+          star.position.z = otherStars[i].z;
+          star.isPickable = true;
+          star.region = otherStars[i].region_num;
+          star.sector = otherStars[i].sector_num;
+          star.system = otherStars[i].system_num;
+        }
+      }
+    } else if (isolate) {
+      let selected;
+      if (galaxySelector === "region") {
+        selected = selectedStars[0];
+      } else {
+        selected = selectedStars;
+      }
+      spriteManager = new SpriteManager("starsManager", basicStar, selected.length, {width: 50, height: 50});
+      spriteManager.isPickable = true;
+      for (let i=0, length=selected.length; i<length; i++) {
+        const star = new Sprite(("star"), spriteManager);
+        star.width = 2;
+        star.height = 2;
+        star.position.x = selected[i].x;
+        star.position.y = selected[i].y - 2000;
+        star.position.z = selected[i].z;
+        star.isPickable = true;
+        star.region = selected[i].region_num;
+        star.sector = selected[i].sector_num;
+        star.system = selected[i].system_num;
+      }
+    }
+
+    return () => {
+      spriteManager.dispose();
+      if (highlightSpriteManager) highlightSpriteManager.dispose();
+    }
+  }, [highlight, isolate])
+
+  // ============= CAMERA ANIMATION ==============
+  useEffect(() => {
+    if (goAndSee) {
+      setGoAndSee(false);
+      // Finding the wanted camera's position
+      let x, y, z;
+      if (galaxySelector === "region" || galaxySelector === "sector") {
+        let selected;
+        if (galaxySelector === "region") {
+          selected = selectedStars[0];
+        } else {
+          selected = selectedStars;
+        }
+        let minX = selected[0].x;
+        let maxX = selected[0].x;
+        let minY = selected[0].y;
+        let maxY = selected[0].y;
+        let minZ = selected[0].z;
+        let maxZ = selected[0].z;
+        for (let i=1; i<selected.length; i++) {
+          const star = selected[i];
+          if (star.x < minX) minX = star.x;
+          if (star.x > maxX) maxX = star.x;
+          if (star.y < minY) minY = star.y;
+          if (star.y > maxY) maxY = star.y;
+          if (star.z < minZ) minZ = star.z;
+          if (star.z > maxZ) maxZ = star.z;
+        }
+        x = (minX + maxX) / 2;
+        z = (minZ + maxZ) / 2;
+        let offSetY;
+        if ((maxX - minX) < (maxZ - minZ)) {
+          offSetY = maxZ - minZ;
+        } else {
+          offSetY = maxX - minX;
+        }
+        y = ((minY + maxY) / 2) - offSetY - 2000;
+      } else {
+        const star = selectedStars[0];
+        x = star.x;
+        y = star.y - 2000 - 30;
+        z = star.z;
+      }
+      // Animation of the camera
+      const animationcamera = new Animation(
+        "animationcamera", 
+        "position", 
+        30, 
+        Animation.ANIMATIONTYPE_VECTOR3, 
+        Animation.ANIMATIONLOOPMODE_CONSTANT
+      );
+      let keys = [];
+      keys.push({
+        frame: 0,
+        value: camera.position.clone(),
+      });
+      keys.push({
+        frame: 100,
+        value: new Vector3(x, y, z),
+      });
+      animationcamera.setKeys(keys);
+      camera.animations = [];
+      camera.animations.push(animationcamera);
+      scene.beginAnimation(camera, 0, 100, false, 1);
+    }
+  }, [goAndSee])
 
   return <canvas ref={reactCanvas} {...rest} />;
 };

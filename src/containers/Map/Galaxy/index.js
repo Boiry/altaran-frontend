@@ -7,6 +7,7 @@ import {
   fetchStarSystem,
   deleteStarSystemName,
   setCameraPosition,
+  goAndSee,
 } from 'src/actions/map';
 
 import { changeSubPage } from 'src/actions/tab';
@@ -14,6 +15,13 @@ import { changeSubPage } from 'src/actions/tab';
 const mapStateToProps = (state) => ({
   starSystemName: state.map.starSystemInfo.name,
   getCameraPosition: state.map.cameraPosition,
+  galaxySelector: state.map.galaxySelector,
+  galaxyRegion: state.map.galaxyRegion,
+  galaxySector: state.map.galaxySector,
+  galaxyStarSystem: state.map.galaxyStarSystem,
+  highlight: state.map.highlight,
+  isolate: state.map.isolate,
+  goAndSee: state.map.goAndSee,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -31,6 +39,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setCameraPosition: (position) => {
     dispatch(setCameraPosition(position));
+  },
+  setGoAndSee: (value) => {
+    dispatch(goAndSee(value));
   },
 });
 

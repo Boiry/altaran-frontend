@@ -1,6 +1,7 @@
 @use 'src/styles/vars';
 
-.map {
+// CSS for star system menu
+.starSystem {
   &-field {
     position: relative;
   }
@@ -20,6 +21,31 @@
     position: absolute;
     width: 4rem;
     top: -.5rem;
+    left: 0;
+  }
+}
+
+// CSS for galaxy menu
+.galaxy {
+  &-field {
+    position: relative;
+  }
+  &-input {
+    position: relative;
+    background: white;
+    background: vars.$field-background;
+    width: 3rem;
+    text-align: center;
+    border: none;
+    color: vars.$neon;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    margin-top: .5rem;;
+  }
+  &-selector-arrow {
+    position: absolute;
+    width: 3rem;
+    top: 1.5rem;
     left: 0;
   }
 }

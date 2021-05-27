@@ -5,17 +5,24 @@ import {
   MESSAGE_TYPING,
   MESSAGE_STOP_TYPING,
   MESSAGE_RECEIVED,
+  SEARCH_USER,
+  SEARCH_USER_RESULT,
+  CREATE_NEW_CHANNEL,
 } from 'src/actions/chat';
 
 const initialState = {
   webSocketConnected: false,
   channels: [
-    "main", "help", "alliance"
+    {name: "main", path: "main"},
+    {name: "help", path: "help"},
+    {name: "alliance", path: "alliance"}
   ],
-  channel: 'main',
+  channel: {name: "main", path: "main"},
   fieldValue: '',
   messageTyping: [],
   chatContent: [],
+  searchUser: '',
+  searchUserResult: [],
 };
 
 const chat = (state = initialState, action = {}) => {
@@ -73,7 +80,25 @@ const chat = (state = initialState, action = {}) => {
           messageTyping: state.messageTyping.filter(sender => sender !== action.sender),
         }
       }
+
+    case SEARCH_USER:
+      return {
+        ...state,
+        searchUser: action.value,
+      }
     
+    case SEARCH_USER_RESULT:
+      return {
+        ...state,
+        searchUserResult: action.result,
+      }
+
+    case CREATE_NEW_CHANNEL:
+      return {
+        ...state,
+        channels: [...state.channels, action.channel],
+      }
+
     default: return { ...state };
   }
 };

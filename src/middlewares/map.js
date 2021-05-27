@@ -13,9 +13,11 @@ import {
   setStarSystemsLoading,
 } from '../actions/map';
 
+let token, authorization;
+
 const mapMiddleware = (store) => (next) => (action) => {
-  const token = sessionStorage.getItem('token');
-  const authorization = {
+  token = sessionStorage.getItem('token');
+  authorization = {
     headers: {
       Authorization: `Bearer ${token}`,
     },

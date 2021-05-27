@@ -99,6 +99,8 @@ const MiniChat = ({
         currentMessage.hide = false;
       }
       setReady(true);
+    } else if (chatContent.length === 1) {
+      chatContent[0].hide = false;
     }
   }, [chatContent])
 
@@ -139,7 +141,7 @@ const MiniChat = ({
 
       <div ref={channelsWindow} className="minichat-channels-window">
         {channels.map((channel, index) => (
-          <div key={`channelWindow${index}`} className="minichat-channels-window-item" onClick={() => {openCloseChannelsWindow(); changeChannel(channel)}}>{t(channel)}</div>
+          <div key={`channelWindow${index}`} className="minichat-channels-window-item" onClick={() => {openCloseChannelsWindow(); changeChannel(channel)}}>{t(channel.name)}</div>
         ))}
       </div>
     </div>

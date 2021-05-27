@@ -7,6 +7,8 @@ import {
   changeChannel,
   updateFieldValue,
   sendMessage,
+  searchUser,
+  subscribe,
 } from 'src/actions/chat';
 
 const mapStateToProps = (state) => ({
@@ -16,6 +18,10 @@ const mapStateToProps = (state) => ({
   chatContent: state.chat.chatContent,
   channels: state.chat.channels,
   selectedChannel: state.chat.channel,
+  searchUserValue: state.chat.searchUser,
+  searchUserResult: state.chat.searchUserResult,
+  userId: state.user.id,
+  userName: state.user.username,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -28,8 +34,14 @@ const mapDispatchToProps = (dispatch) => ({
   updateFieldValue: (value) => {
     dispatch(updateFieldValue(value));
   },
-  sendMessage: (action) => {
-    dispatch(sendMessage(action));
+  sendMessage: (action, payload) => {
+    dispatch(sendMessage(action, payload));
+  },
+  searchUser: (value) => {
+    dispatch(searchUser(value));
+  },
+  subscribe: (userId, userName, createChannel) => {
+    dispatch(subscribe(userId, userName, createChannel));
   },
 });
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import './field.scss';
@@ -7,6 +7,7 @@ import Arrow from 'src/assets/images/selectorArrow.svg';
 
 const Field = ({
   name,
+  CSSName,
   type,
   value,
   onChange,
@@ -23,16 +24,16 @@ const Field = ({
     onClick(evt.target.id);
   }
   return (
-    <span className="map-field">
+    <span className={`${CSSName}-field`}>
       <input
         id={inputId}
         value={value}
         type={type}
         name={name}
         onChange={handleChange}
-        className="map-input"
+        className={`${CSSName}-input`}
       />
-      <img src={Arrow} id={arrowId} className="map-selector-arrow" onClick={handleClick} />
+      <img src={Arrow} id={arrowId} className={`${CSSName}-selector-arrow`} onClick={handleClick} />
     </span>
   );
 };
@@ -44,6 +45,7 @@ Field.propTypes = {
   ]),
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  CSSName: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 };

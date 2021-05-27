@@ -14,6 +14,11 @@ export const SAVE_CURRENT_SECTOR = "SAVE_CURRENT_SECTOR";
 export const SAVE_CURRENT_STAR_SYSTEM = "SAVE_CURRENT_STAR_SYSTEM";
 export const DELETE_STAR_SYSTEM_NAME = "DELETE_STAR_SYSTEM_NAME";
 export const SET_CAMERA_POSITION = "SET_CAMERA_POSITION";
+export const SET_GALAXY_SELECTOR = "SET_GALAXY_SELECTOR";
+export const CHANGE_GALAXY_FIELD = "CHANGE_GALAXY_FIELD";
+export const SET_HIGHLIGHT = "SET_HIGHLIGHT";
+export const SET_ISOLATE = "SET_ISOLATE";
+export const GO_AND_SEE = "GO_AND_SEE";
 
 export const updateCoordinatesField = (value, name) => ({
   type: UPDATE_COORDINATES_FIELD,
@@ -95,4 +100,30 @@ export const deleteStarSystemName = () => ({
 export const setCameraPosition = (position) => ({
   type: SET_CAMERA_POSITION,
   position,
+});
+
+export const setGalaxySelector = (selected) => ({
+  type: SET_GALAXY_SELECTOR,
+  selected,
+})
+
+export const changeGalaxyField = (value, name) => ({
+  type: CHANGE_GALAXY_FIELD,
+  value,
+  name,
+});
+
+export const setHighlight = (value) => ({
+  type: SET_HIGHLIGHT,
+  value,
+});
+
+export const setIsolate = (value) => ({
+  type: SET_ISOLATE,
+  value,
+});
+
+export const goAndSee = (value) => ({
+  type: GO_AND_SEE,
+  value,
 });
