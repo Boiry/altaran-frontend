@@ -146,7 +146,7 @@ export default (props) => {
     pushOtherStars([]);
     if (galaxyRegion) {
       for (let i=1; i<=50; i++) {
-        if (galaxyRegion === i) {
+        if (parseInt(galaxyRegion) === i) {
           pushSelectedStars(arr => [...arr, stars[`r${i}`]]);
         } else {
           pushOtherStars(arr => [...arr, stars[`r${i}`]]);

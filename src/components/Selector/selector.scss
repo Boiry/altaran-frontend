@@ -1,0 +1,31 @@
+@use 'src/styles/vars';
+
+.selector {
+  display: inline-block;
+  background: vars.$field-background;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  text-align: left !important;
+  cursor: pointer;
+
+  &-arrow {
+    position: relative;
+    float: right;
+  }
+
+  &-content {
+    position: absolute;
+    visibility: hidden;
+    background: vars.$field-background;
+    border-radius: 5px;
+    padding: .5rem .5rem;
+    text-align: left !important;
+    cursor: pointer;
+
+    &-item {
+      &:hover {
+        background: vars.$neon;
+      }
+    }
+  }
+}

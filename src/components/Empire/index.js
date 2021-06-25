@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Ranking from 'src/containers/Ranking';
+
 import Background from 'src/assets/images/background3.jpg';
 
 import Tab from 'src/containers/Tab';
@@ -20,7 +22,7 @@ const Empire = () => {
     <div className="container">
       <Tab name={"empire"} tabs={tabs} dispatchSubPage={changeSubPage} />
       {subPage === "statistics" && <div>Statistiques</div>}
-      {subPage === "ranking" && <div>Classement</div>}
+      {subPage === "ranking" && <Ranking />}
 
     </div>
   );

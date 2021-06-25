@@ -14,7 +14,7 @@
   }
 }
 
-table {
+.specialties-table {
   background-color: rgba(4, 119, 166, .5);
   border-collapse: separate;
   border-spacing: .5rem;
@@ -23,12 +23,12 @@ table {
   margin: 0 auto;
 }
 
-th {
+.specialties-table th {
   vertical-align: middle;
   font-size: .9rem;
 }
 
-td {
+.specialties-table td {
   font-size: .7rem;
   width: 18rem;
   text-align: center;

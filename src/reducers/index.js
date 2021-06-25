@@ -5,6 +5,7 @@ import chatReducer from './chat';
 import loaderReducer from './loader';
 import mapReducer from './map';
 import miniChatReducer from './miniChat';
+import rankingReducer from './ranking';
 import routerReducer from './router';
 import tabReducer from './tab';
 import userReducer from './user';
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   loader: loaderReducer,
   map: mapReducer,
   miniChat: miniChatReducer,
+  ranking: rankingReducer,
   router: routerReducer,
   tab: tabReducer,
   user: userReducer,

@@ -87,7 +87,27 @@
         }
       }
     }
+  }
 
+  &-list {
+    position: absolute;
+    background: vars.$field-background;
+    top: 9rem;
+    width: 16rem;
+    left: calc(50% - 8rem);
+    height: calc(100% - 9rem);
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
+    visibility: hidden;
+
+    &-item {
+      cursor: default;
+      &:hover {
+        background: vars.$field-background;
+      }
+    }
   }
 }
-

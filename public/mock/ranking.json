@@ -1,0 +1,142 @@
+{
+  "1": {
+    "rank": "1",
+    "growth": "equal",
+    "name": "Sam le pirate",
+    "alliance": "PDF",
+    "score": "10000000"
+  },
+  "2": {
+    "rank": "2",
+    "growth": "up",
+    "name": "Estydral",
+    "alliance": "PDF",
+    "score": "2000"
+  },
+  "3": {
+    "rank": "3",
+    "growth": "down",
+    "name": "Melkor le vilain",
+    "alliance": "PDF",
+    "score": "1"
+  },
+  "4": {
+    "rank": "4",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "5": {
+    "rank": "5",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "6": {
+    "rank": "6",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "7": {
+    "rank": "7",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "8": {
+    "rank": "8",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "9": {
+    "rank": "9",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "10": {
+    "rank": "10",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "11": {
+    "rank": "11",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "12": {
+    "rank": "12",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "13": {
+    "rank": "13",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "14": {
+    "rank": "14",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "15": {
+    "rank": "15",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "16": {
+    "rank": "16",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "17": {
+    "rank": "17",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "18": {
+    "rank": "18",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "19": {
+    "rank": "19",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  },
+  "20": {
+    "rank": "20",
+    "growth": "equal",
+    "name": "Remplissage",
+    "alliance": "NoAlly",
+    "score": "1"
+  }
+}

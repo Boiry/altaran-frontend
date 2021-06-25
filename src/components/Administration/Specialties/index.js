@@ -27,7 +27,7 @@ const Specialties = () => {
   return (
     <div className="specialties">
       <div className="specialties-main">
-        <table>
+        <table className="specialties-table">
           <thead>
             <tr>
               <th></th>

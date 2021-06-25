@@ -1,0 +1,8 @@
+{
+  "main": ["equal", 18],
+  "industry": ["down", 37],
+  "military": ["equal", 112],
+  "technology": ["up", 258],
+  "economy": ["equal", 54],
+  "intelligence": ["up", 28]
+}

@@ -69,6 +69,9 @@ const Aside = ({
   // =================== LISTS ====================
   const list = useRef();
   const [listContent, setListContent] = useState([]);
+  const [regionScrollPosition, setRegionScrollPosition] = useState()
+  const [sectorScrollPosition, setSectorScrollPosition] = useState()
+  const [starSystemScrollPosition, setStarSystemScrollPosition] = useState()
 
   useEffect(() => {
     launchFetchRegions();
@@ -82,6 +85,7 @@ const Aside = ({
         if (regionsInfo) {
           infos = regionsInfo;
         }
+        list.current.scrollTop = regionScrollPosition;
         break;
       case 'galaxySector':
         if (sectorsInfo) {
@@ -89,6 +93,7 @@ const Aside = ({
         } else {
           infos = null;
         }
+        list.current.scrollTop = sectorScrollPosition;
         break;
       case 'galaxyStarSystem':
         if (starSystemsInfo) {
@@ -96,6 +101,7 @@ const Aside = ({
         } else {
           infos = null;
         }
+        list.current.scrollTop = starSystemScrollPosition;
         break;
     }
     if (infos) {
@@ -118,7 +124,6 @@ const Aside = ({
   
   const hideList = () => {
     if (list.current) {
-      list.current.scrollTop = 0;
       list.current.style.visibility = "hidden";
     }
   }
@@ -130,9 +135,16 @@ const Aside = ({
       launchFetchSectors(item);
       updateField('', 'galaxySector');
       updateField('', 'galaxyStarSystem');
+      setRegionScrollPosition(list.current.scrollTop);
+      setSectorScrollPosition(0);
+      setStarSystemScrollPosition(0);
     } else if (field === 'galaxySector') {
       launchFetchStarSystems(galaxyRegion, item);
       updateField('', 'galaxyStarSystem');
+      setSectorScrollPosition(list.current.scrollTop);
+      setStarSystemScrollPosition(0);
+    } else {
+      setStarSystemScrollPosition(list.current.scrollTop);
     }
   }
 
@@ -221,11 +233,11 @@ const Aside = ({
         <div ref={goButton} className="galaxy-aside-form-button-go" onMouseDown ={() => animateButton('down')} onMouseUp={() => animateButton('up')} onClick={() => go()}>Y aller</div>
       </form>
 
-      <div ref={list} onBlur={hideList} tabIndex="0" className="star-system-list">
+      <div ref={list} onBlur={hideList} tabIndex="0" className="galaxy-aside-list">
         {listContent.map(listItem => (
           <p
             key={listItem.key}
-            className="star-system-list-item"
+            className="galaxy-aside-list-item"
             onClick={() => clickOnListItem(listItem.field, listItem.id)}
           >
             {listItem.id}. {listItem.name}

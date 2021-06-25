@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.ranking-aside {
+  position: absolute;
+  background-color: rgba(93, 186, 224, .2);
+  width: 17vw;
+  top: 8rem;
+  right: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+}
