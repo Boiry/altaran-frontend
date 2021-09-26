@@ -21,6 +21,8 @@ const mapStateToProps = (state) => ({
   regionsInfo: state.map.regionsInfo,
   sectorsInfo: state.map.sectorsInfo,
   starSystemsInfo: state.map.starSystemsInfo,
+  highlighted: state.map.highlight,
+  isolated: state.map.isolate,
 });
 
 const mapDispatchToProps = (dispatch) => ({

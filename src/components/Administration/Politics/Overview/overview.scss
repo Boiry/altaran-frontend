@@ -1,0 +1,52 @@
+@use 'src/styles/vars';
+
+.politics-overview {
+  &-container {
+    background: vars.$main-background;
+    margin-top: 1rem;
+    padding: .5rem;
+    max-height: calc(100vh - 10rem);
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: vars.$neon transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+  }
+
+  &-ideology {
+    background: vars.$main-background;
+    margin: .5rem;
+  }
+
+  &-name {
+    background: vars.$main-background;
+    margin: .5rem;
+    padding: .2rem;
+    text-align: center;
+    font-weight: bold;
+    color: vars.$neon;
+  }
+
+  &-description {
+    background: vars.$main-background;
+    margin: .5rem;
+    padding: .2rem;
+    font-size: .8rem;
+  }
+
+  &-bonuses {
+    background: vars.$main-background;
+    margin: .5rem;
+    padding: .2rem;
+
+    &-title {
+      text-align: center;
+    }
+  }
+
+  &-bonus strong{
+    color: vars.$orange;
+    font-weight: bold;
+  }
+}

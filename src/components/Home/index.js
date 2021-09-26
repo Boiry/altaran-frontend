@@ -84,7 +84,7 @@ const Home = ({ id, page }) => {
       </nav>
 
       <header className="header">
-        <h1 className="title">PRALAND</h1>
+        <h1 className="title">ALTARAN</h1>
         <div className="baseline">
           <img src={Corner} className="corner corner-top-left" />
           <img src={Corner} className="corner corner-top-right" />

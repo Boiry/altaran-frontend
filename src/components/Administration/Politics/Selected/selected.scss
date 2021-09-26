@@ -1,0 +1,115 @@
+@use 'src/styles/vars';
+
+.politics-selected {
+  &-container {
+    display: flex;
+    margin-top: 1rem;
+  }
+  &-left-panel {
+    background: vars.$main-background;
+    width: 45%;
+    margin-right: .5rem;
+  }
+  &-title {
+    background: vars.$main-background;
+    margin: 1rem;
+    padding: .5rem;
+    text-align: center;
+    color: vars.$neon;
+    font-size: 1.2rem;
+  }
+  &-description {
+    background: vars.$main-background;
+    margin: 1rem;
+    padding: .5rem;
+    font-size: .9rem;
+    text-align: justify;
+  }
+  &-bonus {
+    background: vars.$main-background;
+    margin: 1rem;
+    padding: .5rem;
+    font-size: .9rem;
+    text-align: justify;
+  }
+
+  &-right-panel {
+    background: vars.$main-background;
+    width: 55%;
+    margin-left: .5rem;
+    font-size: .9rem;
+  }
+  &-political1 {
+    background: vars.$main-background;
+    margin: 1rem;
+  }
+  &-political1-presentation {
+    display: flex;
+    padding: 1rem;
+  }
+  &-political-picture {
+    border: 1px solid vars.$neon;
+    width: 40%;
+  }
+  &-political1-attributes {
+    text-align: justify;
+    padding-left: 1rem;
+  }
+  &-political1-change {
+    text-align: justify;
+    padding: 1rem;
+    padding-top: 0;
+  }
+  &-politicals {
+    background: vars.$main-background;
+    margin: 1rem;
+  }
+  &-politicals-presentation {
+    display: flex;
+    padding: 1rem;
+  }
+  &-politicals-picture {
+    border: 1px solid vars.$neon;
+    width: 20%;
+    margin-right: .5rem;
+  }
+  &-politicals-attributes {
+    display: flex;
+    flex-direction: column;
+    &-detail {
+      text-align: justify;
+      padding-left: .5rem;
+    }
+  }
+  &-politicals-change {
+    text-align: justify;
+    padding: 1rem;
+    padding-top: 0;
+  }
+  &-explainations {
+    background: vars.$main-background;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: justify;
+  }
+
+  &-aside {
+    position: absolute;
+    background-color: rgba(93, 186, 224, .2);
+    width: 17vw;
+    top: 8rem;
+    right: 1rem;
+    padding: 1rem;
+    text-align: center;
+
+    &-button {
+      background: vars.$main-background;
+      padding: .5rem;
+      margin: .5rem;
+      color: white;
+      font-size: .9rem;
+      border: 1px solid vars.$neon;
+      border-radius: 5px;
+    }
+  }
+}

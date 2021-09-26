@@ -2,7 +2,7 @@
 
 .specialties {
   &-main {
-  height: calc(100vh-15rem);
+  max-height: calc(100vh-13rem);
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: vars.$neon transparent;
@@ -19,7 +19,7 @@
   border-collapse: separate;
   border-spacing: .5rem;
   table-layout: auto;
-  width: 50rem;
+  width: 60vw;
   margin: 0 auto;
 }
 

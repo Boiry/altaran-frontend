@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Tab from 'src/containers/Tab';
 import Specialties from 'src/components/Administration/Specialties';
-import Politics from 'src/components/Administration/Politics';
+import Politics from 'src/containers/Administration/Politics';
 
 import './administration.scss';
 

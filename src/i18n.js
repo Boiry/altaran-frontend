@@ -7,6 +7,7 @@ import communicationsFR from '../public/locales/fr/communications';
 import facilitiesFR from '../public/locales/fr/facilities.json';
 import specialtiesFR from '../public/locales/fr/specialties.json';
 import technologiesFR from '../public/locales/fr/technologies.json';
+import politicsFR from '../public/locales/fr/politics.json';
 
 const resources = {
   en: {
@@ -21,6 +22,7 @@ const resources = {
     facilities: facilitiesFR,
     specialties: specialtiesFR,
     technologies: technologiesFR,
+    politics: politicsFR,
   }
 };
 

@@ -22,6 +22,8 @@ const Aside = ({
   highlight,
   isolate,
   goAndSee,
+  highlighted,
+  isolated,
 }) => {
   // ============ SELECTOR ===============
   const selector = useRef();
@@ -152,45 +154,69 @@ const Aside = ({
   const highlightButton = useRef();
   const isolateButton = useRef();
   const goButton = useRef();
+
+  const checkInputs = () => {
+    if (galaxySelector === "region" && galaxyRegion ||
+        galaxySelector === "sector" && galaxyRegion && galaxySector ||
+        galaxySelector === "starSystem" && galaxyRegion && galaxySector && galaxyStarSystem
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   const clickOnHighlight = () => {
-    if (highlightButton.current.classList.contains("galaxy-aside-form-button-active")) {
-      highlightButton.current.classList.remove("galaxy-aside-form-button-active");
-      highlight(false);
-    } else {
-      highlightButton.current.classList.add("galaxy-aside-form-button-active");
-      isolateButton.current.classList.remove("galaxy-aside-form-button-active");
-      isolate(false);
-      highlight(true);
+    if (checkInputs() === true) {
+      if (highlightButton.current.classList.contains("galaxy-aside-form-button-active")) {
+        highlightButton.current.classList.remove("galaxy-aside-form-button-active");
+        highlight(false);
+      } else {
+        highlightButton.current.classList.add("galaxy-aside-form-button-active");
+        isolateButton.current.classList.remove("galaxy-aside-form-button-active");
+        isolate(false);
+        highlight(true);
+      }
     }
   }
 
   const clickOnIsolate = () => {
-    if (isolateButton.current.classList.contains("galaxy-aside-form-button-active")) {
-      isolateButton.current.classList.remove("galaxy-aside-form-button-active");
-      isolate(false);
-    } else {
-      isolateButton.current.classList.add("galaxy-aside-form-button-active");
-      highlightButton.current.classList.remove("galaxy-aside-form-button-active");
-      highlight(false);
-      isolate(true);
+    if (checkInputs() === true) {
+      if (isolateButton.current.classList.contains("galaxy-aside-form-button-active")) {
+        isolateButton.current.classList.remove("galaxy-aside-form-button-active");
+        isolate(false);
+      } else {
+        isolateButton.current.classList.add("galaxy-aside-form-button-active");
+        highlightButton.current.classList.remove("galaxy-aside-form-button-active");
+        highlight(false);
+        isolate(true);
+      }
     }
   }
 
   const animateButton = (key) => {
-    if (key === 'down') {
-      goButton.current.classList.add('galaxy-aside-form-button-go-active');
-    } else {
-      goButton.current.classList.remove('galaxy-aside-form-button-go-active');
+    if (checkInputs() === true) {
+      if (key === 'down') {
+        goButton.current.classList.add('galaxy-aside-form-button-go-active');
+      } else {
+        goButton.current.classList.remove('galaxy-aside-form-button-go-active');
+      }
     }
   }
 
   const go = () => {
-    if (galaxySelector === "region" && galaxyRegion ||
-        galaxySelector === "sector" && galaxyRegion && galaxySector ||
-        galaxySelector === "starSystem" && galaxyRegion && galaxySector && galaxyStarSystem
-    )
+    if (checkInputs() === true)
     goAndSee(true)
   }
+
+  // When page's reload
+  useEffect(() => {
+    if (highlighted === true) {
+      highlightButton.current.classList.add("galaxy-aside-form-button-active");
+    }
+    if (isolated === true) {
+      isolateButton.current.classList.add("galaxy-aside-form-button-active");
+    }
+  }, []);
 
   return (
     <div className="galaxy-aside">

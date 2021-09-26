@@ -23,7 +23,7 @@
     "energy": "50",
     "time": "100000000"
   },
-  "alchemy": {
+  "steel": {
     "level": "1",
     "metal": "100",
     "energy": "50",
@@ -35,7 +35,7 @@
     "energy": "50",
     "time": "1000"
   },
-  "darkmatter": {
+  "collector": {
     "level": "0",
     "metal": "100",
     "energy": "50",
@@ -72,7 +72,7 @@
     "energy": "50",
     "time": "1000"
   },
-  "mecanics": {
+  "shipyard": {
     "level": "1",
     "metal": "100",
     "energy": "50",
@@ -133,7 +133,7 @@
     "energy": "50",
     "time": "1000"
   },
-  "city": {
+  "orbital": {
     "level": "1",
     "metal": "100",
     "energy": "50",

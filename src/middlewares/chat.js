@@ -50,6 +50,8 @@ const chatMiddleware = (store) => (next) => (action) => {
       }
     } else if (message.type === "JOIN") {
       store.dispatch(subscribe(message.payload[0], message.payload[1], false));
+    } else {
+      console.log(message)
     }
   }
 
@@ -79,6 +81,8 @@ const chatMiddleware = (store) => (next) => (action) => {
         stompClient.subscribe('/topic/main', onMessageReceived);
         stompClient.subscribe('/topic/help', onMessageReceived);
         stompClient.subscribe('/topic/alliance', onMessageReceived);
+        // Test
+        stompClient.subscribe('/topic/pubic_history', onMessageReceived);
       }
 
       stompClient.onStompError = (frame) => {

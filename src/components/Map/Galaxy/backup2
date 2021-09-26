@@ -7,8 +7,8 @@ import Camera2DMouseInputs from './camera2DMouseInputs';
 // import stars from 'src/assets/galaxyData';
 // import stars from 'src/assets/miniGalaxyData';
 
-import * as stars from 'src/assets/galaxy';
-// import * as stars from 'src/assets/miniGalaxy';
+// import * as stars from 'src/assets/galaxy';
+import * as stars from 'src/assets/miniGalaxy';
 
 import galaxyWrapper from 'src/assets/galaxyWrapper';
 import basicStar from "src/assets/images/basic-star50.png";
@@ -139,30 +139,33 @@ export default (props) => {
   }, [scene]);
 
   // ============== FILTERS ===============
-  let selectedStars = useRef([]);
-  let otherStars = useRef([]);
+  const [selectedStars, pushSelectedStars] = useState([]);
+  let selStars = useRef([]);
+  const [otherStars, pushOtherStars] = useState([]);
   useEffect(() => {
-    selectedStars.current = [];
-    otherStars.current = [];
+    pushSelectedStars([]);
+    pushOtherStars([]);
     if (galaxyRegion) {
       for (let i=1; i<=50; i++) {
         if (parseInt(galaxyRegion) === i) {
-          selectedStars.current = [...stars[`r${i}`]];
+          pushSelectedStars(arr => [...arr, stars[`r${i}`]]);
+          selStars.current = [...stars[`r${i}`]];
         } else {
-          otherStars.current.push(...stars[`r${i}`]);
+          pushOtherStars(arr => [...arr, stars[`r${i}`]]);
         }
       }
     }
+    console.log(selStars)
     switch (galaxySelector) {
       case "sector": {
         if (galaxyRegion && galaxySector) {
-          selectedStars.current = [];
+          pushSelectedStars([]);
           const region = `r${galaxyRegion}`;
           for (let i=0, length=stars[region].length; i<length; i++) {
-            if (stars[region][i].sector_num === parseInt(galaxySector)) {
-              selectedStars.current.push(stars[region][i]);
+            if (stars[region][i].sector_num === galaxySector) {
+              pushSelectedStars(arr => [...arr, stars[region][i]]);
             } else {
-              otherStars.current.push(stars[region][i]);
+              pushOtherStars(arr => [...arr, stars[region][i]]);
             }
           }
         }
@@ -170,13 +173,13 @@ export default (props) => {
       }
       case "starSystem": {
         if (galaxyRegion && galaxySector && galaxyStarSystem) {
-          selectedStars.current = [];
+          pushSelectedStars([]);
           const region = `r${galaxyRegion}`;
           for (let i=0, length=stars[region].length; i<length; i++) {
-            if (stars[region][i].sector_num === parseInt(galaxySector) && stars[region][i].system_num === parseInt(galaxyStarSystem)) {
-              selectedStars.current.push(stars[region][i]);
+            if (stars[region][i].sector_num === galaxySector && stars[region][i].system_num === galaxyStarSystem) {
+              pushSelectedStars(arr => [...arr, stars[region][i]]);
             } else {
-              otherStars.current.push(stars[region][i]);
+              pushOtherStars(arr => [...arr, stars[region][i]]);
             }
           }
         }
@@ -214,48 +217,103 @@ export default (props) => {
 
     // With filter
     } else if (highlight) {
-      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selectedStars.current.length, {width: 50, height: 50});
+      let selected, others = 0;
+      console.log(selStars)
+      if (galaxySelector === "region") {
+        selected = selectedStars[0].length;
+        for (let i=0, length=otherStars.length; i<length; i++) {
+          others += otherStars[i].length;
+        }
+      } else {
+        selected = selectedStars.length;
+        for (let i=0, length=otherStars.length; i<length; i++) {
+          if (Array.isArray(otherStars[i])) {
+            others += otherStars[i].length;
+          } else {
+            others++;
+          }
+        }
+      }
+
+      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selected, {width: 50, height: 50});
       highlightSpriteManager.isPickable = true;
-      for (let i=0, length=selectedStars.current.length; i<length; i++) {
+      for (let i=0, length=selectedStars.length; i<length; i++) {
+        if (Array.isArray(selectedStars[i])) {
+          for (let j=0, jLength=selectedStars[i].length; j<jLength; j++) {
+            const star = new Sprite(("star"), highlightSpriteManager);
+            star.width = 2;
+            star.height = 2;
+            star.position.x = selectedStars[i][j].x;
+            star.position.y = selectedStars[i][j].y - 2000;
+            star.position.z = selectedStars[i][j].z;
+            star.isPickable = true;
+            star.region = selectedStars[i][j].region_num;
+            star.sector = selectedStars[i][j].sector_num;
+            star.system = selectedStars[i][j].system_num;
+          }
+        } else {
         const star = new Sprite(("star"), highlightSpriteManager);
         star.width = 2;
         star.height = 2;
-        star.position.x = selectedStars.current[i].x;
-        star.position.y = selectedStars.current[i].y - 2000;
-        star.position.z = selectedStars.current[i].z;
+        star.position.x = selectedStars[i].x;
+        star.position.y = selectedStars[i].y - 2000;
+        star.position.z = selectedStars[i].z;
         star.isPickable = true;
-        star.region = selectedStars.current[i].region_num;
-        star.sector = selectedStars.current[i].sector_num;
-        star.system = selectedStars.current[i].system_num;
+        star.region = selectedStars[i].region_num;
+        star.sector = selectedStars[i].sector_num;
+        star.system = selectedStars[i].system_num;
+        }
       }
-      spriteManager = new SpriteManager("starsManager", basicStar, otherStars.current.length, {width: 50, height: 50});
+
+      spriteManager = new SpriteManager("starsManager", basicStar, others, {width: 50, height: 50});
       spriteManager.isPickable = true;
-      for (let i=0, length=otherStars.current.length; i<length; i++) {
+      for (let i=0, length=otherStars.length; i<length; i++) {
+        if (Array.isArray(otherStars[i])) {
+          for (let j=0, jLength=otherStars[i].length; j<jLength; j++) {
+            const star = new Sprite(("star"), spriteManager);
+            star.width = 2;
+            star.height = 2;
+            star.position.x = otherStars[i][j].x;
+            star.position.y = otherStars[i][j].y - 2000;
+            star.position.z = otherStars[i][j].z;
+            star.isPickable = true;
+            star.region = otherStars[i][j].region_num;
+            star.sector = otherStars[i][j].sector_num;
+            star.system = otherStars[i][j].system_num;
+          }
+        } else {
           const star = new Sprite(("star"), spriteManager);
           star.width = 2;
           star.height = 2;
-          star.position.x = otherStars.current[i].x;
-          star.position.y = otherStars.current[i].y - 2000;
-          star.position.z = otherStars.current[i].z;
+          star.position.x = otherStars[i].x;
+          star.position.y = otherStars[i].y - 2000;
+          star.position.z = otherStars[i].z;
           star.isPickable = true;
-          star.region = otherStars.current[i].region_num;
-          star.sector = otherStars.current[i].sector_num;
-          star.system = otherStars.current[i].system_num;
+          star.region = otherStars[i].region_num;
+          star.sector = otherStars[i].sector_num;
+          star.system = otherStars[i].system_num;
+        }
       }
     } else if (isolate) {
-      spriteManager = new SpriteManager("starsManager", basicStar, selectedStars.current.length, {width: 50, height: 50});
+      let selected;
+      if (galaxySelector === "region") {
+        selected = selectedStars[0];
+      } else {
+        selected = selectedStars;
+      }
+      spriteManager = new SpriteManager("starsManager", basicStar, selected.length, {width: 50, height: 50});
       spriteManager.isPickable = true;
-      for (let i=0, length=selectedStars.current.length; i<length; i++) {
+      for (let i=0, length=selected.length; i<length; i++) {
         const star = new Sprite(("star"), spriteManager);
         star.width = 2;
         star.height = 2;
-        star.position.x = selectedStars.current[i].x;
-        star.position.y = selectedStars.current[i].y - 2000;
-        star.position.z = selectedStars.current[i].z;
+        star.position.x = selected[i].x;
+        star.position.y = selected[i].y - 2000;
+        star.position.z = selected[i].z;
         star.isPickable = true;
-        star.region = selectedStars.current[i].region_num;
-        star.sector = selectedStars.current[i].sector_num;
-        star.system = selectedStars.current[i].system_num;
+        star.region = selected[i].region_num;
+        star.sector = selected[i].sector_num;
+        star.system = selected[i].system_num;
       }
     }
 
@@ -272,14 +330,20 @@ export default (props) => {
       // Finding the wanted camera's position
       let x, y, z;
       if (galaxySelector === "region" || galaxySelector === "sector") {
-        let minX = selectedStars.current[0].x;
-        let maxX = selectedStars.current[0].x;
-        let minY = selectedStars.current[0].y;
-        let maxY = selectedStars.current[0].y;
-        let minZ = selectedStars.current[0].z;
-        let maxZ = selectedStars.current[0].z;
-        for (let i=1; i<selectedStars.current.length; i++) {
-          const star = selectedStars.current[i];
+        let selected;
+        if (galaxySelector === "region") {
+          selected = selectedStars[0];
+        } else {
+          selected = selectedStars;
+        }
+        let minX = selected[0].x;
+        let maxX = selected[0].x;
+        let minY = selected[0].y;
+        let maxY = selected[0].y;
+        let minZ = selected[0].z;
+        let maxZ = selected[0].z;
+        for (let i=1; i<selected.length; i++) {
+          const star = selected[i];
           if (star.x < minX) minX = star.x;
           if (star.x > maxX) maxX = star.x;
           if (star.y < minY) minY = star.y;
@@ -297,7 +361,7 @@ export default (props) => {
         }
         y = ((minY + maxY) / 2) - offSetY - 2000;
       } else {
-        const star = selectedStars.current[0];
+        const star = selectedStars[0];
         x = star.x;
         y = star.y - 2000 - 30;
         z = star.z;

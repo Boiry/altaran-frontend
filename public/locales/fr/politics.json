@@ -1,0 +1,113 @@
+{
+  "democracy": {
+    "name": "Démocratie",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>10 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>1 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits démocratie : <1>+20%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "imperialism": {
+    "name": "Impérialisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>30 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,4 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits impérialisme : <1>+60%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "nationalism": {
+    "name": "Nationalisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>15 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,65 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits nationalisme : <1>+30%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "oligarchy": {
+    "name": "Oligarchie",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>20 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,35 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits oligarchie : <1>+40%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "monarchy": {
+    "name": "Monarchie",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>40 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,4 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits monarchie : <1>+70%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "technocracy": {
+    "name": "Technocratie",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>25 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,3 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits technocratie : <1>+20%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "communism": {
+    "name": "Communisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>45 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,7 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits communisme : <1>+75%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "authoritarianism": {
+    "name": "Autoritarisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>45 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,2 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits autoritarisme : <1>+75%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "republic": {
+    "name": "République",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>15 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,8 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits république : <1>+30%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "obscurantism": {
+    "name": "Obscurantisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>25 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,1 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits obscurantisme : <1>+50%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "theocracy": {
+    "name": "Théocratie",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>45 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,4 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits théocratie : <1>+75%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "transcendentism": {
+    "name": "Transcendantisme",
+    "summary": "Résumé et détails techniques sur l'idéologie.",
+    "bonus1": "<0>Changement d'administration : tous les <1>15 jours</1>.</0>",
+    "bonus2": "<0>Progression du bonheur : <1>0,9 point / jour</1>.</0>",
+    "bonus3": "<0>Efficacité des traits transcendantisme : <1>+10%</1>.</0>",
+    "description": "C'est pas mal comme idéologie, ici on vous explique un peu de quoi il en retourne.",
+    "bonus": "Ici les bonus idéologiques et puis d'autres trucs."
+  },
+  "bonus-title": "Bonus idéologiques :",
+  "select": "Adopter l'idéologie",
+  "see-all": "Voir les autres idéologies"
+}
