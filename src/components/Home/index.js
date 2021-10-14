@@ -31,6 +31,7 @@ import Corner from '../../assets/images/corner.svg';
 import Construction from 'src/assets/images/construction.svg';
 
 const Home = ({ id, page }) => {
+  // If it's the first visit, we display the animation, otherwise we skip it.
   useEffect(() => {
     if (window.localStorage.firstVisit === undefined) {
       firstAnimation();

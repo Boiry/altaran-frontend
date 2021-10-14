@@ -14,6 +14,7 @@ import {
   SUBSCRIBE,
   subscribe,
   createNewChannel,
+  WEBSOCKET_DISCONNECT,
 } from 'src/actions/chat';
 
 let userName, token, authorization, socket, stompClient;
@@ -177,6 +178,12 @@ const chatMiddleware = (store) => (next) => (action) => {
           store.dispatch(createNewChannel({name: userName, path: newChannel}));
         }
       }
+      next(action);
+      break;
+    };
+
+    case WEBSOCKET_DISCONNECT: {
+      stompClient.disconnect;
       next(action);
       break;
     };

@@ -11,6 +11,7 @@ export const SEARCH_USER = "SEARCH_USER";
 export const SEARCH_USER_RESULT = "SEARCH_USER_RESULT";
 export const SUBSCRIBE = "SUBSCRIBE";
 export const CREATE_NEW_CHANNEL = "CREATE_NEW_CHANNEL";
+export const WEBSOCKET_DISCONNECT = "WEBSOCKET_DISCONNECT";
 
 export const webSocketConnect = () => ({
   type: WEBSOCKET_CONNECT,
@@ -68,16 +69,20 @@ export const searchUser = (value) => ({
 export const searchUserResult = (result) => ({
   type: SEARCH_USER_RESULT,
   result,
-})
+});
 
 export const subscribe = (userId, userName, createChannel) => ({
   type: SUBSCRIBE,
   userId,
   userName,
   createChannel,
-})
+});
 
 export const createNewChannel = (channel) => ({
   type: CREATE_NEW_CHANNEL,
   channel,
-})
+});
+
+export const webSocketDisconnect = () => ({
+  type: WEBSOCKET_DISCONNECT,
+});

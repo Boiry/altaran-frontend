@@ -14,6 +14,7 @@ import {
   confirmSuccess,
   LOGOUT,
 } from '../actions/user';
+import { webSocketDisconnect } from '../actions/chat';
 import { changePage } from '../actions/router';
 
 const userMiddleware = (store) => (next) => (action) => {
@@ -111,8 +112,9 @@ const userMiddleware = (store) => (next) => (action) => {
 
     case LOGOUT: {
       window.sessionStorage.removeItem("token");
-      store.dispatch(saveUserInfo(null, false));
-      store.dispatch(changePage('login'));
+      // store.dispatch(saveUserInfo(null, false));
+      // store.dispatch(changePage('login'));
+      store.dispatch(webSocketDisconnect());
       next(action);
       break;
     };

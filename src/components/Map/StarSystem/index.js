@@ -74,6 +74,16 @@ const StarSystem = ({
     }
   })
 
+  useEffect(() => {
+    if (go === true && starSystem) {
+      systemName.current.textContent = "Chargement...";
+      systemName.current.style.fontStyle = "italic";
+    }
+    if (go === false) {
+      systemName.current.style.fontStyle = "normal";
+    }
+  }, [go])
+
   // Handle Return
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -90,11 +100,11 @@ const StarSystem = ({
     }
   }
 
-  // Click on arrow
-  const handleClickArrow = (e) => {
+  // Navigating in star systems (left and right)
+  const navigate = (direction) => {
     if (region && sector && starSystem) {
-      switch (e.target.name) {
-        case "arrowLeft":
+      switch (direction) {
+        case "left":
           if (starSystem > 1) {
             changeField(starSystem - 1, 'starSystem');
             letsGo(true);
@@ -107,7 +117,7 @@ const StarSystem = ({
             doFindLastSector(true);
           }
           break;
-        case "arrowRight":
+        case "right":
           if (starSystem < starSystemsInfo.length) {
             changeField(parseInt(starSystem) + 1, 'starSystem');
             letsGo(true);
@@ -125,6 +135,20 @@ const StarSystem = ({
           }
           break;
       }
+    }
+  }
+
+  // Click on arrow
+  const handleClickArrow = (e) => {
+    e.target.name === "arrowLeft" ? navigate("left") : navigate("right");
+  }
+
+  // Press keyboard's arrows
+  document.onkeydown = (e) => {
+    if (e.code === "ArrowLeft") {
+      navigate("left");
+    } else if (e.code === "ArrowRight") {
+      navigate("right");
     }
   }
 

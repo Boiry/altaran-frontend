@@ -11,7 +11,7 @@ import routerReducer from './router';
 import tabReducer from './tab';
 import userReducer from './user';
 
-const rootReducer = combineReducers({
+const appReducer = combineReducers({
   administration: administrationReducer,
   bases: basesReducer,
   chat: chatReducer,
@@ -23,5 +23,13 @@ const rootReducer = combineReducers({
   tab: tabReducer,
   user: userReducer,
 });
+
+const rootReducer = (state, action) => {
+  if (action.type === 'LOGOUT') {
+    return appReducer(undefined, action)
+  }
+
+  return appReducer(state, action)
+}
 
 export default rootReducer;

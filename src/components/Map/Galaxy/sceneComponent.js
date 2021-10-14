@@ -7,8 +7,8 @@ import Camera2DMouseInputs from './camera2DMouseInputs';
 // import stars from 'src/assets/galaxyData';
 // import stars from 'src/assets/miniGalaxyData';
 
-import * as stars from 'src/assets/galaxy';
-// import * as stars from 'src/assets/miniGalaxy';
+// import * as stars from 'src/assets/galaxy';
+import * as stars from 'src/assets/miniGalaxy';
 
 import galaxyWrapper from 'src/assets/galaxyWrapper';
 import basicStar from "src/assets/images/basic-star50.png";
