@@ -6,7 +6,7 @@ import gasCloudTexture from 'src/assets/images/gas_cloud.png';
 
 export default (props) => {
   const reactCanvas = useRef(null);
-  const { antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onSceneReady, starSystemInfo, ...rest } = props;
+  const { antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onSceneReady, starSystemInfo, showEntityInfo, ...rest } = props;
   const [engine, setEngine] = useState();
   const [scene, setScene] = useState();
   
@@ -61,7 +61,7 @@ export default (props) => {
       const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2.5, 95, new Vector3(25, 5, 0), scene);
       scene.addCamera(camera);
       camera.setPosition(new Vector3(25, 15, -40));
-      camera.attachControl(canvas, true);
+      // camera.attachControl(canvas, true);
 
       // Specifications according to the current star
       let specs = starsSpecs[props.starSystemInfo.central.type];
@@ -87,6 +87,9 @@ export default (props) => {
       glowLayer.intensity = specs.intensity;
       star.material = new StandardMaterial("starMaterial", scene);
       star.material.emissiveColor = new Color3(specs.r, specs.g, specs.b);
+      star.id = props.starSystemInfo.central.id;
+      star.name = props.starSystemInfo.central.name;
+      star.type = props.starSystemInfo.central.type;
       glowLayer.addIncludedOnlyMesh(star);
 
       // Create orbits
@@ -105,7 +108,8 @@ export default (props) => {
 
       for (let i=10; i<=45; i+=5) {
         makeCircle(i, 100);
-        MeshBuilder.CreateLines("circle", {points: circlePoints, colors: pointsColor}, scene);
+        const circle = MeshBuilder.CreateLines("circle", {points: circlePoints, colors: pointsColor}, scene);
+        circle.isPickable = false;
         circlePoints = [];
       };
 
@@ -199,12 +203,14 @@ export default (props) => {
             asteroid5.rotation = new Vector3(1.5, 0, 0);
             asteroid5.position = new Vector3(x, -0.4, 0.4);
 
+          // Gas cloud
           } else if (type === "GAS_CLOUD") {
             const particleSystem = new ParticleSystem("particles", 2000);
             particleSystem.particleTexture = new Texture(gasCloudTexture);
             particleSystem.emitter = new Vector3(x, 0, 0);
             particleSystem.start();
 
+          // Planets
           } else {
             specs = planetsSpecs[props.starSystemInfo.central.entities[i].type];
             const material = new StandardMaterial(scene);
@@ -213,8 +219,12 @@ export default (props) => {
             planet.material = material;
             planet.position = new Vector3(x, 0, 0);
             planet.isPickable = true;
+            planet.id = props.starSystemInfo.central.entities[i].id;
+            planet.name = props.starSystemInfo.central.entities[i].name;
+            planet.type = props.starSystemInfo.central.entities[i].type;
           }
 
+          // Moons
           for (let j=0; j<5; j++) {
             if (entities[i].moons) {
               const moonSpec = entities[i].moons;
@@ -226,11 +236,22 @@ export default (props) => {
                 moon.material = material;
                 const y = 2 * j + 2.5;
                 moon.position = new Vector3(x, y, 0);
+                moon.id = moonSpec[j].id;
+                moon.name = moonSpec[j].name;
+                moon.type = moonSpec[j].type;
               }
             }
           }
         }
       }
+
+      // Click on an entity
+      scene.onPointerDown = function (evt, pickResult) {
+        if (pickResult.hit) {
+          props.showEntityInfo(pickResult.pickedMesh.id, pickResult.pickedMesh.name, pickResult.pickedMesh.type);
+        }
+      };
+
     }
   }, [props.starSystemInfo])
 

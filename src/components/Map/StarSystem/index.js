@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import Field from '../Field';
+import EntityInfo from './EntityInfo';
 
 import SceneComponent from "./sceneComponent";
 
@@ -74,13 +75,16 @@ const StarSystem = ({
     }
   })
 
+  // Display the loading message
   useEffect(() => {
-    if (go === true && starSystem) {
-      systemName.current.textContent = "Chargement...";
-      systemName.current.style.fontStyle = "italic";
-    }
-    if (go === false) {
-      systemName.current.style.fontStyle = "normal";
+    if (systemName.current) {
+      if (go === true && starSystem) {
+        systemName.current.textContent = "Chargement...";
+        systemName.current.style.fontStyle = "italic";
+      }
+      if (go === false) {
+        systemName.current.style.fontStyle = "normal";
+      }
     }
   }, [go])
 
@@ -235,9 +239,18 @@ const StarSystem = ({
     }
   }
 
+  // Show entities infos
+  const [entityInfos, setEntityInfos] = useState({id: '', name: '', type: ''});
+  const showEntityInfo = (id, name, type) => {
+    setEntityInfos({...entityInfos, id, name, type});
+  }
+
   return (
     <div className="star-system">
-      <SceneComponent antialias id="canvas" tabIndex="0" starSystemInfo={starSystemInfo} />
+      <SceneComponent antialias id="canvas" tabIndex="0" starSystemInfo={starSystemInfo} showEntityInfo={showEntityInfo} />
+      {region && sector && starSystem &&
+        <div ref={systemName} className="star-system-info">{starSystemName}</div>
+      }
       <form className="star-system-navigation" onSubmit={handleSubmit}>
         <img src={ArrowLeft} className="star-system-arrow" name="arrowLeft" onClick={handleClickArrow} />
         <Field
@@ -269,7 +282,8 @@ const StarSystem = ({
         <img src={ArrowRight} className="star-system-arrow" name="arrowRight" onClick={handleClickArrow} />
         <button type="submit" className="star-system-button"></button>
       </form>
-      <div ref={systemName} className="star-system-info">{starSystemName}</div>
+
+      {entityInfos.id && <EntityInfo id={entityInfos.id} name={entityInfos.name} type={entityInfos.type} />}      
 
       <div ref={list} onBlur={hideList} tabIndex="0" className="star-system-list">
         {listContent.map(listItem => (

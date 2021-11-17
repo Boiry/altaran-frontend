@@ -8,17 +8,24 @@ const Item = ({
   name,
   className,
   level,
+  current,
   handleClick,
+  handleHover,
+  handleOut,
 }) => (
   <span className="item">
     <img
       src={image}
-      className={`item-icon ${className} item-${name}`}
-      onClick={() => (handleClick && handleClick(name))} alt=""
+      alt={name}
+      className={`item-icon ${className} item-${name} ${current && "item-is-active"}`}
+      onClick={() => (handleClick && handleClick(name))}
+      onMouseOver={() => (handleHover && handleHover(name))}
+      onMouseOut={() => (handleOut && handleOut(''))}
     />
     {level && <div className="item-level">{level}</div>}
   </span>
 );
+
 
 export default Item;
 
@@ -26,14 +33,21 @@ Item.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
-  level: PropTypes.string,
-  handleClick: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.bool,
-  ]).isRequired,
+  level: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  current: PropTypes.bool,
+  handleClick: PropTypes.func,
+  handleHover: PropTypes.func,
+  handleOut: PropTypes.func,
 };
 
 Item.defaultProps = {
   className: '',
   level: '',
+  current: false,
+  handleClick: null,
+  handleHover: null,
+  handleOut: null,
 };

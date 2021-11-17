@@ -2,19 +2,19 @@ import { connect } from 'react-redux';
 
 import Aside from 'src/components/Bases/Aside';
 
-import { fetchBaseInfos, setResourceAmount } from 'src/actions/bases';
+import { fetchBaseResources } from 'src/actions/bases';
 
 const mapStateToProps = (state) => {
   const selectedBase = state.bases.selectedBase;
   return ({
     selectedBase,
-    infos: state.bases[`${selectedBase}Infos`],
+    baseResources: state.bases[selectedBase].resources,
   })
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  launchFetchBaseInfos: () => {
-    dispatch(fetchBaseInfos());
+  fetchBaseResources: () => {
+    dispatch(fetchBaseResources());
   },
 });
 

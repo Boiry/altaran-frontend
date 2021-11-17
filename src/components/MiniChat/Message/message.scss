@@ -2,14 +2,14 @@
 
 .mini-chat-message {
   background-color: rgba(4, 119, 166, .7);
-  width: 13vw;
+  width: calc(100% - 2rem);
   padding: .5rem;
   margin: .5rem 0;
   font-size: .8rem;
   border-radius: .5rem;
 
   &-user {
-    margin-left: 2.5vw;
+    margin-left: 2rem;
     text-align: right;
   }
 

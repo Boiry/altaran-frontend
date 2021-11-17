@@ -1,7 +1,8 @@
 @use 'src/styles/vars';
 
 .bases {
-  width: 60vw;
+  width: 60%;
+  min-width: 50rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 4rem 1fr;

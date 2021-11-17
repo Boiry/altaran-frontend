@@ -1,25 +1,42 @@
 import axios from 'axios';
 
 import {
-  FETCH_FACILITIES,
-  saveFacilitiesInfo,
-  FETCH_FACILITIES_UPDATES,
-  saveFacilitiesUpdatesInfo,
+  FETCH_BASES,
+  SAVE_BASES,
+  saveBase,
+  saveBaseSelector,
+  FETCH_FACILITIES_LEVELS,
+  saveFacilitiesLevels,
+  FETCH_CURRENT_FACILITY,
+  saveCurrentFacility,
+  FETCH_FACILITIES_UPGRADES,
+  saveFacilitiesUpgrades,
+  ADD_FACILITY_UPGRADE,
+  REMOVE_FACILITY_UPGRADE,
   FETCH_TECHNOLOGIES,
   saveTechnologiesInfo,
   FETCH_TECHNOLOGIES_UPDATES,
   saveTechnologiesUpdatesInfo,
-  FETCH_BASE_INFOS,
-  saveBaseInfos,
+  FETCH_BASE_RESOURCES,
+  saveBaseResources,
 } from 'src/actions/bases';
 
 const basesMiddleware = (store) => (next) => (action) => {
   const base = store.getState().bases.selectedBase;
+  const token = sessionStorage.getItem('token');
+  const authorization = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
   switch (action.type) {
-    case FETCH_FACILITIES: {
-      axios.get('/mock/facilities.json')
+    case FETCH_BASES: {
+      axios.get(`${process.env.API_URL}api/user/planets`, authorization)
       .then((response) => {
-        store.dispatch(saveFacilitiesInfo(`${base}Facilities`, response.data));
+        response.data.forEach((base, index) => {
+          store.dispatch(saveBase(index+1, base));
+          store.dispatch(saveBaseSelector(index+1, base.id, base.name));
+        })
       })
       .catch((error) => {
         console.log(error);
@@ -28,10 +45,66 @@ const basesMiddleware = (store) => (next) => (action) => {
       break;
     };
 
-    case FETCH_FACILITIES_UPDATES: {
-      axios.get('/mock/updates.json')
+    case SAVE_BASES: {
+      action.bases.forEach((base, index) => {
+        store.dispatch(saveBase(index+1, base));
+        store.dispatch(saveBaseSelector(index+1, base.id, base.name));
+      })
+    };
+
+    case FETCH_FACILITIES_LEVELS: {
+      axios.get('/mock/facilitiesLevels.json')
       .then((response) => {
-        store.dispatch(saveFacilitiesUpdatesInfo(`${base}FacilitiesUpdates`, response.data));
+        store.dispatch(saveFacilitiesLevels(base, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    };
+
+    case FETCH_CURRENT_FACILITY: {
+      const param = action.facility;
+      axios.get(`${process.env.API_URL}api/user/planets/${action.baseId}/buildingTemplates?name=${param}`, authorization)
+      .then((response) => {
+        store.dispatch(saveCurrentFacility(action.base, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    };
+
+    case FETCH_FACILITIES_UPGRADES: {
+      axios.get(`${process.env.API_URL}api/user/planets/${action.baseId}/buildings`, authorization)
+      .then((response) => {
+        store.dispatch(saveFacilitiesUpgrades(base, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    };
+
+    case ADD_FACILITY_UPGRADE: {
+      axios.post(`${process.env.API_URL}api/user/planets/${action.baseId}/buildings`, {name: action.facility}, authorization)
+      .then((response) => {
+        store.dispatch(saveFacilitiesUpgrades(base, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    };
+
+    case REMOVE_FACILITY_UPGRADE: {
+      axios.delete(`${process.env.API_URL}api/user/planets/${action.baseId}/building/${action.facility}`, authorization)
+      .then((response) => {
+        store.dispatch(saveFacilitiesUpgrades(base, response.data));
       })
       .catch((error) => {
         console.log(error);
@@ -64,10 +137,10 @@ const basesMiddleware = (store) => (next) => (action) => {
       break;
     };
 
-    case FETCH_BASE_INFOS: {
-      axios.get('/mock/base-infos.json')
+    case FETCH_BASE_RESOURCES: {
+      axios.get('/mock/baseResources.json')
       .then((response) => {
-        store.dispatch(saveBaseInfos(`${base}Infos`, response.data));
+        store.dispatch(saveBaseResources(base, response.data));
       })
       .catch((error) => {
         console.log(error);

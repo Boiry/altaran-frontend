@@ -1,0 +1,21 @@
+{
+  "RED_DWARF": "Naine rouge",
+  "YELLOW_DWARF": "Naine jaune",
+  "WHITE_DWARF": "Naine blanche",
+  "NEUTRON_STAR": "Étoile à neutron",
+  "WOLF_RAYET": "Étoile Wolf-Rayet",
+  "POPULATION_III": "Étoile de position III",
+  "BLACK_HOLE": "Trou noir",
+  "SUPERMASSIVE_BLACK_HOLE": "Trou noir super massif",
+  "CHTHONIAN_PLANET": "Planète chtonienne",
+  "METALLIC_PLANET": "Planète métallique",
+  "OCEAN_PLANET": "Planète océanique",
+  "GAS_GIANT": "Géante gazeuse",
+  "HABITABLE_PLANET": "Planète habitable",
+  "LAVA_PLANET": "Planète de lave",
+  "SUPER_JOVIAN": "Super jovienne",
+  "SOLID_MASSIVE_PLANET": "Planète solide massive",
+  "CARBON_PLANET": "Planète de carbone",
+  "FROZEN_PLANET": "Planète glacée",
+  "MEGA_HABITABLE_PLANET": "Planète mega habitable"
+}

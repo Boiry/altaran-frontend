@@ -16,7 +16,7 @@
   &-navigation {
     position: absolute;
     width: 25rem;
-    top: 2rem;
+    top: 4rem;
     text-align: center;
     left: calc(50% - 12rem);
   }
@@ -41,7 +41,7 @@
     position: absolute;
     background: vars.$light-blue;
     border: 1px solid vars.$neon;
-    top: 50vh;
+    top: 1rem;
     width: 18rem;
     left: calc(50% - 9rem);
     padding: .5rem;

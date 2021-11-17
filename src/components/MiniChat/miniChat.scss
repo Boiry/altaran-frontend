@@ -3,9 +3,9 @@
 .minichat {
   background-color: rgba(93, 186, 224, .2);
   position: absolute;
-  width: 17vw;
-  height: 45vh;
-  margin: 1rem;
+  width: 17%;
+  height: 20rem;
+  margin: 0 1rem;
   right: 0;
   bottom: 0;
 
@@ -28,9 +28,9 @@
 
   &-content {
     position: relative;
-    height: 35vh;
-    width: 17vw;
-    padding: .5rem;
+    height: 16rem;
+    width: calc(100% - 1rem);
+    margin: .5rem;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: vars.$neon transparent;
@@ -39,7 +39,7 @@
   &-field {
     background-color: vars.$field-background;
     position: absolute;
-    width: 16vw;
+    width: 94%;
     height: 2rem;
     bottom: 0;
     margin: .5rem;

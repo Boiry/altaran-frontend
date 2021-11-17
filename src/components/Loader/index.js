@@ -13,9 +13,10 @@ import Lock8 from 'src/assets/images/lock/lock8.svg';
 import Lock9 from 'src/assets/images/lock/lock9.svg';
 
 
-const Loader = ({ webSocketConnect, webSocketConnected, id, setIsLogged }) => {
+const Loader = ({ webSocketConnect, webSocketConnected, fetchBases, id, setIsLogged }) => {
   const [elapsedTime, setElapsedTime] = useState('');
   useEffect(() => {
+    fetchBases();
     webSocketConnect();
     const timeout = setTimeout(() => {
       setElapsedTime("tooLong");

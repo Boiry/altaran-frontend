@@ -1,4 +1,7 @@
 export const msToDuration = (ms) => {
+  if (ms <= 1000) {
+    return '0m 1s';
+  }
   let days = parseInt(ms / (1000 * 60 * 60 * 24));
   if (days === 0) {days = ""} else {days = `${days}j `};
   let hours = parseInt((ms / (1000 * 60 * 60)) % 24);

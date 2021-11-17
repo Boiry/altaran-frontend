@@ -1,41 +1,33 @@
 import React, { useEffect, memo } from 'react';
 
-import FakeData from '../fakeData.js';
 import './baseSelector.scss';
 
-const BaseSelector = memo(({ handleClick }) => {
-  // Extracting datas from object and put it in arrays
-  let basesId = [];
-  let basesSkin = [];
-  Object.entries(FakeData).forEach(
-    ([key, value]) => {
-      basesId.push(value.id);
-      basesSkin.push(value.skin);
-    }
-  );
+const BaseSelector = memo(({ bases, handleClick }) => {
+  // Formating data
+  let basesArray = [];
+  for (const [key, value] of Object.entries(bases)) {
+      basesArray.push(key);
+  }
 
-  // Making of img components
+  // Create the img elements
   const BasesList = () => (
-    basesId.map((baseId, index) => {
-      const key = baseId;
-      return (
-        <img key={key} src={require("src/assets/images/"+basesSkin[index]+".png").default} className="base-selector-base" onClick={() => {handleClick(baseId)}} />
-      );
-    })
-  );
+    basesArray.map((base) => (
+      <img key={`selector${base}`} src={require("src/assets/images/planet1.png").default} className="base-selector-base" onClick={() => {handleClick(base)}} />
+    ))
+  )
 
   // Effects of hover and click
   useEffect(() => {
     const little = "1.5rem", medium = "2.5rem", big = "3.5rem";
-    let bases = document.getElementsByClassName("base-selector-base");
+    let basesImg = document.getElementsByClassName("base-selector-base");
     const softDescription = document.getElementsByClassName("soft-description")[0];
-    for (let i=0; i<bases.length; i++) {
-      if (bases[i].classList.contains("selected-base")) {
-        bases[i].style.width = big;
+    for (let i=0; i<basesImg.length; i++) {
+      if (basesImg[i].classList.contains("selected-base")) {
+        basesImg[i].style.width = big;
       }
-      bases[i].addEventListener("mouseover", () => {mouseOverBase(bases[i])});
-      bases[i].addEventListener("mouseout", () => {mouseOutBase(bases[i])});
-      bases[i].addEventListener("click", () => {clickOnBase(bases[i])});
+      basesImg[i].addEventListener("mouseover", () => {mouseOverBase(basesImg[i])});
+      basesImg[i].addEventListener("mouseout", () => {mouseOutBase(basesImg[i])});
+      basesImg[i].addEventListener("click", () => {clickOnBase(basesImg[i])});
     }
 
     const mouseOverBase = (base) => {
@@ -45,9 +37,10 @@ const BaseSelector = memo(({ handleClick }) => {
       softDescription.style.top = top+"px";
       softDescription.style.left = left+"px";
       softDescription.style.display = "flow-root";
-      for (let i=0; i<bases.length; i++) {
+      for (let i=0; i<basesImg.length; i++) {
         if (base === document.getElementsByClassName("base-selector-base")[i]) {
-          softDescription.querySelector(".selector-base-name").textContent = "Planète " + (i+1);
+          softDescription.querySelector(".selector-base-name").textContent = bases[`base${i+1}`].name;
+          softDescription.querySelector(".selector-base-coordinates").textContent = "[Coordonnées]";
         }
       }
       const previousElement = base.previousElementSibling;
@@ -76,10 +69,10 @@ const BaseSelector = memo(({ handleClick }) => {
     };
 
     const clickOnBase = (base) => {
-      for (let i=0; i<bases.length; i++) {
-        if (bases[i].classList.contains("selected-base")) {
-          bases[i].classList.remove("selected-base");
-          bases[i].style.width = little;
+      for (let i=0; i<basesImg.length; i++) {
+        if (basesImg[i].classList.contains("selected-base")) {
+          basesImg[i].classList.remove("selected-base");
+          basesImg[i].style.width = little;
         }
       }
       base.classList.add("selected-base");

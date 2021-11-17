@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Tab from 'src/containers/Tab';
 
 import './bases.scss';
-import BaseSelector from './BaseSelector';
+import BaseSelector from 'src/containers/Bases/BaseSelector';
 import Description from './Description';
 import Facilities from 'src/containers/Bases/Facilities';
 import Defenses from './Defenses';
@@ -14,8 +14,6 @@ import Technologies from 'src/containers/Bases/Technologies';
 import Aside from 'src/containers/Bases/Aside';
 
 const Bases = ({ selectedBase, changeSelectedBase }) => {
-  // document.body.style.background = "linear-gradient(30deg, #00152b, #003f66)";
-
   const { t } = useTranslation('bases');
   const [subPage, changeSubPage] = useState("description");
 
@@ -62,8 +60,8 @@ const Bases = ({ selectedBase, changeSelectedBase }) => {
       <Aside />
 
       <div className="soft-description">
-        <p className="selector-base-name">Planète de merde</p>
-        <p className="selector-base-coordinates">(coordonnées)</p>
+        <p className="selector-base-name"></p>
+        <p className="selector-base-coordinates"></p>
       </div>
     </>
   );
