@@ -47,6 +47,10 @@ export default (props) => {
 
   useEffect(() => {
     if (scene) scene.dispose();
+    if (scene && props.starSystemInfo === 'no system') {
+      console.log(scene.cameras)
+      return;
+    }
     if (props.starSystemInfo && engine) {
       const scene = new Scene(engine, sceneOptions);
       setScene(scene);

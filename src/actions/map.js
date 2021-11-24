@@ -9,6 +9,7 @@ export const FETCH_STAR_SYSTEMS = "FETCH_STAR_SYSTEMS";
 export const SAVE_STAR_SYSTEMS_INFO = "SAVE_STAR_SYSTEMS_INFO";
 export const SET_SECTORS_LOADING = "SET_SECTORS_LOADING";
 export const SET_STAR_SYSTEMS_LOADING = "SET_STAR_SYSTEMS_LOADING";
+export const SET_STAR_SYSTEM_LOADING = "SET_STAR_SYSTEM_LOADING";
 export const SAVE_CURRENT_REGION = "SAVE_CURRENT_REGION";
 export const SAVE_CURRENT_SECTOR = "SAVE_CURRENT_SECTOR";
 export const SAVE_CURRENT_STAR_SYSTEM = "SAVE_CURRENT_STAR_SYSTEM";
@@ -75,6 +76,11 @@ export const setSectorsLoading = (loading) => ({
 
 export const setStarSystemsLoading = (loading) => ({
   type: SET_STAR_SYSTEMS_LOADING,
+  loading,
+});
+
+export const setStarSystemLoading = (loading) => ({
+  type: SET_STAR_SYSTEM_LOADING,
   loading,
 });
 

@@ -16,8 +16,8 @@
   position: relative;
   // background-image: url("../../../assets/images/universe1.jpg");
   // background-size: cover;
-  width: 60vw;
-  height: 70vh;
+  width: 100%;
+  height: 39rem;
   top: 1rem;
   margin: 0 auto;
   overflow: hidden;
@@ -27,7 +27,7 @@
     position: absolute;
     background: vars.$field-background;
     width: 18rem;
-    top: calc(100vh * (2 / 3));
+    top: calc(100% * (2 / 3));
     left: calc(50% - 9rem);
     color: white;
     text-align: center;

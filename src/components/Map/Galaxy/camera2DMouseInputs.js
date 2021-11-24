@@ -27,8 +27,9 @@ Camera2DKeyboardInputs.prototype.attachControl = function(noPreventDefault) {
     if (this._mouse === "down") {
       const offsetX = this._mousePrevX - e.clientX;
       const offsetY = this._mousePrevY - e.clientY;
-      camera.position.x += offsetX;
-      camera.position.z += offsetY;
+      const modifier = Math.pow(10, Math.abs(camera.position.y) / 10000);
+      camera.position.x += offsetX * modifier;
+      camera.position.z += offsetY * modifier;
       camera.setTarget(new Vector3(camera.position.x, 0, camera.position.z));
       this._mousePrevX = e.clientX;
       this._mousePrevY = e.clientY;
@@ -40,7 +41,9 @@ Camera2DKeyboardInputs.prototype.attachControl = function(noPreventDefault) {
   }
 
   this._onWheel = (e) => {
-    camera.position.y -= e.deltaY;
+    let modifier = Math.pow(100, Math.abs(camera.position.y) / 10000);
+    if (modifier >= 200) modifier = 200;
+    camera.position.y -= e.deltaY * modifier;
   }
 
   element.addEventListener("pointerdown", this._onMouseDown);

@@ -360,6 +360,6 @@ export const lastAnimation = function () {
     document.getElementsByClassName("header")[0].style.display = "none";
     document.getElementsByClassName("article")[0].style.display = "none";
     document.body.style.background = "black";
-
+    document.getElementsByClassName("home-construction")[0].style.display = "none";
   }, 1000);
 }

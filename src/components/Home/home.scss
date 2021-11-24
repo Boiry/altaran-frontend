@@ -26,8 +26,8 @@ body {
   position: absolute;
   width: 30rem;
   height: 30rem;
-  top: calc(100vh / 2 - 15rem);
-  left: calc(100vw / 2 - 15rem);
+  top: calc(50% - 15rem);
+  left: calc(50% - 15rem);
   visibility: hidden;
   filter: drop-shadow(0 0 30px white);
 }
@@ -208,8 +208,7 @@ body {
   top : 2rem;
   text-align: center;
   &-image {
-    width: 40vw;
-    
+    width: 40%;
   }
 }
 

@@ -39,7 +39,7 @@ export default (props) => {
       setScene(scene);
 
       document.getElementById("canvas").focus();
-      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -3000, 0), scene);
+      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -12000, 0), scene);
       setCamera(camera);
       scene.addCamera(camera);
       if (cameraPosition) {
@@ -77,8 +77,6 @@ export default (props) => {
       camera.maxZ = 20000
       camera.setTarget(new Vector3(camera.position.x, 0, camera.position.z));
       camera.inertia = 0;
-      camera.speed = 10;
-      camera.fov = 0.8;
 
       // Disable default menu from right click
       document.oncontextmenu = function() { return false };
@@ -141,6 +139,7 @@ export default (props) => {
   // ============== FILTERS ===============
   let selectedStars = useRef([]);
   let otherStars = useRef([]);
+  const starSize = 20;
   useEffect(() => {
     selectedStars.current = [];
     otherStars.current = [];
@@ -195,13 +194,12 @@ export default (props) => {
       for (let i=1; i<=50; i++) {
         nbStars += stars[`r${i}`].length;
       }
-      spriteManager = new SpriteManager("starsManager", basicStar, nbStars, {width: 50, height: 50});
+      spriteManager = new SpriteManager("starsManager", basicStar, nbStars, 50);
       spriteManager.isPickable = true;
       for (let i=1; i<=50; i++) {
         for (let j=0, length=stars[`r${i}`].length; j<length; j++) {
           const star = new Sprite(("star"), spriteManager);
-          star.width = 2;
-          star.height = 2;
+          star.size = starSize;
           star.position.x = stars[`r${i}`][j].x;
           star.position.y = stars[`r${i}`][j].y - 2000;
           star.position.z = stars[`r${i}`][j].z;
@@ -214,12 +212,11 @@ export default (props) => {
 
     // With filter
     } else if (highlight) {
-      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selectedStars.current.length, {width: 50, height: 50});
+      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selectedStars.current.length, 50);
       highlightSpriteManager.isPickable = true;
       for (let i=0, length=selectedStars.current.length; i<length; i++) {
         const star = new Sprite(("star"), highlightSpriteManager);
-        star.width = 2;
-        star.height = 2;
+        star.size = starSize;
         star.position.x = selectedStars.current[i].x;
         star.position.y = selectedStars.current[i].y - 2000;
         star.position.z = selectedStars.current[i].z;
@@ -228,12 +225,11 @@ export default (props) => {
         star.sector = selectedStars.current[i].sector_num;
         star.system = selectedStars.current[i].system_num;
       }
-      spriteManager = new SpriteManager("starsManager", basicStar, otherStars.current.length, {width: 50, height: 50});
+      spriteManager = new SpriteManager("starsManager", basicStar, otherStars.current.length, 50);
       spriteManager.isPickable = true;
       for (let i=0, length=otherStars.current.length; i<length; i++) {
           const star = new Sprite(("star"), spriteManager);
-          star.width = 2;
-          star.height = 2;
+          star.size = starSize;
           star.position.x = otherStars.current[i].x;
           star.position.y = otherStars.current[i].y - 2000;
           star.position.z = otherStars.current[i].z;
@@ -243,12 +239,11 @@ export default (props) => {
           star.system = otherStars.current[i].system_num;
       }
     } else if (isolate) {
-      spriteManager = new SpriteManager("starsManager", basicStar, selectedStars.current.length, {width: 50, height: 50});
+      spriteManager = new SpriteManager("starsManager", basicStar, selectedStars.current.length, 50);
       spriteManager.isPickable = true;
       for (let i=0, length=selectedStars.current.length; i<length; i++) {
         const star = new Sprite(("star"), spriteManager);
-        star.width = 2;
-        star.height = 2;
+        star.size = starSize;
         star.position.x = selectedStars.current[i].x;
         star.position.y = selectedStars.current[i].y - 2000;
         star.position.z = selectedStars.current[i].z;
@@ -275,7 +270,6 @@ export default (props) => {
         let minX = selectedStars.current[0].x;
         let maxX = selectedStars.current[0].x;
         let minY = selectedStars.current[0].y;
-        let maxY = selectedStars.current[0].y;
         let minZ = selectedStars.current[0].z;
         let maxZ = selectedStars.current[0].z;
         for (let i=1; i<selectedStars.current.length; i++) {
@@ -283,23 +277,30 @@ export default (props) => {
           if (star.x < minX) minX = star.x;
           if (star.x > maxX) maxX = star.x;
           if (star.y < minY) minY = star.y;
-          if (star.y > maxY) maxY = star.y;
           if (star.z < minZ) minZ = star.z;
           if (star.z > maxZ) maxZ = star.z;
         }
         x = (minX + maxX) / 2;
         z = (minZ + maxZ) / 2;
-        let offSetY;
-        if ((maxX - minX) < (maxZ - minZ)) {
-          offSetY = maxZ - minZ;
+
+        const canvas = document.querySelector("#canvas");
+        const width = canvas.width;
+        const height = canvas.height;
+        const xFOV = camera.fov * (180 / Math.PI);
+        const zFOV = xFOV * (height / width);
+
+        const y1 = (x - minX + 1500) / Math.tan(xFOV / 2);
+        const y2 = (z - minZ + 1500) / Math.tan(zFOV / 2);
+        if (y1 > y2) {
+          y = minY - y1 - 2000;
         } else {
-          offSetY = maxX - minX;
+          y = minY - y2 - 2000;
         }
-        y = ((minY + maxY) / 2) - offSetY - 2000;
+
       } else {
         const star = selectedStars.current[0];
         x = star.x;
-        y = star.y - 2000 - 30;
+        y = star.y - 2500;
         z = star.z;
       }
       // Animation of the camera

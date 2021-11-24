@@ -17,5 +17,7 @@
   "SOLID_MASSIVE_PLANET": "Planète solide massive",
   "CARBON_PLANET": "Planète de carbone",
   "FROZEN_PLANET": "Planète glacée",
-  "MEGA_HABITABLE_PLANET": "Planète mega habitable"
+  "MEGA_HABITABLE_PLANET": "Planète mega habitable",
+  "no system": "Ce système n'existe pas.",
+  "loading": "Chargement..."
 }

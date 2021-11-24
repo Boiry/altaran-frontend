@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Field from '../Field';
 import EntityInfo from './EntityInfo';
@@ -14,17 +15,17 @@ const StarSystem = ({
   region,
   sector,
   starSystem,
-  starSystemName,
   changeField, 
-  launchFetchStarSystem,
-  launchFetchRegions,
+  fetchStarSystem,
+  fetchRegions,
   regionsInfo,
-  launchFetchSectors,
+  fetchSectors,
   sectorsInfo,
-  launchFetchStarSystems,
+  fetchStarSystems,
   starSystemsInfo,
   sectorsAreLoading,
   starSystemsAreLoading,
+  starSystemIsLoading,
   setCurrentRegion,
   currentRegion,
   setCurrentSector,
@@ -33,33 +34,50 @@ const StarSystem = ({
   currentStarSystem,
   starSystemInfo,
 }) => {
+  const { t } = useTranslation('map');
 
   // ================== HANDLE OF INPUTS ==================
 
   const systemName = useRef();
+  const [starSystemName, setStarSystemName] = useState('');
   const list = useRef();
   const [go, letsGo] = useState(false);
   const [findLastSector, doFindLastSector] = useState(false);
   const [findLastSystem, doFindLastSystem] = useState(false);
 
+  // Fetch star system infos on go
   useEffect(() => {
-    if (sectorsInfo && starSystemsInfo && go) {
-      if (region > 0 && region < 51 &&
-        sector > 0 && sector <= sectorsInfo.length &&
-        starSystem > 0 && starSystem <= starSystemsInfo.length
-        ) {
-        launchFetchStarSystem(region, sector, starSystem);
-        setCurrentRegion(region);
-        setCurrentSector(sector);
-        setCurrentStarSystem(starSystem);
-        letsGo(false);    
+    if (go) {
+      fetchStarSystem(region, sector, starSystem);
+      setCurrentRegion(region);
+      setCurrentSector(sector);
+      setCurrentStarSystem(starSystem);
+      letsGo(false);    
+    }
+  }, [go]);
+
+  // When loading
+  useEffect(() => {
+    if (systemName.current) {
+      if (starSystemIsLoading) {
+        systemName.current.style.fontStyle = "italic";
+        setStarSystemName(t("loading"));
       } else {
-        systemName.current.textContent = "Ce système n'existe pas.";
-        letsGo(false);
+        systemName.current.style.fontStyle = "normal";
       }
     }
-  });
+  }, [starSystemIsLoading]);
 
+  // If the coordinates are wrong
+  useEffect(() => {
+    if (starSystemInfo !== 'no system') {
+      setStarSystemName(starSystemInfo.name);
+    } else {
+      setStarSystemName(t("no system"));
+    }
+  }, [starSystemInfo]);
+
+  // Handle changes of coordinates when navigating
   useEffect(() => {
     if (findLastSystem && !starSystemsAreLoading) {
       changeField(starSystemsInfo.length, 'starSystem');
@@ -69,34 +87,21 @@ const StarSystem = ({
     if (findLastSector && !sectorsAreLoading) {
       changeField(region - 1, 'region');
       changeField(sectorsInfo.length, 'sector');
-      launchFetchStarSystems(region - 1, sectorsInfo.length);
+      fetchStarSystems(region - 1, sectorsInfo.length);
       doFindLastSystem(true);
       doFindLastSector(false);
     }
   })
-
-  // Display the loading message
-  useEffect(() => {
-    if (systemName.current) {
-      if (go === true && starSystem) {
-        systemName.current.textContent = "Chargement...";
-        systemName.current.style.fontStyle = "italic";
-      }
-      if (go === false) {
-        systemName.current.style.fontStyle = "normal";
-      }
-    }
-  }, [go])
 
   // Handle Return
   const handleSubmit = (e) => {
     e.preventDefault();
     if (region && sector && starSystem) {
       if (region !== currentRegion) {
-        launchFetchSectors(region);
+        fetchSectors(region);
       }
       if (sector !== currentSector) {
-        launchFetchStarSystems(region, sector);
+        fetchStarSystems(region, sector);
       }
       if (currentRegion !== region || currentSector !== sector || currentStarSystem !== starSystem) {
         letsGo(true);
@@ -113,11 +118,11 @@ const StarSystem = ({
             changeField(starSystem - 1, 'starSystem');
             letsGo(true);
           } else if (sector > 1) {
-            launchFetchStarSystems(region, sector - 1);
+            fetchStarSystems(region, sector - 1);
             changeField(sector - 1, 'sector');
             doFindLastSystem(true);
           } else if (region > 1) {
-            launchFetchSectors(region - 1);
+            fetchSectors(region - 1);
             doFindLastSector(true);
           }
           break;
@@ -126,12 +131,12 @@ const StarSystem = ({
             changeField(parseInt(starSystem) + 1, 'starSystem');
             letsGo(true);
           } else if (sector < sectorsInfo.length) {
-            launchFetchStarSystems(region, parseInt(sector) + 1);
+            fetchStarSystems(region, parseInt(sector) + 1);
             changeField(1, 'starSystem');
             changeField(parseInt(sector) + 1, 'sector');
             letsGo(true);
           } else if (region < 50) {
-            launchFetchStarSystems(parseInt(region) + 1, 1);
+            fetchStarSystems(parseInt(region) + 1, 1);
             changeField(parseInt(region) + 1, 'region');
             changeField(1, 'sector');
             changeField(1, 'starSystem');
@@ -159,11 +164,11 @@ const StarSystem = ({
   // Automatically display star system when component mounts
   useEffect(() => {
     if (region && sector && starSystem) {
-      if (!sectorsInfo) launchFetchSectors(region);
-      if (!starSystemsInfo) launchFetchStarSystems(region, sector);
+      if (!sectorsInfo) fetchSectors(region);
+      if (!starSystemsInfo) fetchStarSystems(region, sector);
       letsGo(true);
     }
-    launchFetchRegions();
+    fetchRegions();
   }, [])
 
 
@@ -181,17 +186,13 @@ const StarSystem = ({
         }
         break;
       case 'sector':
-        if (sectorsInfo) {
+        if (regionsInfo && sectorsInfo) {
           infos = sectorsInfo;
-        } else {
-          infos = null;
         }
         break;
       case 'starSystem':
-        if (starSystemsInfo) {
+        if (regionsInfo && sectorsInfo && starSystemsInfo) {
           infos = starSystemsInfo;
-        } else {
-          infos = null;
         }
         break;
     }
@@ -224,15 +225,19 @@ const StarSystem = ({
     hideList();
     changeField(item, field);
     let system;
-    if (field === 'region') {
-      launchFetchSectors(item);
-      changeField('', 'sector');
-      changeField('', 'starSystem');
-    } else if (field === 'sector') {
-      launchFetchStarSystems(region, item);
-      changeField('', 'starSystem');
-    } else if (field === 'starSystem') {
-      system = item;
+    switch (field) {
+      case 'region':
+        fetchSectors(item);
+        changeField('', 'sector');
+        changeField('', 'starSystem');
+        break;
+      case 'sector':
+        fetchStarSystems(region, item);
+        changeField('', 'starSystem');
+        break;
+      case 'starSystem':
+        system = item;
+        break;
     }
     if (region && sector && system) {
       letsGo(true);
@@ -244,6 +249,13 @@ const StarSystem = ({
   const showEntityInfo = (id, name, type) => {
     setEntityInfos({...entityInfos, id, name, type});
   }
+
+  // Hide entities infos when changing star system
+  useEffect(() => {
+    if (go) {
+      setEntityInfos({...entityInfos, id: '', name: '', type: ''});
+    }
+  }, [go]);
 
   return (
     <div className="star-system">

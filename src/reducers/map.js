@@ -6,6 +6,7 @@ import {
   SAVE_STAR_SYSTEMS_INFO,
   SET_SECTORS_LOADING,
   SET_STAR_SYSTEMS_LOADING,
+  SET_STAR_SYSTEM_LOADING,
   SAVE_CURRENT_REGION,
   SAVE_CURRENT_SECTOR,
   SAVE_CURRENT_STAR_SYSTEM,
@@ -28,6 +29,7 @@ const initialState = {
   starSystemsInfo: '',
   sectorsAreLoading: 'false',
   starSystemsAreLoading: 'false',
+  starSystemIsLoading: 'false',
   currentRegion: '',
   currentSector: '',
   currentStarSystem: '',
@@ -77,6 +79,11 @@ const map = (state = initialState, action = {}) => {
       return {
         ...state,
         starSystemsAreLoading: action.loading,
+      };
+    case SET_STAR_SYSTEM_LOADING:
+      return {
+        ...state,
+        starSystemIsLoading: action.loading,
       };
     case SAVE_CURRENT_REGION:
       return {

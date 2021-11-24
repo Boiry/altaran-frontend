@@ -23,6 +23,7 @@ const mapStateToProps = (state) => ({
   starSystemsInfo: state.map.starSystemsInfo,
   sectorsAreLoading: state.map.sectorsAreLoading,
   starSystemsAreLoading: state.map.starSystemsAreLoading,
+  starSystemIsLoading: state.map.starSystemIsLoading,
   currentRegion: state.map.currentRegion,
   currentSector: state.map.currentSector,
   currentStarSystem: state.map.currentStarSystem,
@@ -33,16 +34,16 @@ const mapDispatchToProps = (dispatch) => ({
   changeField: (newValue, name) => {
     dispatch(updateCoordinatesField(newValue, name));
   },
-  launchFetchStarSystem: (region, sector, starSystem) => {
+  fetchStarSystem: (region, sector, starSystem) => {
     dispatch(fetchStarSystem(region, sector, starSystem));
   },
-  launchFetchRegions: () => {
+  fetchRegions: () => {
     dispatch(fetchRegions());
   },
-  launchFetchSectors: (region) => {
+  fetchSectors: (region) => {
     dispatch(fetchSectors(region));
   },
-  launchFetchStarSystems: (region, sector) => {
+  fetchStarSystems: (region, sector) => {
     dispatch(fetchStarSystems(region, sector));
   },
   setCurrentRegion: (region) => {

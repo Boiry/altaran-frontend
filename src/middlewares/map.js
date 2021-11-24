@@ -11,6 +11,7 @@ import {
   saveStarSystemsInfo,
   setSectorsLoading,
   setStarSystemsLoading,
+  setStarSystemLoading,
 } from '../actions/map';
 
 let token, authorization;
@@ -28,12 +29,16 @@ const mapMiddleware = (store) => (next) => (action) => {
       const region = action.region;
       const sector = action.sector;
       const starSystem = action.starSystem;
+      store.dispatch(setStarSystemLoading(true));
       axios.get(`${process.env.API_URL}api/exploration/regions/${region}/sectors/${sector}/starsystems/${starSystem}`, authorization)
       .then((response) => {
         store.dispatch(saveStarSystemInfo(response.data));
       })
       .catch((error) => {
-        store.dispatch(saveStarSystemInfo("Ce système n'existe pas"));
+        store.dispatch(saveStarSystemInfo("no system"));
+      })
+      .finally(() => {
+        store.dispatch(setStarSystemLoading(false));
       });
       next(action);
       break;

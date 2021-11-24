@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 
 import { setPage } from 'src/utils/router';
 
+import './loader.scss';
+
 import Lock1 from 'src/assets/images/lock/lock1.svg';
 import Lock2 from 'src/assets/images/lock/lock2.svg';
 import Lock3 from 'src/assets/images/lock/lock3.svg';
