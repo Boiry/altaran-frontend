@@ -14,10 +14,16 @@ body {
   opacity: 0;
 }
 
+.navigation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .lock {
-  position: relative;
-  width: 15rem;
-  height: 15rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -173,7 +179,7 @@ body {
 }
 
 .title {
-  position: absolute;
+  position: relative;
   visibility: hidden;
   width: 46rem;
   top: 3rem;
@@ -185,7 +191,7 @@ body {
 }
 
 .baseline {
-  position: absolute;
+  position: relative;
   visibility: hidden;
   background-image: url(../../assets/images/background.svg);
   background-size: cover;
@@ -205,7 +211,7 @@ body {
 
 .home-construction {
   position: relative;
-  top : 2rem;
+  top: 8rem;
   text-align: center;
   &-image {
     width: 40%;
@@ -217,7 +223,7 @@ body {
   visibility: hidden;
   background-image: url(../../assets/images/background.svg);
   background-size: cover;
-  top: 3rem;
+  top: 10rem;
   margin: 0 auto;
   padding: 2rem;
   text-align: justify;

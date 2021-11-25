@@ -135,7 +135,7 @@ const Facilities = ({
     }
   }
   if (!currentFacility && displayedImage.current) {
-    displayedImage.current.src = '';
+    displayedImage.current.src = Empty;
     titleDiv.current.textContent = '';
   }
 

@@ -27,10 +27,13 @@ Camera2DKeyboardInputs.prototype.attachControl = function(noPreventDefault) {
     if (this._mouse === "down") {
       const offsetX = this._mousePrevX - e.clientX;
       const offsetY = this._mousePrevY - e.clientY;
-      const modifier = Math.pow(10, Math.abs(camera.position.y) / 10000);
-      camera.position.x += offsetX * modifier;
-      camera.position.z += offsetY * modifier;
-      camera.setTarget(new Vector3(camera.position.x, 0, camera.position.z));
+      if (e.buttons === 1) {
+        const modifier = Math.pow(10, Math.abs(camera.position.y) / 10000);
+        camera.position.x += offsetX * modifier;
+        camera.position.z += offsetY * modifier;
+      } else if (e.buttons === 2) {
+        // If we want rotation...
+      }
       this._mousePrevX = e.clientX;
       this._mousePrevY = e.clientY;
     }

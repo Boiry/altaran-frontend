@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Engine, Scene, Color4, UniversalCamera, Animation, FreeCameraInputsManager, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial } from "@babylonjs/core";
+import { Engine, Scene, Color4, UniversalCamera, Animation, FreeCameraInputsManager, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, HemisphericLight, MeshBuilder, GlowLayer, Color3, StandardMaterial, Vector2 } from "@babylonjs/core";
 
 import Camera2DKeyboardInputs from "./camera2DKeyboardInputs";
 import Camera2DMouseInputs from './camera2DMouseInputs';
@@ -39,7 +39,7 @@ export default (props) => {
       setScene(scene);
 
       document.getElementById("canvas").focus();
-      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -12000, 0), scene);
+      const camera = new UniversalCamera("UniversalCamera", new Vector3(0, -7500, 0), scene);
       setCamera(camera);
       scene.addCamera(camera);
       if (cameraPosition) {
@@ -139,7 +139,7 @@ export default (props) => {
   // ============== FILTERS ===============
   let selectedStars = useRef([]);
   let otherStars = useRef([]);
-  const starSize = 20;
+  const starSize = 5;
   useEffect(() => {
     selectedStars.current = [];
     otherStars.current = [];
