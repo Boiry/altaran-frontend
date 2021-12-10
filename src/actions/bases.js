@@ -12,6 +12,7 @@ export const FETCH_FACILITIES_UPGRADES = "FETCH_FACILITIES_UPGRADES";
 export const SAVE_FACILITIES_UPGRADES = "SAVE_FACILITIES_UPGRADES";
 export const ADD_FACILITY_UPGRADE = "ADD_FACILITY_UPGRADE";
 export const REMOVE_FACILITY_UPGRADE = "REMOVE_FACILITY_UPGRADE";
+export const LOADING = "LOADING";
 
 export const FETCH_TECHNOLOGIES = "FETCH_TECHNOLOGIES";
 export const SAVE_TECHNOLOGIES_INFO = "SAVE_TECHNOLOGIES_INFO";
@@ -99,6 +100,11 @@ export const removeFacilityUpgrade = (baseId, facility) => ({
   baseId,
   facility,
 });
+
+export const loading = (isLoading) => ({
+  type: LOADING,
+  isLoading,
+})
 
 export const fetchTechnologies = () => ({
   type: FETCH_TECHNOLOGIES,

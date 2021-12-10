@@ -6,6 +6,7 @@ import {
   CHANGE_CURRENT_FACILITY,
   SAVE_CURRENT_FACILITY,
   SAVE_FACILITIES_UPGRADES,
+  LOADING,
   SAVE_TECHNOLOGIES_INFO,
   CHANGE_CURRENT_TECHNOLOGY,
   SAVE_TECHNOLOGIES_UPDATES_INFO,
@@ -14,7 +15,7 @@ import {
 
 const initialState = {
   selectedBase: 'base1',
-
+  loading: false,
 };
 
 const bases = (state = initialState, action = {}) => {
@@ -65,7 +66,7 @@ const bases = (state = initialState, action = {}) => {
           ...state[action.base],
           nextLevelCost: action.facility,
         }
-      }
+      };
     case SAVE_FACILITIES_UPGRADES:
       return {
         ...state,
@@ -73,6 +74,11 @@ const bases = (state = initialState, action = {}) => {
           ...state[action.base],
           upgrades: action.upgrades,
         }
+      };
+    case LOADING:
+      return {
+        ...state,
+        loading: action.isLoading,
       };
     case SAVE_TECHNOLOGIES_INFO:
       return {

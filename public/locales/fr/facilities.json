@@ -1,38 +1,173 @@
 {
-  "MINING_INDUSTRY": "Industrie minière",
-  "GEOTHERMAL_POWER_PLANT": "Centrale géothermique",
-  "FUSION_POWER_PLANT": "Centrale à fusion",
-  "CORE_CATALYST": "Catalyseur du noyau",
-  "STEEL_COMPLEX": "Complexe sidérurgique",
-  "PARTICLE_ACCELERATOR": "Accélérateur de particule",
-  "DARKMATTER_COLLECTOR": "Collecteur de matière noire",
-  "FINANCIAL_CENTER": "Centre financier",
-  "MEGALOPOLIS": "Mégalopole",
-  "RARE_RESOURCE_EXTRACTOR": "Extracteur de ressource rare",
-  "INTELLIGENCE_AGENCY": "Agence de renseignement",
-  "DEVELOPMENT_INSTITUTE": "Institut de développement",
-  "POLITICAL_INSTITUTION": "Institution politique",
-  "MONUMENT": "Monument",
-  "ROBOTISATION": "Robotisation",
-  "CENTRAL_SERVER": "Serveur central",
-  "ORBITAL_SITE": "Chantier orbital",
-  "UNIVERSITY": "Université",
-  "GARRISON": "Garnison",
-  "REPAIR_CENTER": "Centre de réparation",
-  "DARK_MATTER_CONCENTRATOR": "Concentrateur de matière noire",
-  "ORBITAL_CITY": "Cité orbitale",
-  "CORE_STABILIZER": "Stabilisateur du noyau",
-  "ZONE_52": "Zone 52",
+  "MINING_INDUSTRY": {
+    "name": "Industrie minière",
+    "shortDescription": "Ce bâtiment exploite les matières métalliques présentes sur la position. Chaque augmentation améliore la production de 5%.",
+    "longDescription": "La production de cette structure peut être affectée par plusieurs facteurs : la présence du métal sur la position, la technologie géophysique, le bâtiment serveur mère, les différents âges et la complexité d'exploitation dans le cas de l'exploitation d'un système stellaire.",
+    "rolePlay": "Je me souviens encore l'azur du ciel surplombant la ville. Il était pur et la lumière des étoiles l'éclairait de mille feux. Mais l'expansion spatiale nécessite d'énormes ressources minières et une ombre grandissante vint peu à peu cacher ces merveilles. Bientôt les machines et les bâtiments devinrent si grands que l'ombre recouvrit la ville entière d'un voile opaque.",
+    "author": "Un citoyen de Hirinor."
+  },
+  "GEOTHERMAL_POWER_PLANT": {
+    "name": "Centrale géothermique",
+    "shortDescription": "Cette construction produit de l'énergie en faible quantité pour la planète. L'amélioration du centre le rend plus efficace de 2% supplémentaire pour chaque niveau.",
+    "longDescription": "On peut produire de l'énergie de trois manières différentes sur une position colonisable. Chacune d'entre elles a sa particularité, mais toutes servent le même objectif : alimenter les bâtiments présents et autres structures nécessitant de l'énergie pour fonctionner. La production de cette structure peut être affectée par plusieurs facteurs : les technologies telles que l'énergie et le bâtiment serveur mère.",
+    "rolePlay": "La terre est source d'abondance, seul un fou n'exploiterait pas toutes ces richesses qui lui sont offertes."
+  },
+  "FUSION_POWER_PLANT": {
+    "name": "Centrale à fusion",
+    "shortDescription": "La centrale à fusion est le système de production d'énergie le plus fiable. Elle produit une quantité modérée et chaque niveau augmente de 5% son efficacité.",
+    "longDescription": "On peut produire de l'énergie de trois manières différentes sur une position colonisable. Chacune d'entre elles a sa particularité, mais toutes servent le même objectif : alimenter les bâtiments présents et autres structures nécessitant de l'énergie pour fonctionner. La production de cette structure peut être affectée par plusieurs facteurs : les technologies telles que l'énergie et le bâtiment serveur mère.",
+    "rolePlay": "Je me rappelle cet acharnement pour stabiliser le plasma. Et la pression que les habitants de la planète exerçaient sur nous, conscients qu'ils étaient de la chute imminente de notre civilisation en cas d'échec. Tous les scientifiques travaillaient jusqu'à l'épuisement... Puis un jour, une lueur vint éclairer le centre. Elle était parfois douce, parfois forte. Le champ magnétique fonctionnait enfin. Ainsi avons-nous obtenu une source d'énergie suffisante pour éviter notre extinction.",
+    "author": "Reivax B., scientifique d'un ancien temps"
+  },
+  "CORE_CATALYST": {
+    "name": "Catalyseur du noyau",
+    "shortDescription": "Mégaconstruction exploitant une quantité d'énergie colossale provenant du centre de la planète : le noyau. La production est particulièrement élevée, mais certains risques y sont associés. Chaque niveau augmente sa production de 25%.",
+    "longDescription": "Le catalyseur du noyau produit massivement de l'énergie, cependant vous avez des risques de sabotage pouvant compromettre la sécurité de votre planète. Assurez-vous avant de construire cette structure de disposer d'un solide arsenal de contre-espionnage. L'énergie est une source cruciale pour tous les empires, elle permet d'alimenter les bâtiments et autres structures nécessitant de l'énergie pour fonctionner. La production de cette structure peut être affectée par plusieurs facteurs : les technologies telles que l'énergie et le bâtiment serveur mère.",
+    "rolePlay": "Le coeur d'une planète est un joyau inestimable. Un tel bijou ne peut rester enfoui et caché, il doit être sublimé ! La matière rare doit être travaillée pour la rendre plus éclatante encore ! Alors creusons et taillons ce noyau pour en révéler toute la splendeur (et accessoirement pour en extraire sa formidable énergie) !",
+    "author": "Nilan, célèbre promoteur dans la construction de structure énergétique."
+  },
+  "STEEL_COMPLEX": {
+    "name": "Complexe sidérurgique",
+    "shortDescription": "L'usine de transformation métallurgique permet de transformer le simple métal en un alliage métallique plus résistant en échange d'une quantité d'énergie. L'augmentation du niveau du complexe permet de transformer une certaine quantité de métal ordinaire en un alliage, soit 30% supplémentaire à chaque niveau. De plus, le complexe peut transformer l'alliage en métal simple.",
+    "longDescription": "Il existe trois métaux différents : le métal, l'alliage et l'alliage expérimental. L'alliage permet lors de la construction d'un vaisseau de donner certains bonus. Il existe une quantité considérable d'alliages différents dont vous pourrez exploiter les attributs pour former la flotte la plus efficace selon vos désirs. Il est possible d'augmenter la production via la technologie d'alliage, le bâtiment serveur mère et les différentes âges.",
+    "rolePlay": "Notre mandat était simple mais incroyablement difficile : nous devions découvrir le métal le plus résistant n'ayant jamais existé. Durant des centaines d'années nos prédécesseurs avaient travaillé en vain dans ce but. Les complexes sidérurgiques s'étaient multipliés et les immenses panaches de fumée avaient fini de cacher le ciel. Malgré nos échecs, nous devions trouver une solution pour rendre notre flotte plus efficace et à force de détermination et d'un travail acharné nous y sommes finalement parvenus. Notre erreur était de penser qu'un unique alliage répondait à la problématique. Or il faut savoir adapter la matière à l'objectif du moment. C'est ainsi qu'en lieu et place d'un alliage, plusieurs furent découverts.",
+    "author": "Un ancien patron d'un des plus grands complexes sidérurgiques de l'Empire Valikma."
+  },
+  "PARTICLE_ACCELERATOR": {
+    "name": "Accélérateur de particules",
+    "shortDescription": "L'accélérateur de particules est la mégastructure permettant de développer et de produire de l'antimatière. L'amélioration du complexe augmente l'apport en antimatière de 10% pour chaque niveau supplémentaire.",
+    "longDescription": "L'accélérateur de particules est le seul et unique moyen d'obtenir de l'antimatière. Cette ressource est particulièrement utile pour les technologies avancées, vaisseau mère et xenomorphe. Elle est l'une des ressources les plus rares d'Altaran. La production est affectée par la technologie Transmutation métallique, bâtiment serveur mère et les différents âges.",
+    "rolePlay": "Il fut un temps, très lointain et barbare où l'on condamnait les gens à mort en les incrustant dans le tuyau d'un accélérateur de particules. Il paraît que la mort était indolore.",
+    "author": "Kortos, ancien empereur connu pour sa tyrannie sanguinaire, voulant restaurer la peine."
+  },
+  "DARKMATTER_COLLECTOR": {
+    "name": "Collecteur de matière noire",
+    "shortDescription": "Structure complexe permettant de produire la ressource la plus rare du jeu : la matière noire. Chaque niveau augmente de 5% la capacité de captation de la matière.",
+    "longDescription": "La production de cette structure peut être affectée par plusieurs facteurs : la technologie matière noire, le bâtiment serveur mère et les différents âges.",
+    "rolePlay": "Le jour où l'on comprendra entièrement les capacités de la matière noire nous serons capable de voyager à travers les dimensions.",
+    "author": "Extrait du discours de Terrisa Erim lors du premier congrès galactique sur les sciences du futur."
+  },
+  "FINANCIAL_CENTER": {
+    "name": "Centre financier",
+    "shortDescription": "Les complexes financiers augmentent l'indice de la valeur de votre économie et augmente la valeur de votre production monétaire. Chaque niveau augmente de X points l'indice et de 5% votre production monétaire.",
+    "longDescription": "Le valik est l'une des ressources les plus utilisées à travers tout l'empire. L'indice est un facteur permettant d'augmenter la valeur de votre économie auprès des marchés. Un indice élevé entraîne une meilleure rémunération passive, mais moins d'investissements contrairement à un indice faible qui amène beaucoup d'investissements et peu de rémunération quotidienne. Chaque niveau permet d'augmenter votre production quotidienne de valik.",
+    "rolePlay": "Tu vois cet immeuble ? Il a été construit par Ugom Corp. Cette ville, ces routes et la nourriture que tu manges ont été fabriqué par Ugom. Même ta conception est l'oeuvre d'Ugom. Alors la prochaine fois que je t'entends critiquer Ugom Corp., je te promets que je te jette dehors.",
+    "author": "Cadre de la société Ugom Corp. parlant à son jeune fils."
+  },
+  "MEGALOPOLIS": {
+    "name": "Mégalopole",
+    "shortDescription": "La croissance de la population dépend du niveau de cette structure. L'augmentation de la mégalopole permet d'augmenter la reproduction de 40% pour chaque niveau.",
+    "longDescription": "La population est un facteur limiteur et une ressource fragile en temps de guerre. Elle affecte plusieurs choses : l'âge d'or, le bonheur et la capacité de flotte de votre empire. Les ressources de luxe sont liées uniquement à la population.",
+    "rolePlay": "Pour supporter l'expansion urbaine nous avons érigé des cités colossales. Des cités capables de rejoindre les nuages et même de s'élever plus haut encore. C'était impressionnant, ces villes pouvaient abriter plusieurs milliards d'individus ! Mais à quel prix ? On voyait des structures métalliques et du gris partout. Même si la cité impériale mettait quelques couleurs, il n'en demeurait pas moins que la végétation n'avait plus sa place."
+  },
+  "RARE_RESOURCE_EXTRACTOR": {
+    "name": "Extracteur de ressources rares",
+    "shortDescription": "Le bâtiment exploite les ressources rares présentes sur la position. Chaque niveau augmente de 5% la production.",
+    "longDescription": "La ressource rare est une ressource qui permet d'entretenir un bonheur chez la population. Il faut une certaine quantité de ressources rares en lien avec la population pour entretenir son bonheur qui peut être trouvé dans le menu Empire. Les ressources rares ne se consomment pas et ne disparaissentt pas après un certains temps, mais peuvent être pillées. ",
+    "rolePlay": "Tenant entre ses doigts une émeraude très rare, une jeune femme s'étonne : c'est drôle comment une si petite chose peut tuer autant de gens. Une si petite chose pourtant inutile dans la survie d'un être vivant amène la mort."
+  },
+  "INTELLIGENCE_AGENCY": {
+    "name": "Agence de renseignement",
+    "shortDescription": "L'agence permet d'augmenter le niveau de contre-espionnage dans votre empire et augmente le renouvellement des recrues de 1%.",
+    "longDescription": "L'agence de renseignement augmente d'une valeur de 1 le contre-espionnage dans tout votre empire. La valeur s'ajoute dans le calcul d'espionnage des ennemies en réduisant le pourcentage de réussite des actions qu'ils entreprennent. Le renouvellement des espions, par le processus de recrutement, est accéléré vous permettant d'avoir plus de chances de tomber sur la meilleur recrue.",
+    "rolePlay": "Sergent ! Vous devrez vous infiltrer dans le bâtiment abritant les serveurs informatiques de l'Empire. Une fois à l'intérieur, assurez-vous que notre contact modifie les images des caméras. Votre présence doit être totalement invisible ! Une fois les différentes étapes accomplies, attendez le décompte près du server principal. Vous devrez saboter toutes les communications de la planète et détruire tous les relais d'information sensible afin que notre attaque soit faite par surprise. Nous vous exfiltrerons lors de l'invasion. Et rappelez-vous ! Si vous êtes capturé croquez dans la dent de cyanure, c'est préférable."
+  },
+  "DEVELOPMENT_INSTITUTE": {
+    "name": "Institut de développement",
+    "shortDescription": "Le développement des technologies avancées et vaisseau mère est possible en construisant le premier niveau du bâtiment sur la position. Chaque niveau réduit le temps de développement des technologies : élémentaires, avancées et vaisseau mère de 5%.",
+    "longDescription": "L'institut de développement réduit le temps technologique des sections : élémentaire, avancé et vaisseaux mère.",
+    "rolePlay": "Ce bâtiment... que dis-je, ce monument est si grand ! Il n'est pas comme les bâtiments métalliques et sombres que j'ai l'habitude de voir. Il est clair, immaculé et impose un immense respect. C'est l'un des rares endroits où l'on voit encore de la végétation dans ses cours. Un jour, j'étudirai là-bas et j'en ressortirai plus grand moi aussi. Un jeune marchand près du grand institut de développement de la capitale de Valikma. L'institut est réputé à travers les différentes galaxies ayant permis l'émergence de cet Empire grâce à son savoir innovant."
+  },
+  "POLITICAL_INSTITUTION": {
+    "name": "Institution politique",
+    "shortDescription": "L'institution politique débloque la capacité de choisir son administration. Chaque niveau permet d'augmenter de 0.0387 point le nombre de points disponibles dans les spécialisations.",
+    "longDescription": "La politique est un système permettant de moduler la manière dont vous voulez jouer et gagner du bonheur. Les spécialisations sont des compétences que vous pouvez vous procurer en échange d'un point pour une compétence. Celle-ci permet d'orienter considérablement votre empire et il est possible de faire certaines combiniaisons avec vos alliés. Vous pouvez consulter ces deux aspects dans le menu administration.",
+    "rolePlay": "L'assassinat de l'ambassadeur Dernie Iona Maxor est une catastrophe. Nous sommes tout près d'une guerre civile et d'une guerre avec le président Eru Xenema. Si nous ne prenons pas des mesures fortes et immédiates nous ne nous en sortirons pas. Il faut mobiliser l'armée et instaurer un régime autoritaire pour stabiliser la situation temporairement.",
+    "author": "La mesure, votée, fut reconduite durant 500 ans sous l'empire Holin dépendant de Valikma."
+  },
+  "MONUMENT": {
+    "name": "Monument",
+    "shortDescription": "Le bonheur de votre population peut être affecté par des monuments valorisant votre civilisation. Chaque niveau de monument augmente de 0,06 le bonheur de votre population après la fin d'un âge sombre.",
+    "longDescription": "Le bonheur est un indicateur de santé de votre population dans votre politique. Plus le bonheur augmente plus vous aurez de chance d'obtenir un âge d'or et dans le cas contraire, après plusieurs défaites vous subirez un âge sombre. ",
+    "rolePlay": "L'immense structure prend forme jour après jour, elle représente la force de notre civilisation. Elle nous permettra de nous rappeler d'où nous venons pour mieux avancer. Les héros d'autrefois sont ceux qui ont réussi à nous mener là ou nous sommes. Nous sommes l'héritage de leur richesse, de leurs connaissances et de leurs projets. N'oublions pas que nous sommes capables de tout grâce à eux."
+  },
+  "ROBOTISATION": {
+    "name": "Robotisation",
+    "shortDescription": "L'installation de la robotisation réduit drastiquement le temps de construction de tous les bâtiments de 50% à chaque niveau et de 25% les vaisseaux.",
+    "longDescription": "La robotisation réduit le temps de tous les bâtiments y compris lui même. La réduction sur les vaisseaux se combine avec celle du chantier orbital.",
+    "rolePlay": "La force des bras n'est plus suffisante si l'on veut aller plus loin. Nous avons besoin de la fiabilité, de la rapidité et de la précision des machines dans tous les domaines. La robotique ne doit plus être considérée comme une simple amélioration de nos capacités, nous devons cesser de croire que l'être biologique demeurera la pierre angulaire de la production. La robotique doit se charger entièrement de la production, de la construction et même de la conceptualisation des projets futurs.",
+    "author": "Discours d'inauguration du plus grand complexe de l'Empire Valikma."
+  },
+  "CENTRAL_SERVER": {
+    "name": "Serveur central",
+    "shortDescription": "Centre informatique le plus important de votre planète, il augmente la production de tous les bâtiments (hors production d'énergie) de 10% et réduit le temps de construction de 20% à chaque niveau.",
+    "longDescription": "Le serveur central est une structure très importante dans le développement de la position. Il n'existe pas de technologie permettant d'augmenter son efficacité et les différentes âges ne l'impacte pas dans son efficacité.",
+    "rolePlay": "Notre civilisation se développait si vite et sur un territoire si vaste qu'il devint nécessaire de développer un moyen de garder notre cohésion tout en continuant notre expansion. C'est pourquoi sur ordre de l'assemblée, il fut décidé de créer une intelligence artificielle capable de synthétiser toutes les décisions et d'améliorer l'efficacité de la production de l'Empire. C'est à ce moment précis que pris forme la première intelligence artificielle capable de réfléchir, d'imaginer et d'innover. Cet être qui maintient notre civilisation n'a qu'un seul supérieur, mais qu'arrivera-t-il s'il devait s'en passer ?",
+    "author": "Un analyste politique."
+  },
+  "ORBITAL_SITE": {
+    "name": "Chantier orbital",
+    "shortDescription": "Le temps de construction de vos vaisseaux dépend directement de cette structure. Chaque niveau permet de réduire de 5% le temps de construction de vos vaisseaux.",
+    "longDescription": "Le temps de construction des vaisseaux est affecté uniquement par le chantier orbital et la robotisation. Si vous annnulez les commandes dans la liste de construction,vous perdez tous les ressources investis.",
+    "rolePlay": "Une nuit, je regardais dans le ciel et je vis des milliers de lumières se déplacer de-ci de-là. La construction de notre premier chantier orbital était en cours. Ce chantier devrait être quasiment aussi grand que notre satellite naturelle et être capable de sortir les plus grands vaisseaux de notre histoire. Enfin je l'espère, car j'aimerais voyager dans l'espace."
+  },
+  "UNIVERSITY": {
+    "name": "Université",
+    "shortDescription": "Le bâtiment permet de réduire le temps de développement des technologies de toutes les catégories de 1% pour chaque niveau.",
+    "longDescription": "L'université réduit le temps de recherche technologique des sections : élémentaire, avancée et vaisseaux mère. Cette réduction s'applique dans tout l'Empire du joueur.",
+    "rolePlay": "Le progrès est partout et commence à arriver dans les salles de classe ! Certaines universités ont décidé de faire des classes par neurotransmission. Les élèves restent assis et sont branchés à une centrale ou leur professeur, lui aussi branché, donne son cours. La différence entre les méthodes classique et virtuelle est que cette dernière permettrait d'enseigner dix fois plus rapidement !",
+    "author": "Le recteur Delnimeau"
+  },
+  "GARRISON": {
+    "name": "Garnison",
+    "shortDescription": "Votre capacité de production d'infanterie et de garnison dépend de cette structure. Chaque niveau réduit de 5% la vitesse de production de l'infanterie et 10 000 la valeur d'infanterie en garnison passive.",
+    "longDescription": "Les unités en garnison sont une force militaire qui permet d'augmenter votre capacité à vous défendre lors d'une invasion et votre capacité de contre-espionnage. Elle se traduit par un pourcentage d'augmentation d'efficacité dans les deux domaines de manière passive et sans coût supplémentaire. Après une invasion réussie de votre adversaire, la garnison prend X temps à chaque niveau pour récupérer son niveau initial.",
+    "rolePlay": "Lors d'une invasion, le choix n'est pas permis, il faut défendre au prix de nos vies notre nation, notre ville, notre famille ! Il n'y a pas matière à discuter, c'est soit eux soit nous ! Engagez-vous pour protéger ceux qui vous sont chers !"
+  },
+  "REPAIR_CENTER": {
+    "name": "Centre de réparation",
+    "shortDescription": "Cette structure répare les épaves et les vaisseaux endommagés. L'augmentation de son niveau réduit le coût associé à la réparation de 1% par niveau.",
+    "longDescription": "Les épaves sont des vaisseaux à 20% de leur valeur initiale en coût. Il vous faudra donc payer 80% du coût pour réparer. Tous les vaisseaux endommagés le sont à 80% sans considérer leur réel pourcentage.",
+    "rolePlay": "Monsieur, une nouvelle cargaison de vaisseaux à réparer vient d'arriver... Monsieur, l'armement du chasseur vient de céder et il faut qu'il soit opérationnel dans quelques heures... Monsieur... Monsieur... Il suffit ! Allez voir les stagiaires, moi je prends ma retraite dans quelques minutes."
+  },
+  "DARK_MATTER_CONCENTRATOR": {
+    "name": "Concentrateur de matière noire",
+    "shortDescription": "Ce bâtiment utilise la matière noire disponible sur la position pour envoyer une flotte sur un trou de ver ciblé. Le niveau permet de réduire le temps de récupération de la structure pour utiliser sa capacité de 20%.",
+    "longDescription": "Pour utiliser la capacité, il faut aller dans le menu installation et dans la section concentrateur de matière noire qui sera présente uniquement si vous disposez de la structure sur la position que vous consultez. Vous pourrez à travers ce menu sélectionner une flotte et envoyer celle-ci vers la coordonnée du trou de ver ciblé.  Attention, lors de l'envoi, votre flotte subira un malus de 50% sur la vitesse pendant 20 minutes dû au transfert.",
+    "rolePlay": "Aidez-nous ! Une flotte est ...SSHHH... en ...CRRRR... approche de notre positionnnnn. Elle vient d'apparaître de ...CLACLAC... nulle part et nous n'avons que des infrastructures civiles ici .... LE SIGNAL EST PERDU, LE SIGNAL EST PERDU..."
+  },
+  "ORBITAL_CITY": {
+    "name": "Cité orbitale",
+    "shortDescription": "L'un des bâtiments ultimes, il permet d'augmenter l'efficacité des spécialisations de 10% pour chaque cité orbitale différente que vous possédez.",
+    "longDescription": "La cité orbitale dispose d'un fonctionnement particulier. Vous ne pouvez en construire qu'une sur une position et les autres constructions de cité orbitale sur d'autres positions voient leur prix augmenter en fonction du nombre de cité orbitale dont vous disposez sur l'ensemble de votre empire. La construction d'une cité orbitale empêche la donation/vente de colonie à un tier. L'augmentation d'efficacité d'une cité orbitale sur la spécialisation augmente tous les pourcentages que vous pouvez voir dans les spécialisations de la valeur que votre cité orbitale vous procure.",
+    "rolePlay": "Vue depuis l'espace, la cité orbitale est une structure à la fois stupéfiante, effrayante et merveilleuse. On ne voit plus les océans ni les fôrets, uniquement les lumières éclairant nuit et jour la vie qui ne s'arrête jamais. D'un côté c'est impressionnant et de l'autre, voir des gratte-ciels monter plus haut que l'atmosphère relève clairement d'un ego démesuré. Ceci dit, on comprend très rapidement qu'on ne peut pas mettre ce genre de civilisations dans le même groupe que celles qui sont incapables d'en construire une, clairement...",
+    "author": "L'ingénieur en chef ayant travaillé sur les premiers plans de la cité orbitale, Ordinemar Loss."
+  },
+  "CORE_STABILIZER": {
+    "name": "Stabilisateur du noyau",
+    "shortDescription": "Le stabilisateur réduit de 10 % par niveau la possibilité de sabotage du catalyseur de noyau.",
+    "longDescription": "Le stabilisateur de noyau a pour vocation d'empêcher autant que possible le sabotage du catalyseur du noyau pouvant entraîner dans de rares cas une destruction de la planète.",
+    "rolePlay": "Un monde a disparu suite au sabotage du catalyseur du noyau planétaire. Des milliards d'individus ont perdu la vie ! Jamais nous ne pourrons pardonner cet acte d'une barbarie sans nom ! Cependant nous ne pouvons tourner le dos au progrès et nous avons besoin d'énergie. C'est pourquoi nous avons développé un système permettant de protéger le catalyseur de noyau. Et plus jamais une telle tragédie ne se répètera !",
+    "author": "C'est sous les cris d'acclamation que le président Xernass prononça son discours d'investiture, bien qu'étant lui-même soupçonné d'avoir commis dix destructions de planète lorsqu'il était agent de l'Empire."
+  },
+  "ZONE_52": {
+    "name": "Zone 52",
+    "shortDescription": "La zone 52 permet de protéger des technologies du vol technologique par l'espionnage dans tout votre empire. Chaque niveau permet d'augmenter le nombre de cases de 1.",
+    "longDescription": "Les technologies peuvent être volées, mais la grande partie vont revenir progressivement au niveau initial dans le temps. Il est possible de déplacer une technologie dans la zone 52 afin de se prémunir de ces vols empêchant toute possibilité pour un adversaire de se procurer la technologie en question. Attention, certaines catégories de technologie ne peuvent être protégées que dans un nombre restreint dans tout l'Empire. Vous pouvez consulter la zone 52 dans le menu installation.",
+    "rolePlay": "Il paraît qu'une zone 52 a été créée suite à la 51, celle-là même qui a dévoilé des informations concernant des formes de vie étrangères. C'est pourquoi nous devons maintenant trouver cette zone 52 ! Pour savoir ce que le gouvernement nous cache ! Nous sommes sûrs qu'il complote contre nous et qu'il veut mettre au point des micro-puces pour nous diriger tous...",
+    "author": "Discours d'un conspirationniste de la secte Ivoirin de l'Empire Valkima."
+  },
   "time": "Distorsion temporelle",
   "relifer": "Revitalisateur",
   "level": "niveau",
   "nextLevel": "prochain niveau :",
+  "more": "En savoir plus.",
   "metal": "Métal :",
   "energy": "Énergie :",
   "antimatter": "Antimatière :",
   "workforce": "Main d'œuvre :",
   "energyConsumption": "Consommation d'énergie :",
-  "contructionTime": "Temps de construction :",
+  "constructionTime": "Temps de construction :",
   "constructionEnd": "Fin de construction :",
   "levelUp": "Améliorer",
   "levelDown": "Démanteler",
@@ -43,5 +178,6 @@
   "production": "Production",
   "functional": "Fonctionnel",
   "civilian": "Civil",
-  "advanced": "Avancé"
+  "advanced": "Avancé",
+  "close": "Fermer"
 }

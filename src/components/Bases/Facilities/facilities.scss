@@ -16,21 +16,52 @@
     border-radius: .5rem;
   }
 
-  &-actions {
+  &-description {
+    flex-grow: 1;
+
     &-title {
       margin-bottom: 1rem;
       border-bottom: 1px solid vars.$neon;
     }
 
+    &-text {
+      font-size: 0.8rem;    
+      text-align: justify;
+      margin-bottom: .5rem;
+      &-more {
+        color: vars.$neon;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    & table {
+      margin: 0 auto;
+      font-size: 0.9rem;
+      & tbody tr td {
+        width: 50%;
+      }
+      & tbody tr td:nth-child(odd) {
+        text-align: right;
+      }
+    }
+
+    &-buttons {
+      text-align: center;
+    }
+
     &-button {
       margin-top: 1rem;
       margin-bottom: 1rem;
-      background: vars.$light-blue;
+      background: vars.$medium-blue;
       color: white;
       border: 1px solid vars.$neon;
       padding: .5rem;
       margin-right: 1rem;
       border-radius: .5rem;
+    }
+    &-button:hover {
+      background: vars.$light-blue;
     }
   }
 
@@ -90,6 +121,72 @@
       position: absolute;
       top: 8rem;
       right: 0;
+    }
+  }
+
+  &-more {
+    position: absolute;
+    background-color: vars.$medium-blue;
+    display: none;
+    width: 80%;
+    top: 5rem;
+    left: 10%;
+    padding: 1rem;
+    text-align: justify;
+    box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.5);
+
+    &-description {
+
+    }
+
+    &-role-play {
+      position: relative;
+      font-family: 'Lobster', cursive;
+      font-size: 1.2rem;
+      font-style: italic;
+      text-indent: 2rem;
+      line-height: 1.5rem;
+      background-color: rgba(255, 255, 255, .1);
+      padding: 2rem;
+      margin: 2rem 2rem 1rem 2rem;
+      border: 2px solid vars.$neon;
+      border-radius: 0 2rem 0 2rem;
+
+      &::before {
+        content: '“';
+        position: absolute;
+        font-size: 15rem;
+        top: 4rem;
+        left: -7rem;
+        color: vars.$neon;
+        text-shadow: .1rem .1rem 0 white;
+      }
+
+      &-author {
+        position: relative;
+        width: calc(80% - 2rem);
+        left: 20%;
+        text-align: right;
+      }
+    }
+
+    &-button {
+      text-align: center;
+
+      & button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background: vars.$medium-blue;
+        color: white;
+        border: 1px solid vars.$neon;
+        padding: .5rem;
+        margin-right: 1rem;
+        border-radius: .5rem;
+      }
+
+      & button:hover {
+        background: vars.$light-blue;
+      }
     }
   }
 }

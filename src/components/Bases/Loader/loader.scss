@@ -1,0 +1,40 @@
+@use 'src/styles/vars';
+
+.bases-loader {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  margin: 3rem auto 0 auto;
+  animation: 2s linear infinite rotate-shape;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    border-left: 10px solid vars.$neon;
+    animation: 1s ease-in-out infinite rotate-shape; 
+  }
+
+  &::after {
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    border-right: 5px solid vars.$light-blue;
+    animation: 1s ease-in-out infinite reverse rotate-shape;
+  }
+}
+
+@keyframes rotate-shape {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

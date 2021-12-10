@@ -20,6 +20,7 @@ const mapStateToProps = (state) => {
     currentFacility: state.bases[selectedBase].currentFacility,
     nextLevelCost: state.bases[selectedBase].nextLevelCost,
     upgrades: state.bases[selectedBase].upgrades,
+    loading: state.bases.loading,
 })};
 
 const mapDispatchToProps = (dispatch) => ({

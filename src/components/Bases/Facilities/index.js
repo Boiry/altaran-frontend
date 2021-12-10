@@ -2,7 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Item from '../Item';
+import Loader from '../Loader';
 import { msToDuration, msToDate, countdown, timestampToDate } from 'src/utils/Timer';
+import Corner from 'src/assets/images/corner.svg'; 
 
 import './facilities.scss';
 
@@ -31,6 +33,7 @@ import Monument from 'src/assets/images/icons/monument.svg';
 import Orbital from 'src/assets/images/icons/orbital.svg';
 import Stabilizer from 'src/assets/images/icons/stabilizer.svg';
 import Information from 'src/assets/images/icons/information.svg';
+import { AddBlock } from '@babylonjs/core';
 
 const Facilities = ({
   selectedBase,
@@ -45,6 +48,7 @@ const Facilities = ({
   addFacilityUpgrade,
   removeFacilityUpgrade,
   changeFacility,
+  loading,
 }) => {
   // Translations
   const { t } = useTranslation('facilities');
@@ -87,10 +91,10 @@ const Facilities = ({
   };
 
   // Toggle for rendering item from menu or from update list
-  let showActions;
+  let showDescription;
   if (currentFacility) {
     const isUpgrade = currentFacility.match(/^upgrade/);
-    isUpgrade ? showActions = "showConstruction" : showActions = "showItem";
+    isUpgrade ? showDescription = "showConstruction" : showDescription = "showItem";
   }
 
   // Correspondance table between names and images
@@ -128,10 +132,10 @@ const Facilities = ({
     if (currentFacility.match(/^upgrade/)) {
       const name = currentFacility.split('-');
       displayedImage.current.src = nameToImage[name[1]];
-      titleDiv.current.textContent = `${t(name[1])}`;
+      titleDiv.current.textContent = t(`${name[1]}.name`);
     } else {
       displayedImage.current.src = nameToImage[currentFacility];
-      titleDiv.current.textContent = `${t(currentFacility)} (${t("level")} ${facilitiesLevels[currentFacility]})`;
+      titleDiv.current.textContent = t(`${currentFacility}.name`) + ` (${t("level")} ${facilitiesLevels[currentFacility]})`;
     }
   }
   if (!currentFacility && displayedImage.current) {
@@ -139,10 +143,25 @@ const Facilities = ({
     titleDiv.current.textContent = '';
   }
 
+  // Displaying the window for more informations
+  const moreDiv = useRef();
+  const showMore = () => {
+    moreDiv.current.style.display = "block";
+    moreDiv.current.focus();
+  }
+
+  const hideMore = () => {
+    moreDiv.current.style.display = "none";
+  }
+
   // Show name on hover facility
   const nameDiv = useRef();
   const showName = (name) => {
-    nameDiv.current.textContent = t(name);
+    if (name) {
+      nameDiv.current.textContent = t(`${name}.name`);
+    } else {
+      nameDiv.current.textContent = "";
+    }
   }
 
   // Format great numbers
@@ -167,45 +186,75 @@ const Facilities = ({
     <>
       <div className="facilities-main">
         <img ref={displayedImage} src="" className="facilities-image" alt=""/>
-        <div className="facilities-actions">
-          <div ref={titleDiv} className="facilities-actions-title"></div>
-          {showActions === 'showItem' &&
+        <div className="facilities-description">
+          <div ref={titleDiv} className="facilities-description-title"></div>
+          {!loading && showDescription === 'showItem' &&
             <>
-              {nextLevelCost && nextLevelCost.costMetal != 0 &&
-                <div className="facilities-actions-metal">{t("metal")} {formatize(nextLevelCost.costMetal)}</div>
-              }
-              {nextLevelCost && nextLevelCost.costEnergy != 0 &&
-                <div className="facilities-actions-energy">{t("energy")} {formatize(nextLevelCost.costEnergy)}</div>
-              }
-              {nextLevelCost && nextLevelCost.costAntimatter != 0 &&
-                <div className="facilities-actions-antimatter">{t("antimatter")} {formatize(nextLevelCost.costAntimatter)}</div>
-              }
-              {nextLevelCost && nextLevelCost.workforce != 0 &&
-                <div className="facilities-actions-workforce">{t("workforce")} {formatize(nextLevelCost.workforce)}</div>
-              }
-              {nextLevelCost && nextLevelCost.energyConsumption != 0 &&
-                <div className="facilities-actions-energyConsumption">{t("energyConsumption")} {formatize(nextLevelCost.energyConsumption)}</div>
-              }
-              {nextLevelCost &&
-                <div className="facilities-actions-time">{t("contructionTime")} {msToDuration(nextLevelCost.constructionTime)}</div>
-              }
-              {nextLevelCost &&
-                <div className="facilities-actions-end">{t("constructionEnd")} {endOfConstruction}</div>
-              }
-              <button className="facilities-actions-button" onClick={levelUp}>{t("levelUp")}</button>
-              {currentFacility && facilitiesLevels && facilitiesLevels[currentFacility] > 0 &&
-                <button className="facilities-actions-button">{t("levelDown")}</button>
-              }
-              
+              <p className="facilities-description-text">{t(`${currentFacility}.shortDescription`)}&nbsp;
+                <span className="facilities-description-text-more" onClick={showMore}>{t("more")}</span>
+              </p>
+              <table>
+                <tbody>
+                  {nextLevelCost && nextLevelCost.costMetal != 0 &&
+                    <tr>
+                      <td>{t("metal")}&nbsp;</td>
+                      <td>{formatize(nextLevelCost.costMetal)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost && nextLevelCost.costEnergy != 0 &&
+                    <tr>
+                      <td>{t("energy")}&nbsp;</td>
+                      <td>{formatize(nextLevelCost.costEnergy)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost && nextLevelCost.costAntimatter != 0 &&
+                    <tr>
+                      <td>{t("antimatter")}&nbsp;</td>
+                      <td>{formatize(nextLevelCost.costAntimatter)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost && nextLevelCost.workforce != 0 &&
+                    <tr>
+                      <td>{t("workforce")}&nbsp;</td>
+                      <td>{formatize(nextLevelCost.workforce)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost && nextLevelCost.energyConsumption != 0 &&
+                    <tr>
+                      <td>{t("energyConsumption")}&nbsp;</td>
+                      <td>{formatize(nextLevelCost.energyConsumption)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost &&
+                    <tr>
+                      <td>{t("constructionTime")}&nbsp;</td>
+                      <td>{msToDuration(nextLevelCost.constructionTime)}</td>
+                    </tr>
+                  }
+                  {nextLevelCost &&
+                    <tr>
+                      <td>{t("constructionEnd")}&nbsp;</td>
+                      <td>{endOfConstruction}</td>
+                    </tr>
+                  }                 
+                </tbody>
+              </table>
+              <div className="facilities-description-buttons">
+                <button className="facilities-description-button" onClick={levelUp}>{t("levelUp")}</button>
+                {currentFacility && facilitiesLevels && facilitiesLevels[currentFacility] > 0 &&
+                  <button className="facilities-description-button">{t("levelDown")}</button>
+                }
+              </div>
             </>
           }
-          {showActions === 'showConstruction' &&
+          {loading && <Loader />}
+          {showDescription === 'showConstruction' &&
             <>
               {currentFacility.match(/^upgrade1/) &&
-                <button className="facilities-actions-button" onClick={() => removeUpgrade(currentFacility)}>{t("stop")}</button>
+                <button className="facilities-description-button" onClick={() => removeUpgrade(currentFacility)}>{t("stop")}</button>
               }
               {!currentFacility.match(/^upgrade1/) &&
-                <button className="facilities-actions-button" onClick={() => removeUpgrade(currentFacility)}>{t("remove")}</button>
+                <button className="facilities-description-button" onClick={() => removeUpgrade(currentFacility)}>{t("remove")}</button>
               }
             </>
           }
@@ -504,6 +553,20 @@ const Facilities = ({
             handleHover={showName}
             handleOut={showName}
           />
+        </div>
+      </div>
+      <div ref={moreDiv} tabIndex="1" onBlur={hideMore} className="facilities-more">
+        <img src={Corner} className="corner corner-top-left" />
+        <img src={Corner} className="corner corner-top-right" />
+        <img src={Corner} className="corner corner-bottom-left" />
+        <img src={Corner} className="corner corner-bottom-right" />
+        <p className="facilities-more-description">{t(`${currentFacility}.longDescription`)}</p>
+        <p className="facilities-more-role-play">{t(`${currentFacility}.rolePlay`)}</p>
+        {t(`${currentFacility}.author`) !== `${currentFacility}.author` &&
+          <p className="facilities-more-role-play-author">{t(`${currentFacility}.author`)}</p>
+        }
+        <div className="facilities-more-button">
+          <button onClick={hideMore}>{t("close")}</button>
         </div>
       </div>
     </>

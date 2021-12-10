@@ -13,6 +13,7 @@ import {
   saveFacilitiesUpgrades,
   ADD_FACILITY_UPGRADE,
   REMOVE_FACILITY_UPGRADE,
+  loading,
   FETCH_TECHNOLOGIES,
   saveTechnologiesInfo,
   FETCH_TECHNOLOGIES_UPDATES,
@@ -66,12 +67,16 @@ const basesMiddleware = (store) => (next) => (action) => {
 
     case FETCH_CURRENT_FACILITY: {
       const param = action.facility;
+      store.dispatch(loading(true));
       axios.get(`${process.env.API_URL}api/user/planets/${action.baseId}/buildingTemplates?name=${param}`, authorization)
       .then((response) => {
         store.dispatch(saveCurrentFacility(action.base, response.data));
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        store.dispatch(loading(false));
       });
       next(action);
       break;
