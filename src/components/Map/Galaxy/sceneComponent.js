@@ -34,6 +34,7 @@ export default (props) => {
   useEffect(() => {
     if (reactCanvas.current) {
       const engine = new Engine(reactCanvas.current, antialias, engineOptions, adaptToDeviceRatio);
+
       const scene = new Scene(engine, sceneOptions);
       scene.clearColor = new Color4(0, 0, 0, 0.9);
       setScene(scene);
@@ -267,34 +268,68 @@ export default (props) => {
       // Finding the wanted camera's position
       let x, y, z;
       if (galaxySelector === "region" || galaxySelector === "sector") {
-        let minX = selectedStars.current[0].x;
-        let maxX = selectedStars.current[0].x;
-        let minY = selectedStars.current[0].y;
-        let minZ = selectedStars.current[0].z;
-        let maxZ = selectedStars.current[0].z;
-        for (let i=1; i<selectedStars.current.length; i++) {
-          const star = selectedStars.current[i];
-          if (star.x < minX) minX = star.x;
-          if (star.x > maxX) maxX = star.x;
-          if (star.y < minY) minY = star.y;
-          if (star.z < minZ) minZ = star.z;
-          if (star.z > maxZ) maxZ = star.z;
+        const aZ = Math.tan((Math.PI / 2) - (camera.fov / 2));
+        const aspectRatio = scene.getEngine().getAspectRatio(camera);
+        const aX = Math.tan((Math.PI / 2) - ((camera.fov * aspectRatio) / 2));
+
+        function calculateCamPos(p1, p2, a) {
+          if (p1.x > p2.x) {
+            [p1, p2] = [p2, p1];
+          }
+          const b1 = p1.y - (-a * p1.x);
+          const b2 = p2.y - (a * p2.x);
+          const resultX = (b1 - b2) / (a - (-a));
+          const resultY = -a * resultX + b1;
+          return {x: resultX, y: resultY};
         }
-        x = (minX + maxX) / 2;
-        z = (minZ + maxZ) / 2;
 
-        const canvas = document.querySelector("#canvas");
-        const width = canvas.width;
-        const height = canvas.height;
-        const xFOV = camera.fov * (180 / Math.PI);
-        const zFOV = xFOV * (height / width);
+        function findIntersection(x, y, a) {
+          const b = y - (a * x);
+          const intersection = (-10000 - b) / a;
+          return intersection;
+        }
 
-        const y1 = (x - minX + 1500) / Math.tan(xFOV / 2);
-        const y2 = (z - minZ + 1500) / Math.tan(zFOV / 2);
-        if (y1 > y2) {
-          y = minY - y1 - 2000;
+        let minX, maxX, minZ, maxZ;
+        for (let i=0; i<selectedStars.current.length; i++) {
+          const star = {
+            x: selectedStars.current[i].x,
+            y: selectedStars.current[i].y - 2000,
+            z: selectedStars.current[i].z
+          };
+          let value = findIntersection(star.x, star.y, -aX);
+          if (minX === undefined) {
+            minX = {value, star};
+          } else if (value < minX.value) {
+            minX = {value, star};
+          };
+          value = findIntersection(star.x, star.y, aX);
+          if (maxX === undefined) {
+            maxX = {value, star};
+          } else if (value > maxX.value) {
+            maxX = {value, star};
+          };
+          value = findIntersection(star.z, star.y, -aZ);
+          if (minZ === undefined) {
+            minZ = {value, star};
+          } else if (value < minZ.value) {
+            minZ = {value, star};
+          };
+          value = findIntersection(star.z, star.y, aZ);
+          if (maxZ === undefined) {
+            maxZ = {value, star};
+          } else if (value > maxZ.value) {
+            maxZ = {value, star};
+          };
+        }
+
+        const camPosX = calculateCamPos({x: minX.star.x, y: minX.star.y}, {x: maxX.star.x, y: maxX.star.y}, aX);
+        const camPosZ = calculateCamPos({x: minZ.star.z, y: minZ.star.y}, {x: maxZ.star.z, y: maxZ.star.y}, aZ);
+        x = camPosX.x;
+        z = camPosZ.x;
+        if (camPosX.y < camPosZ.y) {
+          y = camPosX.y - 100;
         } else {
-          y = minY - y2 - 2000;
+          y = camPosZ.y - 100;
         }
 
       } else {

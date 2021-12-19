@@ -44,9 +44,11 @@ Camera2DKeyboardInputs.prototype.attachControl = function(noPreventDefault) {
   }
 
   this._onWheel = (e) => {
+    let delta;
+    e.deltaY < 0 ? delta = -6 : delta = 6;
     let modifier = Math.pow(100, Math.abs(camera.position.y) / 10000);
     if (modifier >= 200) modifier = 200;
-    camera.position.y -= e.deltaY * modifier;
+    camera.position.y -= delta * modifier;
   }
 
   element.addEventListener("pointerdown", this._onMouseDown);
