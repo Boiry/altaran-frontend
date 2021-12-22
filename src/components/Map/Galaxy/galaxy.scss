@@ -49,4 +49,22 @@
       cursor: default;
     }
   }
+
+  &-no-system-info {
+    display: none;
+    position: absolute;
+    background: vars.$field-background;
+    width: 18rem;
+    top: calc(100% * (2 / 3));
+    left: calc(50% - 9rem);
+    color: white;
+    text-align: center;
+    border-radius: .3rem;
+    padding: .5rem;
+
+    &-fade-out {
+      opacity: 0;
+      transition: opacity 1s; 
+    }
+  }
 }

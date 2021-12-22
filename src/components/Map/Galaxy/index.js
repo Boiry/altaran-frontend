@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Aside from 'src/containers/Map/Galaxy/Aside';
 import SceneComponent from "./sceneComponent";
@@ -22,6 +23,8 @@ const Galaxy = ({
   goAndSee,
   setGoAndSee,
 }) => {
+  // Translations
+  const { t } = useTranslation('map');
 
   // ==================== INPUTS ======================
 
@@ -68,6 +71,26 @@ const Galaxy = ({
     hideInfo();
   }, []);
 
+  // If entered coordinates are wrong
+  const info2 = useRef();
+  const [reset, setReset] = useState(false);
+  const noSystem = () => {
+    if (galaxySelector === "region") {info2.current.textContent = `${t("no region")}`}
+    if (galaxySelector === "sector") {info2.current.textContent = `${t("no sector")}`}
+    if (galaxySelector === "starSystem") {info2.current.textContent = `${t("no system")}`}
+    info2.current.style.display = "block";
+    setReset(true);
+    setTimeout(() => {
+      info2.current.classList.add("galaxy-no-system-info-fade-out");
+    }, 2000);
+    setTimeout(() => {
+      info2.current.style.display = "none";
+      info2.current.classList.remove("galaxy-no-system-info-fade-out");
+    }, 3000);
+  }
+
+  const restore = () => {setReset(false)}
+
   return (
     <>
       <div className="galaxy">
@@ -86,6 +109,7 @@ const Galaxy = ({
           isolate={isolate}
           goAndSee={goAndSee}
           setGoAndSee={setGoAndSee}
+          noSystem={noSystem}
         />
       </div>
       <div ref={info} className="galaxy-star-info" tabIndex="1" onBlur={hideInfo}>
@@ -93,7 +117,8 @@ const Galaxy = ({
         <p ref={coordinates} className="galaxy-star-into-coordinates"></p>
         <button className="galaxy-star-info-button" onMouseDown={() => clickOnGoStarSystem()}>Y aller</button>
       </div>
-      <Aside />
+      <div ref={info2} className="galaxy-no-system-info"></div>
+      <Aside reset={reset} restore={restore} />
     </>
   );
 };

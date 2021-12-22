@@ -30,7 +30,9 @@ export default (props) => {
     isolate,
     goAndSee,
     setGoAndSee,
+    noSystem,
      ...rest } = props;
+
   useEffect(() => {
     if (reactCanvas.current) {
       const engine = new Engine(reactCanvas.current, antialias, engineOptions, adaptToDeviceRatio);
@@ -155,7 +157,7 @@ export default (props) => {
     }
     switch (galaxySelector) {
       case "sector": {
-        if (galaxyRegion && galaxySector) {
+        if (galaxyRegion && galaxySector && galaxyRegion > 0 && galaxyRegion < 51) {
           selectedStars.current = [];
           const region = `r${galaxyRegion}`;
           for (let i=0, length=stars[region].length; i<length; i++) {
@@ -169,7 +171,7 @@ export default (props) => {
         break;
       }
       case "starSystem": {
-        if (galaxyRegion && galaxySector && galaxyStarSystem) {
+        if (galaxyRegion && galaxySector && galaxyStarSystem && galaxyRegion > 0 && galaxyRegion < 51) {
           selectedStars.current = [];
           const region = `r${galaxyRegion}`;
           for (let i=0, length=stars[region].length; i<length; i++) {
@@ -213,50 +215,58 @@ export default (props) => {
 
     // With filter
     } else if (highlight) {
-      highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selectedStars.current.length, 50);
-      highlightSpriteManager.isPickable = true;
-      for (let i=0, length=selectedStars.current.length; i<length; i++) {
-        const star = new Sprite(("star"), highlightSpriteManager);
-        star.size = starSize;
-        star.position.x = selectedStars.current[i].x;
-        star.position.y = selectedStars.current[i].y - 2000;
-        star.position.z = selectedStars.current[i].z;
-        star.isPickable = true;
-        star.region = selectedStars.current[i].region_num;
-        star.sector = selectedStars.current[i].sector_num;
-        star.system = selectedStars.current[i].system_num;
-      }
-      spriteManager = new SpriteManager("starsManager", basicStar, otherStars.current.length, 50);
-      spriteManager.isPickable = true;
-      for (let i=0, length=otherStars.current.length; i<length; i++) {
-          const star = new Sprite(("star"), spriteManager);
+      if (selectedStars.current.length > 0) {
+        highlightSpriteManager = new SpriteManager("highlightedStarsManager", basicStarHighlight, selectedStars.current.length, 50);
+        highlightSpriteManager.isPickable = true;
+        for (let i=0, length=selectedStars.current.length; i<length; i++) {
+          const star = new Sprite(("star"), highlightSpriteManager);
           star.size = starSize;
-          star.position.x = otherStars.current[i].x;
-          star.position.y = otherStars.current[i].y - 2000;
-          star.position.z = otherStars.current[i].z;
+          star.position.x = selectedStars.current[i].x;
+          star.position.y = selectedStars.current[i].y - 2000;
+          star.position.z = selectedStars.current[i].z;
           star.isPickable = true;
-          star.region = otherStars.current[i].region_num;
-          star.sector = otherStars.current[i].sector_num;
-          star.system = otherStars.current[i].system_num;
+          star.region = selectedStars.current[i].region_num;
+          star.sector = selectedStars.current[i].sector_num;
+          star.system = selectedStars.current[i].system_num;
+        }
+        spriteManager = new SpriteManager("starsManager", basicStar, otherStars.current.length, 50);
+        spriteManager.isPickable = true;
+        for (let i=0, length=otherStars.current.length; i<length; i++) {
+            const star = new Sprite(("star"), spriteManager);
+            star.size = starSize;
+            star.position.x = otherStars.current[i].x;
+            star.position.y = otherStars.current[i].y - 2000;
+            star.position.z = otherStars.current[i].z;
+            star.isPickable = true;
+            star.region = otherStars.current[i].region_num;
+            star.sector = otherStars.current[i].sector_num;
+            star.system = otherStars.current[i].system_num;
+        }
+      } else {
+        noSystem();
       }
     } else if (isolate) {
-      spriteManager = new SpriteManager("starsManager", basicStar, selectedStars.current.length, 50);
-      spriteManager.isPickable = true;
-      for (let i=0, length=selectedStars.current.length; i<length; i++) {
-        const star = new Sprite(("star"), spriteManager);
-        star.size = starSize;
-        star.position.x = selectedStars.current[i].x;
-        star.position.y = selectedStars.current[i].y - 2000;
-        star.position.z = selectedStars.current[i].z;
-        star.isPickable = true;
-        star.region = selectedStars.current[i].region_num;
-        star.sector = selectedStars.current[i].sector_num;
-        star.system = selectedStars.current[i].system_num;
+      if (selectedStars.current.length > 0) {
+        spriteManager = new SpriteManager("starsManager", basicStar, selectedStars.current.length, 50);
+        spriteManager.isPickable = true;
+        for (let i=0, length=selectedStars.current.length; i<length; i++) {
+          const star = new Sprite(("star"), spriteManager);
+          star.size = starSize;
+          star.position.x = selectedStars.current[i].x;
+          star.position.y = selectedStars.current[i].y - 2000;
+          star.position.z = selectedStars.current[i].z;
+          star.isPickable = true;
+          star.region = selectedStars.current[i].region_num;
+          star.sector = selectedStars.current[i].sector_num;
+          star.system = selectedStars.current[i].system_num;
+        }
+      } else {
+        noSystem();
       }
     }
 
     return () => {
-      spriteManager.dispose();
+      if (spriteManager) spriteManager.dispose();
       if (highlightSpriteManager) highlightSpriteManager.dispose();
     }
   }, [highlight, isolate])
@@ -264,6 +274,11 @@ export default (props) => {
   // ============= CAMERA ANIMATION ==============
   useEffect(() => {
     if (goAndSee) {
+      if (selectedStars.current.length === 0) {
+        setGoAndSee(false);
+        noSystem();
+        return;
+      }
       setGoAndSee(false);
       // Finding the wanted camera's position
       let x, y, z;
@@ -272,21 +287,18 @@ export default (props) => {
         const aspectRatio = scene.getEngine().getAspectRatio(camera);
         const aX = Math.tan((Math.PI / 2) - ((camera.fov * aspectRatio) / 2));
 
+        function findIntersection(x, y, a) {
+          const b = y - (a * x);
+          const intersection = (-10000 - b) / a;
+          return intersection;
+        }
+
         function calculateCamPos(p1, p2, a) {
-          if (p1.x > p2.x) {
-            [p1, p2] = [p2, p1];
-          }
           const b1 = p1.y - (-a * p1.x);
           const b2 = p2.y - (a * p2.x);
           const resultX = (b1 - b2) / (a - (-a));
           const resultY = -a * resultX + b1;
           return {x: resultX, y: resultY};
-        }
-
-        function findIntersection(x, y, a) {
-          const b = y - (a * x);
-          const intersection = (-10000 - b) / a;
-          return intersection;
         }
 
         let minX, maxX, minZ, maxZ;

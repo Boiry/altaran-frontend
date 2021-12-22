@@ -24,6 +24,8 @@ const Aside = ({
   goAndSee,
   highlighted,
   isolated,
+  reset,
+  restore,
 }) => {
   // ============ SELECTOR ===============
   const selector = useRef();
@@ -217,6 +219,17 @@ const Aside = ({
       isolateButton.current.classList.add("galaxy-aside-form-button-active");
     }
   }, []);
+
+  // If the coordinates are wrong, buttons return to inactive
+  useEffect(() => {
+    if (reset) {
+      highlightButton.current.classList.remove("galaxy-aside-form-button-active");
+      isolateButton.current.classList.remove("galaxy-aside-form-button-active");
+      highlight(false);
+      isolate(false);
+      restore();
+    }
+  }, [reset]);
 
   return (
     <div className="galaxy-aside">
