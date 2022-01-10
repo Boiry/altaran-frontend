@@ -74,16 +74,21 @@ const Galaxy = ({
   // If entered coordinates are wrong
   const info2 = useRef();
   const [reset, setReset] = useState(false);
+  let timeout1 = useRef();
+  let timeout2 = useRef();
   const noSystem = () => {
+    info2.current.classList.remove("galaxy-no-system-info-fade-out");
+    clearTimeout(timeout1.current);
+    clearTimeout(timeout2.current);
     if (galaxySelector === "region") {info2.current.textContent = `${t("no region")}`}
     if (galaxySelector === "sector") {info2.current.textContent = `${t("no sector")}`}
     if (galaxySelector === "starSystem") {info2.current.textContent = `${t("no system")}`}
     info2.current.style.display = "block";
     setReset(true);
-    setTimeout(() => {
+    timeout1.current = setTimeout(() => {
       info2.current.classList.add("galaxy-no-system-info-fade-out");
     }, 2000);
-    setTimeout(() => {
+    timeout2.current = setTimeout(() => {
       info2.current.style.display = "none";
       info2.current.classList.remove("galaxy-no-system-info-fade-out");
     }, 3000);

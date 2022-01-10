@@ -1,6 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Engine, Scene, HemisphericLight, ArcRotateCamera, Mesh, VertexData, ParticleSystem, Texture, BlurPostProcess, PolygonMeshBuilder, UniversalCamera, FlyCamera, DefaultRenderingPipeline, SpriteManager, Sprite, PointerEventTypes, FreeCamera, Vector3, PointLight, MeshBuilder, GlowLayer, Color3, Color4, StandardMaterial, SpriteSceneComponent, Vector2 } from "@babylonjs/core";
-import * as earcut from "earcut";
+import '@babylonjs/loaders/glTF';
+
+import {
+  Engine,
+  Scene,
+  HemisphericLight,
+  ArcRotateCamera,
+  Mesh,
+  VertexData,
+  ParticleSystem,
+  Texture,
+  Vector3,
+  PointLight,
+  MeshBuilder,
+  GlowLayer, 
+  Color3,
+  Color4,
+  StandardMaterial,
+  SceneLoader,
+} from "@babylonjs/core";
 
 import gasCloudTexture from 'src/assets/images/gas_cloud.png';
 
@@ -62,10 +80,12 @@ export default (props) => {
         scene.render();
       });
 
-      const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2.5, 95, new Vector3(25, 5, 0), scene);
+      const camera = new ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2.5, 95, new Vector3(25, 8, 0), scene);
       scene.addCamera(camera);
       camera.setPosition(new Vector3(25, 15, -40));
-      // camera.attachControl(canvas, true);
+
+      // Camera movements
+      camera.attachControl(canvas, true);
 
       // Specifications according to the current star
       let specs = starsSpecs[props.starSystemInfo.central.type];
@@ -95,6 +115,10 @@ export default (props) => {
       star.name = props.starSystemInfo.central.name;
       star.type = props.starSystemInfo.central.type;
       glowLayer.addIncludedOnlyMesh(star);
+
+      // SceneLoader.ImportMesh("", "./models/celestial_bodies/white_dwarf/glb/", "etoileblanchesanseffetxenu.glb", scene, function (newMesh) {
+        // newMesh.convertToFlatShadedMesh();
+      // });
 
       // Create orbits
       let circlePoints = [];

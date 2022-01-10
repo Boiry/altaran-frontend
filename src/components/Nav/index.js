@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { setPage } from 'src/utils/router';
@@ -6,25 +6,33 @@ import { setPage } from 'src/utils/router';
 import './nav.scss';
 
 const Nav = ({ handleLogout }) => {
-  const handleClick = () => {
-    handleLogout();
+  let buttons;
+
+  useEffect(() => {
+    buttons = document.querySelectorAll(".nav-button");
+    buttons[0].classList.add('nav-button-active');
+  }, []);
+
+  const handleClick = (e) => {
+    buttons.forEach(button => button.classList.remove('nav-button-active'));
+    e.target.classList.add('nav-button-active');
   };
   return (
     <div className="nav">
-      <button className="nav-button" onClick={() => setPage('empire')}>Empire</button>
-      <button className="nav-button" onClick={() => setPage('bases')}>Colonies</button>
-      <button className="nav-button">Installations</button>
-      <button className="nav-button" onClick={() => setPage('fleet')}>Flottes</button>
-      <button className="nav-button">Espionnage</button>
-      <button className="nav-button">Alliance</button>
-      <button className="nav-button" onClick={() => setPage('communications')}>Communications</button>
-      <button className="nav-button" onClick={() => setPage('map')}>Cartographie</button>
-      <button className="nav-button">Commerce</button>
-      <button className="nav-button" onClick={() => setPage('administration')}>Administration</button>
-      <button className="nav-button">Options</button>
-      <button className="nav-button">Liens externes</button>
-      <button className="nav-button">Boutique</button>
-      <button className="nav-button" onClick={handleClick}>Déconnexion</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('empire')}}>Empire</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('bases')}}>Colonies</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Installations</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('fleet')}}>Flottes</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Espionnage</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Alliance</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('communications')}}>Communications</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('map')}}>Cartographie</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Commerce</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e); setPage('administration')}}>Administration</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Options</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Liens externes</button>
+      <button className="nav-button" onClick={(e) => {handleClick(e);}}>Boutique</button>
+      <button className="nav-button" onClick={handleLogout}>Déconnexion</button>
     </div>
   );
 };

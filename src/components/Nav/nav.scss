@@ -1,5 +1,10 @@
 @use 'src/styles/vars';
 
+@mixin active {
+  background: vars.$light-blue;
+  font-size: .9rem;
+}
+
 .nav {
   position: absolute;
   top: 8rem;
@@ -10,7 +15,6 @@
   &-button {
     font-family: 'Orbitron', sans-serif;
     font-size: .7rem;
-    // background: linear-gradient(30deg, vars.$deep-blue, vars.$medium-blue);
     background-color: rgba(93, 186, 224, .2);
     opacity: 1;
     border: 1px solid vars.$neon;
@@ -22,8 +26,11 @@
     transition: font-size .2s;
 
     &:hover {
-      background: vars.$light-blue;
-      font-size: .9rem;
+      @include active;
+    }
+
+    &-active {
+      @include active;
     }
   }
 }

@@ -560,11 +560,13 @@ const Facilities = ({
         <img src={Corner} className="corner corner-top-right" />
         <img src={Corner} className="corner corner-bottom-left" />
         <img src={Corner} className="corner corner-bottom-right" />
-        <p className="facilities-more-description">{t(`${currentFacility}.longDescription`)}</p>
-        <p className="facilities-more-role-play">{t(`${currentFacility}.rolePlay`)}</p>
-        {t(`${currentFacility}.author`) !== `${currentFacility}.author` &&
-          <p className="facilities-more-role-play-author">{t(`${currentFacility}.author`)}</p>
-        }
+        <div className="facilities-more-text">
+          <p className="facilities-more-description">{t(`${currentFacility}.longDescription`)}</p>
+          <p className="facilities-more-role-play">{t(`${currentFacility}.rolePlay`)}</p>
+          {t(`${currentFacility}.author`) !== `${currentFacility}.author` &&
+            <p className="facilities-more-role-play-author">{t(`${currentFacility}.author`)}</p>
+          }
+        </div>
         <div className="facilities-more-button">
           <button onClick={hideMore}>{t("close")}</button>
         </div>

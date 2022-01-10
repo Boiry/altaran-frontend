@@ -129,14 +129,19 @@
     background-color: vars.$medium-blue;
     display: none;
     width: 80%;
+    max-height: 35rem;
     top: 5rem;
     left: 10%;
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
     text-align: justify;
     box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.5);
 
-    &-description {
-
+    &-text {
+      padding: 0 1rem 0 1rem;
+      max-height: 30rem;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: vars.$neon transparent;
     }
 
     &-role-play {
