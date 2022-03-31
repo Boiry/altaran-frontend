@@ -33,7 +33,7 @@ const userMiddleware = (store) => (next) => (action) => {
           store.dispatch(deletePassword());
         })
         .catch((error) => {
-          if (error.message === "Network Error") {
+          if (error.message.includes("Error") || error.response.status === 500) {
             store.dispatch(showLoginError('Le serveur est indisponible pour le moment.'));
           } else {
             store.dispatch(showLoginError('Les identifiants sont incorrects, veuillez les saisir à nouveau.'));

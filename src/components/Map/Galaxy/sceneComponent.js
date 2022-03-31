@@ -347,7 +347,7 @@ export default (props) => {
       } else {
         const star = selectedStars.current[0];
         x = star.x;
-        y = star.y - 2500;
+        y = star.y - 2200;
         z = star.z;
       }
       // Animation of the camera
