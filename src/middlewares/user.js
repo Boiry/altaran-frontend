@@ -2,6 +2,12 @@ import axios from 'axios';
 
 import {
   LOGIN,
+  FORGOTTEN_PASSWORD,
+  forgottenPasswordSuccessMessage,
+  forgottenPasswordErrorMessage,
+  RESET_PASSWORD,
+  resetPasswordSuccess,
+  resetPasswordError,
   REGISTER,
   waiting,
   saveUserInfo,
@@ -47,6 +53,66 @@ const userMiddleware = (store) => (next) => (action) => {
       break;
     };
 
+    case FORGOTTEN_PASSWORD: {
+      const email = action.email;
+      const testRegex = /\S+@\S+\.\S+/;
+      if (testRegex.test(email)) {
+        store.dispatch(forgottenPasswordErrorMessage(''));
+        store.dispatch(waiting(true));
+        axios({
+          method: 'post',
+          url: `${process.env.API_URL}user/resetPassword`, 
+          params: {email},
+        })
+          .then(() => {
+            store.dispatch(forgottenPasswordSuccessMessage("Un email vous a été envoyé."));
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+          .finally(() => {
+            store.dispatch(waiting(false));
+          })
+      } else {
+        store.dispatch(forgottenPasswordErrorMessage("L'email que vous avez entré est invalide."));
+      }
+
+      next(action);
+      break;
+    }
+
+    case RESET_PASSWORD: {
+      const token = window.location.search.slice(7);
+      const newPassword = action.newPassword;
+      const matchingNewPassword = action.matchingNewPassword;
+      if (newPassword === matchingNewPassword) {
+        store.dispatch(resetPasswordError(''));
+        store.dispatch(waiting(true));
+        axios.post(`${process.env.API_URL}user/savePassword`, {
+          token,
+          newPassword,
+          matchingNewPassword,
+        })
+          .then(() => {
+            store.dispatch(resetPasswordSuccess(true));
+            setTimeout(() => {
+              window.location = process.env.APP_URL;
+            }, 5000);
+          })
+          .catch((error) => {
+            store.dispatch(resetPasswordError('Un problème est survenu.'))
+          })
+          .finally(() => {
+            store.dispatch(waiting(false));
+          });
+      } else {
+        store.dispatch(resetPasswordError('Les mots de passe ne correspondent pas.'));
+      }
+
+      next(action);
+      break;
+    }
+
     case REGISTER: {
       store.dispatch(waiting(true));
       const { username, email, password, matchingPassword } = store.getState().user;
@@ -57,8 +123,6 @@ const userMiddleware = (store) => (next) => (action) => {
         matchingPassword,
       })
         .then((response) => {
-          console.log(response);
-          // If success
           store.dispatch(registerSuccess(true));
         })
         .catch((error) => {

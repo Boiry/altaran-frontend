@@ -43,7 +43,7 @@ const Home = ({ id, page }) => {
   }, [Home]);
 
   useEffect(() => {
-    if (page === "login" || page === "register") {
+    if (page === "login" || page === "register" || page === "forgotten_password") {
       document.getElementsByClassName("article")[0].style.width = "40rem";
     } else {
       document.getElementsByClassName("article")[0].style.width = "80rem";
@@ -91,7 +91,7 @@ const Home = ({ id, page }) => {
           <img src={Corner} className="corner corner-top-right" />
           <img src={Corner} className="corner corner-bottom-left" />
           <img src={Corner} className="corner corner-bottom-right" />
-          <h2 className="baseline-text">Le jeu qui tchue !<br />Parce qu'un jeu qui tchue c'est mieux qu'un jeu qui tchue pas, Praland c'est trop bien, jouez-y ou on vous pend haut et court.</h2>
+          <h2 className="baseline-text">Le jeu qui tchue !<br />Parce qu'un jeu qui tchue c'est mieux qu'un jeu qui tchue pas, Altaran c'est trop bien, jouez-y ou on vous pend haut et court.</h2>
         </div>
       </header>
 
@@ -106,6 +106,7 @@ const Home = ({ id, page }) => {
         <img src={Corner} className="corner corner-bottom-right" />
         {page === "login" && <Connection />}
         {page === "register" && <Connection />}
+        {page === "forgotten_password" && <Connection />}
         {page === "presentation" && <Presentation />}
         {page === "media" && <Media />}
         {page === "community" && <Community />}

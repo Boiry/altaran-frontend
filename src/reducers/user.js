@@ -6,8 +6,13 @@ import {
   DELETE_PASSWORD,
   SHOW_USERNAME_ERROR,
   SHOW_PASSWORD_ERROR,
+  FORGOTTEN_PASSWORD_SUCCESS_MESSAGE,
+  FORGOTTEN_PASSWORD_ERROR_MESSAGE,
+  RESET_PASSWORD_SUCCESS,
+  RESET_PASSWORD_ERROR,
   REGISTER_SUCCESS,
   CONFIRM_SUCCESS,
+  DELETE_USER_MESSAGES,
 } from 'src/actions/user';
 
 const initialState = {
@@ -21,6 +26,10 @@ const initialState = {
   loginErrorMessage: '',
   usernameErrorMessage: '',
   passwordErrorMessage: '',
+  forgottenPasswordSuccessMessage: '',
+  forgottenPasswordErrorMessage: '',
+  resetPasswordSuccess: false,
+  resetPasswordError: '',
   registerSuccess: false,
   confirmSuccess: '',
 };
@@ -63,16 +72,46 @@ const user = (state = initialState, action = {}) => {
         ...state,
         passwordErrorMessage: action.message,
       };
+    case FORGOTTEN_PASSWORD_SUCCESS_MESSAGE:
+      return {
+        ...state,
+        forgottenPasswordSuccessMessage: action.message,
+      };
+    case FORGOTTEN_PASSWORD_ERROR_MESSAGE:
+      return {
+        ...state,
+        forgottenPasswordErrorMessage: action.message,
+      };
+    case RESET_PASSWORD_SUCCESS:
+      return {
+        ...state,
+        resetPasswordSuccess: action.success,
+      };
+    case RESET_PASSWORD_ERROR:
+      return {
+        ...state,
+        resetPasswordError: action.error,
+      };
     case REGISTER_SUCCESS:
       return {
         ...state,
         registerSuccess: action.success,
-      }
+      };
     case CONFIRM_SUCCESS:
       return {
         ...state,
         confirmSuccess: action.success,
-      }
+      };
+    case DELETE_USER_MESSAGES:
+      return {
+        ...state,
+        loginErrorMessage: '',
+        usernameErrorMessage: '',
+        passwordErrorMessage: '',
+        forgottenPasswordSuccessMessage: '',
+        forgottenPasswordErrorMessage: '',
+        resetPasswordError: '',
+      };
     default: return { ...state };
   }
 };

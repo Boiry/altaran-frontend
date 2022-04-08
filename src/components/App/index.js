@@ -5,6 +5,7 @@ import Administration from 'src/components/Administration';
 import Bases from 'src/containers/Bases';
 import Communications from 'src/components/Communications';
 import Confirmation from 'src/containers/Confirmation';
+import ResetPassword from 'src/containers/Connection/ResetPassword';
 import Empire from 'src/components/Empire';
 import Home from 'src/containers/Home';
 import Log from 'src/components/Log';
@@ -21,12 +22,15 @@ const App = ({ page, isLogged, miniChat }) => {
     const path = window.location.pathname;
     if (path.substring(0, 20) === '/registrationConfirm') {
       setLocation("confirmation");
+    } else if (path.substring(0, 14) === '/resetPassword') {
+      setLocation("resetPassword");
     }
   }, [])
   return (
     <>
       {location === "confirmation" && <Confirmation />}
-      {isLogged === false && location !== "confirmation" && <Home />}
+      {location === "resetPassword" && <ResetPassword />}
+      {isLogged === false && location !== "confirmation" && location !== "resetPassword" && <Home />}
       {isLogged === true && <Log />}
       {isLogged === true && <Nav />}
       {isLogged === true && page !== "communications" && miniChat && <MiniChat />}

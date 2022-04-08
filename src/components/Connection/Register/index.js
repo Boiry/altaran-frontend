@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Field from '../Field';
+import Loader from '../Loader';
 import './register.scss';
-
-import Waiting from 'src/assets/images/waiting.svg';
-import { startAnimation, stopAnimation } from '../waitingWheelAnimation.js';
 
 const Register = ({
   username,
@@ -18,22 +16,18 @@ const Register = ({
   handleLogin,
   registerSuccess,
   waiting,
+  deleteUserMessages,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     handleLogin();
   };
 
-  // Waiting wheel animation
-  const waitingWheel = useRef();
   useEffect(() => {
-    if (waiting && waitingWheel.current) {
-      startAnimation(waitingWheel.current);
-    }
-    if (!waiting) {
-      stopAnimation();
-    }
-  }, [waiting]);
+    return () => {
+      deleteUserMessages();
+    };
+  }, []);
 
   return (
     <div className="register">
@@ -77,7 +71,11 @@ const Register = ({
           Votre demande a bien été prise en compte. Vous allez recevoir un email de confirmation afin d'activer votre compte.
         </p>
       }
-      {waiting && <img src={Waiting} ref={waitingWheel} className="connection-waiting-wheel" />}
+      {waiting &&
+        <div className="register-loader">
+          <Loader />
+        </div>
+      }
     </div>
   );
 };

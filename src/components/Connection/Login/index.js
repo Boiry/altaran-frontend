@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Field from '../Field';
+import Loader from '../Loader';
 import './login.scss';
-
-import Waiting from 'src/assets/images/waiting.svg';
-import { startAnimation, stopAnimation } from '../waitingWheelAnimation.js';
 
 const Login = ({
   username,
@@ -13,23 +11,20 @@ const Login = ({
   errorMessage,
   changeField,
   handleLogin,
+  forgottenPassword,
   waiting,
+  deleteUserMessages,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     handleLogin();
   };
 
-  // Waiting wheel animation
-  const waitingWheel = useRef();
   useEffect(() => {
-    if (waiting && waitingWheel.current) {
-      startAnimation(waitingWheel.current);
-    }
-    if (!waiting) {
-      stopAnimation();
-    }
-  }, [waiting]);
+    return () => {
+      deleteUserMessages();
+    };
+  }, []);
 
   return (
     <div className="login">
@@ -49,11 +44,16 @@ const Login = ({
             value={password}
             onChange={changeField}
           />
+          <div className="login-forgotten-password" onClick={forgottenPassword}>Mot de passe oublié ?</div>
           <div className="login-error-message">{errorMessage}</div>
           <button className="login-button" type="submit">Connexion</button>
         </form>
       }
-      {waiting && <img src={Waiting} ref={waitingWheel} className="connection-waiting-wheel" />}
+      {waiting &&
+        <div className="login-loader">
+          <Loader />
+        </div>
+        }
     </div>
   );
 };

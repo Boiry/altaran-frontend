@@ -1,4 +1,10 @@
 export const UPDATE_USER_FIELD = 'UPDATE_USER_FIELD';
+export const FORGOTTEN_PASSWORD = 'FORGOTTEN_PASSWORD';
+export const FORGOTTEN_PASSWORD_SUCCESS_MESSAGE = 'FORGOTTEN_PASSWORD_SUCCESS_MESSAGE';
+export const FORGOTTEN_PASSWORD_ERROR_MESSAGE = 'FORGOTTEN_PASSWORD_ERROR_MESSAGE';
+export const RESET_PASSWORD = 'RESET_PASSWORD';
+export const RESET_PASSWORD_SUCCESS = 'RESET_PASSWORD_SUCCESS';
+export const RESET_PASSWORD_ERROR = 'RESET_PASSWORD_ERROR';
 export const LOGIN = 'LOGIN';
 export const REGISTER = 'REGISTER';
 export const WAITING = 'WAITING';
@@ -10,12 +16,44 @@ export const SHOW_PASSWORD_ERROR = 'SHOW_PASSWORD_ERROR';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const CONFIRM = 'CONFIRM';
 export const CONFIRM_SUCCESS = 'CONFIRM_SUCCESS';
+export const DELETE_USER_MESSAGES = 'DELETE_USER_MESSAGES';
 export const LOGOUT = 'LOGOUT';
 
 export const updateUserField = (value, name) => ({
   type: UPDATE_USER_FIELD,
   value,
   name,
+});
+
+export const forgottenPassword = (email) => ({
+  type: FORGOTTEN_PASSWORD,
+  email,
+});
+
+export const forgottenPasswordSuccessMessage = (message) => ({
+  type: FORGOTTEN_PASSWORD_SUCCESS_MESSAGE,
+  message,
+})
+
+export const forgottenPasswordErrorMessage = (message) => ({
+  type: FORGOTTEN_PASSWORD_ERROR_MESSAGE,
+  message,
+});
+
+export const resetPassword = (newPassword, matchingNewPassword) => ({
+  type: RESET_PASSWORD,
+  newPassword,
+  matchingNewPassword,
+});
+
+export const resetPasswordSuccess = (success) => ({
+  type: RESET_PASSWORD_SUCCESS,
+  success,
+});
+
+export const resetPasswordError = (error) => ({
+  type: RESET_PASSWORD_ERROR,
+  error,
 });
 
 export const login = () => ({
@@ -29,7 +67,7 @@ export const register = () => ({
 export const waiting = (waiting) => ({
   type: WAITING,
   waiting,
-})
+});
 
 export const saveUserInfo = (id, isLogged) => ({
   type: SAVE_USER_INFO,
@@ -69,7 +107,11 @@ export const confirm = (token) => ({
 export const confirmSuccess = (success) => ({
   type: CONFIRM_SUCCESS,
   success,
-})
+});
+
+export const deleteUserMessages = () => ({
+  type: DELETE_USER_MESSAGES,
+});
 
 export const logout = () => ({
   type: LOGOUT,

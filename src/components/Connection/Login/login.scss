@@ -23,4 +23,16 @@
   &-error-message {
     color: red;
   }
+
+  &-forgotten-password {
+    margin: 10px auto;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  &-loader {
+    display: flex;
+    justify-content: center;
+  }
 }

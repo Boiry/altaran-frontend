@@ -29,10 +29,11 @@
     border-right: 1px solid transparent;
     border-bottom: 1px solid white;
   }
-}
 
-.connection-waiting-wheel {
-  position: relative;
-  width: 5rem;
-  left: calc(175px - 2.5rem);
+  &-special {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+  }
 }

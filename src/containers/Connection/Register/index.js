@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import Register from 'src/components/Connection/Register';
 
-import { updateUserField, register } from 'src/actions/user';
+import { updateUserField, register, deleteUserMessages } from 'src/actions/user';
 
 const mapStateToProps = (state) => ({
   username: state.user.username,
@@ -21,6 +21,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   handleLogin: () => {
     dispatch(register());
+  },
+  deleteUserMessages: () => {
+    dispatch(deleteUserMessages());
   },
 });
 
