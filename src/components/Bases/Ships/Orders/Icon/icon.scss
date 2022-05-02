@@ -1,0 +1,13 @@
+.ships-orders-frame-icon {
+  cursor: pointer;
+  
+  & > figure > img {
+    width: 4rem;
+    border-radius: 7px;
+  }
+
+  & figcaption {
+    font-size: .7rem;
+    text-align: center;
+  }
+}

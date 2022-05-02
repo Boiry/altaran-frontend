@@ -14,9 +14,6 @@ import MiniChat from 'src/containers/MiniChat';
 import Nav from 'src/containers/Nav';
 
 const App = ({ page, isLogged, miniChat }) => {
-  // if (window.sessionStorage.token) {
-  //   isLogged = true;
-  // }
   const [location, setLocation] = useState();
   useEffect(() => {
     const path = window.location.pathname;

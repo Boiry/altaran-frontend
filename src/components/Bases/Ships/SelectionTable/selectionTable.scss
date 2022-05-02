@@ -1,0 +1,128 @@
+@use 'src/styles/vars';
+
+.ships-selection {
+  background-color: vars.$main-background;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+
+  & table {
+    border-collapse: separate;
+    border-spacing: 3px .5rem;
+  }
+
+  & th {
+    padding: .3rem;
+    cursor: pointer;
+  }
+
+  & td {
+    background-color: vars.$main-background;
+    text-align: center;
+    vertical-align: middle;
+
+    & div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & td:not(:first-child) {
+    padding: 0 .3rem;
+    font-size: .8rem;
+
+    & input {
+      background-color: vars.$field-background;
+      font-size: .8rem;
+      font-family: vars.$font-family;
+      width: 7rem;
+      text-align: center;
+      border: none;
+      color: white;
+      padding: .3rem 0;
+    }
+  }
+
+  &-row {
+    height: 4rem;
+    opacity: 1;
+    transform-origin: top;
+    transition: transform .5s linear, height .5s linear, opacity .5s linear;
+
+    &-closed {
+      transform: scaleY(0);
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  &-image {
+    width: 4rem;
+    height: 4rem;
+    transition: height .5s linear;
+
+    &-closed {
+      height: 0;
+    }
+  }
+
+  &-alloy {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-none {
+      background-color: white;
+    }
+
+    &-modified {
+      background-color: orange;
+    }
+  
+    &-experimental {
+      background-color: red;
+    }
+  }
+
+  &-bookmark > img {
+    cursor: pointer;
+    width: 30px;
+  }
+
+  &-clear {
+    width: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &-fullfill {
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &-info {
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  &-message {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+@keyframes translateUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2.9rem);
+  }
+}

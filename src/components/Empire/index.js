@@ -11,6 +11,7 @@ import './empire.scss';
 const Empire = () => {
   document.body.style.background = `url(${Background})`;
   document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundAttachment = 'fixed';
 
   const [subPage, changeSubPage] = useState('statistics');
   const tabs = {

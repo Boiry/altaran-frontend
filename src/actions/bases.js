@@ -14,13 +14,22 @@ export const ADD_FACILITY_UPGRADE = "ADD_FACILITY_UPGRADE";
 export const REMOVE_FACILITY_UPGRADE = "REMOVE_FACILITY_UPGRADE";
 export const LOADING = "LOADING";
 
+export const GET_SHIPS = 'GET_SHIPS';
+export const STORE_SHIPS = 'STORE_SHIPS';
+export const UPDATE_SHIPS_BOOKMARKS = 'UPDATE_SHIPS_BOOKMARKS';
+export const DISPATCH_BOOKMARKS = 'DISPATCH_BOOKMARKS';
+export const SEND_SHIPS = 'SEND_SHIPS';
+
 export const FETCH_TECHNOLOGIES = "FETCH_TECHNOLOGIES";
 export const SAVE_TECHNOLOGIES_INFO = "SAVE_TECHNOLOGIES_INFO";
 export const CHANGE_CURRENT_TECHNOLOGY = "CHANGE_CURRENT_TECHNOLOGY";
 export const FETCH_TECHNOLOGIES_UPDATES = "FETCH_TECHNOLOGIES_UPDATES";
 export const SAVE_TECHNOLOGIES_UPDATES_INFO = "SAVE_TECHNOLOGIES_UPDATES_INFO";
+
 export const FETCH_BASE_RESOURCES = "FETCH_BASE_RESOURCES";
 export const SAVE_BASE_RESOURCES = "SAVE_BASE_RESOURCES";
+export const GET_RESOURCES = "GET_RESOURCES";
+export const SET_RESOURCES = "SET_RESOURCES";
 
 export const fetchBases = () => ({
   type: FETCH_BASES,
@@ -104,7 +113,34 @@ export const removeFacilityUpgrade = (baseId, facility) => ({
 export const loading = (isLoading) => ({
   type: LOADING,
   isLoading,
-})
+});
+
+export const getShips = (baseId) => ({
+  type: GET_SHIPS,
+  baseId,
+});
+
+export const storeShips = (base, ships) => ({
+  type: STORE_SHIPS,
+  base,
+  ships,
+});
+
+export const updateShipsBookmarks = (base, newBookmarkedShips) => ({
+  type: UPDATE_SHIPS_BOOKMARKS,
+  base,
+  newBookmarkedShips,
+});
+
+export const dispatchBookmarks = (bookmarks) => ({
+  type: DISPATCH_BOOKMARKS,
+  bookmarks,
+});
+
+export const sendShips = (ships) => ({
+  type: SEND_SHIPS,
+  ships,
+});
 
 export const fetchTechnologies = () => ({
   type: FETCH_TECHNOLOGIES,
@@ -138,6 +174,18 @@ export const fetchBaseResources = () => ({
 
 export const saveBaseResources = (base, resources) => ({
   type: SAVE_BASE_RESOURCES,
+  base,
+  resources,
+});
+
+export const getResources = (base, boolean) => ({
+  type: GET_RESOURCES,
+  base,
+  boolean,
+});
+
+export const setResources = (base, resources) => ({
+  type: SET_RESOURCES,
   base,
   resources,
 });

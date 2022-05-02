@@ -1,0 +1,81 @@
+@use 'src/styles/vars';
+
+.ships {
+  position: relative;
+
+  &-tab {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+    text-align: center;
+
+    & > div {
+      box-sizing: content-box;
+      width: 100%;
+      padding: 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid vars.$neon;
+    }
+
+    &-active {
+      border-top: 1px solid vars.$neon;
+      border-right: 1px solid vars.$neon;
+      border-bottom: none !important;
+      border-left: 1px solid vars.$neon;
+    }
+  }
+
+  &-categories {
+    margin-top: 1rem;
+    text-align: center;
+
+    &-icon {
+      width: 4rem;
+      margin: 0 .5rem;
+
+      &:hover {
+        border: 1px solid vars.$neon;
+        border-radius: 7px;
+        cursor: pointer;
+        filter: saturate(200%);
+      }
+    }
+
+    &-label {
+      font-size: 1rem;
+    }
+
+    &-active {
+      border: 1px solid vars.$neon;
+      border-radius: 7px;
+      cursor: pointer;
+      filter: saturate(200%);
+    }
+
+    &-choose-all {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+
+      & > img {
+        cursor: pointer;
+      }
+
+      & > img:first-child {
+        width: 20px;
+        margin-right: .5rem;
+      }
+
+      & > img:last-child {
+        width: 35px;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  & > p {
+    background-color: vars.$main-background;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}

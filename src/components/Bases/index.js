@@ -8,7 +8,7 @@ import BaseSelector from 'src/containers/Bases/BaseSelector';
 import Description from './Description';
 import Facilities from 'src/containers/Bases/Facilities';
 import Defenses from './Defenses';
-import Ships from './Ships';
+import Ships from 'src/containers/Bases/Ships';
 import Infantry from './Infantry';
 import Technologies from 'src/containers/Bases/Technologies';
 import Aside from 'src/containers/Bases/Aside';

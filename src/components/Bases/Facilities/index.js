@@ -128,20 +128,22 @@ const Facilities = ({
   // Displaying the corresponding picture and title
   const displayedImage = useRef();
   const titleDiv = useRef();
-  if (currentFacility && facilitiesLevels && displayedImage.current) {
-    if (currentFacility.match(/^upgrade/)) {
-      const name = currentFacility.split('-');
-      displayedImage.current.src = nameToImage[name[1]];
-      titleDiv.current.textContent = t(`${name[1]}.name`);
-    } else {
-      displayedImage.current.src = nameToImage[currentFacility];
-      titleDiv.current.textContent = t(`${currentFacility}.name`) + ` (${t("level")} ${facilitiesLevels[currentFacility]})`;
+  useEffect(() => {
+    if (currentFacility && facilitiesLevels && displayedImage.current) {
+      if (currentFacility.match(/^upgrade/)) {
+        const name = currentFacility.split('-');
+        displayedImage.current.src = nameToImage[name[1]];
+        titleDiv.current.textContent = t(`${name[1]}.name`);
+      } else {
+        displayedImage.current.src = nameToImage[currentFacility];
+        titleDiv.current.textContent = t(`${currentFacility}.name`) + ` (${t("level")} ${facilitiesLevels[currentFacility]})`;
+      }
     }
-  }
-  if (!currentFacility && displayedImage.current) {
-    displayedImage.current.src = Empty;
-    titleDiv.current.textContent = '';
-  }
+    if (!currentFacility && displayedImage.current) {
+      displayedImage.current.src = Empty;
+      titleDiv.current.textContent = '';
+    }
+  });
 
   // Displaying the window for more informations
   const moreDiv = useRef();
@@ -185,7 +187,7 @@ const Facilities = ({
   return (
     <>
       <div className="facilities-main">
-        <img ref={displayedImage} src="" className="facilities-image" alt=""/>
+        <img ref={displayedImage} src={Empty} className="facilities-image" alt=""/>
         <div className="facilities-description">
           <div ref={titleDiv} className="facilities-description-title"></div>
           {!loading && showDescription === 'showItem' &&

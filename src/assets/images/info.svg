@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="117.10407mm"
+   height="117.10407mm"
+   viewBox="0 0 117.10407 117.10408"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (08b2f3d93c, 2022-04-05)"
+   sodipodi:docname="info.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.6440867"
+     inkscape:cx="137.40386"
+     inkscape:cy="230.55902"
+     inkscape:window-width="1535"
+     inkscape:window-height="876"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-46.848086,-98.216166)">
+    <circle
+       style="fill:none;fill-rule:evenodd;stroke:#5dbae0;stroke-width:9.365;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846"
+       cx="105.40012"
+       cy="156.7682"
+       r="53.869537" />
+    <rect
+       style="fill:#5dbae0;fill-opacity:1;stroke:#5dbae0;stroke-width:9.36501;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1024"
+       width="11.393636"
+       height="56.968178"
+       x="99.703308"
+       y="141.99167"
+       rx="4.99999"
+       ry="4.99999" />
+    <ellipse
+       style="fill:#5dbae0;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="path1128"
+       cx="105.40012"
+       cy="122.38059"
+       rx="10.965103"
+       ry="11.475579" />
+  </g>
+</svg>

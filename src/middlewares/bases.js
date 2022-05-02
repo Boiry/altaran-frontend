@@ -14,6 +14,10 @@ import {
   ADD_FACILITY_UPGRADE,
   REMOVE_FACILITY_UPGRADE,
   loading,
+  GET_SHIPS,
+  storeShips,
+  DISPATCH_BOOKMARKS,
+  SEND_SHIPS,
   FETCH_TECHNOLOGIES,
   saveTechnologiesInfo,
   FETCH_TECHNOLOGIES_UPDATES,
@@ -71,6 +75,7 @@ const basesMiddleware = (store) => (next) => (action) => {
       axios.get(`${process.env.API_URL}api/user/planets/${action.baseId}/buildingTemplates?name=${param}`, authorization)
       .then((response) => {
         store.dispatch(saveCurrentFacility(action.base, response.data));
+        console.log(response.data)
       })
       .catch((error) => {
         console.log(error);
@@ -114,6 +119,32 @@ const basesMiddleware = (store) => (next) => (action) => {
       .catch((error) => {
         console.log(error);
       });
+      next(action);
+      break;
+    };
+
+    case GET_SHIPS: {
+      axios.get('/mock/ships.json')
+      .then((response) => {
+        store.dispatch(storeShips(base, response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      next(action);
+      break;
+    };
+
+    case DISPATCH_BOOKMARKS: {
+      // TODO relier au back
+      console.log(JSON.stringify(action.bookmarks))
+      next(action);
+      break;
+    };
+
+    case SEND_SHIPS: {
+      // TODO relier au back
+      console.log(JSON.stringify(action.ships))
       next(action);
       break;
     };

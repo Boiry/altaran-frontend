@@ -98,14 +98,13 @@
         }
       }
     }
+    & hr {
+      max-width: 17vw;
+      color: vars.$neon;
+    }
   }
 }
 
 .emoji-picker-react {
   visibility: hidden;
-}
-
-hr {
-  max-width: 17vw;
-  color: vars.$neon;
 }

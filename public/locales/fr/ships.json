@@ -1,0 +1,19 @@
+{
+  "allShips": "Tous les vaisseaux",
+  "cargos": "Transporteurs",
+  "civilianShips": "Vaisseaux civils",
+  "civilianStations": "Stations civiles",
+  "militaryStations": "Stations militaires",
+  "militaryShips": "Vaisseaux militaires",
+  "motherShips": "Vaisseaux mères",
+  "miscellaneous": "Vaisseaux divers",
+  "bookmarked": "Favoris",
+  "metal": "Métal",
+  "energy": "Énergie",
+  "modifiedAlloy": "Alliage modifié",
+  "experimentalAlloy": "Alliage expérimental",
+  "antimatter": "Antimatière",
+  "darkmatter": "Matière noire",
+  "rareResource": "Resource rare",
+  "population": "Population"
+}

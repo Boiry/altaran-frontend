@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.ships-speed-bar {
+  display: inline-block;
+  width: 10rem;
+  height: 2rem;
+  border: 2px solid vars.$neon;
+  border-radius: 5px;
+  margin: 0 1rem;
+  vertical-align: bottom;
+}

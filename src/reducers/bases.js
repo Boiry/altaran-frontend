@@ -7,10 +7,14 @@ import {
   SAVE_CURRENT_FACILITY,
   SAVE_FACILITIES_UPGRADES,
   LOADING,
+  STORE_SHIPS,
+  UPDATE_SHIPS_BOOKMARKS,
   SAVE_TECHNOLOGIES_INFO,
   CHANGE_CURRENT_TECHNOLOGY,
   SAVE_TECHNOLOGIES_UPDATES_INFO,
   SAVE_BASE_RESOURCES,
+  GET_RESOURCES,
+  SET_RESOURCES,
 } from '../actions/bases';
 
 const initialState = {
@@ -80,6 +84,35 @@ const bases = (state = initialState, action = {}) => {
         ...state,
         loading: action.isLoading,
       };
+    case STORE_SHIPS:
+      return {
+        ...state,
+        [action.base]: {
+          ...state[action.base],
+          ships: action.ships,
+        }
+      };
+    case UPDATE_SHIPS_BOOKMARKS:
+      if (state[action.base].ships === undefined) return;
+      const newShips = state[action.base].ships.map(oldShip => {
+        let modifiedShips;
+        action.newBookmarkedShips.forEach(newShipId => {
+          if (oldShip.id === newShipId) {
+            let newValue = oldShip.bookmarked === 'true' ? 'false' : 'true';
+            modifiedShips = {...oldShip, bookmarked: newValue}
+          }
+          return;
+        });
+        const newShipToPush = modifiedShips ? modifiedShips : oldShip;
+        return newShipToPush;
+      });
+      return {
+        ...state,
+        [action.base]: {
+          ...state[action.base],
+          ships: newShips,
+        }
+      };
     case SAVE_TECHNOLOGIES_INFO:
       return {
         ...state,
@@ -101,6 +134,22 @@ const bases = (state = initialState, action = {}) => {
         [action.base]: {
           ...state[action.base],
           resources: action.resources,
+        }
+      };
+    case GET_RESOURCES:
+      return {
+        ...state,
+        [action.base]: {
+          ...state[action.base],
+          needResources: action.boolean,
+        }
+      };
+    case SET_RESOURCES:
+      return {
+        ...state,
+        [action.base]: {
+          ...state[action.base],
+          snapshotResources: action.resources,
         }
       };
     default: return { ...state };
