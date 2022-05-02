@@ -2,7 +2,7 @@
 
 .specialties {
   &-main {
-  max-height: calc(100vh-13rem);
+  max-height: calc(100vh - 13rem);
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: vars.$neon transparent;
