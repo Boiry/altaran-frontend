@@ -4,7 +4,7 @@ body {
 
 .page-opacity {
   position: absolute;
-  background-image: url(../../assets/images/black-background.svg);
+  background-image: url("../../assets/images/black-background.svg");
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -221,7 +221,7 @@ body {
 .article {
   position: relative;
   visibility: hidden;
-  background-image: url(../../assets/images/background.svg);
+  background-image: url("../../assets/images/background.svg");
   background-size: cover;
   top: 10rem;
   margin: 0 auto;

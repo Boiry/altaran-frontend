@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const { BundleStatsWebpackPlugin } = require('bundle-stats-webpack-plugin');
 
 module.exports = merge(common, {
@@ -45,6 +45,7 @@ module.exports = merge(common, {
           {
             loader: 'sass-loader',
             options: {
+              sourceMap: true,
               implementation: require('sass'),
             },
           },
@@ -65,7 +66,7 @@ module.exports = merge(common, {
   },
 
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new TerserJSPlugin({}), new CssMinimizerWebpackPlugin({})],
     runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',

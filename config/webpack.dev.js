@@ -20,6 +20,7 @@ module.exports = merge(common, {
             options: {
               sourceMap: true,
               importLoaders: 2,
+              esModule: false,
             },
           },
           {
@@ -44,18 +45,24 @@ module.exports = merge(common, {
     publicPath: '/',
   },
 
+  watchOptions: {
+    ignored: /node_modules/,
+  },
+
+  stats: 'minimal',
+
   devServer: {
     historyApiFallback: true,
-    contentBase: paths.build,
-    clientLogLevel: 'warn',
-    overlay: true,
-    stats: 'minimal',
+    static: {
+      directory: paths.build,
+    },
+    client: {
+      overlay: true,
+      logging: 'warn',
+    },
     open: false,
     compress: true,
     hot: true,
-    watchOptions: {
-      ignored: /node_modules/,
-    },
     port,
   },
 });

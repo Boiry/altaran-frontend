@@ -75,7 +75,6 @@ const basesMiddleware = (store) => (next) => (action) => {
       axios.get(`${process.env.API_URL}api/user/planets/${action.baseId}/buildingTemplates?name=${param}`, authorization)
       .then((response) => {
         store.dispatch(saveCurrentFacility(action.base, response.data));
-        console.log(response.data)
       })
       .catch((error) => {
         console.log(error);
