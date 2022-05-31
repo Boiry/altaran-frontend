@@ -6,10 +6,11 @@ import chatFR from '../public/locales/fr/chat.json';
 import communicationsFR from '../public/locales/fr/communications';
 import facilitiesFR from '../public/locales/fr/facilities.json';
 import mapFR from '../public/locales/fr/map.json';
+import politicsFR from '../public/locales/fr/politics.json';
+import presentationFR from '../public/locales/fr/presentation.json';
 import shipsFR from '../public/locales/fr/ships.json';
 import specialtiesFR from '../public/locales/fr/specialties.json';
 import technologiesFR from '../public/locales/fr/technologies.json';
-import politicsFR from '../public/locales/fr/politics.json';
 
 const resources = {
   en: {
@@ -19,14 +20,15 @@ const resources = {
   },
   fr: {
     bases: basesFR,
-    chat: chatFR,
     communications: communicationsFR,
+    chat: chatFR,
     facilities: facilitiesFR,
     map: mapFR,
+    politics: politicsFR,
+    presentation: presentationFR,
     ships: shipsFR,
     specialties: specialtiesFR,
     technologies: technologiesFR,
-    politics: politicsFR,
   }
 };
 

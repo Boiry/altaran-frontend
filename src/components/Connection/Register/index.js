@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 
 import Field from '../Field';
 import Loader from '../Loader';
+import { setPage } from 'src/utils/router';
 import './register.scss';
 
 const Register = ({
   username,
+  civilization,
   email,
+  goToCivilizationsGuide,
   password,
   matchingPassword,
   usernameErrorMessage,
@@ -22,6 +25,11 @@ const Register = ({
     evt.preventDefault();
     handleLogin();
   };
+
+  const changePage = () => {
+    goToCivilizationsGuide(true);
+    setPage('presentation');
+  }
 
   useEffect(() => {
     return () => {
@@ -40,6 +48,17 @@ const Register = ({
             value={username}
             onChange={changeField}
           />
+          <label className="register-form-select" htmlFor="civilization-selection">Civilisation</label>
+          <select id="civilization-selection" name="civilization" value={civilization} onChange={(e) => changeField(e.target.value, 'civilization')}>
+            <option value="Arinesse">Arinesse</option>
+            <option value="Zet-Ha">Zet-Ha</option>
+            <option value="Xel-Nirr Ortolis">Xel-Nirr Ortolis</option>
+            <option value="Kha'Od">Kha'Od</option>
+            <option value="Kertsakar">Kertsakar</option>
+            <option value="Xol To">Xol To</option>
+          </select>
+          <p onClick={changePage}>Comment choisir ?</p>
+          <hr />
           <Field
             name="email"
             type="text"
@@ -83,6 +102,7 @@ const Register = ({
 Register.propTypes = {
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  goToCivilizationsGuide: PropTypes.func.isRequired,
   password: PropTypes.string.isRequired,
   matchingPassword: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,

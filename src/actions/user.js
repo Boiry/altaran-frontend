@@ -1,3 +1,5 @@
+export const GO_TO_CIVILIZATIONS_GUIDE = 'GO_TO_CIVILIZATIONS_GUIDE';
+export const GO_TO_CIVILIZATIONS_GUIDE_DONE = 'GO_TO_CIVILIZATIONS_GUIDE_DONE';
 export const UPDATE_USER_FIELD = 'UPDATE_USER_FIELD';
 export const FORGOTTEN_PASSWORD = 'FORGOTTEN_PASSWORD';
 export const FORGOTTEN_PASSWORD_SUCCESS_MESSAGE = 'FORGOTTEN_PASSWORD_SUCCESS_MESSAGE';
@@ -18,6 +20,15 @@ export const CONFIRM = 'CONFIRM';
 export const CONFIRM_SUCCESS = 'CONFIRM_SUCCESS';
 export const DELETE_USER_MESSAGES = 'DELETE_USER_MESSAGES';
 export const LOGOUT = 'LOGOUT';
+
+export const goToCivilizationsGuide = (value) => ({
+  type: GO_TO_CIVILIZATIONS_GUIDE,
+  value,
+});
+
+export const goToCivilizationsGuideDone = () => ({
+  type: GO_TO_CIVILIZATIONS_GUIDE_DONE,
+});
 
 export const updateUserField = (value, name) => ({
   type: UPDATE_USER_FIELD,

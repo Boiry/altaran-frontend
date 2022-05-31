@@ -1,4 +1,6 @@
 import {
+  GO_TO_CIVILIZATIONS_GUIDE,
+  GO_TO_CIVILIZATIONS_GUIDE_DONE,
   UPDATE_USER_FIELD,
   WAITING,
   SAVE_USER_INFO,
@@ -16,7 +18,9 @@ import {
 } from 'src/actions/user';
 
 const initialState = {
+  goToCivilizationsGuide: false,
   username: '',
+  civilization: '',
   id: '',
   email: '',
   password: '',
@@ -36,6 +40,16 @@ const initialState = {
 
 const user = (state = initialState, action = {}) => {
   switch (action.type) {
+    case GO_TO_CIVILIZATIONS_GUIDE:
+      return {
+        ...state,
+        goToCivilizationsGuide: action.value,
+      };
+    case GO_TO_CIVILIZATIONS_GUIDE_DONE:
+      return {
+        ...state,
+        goToCivilizationsGuide: false,
+      };
     case UPDATE_USER_FIELD:
       return {
         ...state,

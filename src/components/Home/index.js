@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { setPage } from 'src/utils/router';
 import Connection from 'src/components/Connection';
-import Presentation from 'src/components/Presentation';
+import Presentation from 'src/containers/Presentation';
 import Media from 'src/components/Media';
 import Community from 'src/components/Community';
 import Loader from 'src/containers/Loader';

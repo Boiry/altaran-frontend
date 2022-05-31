@@ -1,0 +1,55 @@
+@use 'src/styles/vars';
+
+@mixin title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.presentation-civilizations-card {
+  flex: 1 1 0px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 10px white;
+  background-position: center;
+  background-size: 500%;
+  transition: background-size 2s;
+
+  &:hover {
+    background-size: 550%;
+  }
+
+  &-title {
+    background-color: vars.$main-background;
+  }
+
+  &-civilization {
+    @include title;
+    font-size: .7rem;
+    margin-top: 1rem;
+  }
+
+  &-name {
+    @include title;
+    font-weight: bold;
+  }
+
+  &-summary {
+    margin: 1rem 1rem 4rem 1rem;
+    font-size: .8rem;
+    text-shadow: 1px 1px 5px black;
+  }
+
+  & > footer {
+    position: absolute;
+    width: 100%;
+    background-color: vars.$main-background;
+    text-align: center;
+    padding: .5rem;
+    bottom: 1rem;
+
+    &:hover {
+      background-color: vars.$orange;
+    }
+  }
+}

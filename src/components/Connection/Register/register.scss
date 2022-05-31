@@ -8,6 +8,30 @@
   &-form {
     display: flex;
     flex-direction: column;
+
+    &-select {
+      text-align: center;
+    }
+
+    & select {
+      width: 250px;
+      margin: 0 auto;
+    }
+
+    & > p {
+      text-align: center;
+      font-size: .9rem;
+      font-weight: bold;
+      color: vars.$medium-blue;
+      text-decoration: underline;
+      text-shadow: 0 0 2px white;
+      cursor: pointer;
+    }
+
+    & > hr {
+      color: white;
+      margin: 1rem 0;
+    }
   }
 
   &-button {

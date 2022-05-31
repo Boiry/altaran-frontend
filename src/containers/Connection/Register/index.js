@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 
 import Register from 'src/components/Connection/Register';
 
-import { updateUserField, register, deleteUserMessages } from 'src/actions/user';
+import { goToCivilizationsGuide, updateUserField, register, deleteUserMessages } from 'src/actions/user';
 
 const mapStateToProps = (state) => ({
   username: state.user.username,
+  civilization: state.user.civilization,
   email: state.user.email,
   password: state.user.password,
   matchingPassword: state.user.matchingPassword,
@@ -16,6 +17,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  goToCivilizationsGuide: (value) => {
+    dispatch(goToCivilizationsGuide(value));
+  },
   changeField: (newValue, name) => {
     dispatch(updateUserField(newValue, name));
   },

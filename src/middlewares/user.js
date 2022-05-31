@@ -115,7 +115,7 @@ const userMiddleware = (store) => (next) => (action) => {
 
     case REGISTER: {
       store.dispatch(waiting(true));
-      const { username, email, password, matchingPassword } = store.getState().user;
+      const { username, civilization, email, password, matchingPassword } = store.getState().user;
       axios.post(`${process.env.API_URL}user/registration`, {
         username,
         email,

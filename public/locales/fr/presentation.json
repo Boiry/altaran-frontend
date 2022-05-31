@@ -1,0 +1,223 @@
+{
+  "civilization": "civilisation",
+  "difficulty": "Prise en main",
+  "facts": "Traits principaux",
+  "technicals": "Mentions techniques",
+  "history": "Histoire",
+  "Arinesse": {
+    "summary": "Même origine civilisationnelle que l’Empire Valikma. Très portée sur l’expansion et l'occupation du territoire environnant. Son influence est considérable au sein de l’Empire Valikma tant par sa puissance économique que celle politique. On les soupçonne d’être à l’origine de nombreux complots.",
+    "tags": "Économie puissante, polyvalence et expansionniste.",
+    "difficulty": "Facile",
+    "fact1": {
+      "title": "Nombre de colonies",
+      "fact": "25 au maximum"
+    },
+    "fact2": {
+      "title": "Module d’Extension Industrielle",
+      "fact": "vaisseau unique de production.",
+      "advanced": "permet de produire jusqu’à 100% de ressources supplémentaires dans un système stellaire."
+    },
+    "fact3": {
+      "title": "Le centre de contrôle d’énergie",
+      "fact": "module augmentant la défense sur système stellaire.",
+      "advanced": "dédouble (temporairement) les modules de défense présents dans le système stellaire en cas d’attaque ennemie."
+    },
+    "fact4": {
+      "title": "Le Proconsul Arinesse",
+      "fact": "vaisseau mère exclusivement dédié au combat.",
+      "advanced": "vaisseau le plus puissant et le plus robuste de tout Altaran."
+    },
+    "fact5": {
+      "title": "Brouilleur de rayonnement ",
+      "fact": "superstructure empêchant de voir les mouvements de flotte.",
+      "advanced": "empêche la vision astrale dans un système stellaire pendant 1h."
+    },
+    "fact6": {
+      "title": "Capacité ultime",
+      "fact": "augmentation de la production de la ressource la plus rare d’Altaran.",
+      "advanced": "augmente de 15% la production de la matière noire et rend inattaquable la colonie pendant que l’effet est activé."
+    },
+    "technicals": "Le Proconsul Arinesse ne peut être construit plus d’une fois. Il est l’équivalent de 11 léviathan soit le deuxième vaisseaux le plus puissant accessible à tous les types de civilisations.\nEn développant une technologie sur une colonie, il est possible de payer pour réduire son temps de recherche en mobilisant d’autres colonies pour l’assister. Seules les 10 colonies les plus développées seront susceptibles d’avoir des informations sur l’empire du joueur, obtenables via l’espionnage.\nAprès avoir été enclenchée, la capacité ultime demande 3 jours de préparation avant de s’activer. Une fois le compte à rebours lancé, il ne peut être stoppé. Cette capacité ultime ne peut être interrompue ou annulée.",
+    "history": "La civilisation Arinesse est issue de l’Empire d’Ulmogat. Cet Empire s’est effondré il y a environ 5 000 années. Lors de son effondrement, deux entités se sont formées, l’un les Arinesses et l’autre les Valikmas. Les Arinesses sont une civilisation particulièrement orientée vers l’économie. Elle cherche a toujours augmenté ses capacités à extraire les ressources dans l’espace ce qui les aura conduits à des découvertes étonnantes comme l’exploration dimensionnelle. Elle garde toutefois des fragments de l’Empire d’Ulmogat comme la volonté de toujours s’étendre et de coloniser le plus de monde possible.\nArinesse est une civilisation qui se rapproche énormément du mode de vie sur la Terre mais dans une version futuriste de plusieurs millénaires passée. Le pouvoir des gouvernements est essentiellement démocratique avec des instances semi-permanentes comme des sénats. Il n’existe pas d’Empereur ou de pouvoir absolue détenue par un seul être chez les Arinesses. Il existe toutefois des gouverneurs qui sont assujettie à des hauts conseils d’Arinesses mais dont leur pouvoir est semblable à des pays. Ils peuvent donc créer de nouvelle colonie, s’étendre, faire la guerre etc. Ils peuvent avoir du soutien des instances supérieures Arinesses. La seule limite à ce pouvoir des gouverneurs est qu’ils doivent se soumettre aux lois de celle-ci. Si un gouverneur ne devait pas respecter les coutumes ou lois des Arinesses, le gouverneur peut être destitué de son pouvoir et une intervention militaire peut survenir.\nLe nom Arinesse vient d’un ancien gouverneur dans l’Empire d’Ulmogat qui a entrepris de grandes actions parfois cruelles pour maintenir une grande partie de l’Empire déchue en une nouvelle entité. Malgré le fait qu’il a agit à un certain moment dans son histoire comme un empereur, beaucoup de la population l'ont pardonné comprenant que la situation était critique. Il aura instauré de nouvelle coutume et renforcé celle existante qui on permit selon lui la survie du peuple pendant si longtemps avec l’Empire d’Ulmogat.\nLa population est assez instruite et voyage beaucoup entre les différents mondes Arinesses même avec d'autres gouverneurs. Il existe un fort sentiment d’appartenance à la civilisation et tous sont fiers d’avoir pu surmonter les durs épreuves du passé.\nLors de l’invasion des Valikmas beaucoup d’Arinesses ne comprenait pas cette opération venant d’un peuple frère. D'autres ne souhaitaient que l’unification des Valikmas et Arinesses pour rebâtir l’Empire d’Ulmogat. Cette fracture politique aura rendu compliquée la solidarité face aux Valikmas et rendu l’invasion des Valikmas très rapide en moins d’un siècle.\nSuite à cette conquête et depuis le temps, une grande partie des Arinesses se sentent plus Valikma. Cet état à équilibrer les forces en faveur de Valikma qui était beaucoup moins nombreux que Arinesses. À l’heure actuelle, Arinesse semble avoir la même masse de population que Valikma. Toutefois, leur proximité dans l’histoire et leur culture aura permit l'ascension rapide de plusieurs Arinesses dans les hautes instance de Valikma et permit à Arinesse de finalement garder ses caractéristiques en bloquant, manipulant etc. toutes manoeuvre pouvant réduire l’essence même de ce qu’est un Arinesse à néant. Le combat politique n’est pas terminé pour autant car les Valikma s’en sortent très renforcés si Arinesses devaient s’assimiler entièrement à eux.\nEn résumé  Arinesse : peuple fière, une volonté politique impérialiste, un peu traumatisée par l’attaque des Valikmas, ressemble énormément à la vie sur la Terre concernant le mode de vie mais dans une version futuriste et très présente politiquement. Pas nécessairement que chez Valikma, mais puisqu’ils ont beaucoup moins de pouvoir ils trouvent de plus en plus un certain échappatoire par la politique pour continuer d’avoir une influence et continuer leur mode de vie."
+  },
+  "Zet-Ha": {
+    "summary": "Civilisation très ancienne dont les origines restent très peu connues à l’extérieur. Dispose d’un savoir faire très convoité, même par les différents Grands Empires. Il n’est pas rare de voir se former des complots contre les Zet-Ha afin d’obtenir tous leurs secrets.",
+    "tags": "Tactique, support et méticuleux.",
+    "difficulty": "Moyen",
+    "fact1": {
+      "title": "Nombre de colonie",
+      "fact": "5 au maximum"
+    },
+    "fact2": {
+      "title": "Chasseur type II",
+      "fact": "un chasseur unique des Zet-Ha",
+      "advanced": "meilleure robustesse, puissance de feu et rapidité, mais plus coûteux."
+    },
+    "fact3": {
+      "title": "Grand port nef militarisé",
+      "fact": "transporteur militarisé avec grand cargo pour chasseurs.",
+      "advanced": "double capacité de cargo des chasseurs et bonne puissance de feu."
+    },
+    "fact4": {
+      "title": "Monolith",
+      "fact": "méga-module permettant la téléportation de flotte.",
+      "advanced": "téléportation de ses vaisseaux et alliés depuis votre capitale vers le monolith."
+    },
+    "fact5": {
+      "title": "Tombeau",
+      "fact": "vaisseau permettant de régénérer des vaisseaux lors d’un combat.",
+      "advanced": "Quand basé dans une région, il augmente les chances de régénération des vaisseaux s’y trouvant à 10%."
+    },
+    "fact6": {
+      "title": "Capacités ultimes",
+      "fact": "Capacité de téléportation de colonie et capacité de déplacement rapide de flotte.",
+      "advanced": "Capacité de téléportation des colonies et capacité de propulsion accélérée des vaisseaux à partir des colonies."
+    },
+    "technicals": "Les colonies Zet-Ha disposent d’un bonus compensatoire de production par colonie, mais les coûts de construction de leurs bâtiments sont beaucoup plus élevés également.\nLes colonies ont jusqu’à cinq lignes de chantier de construction pour les vaisseaux. Il est donc possible de faire cinq vaisseaux en même temps.",
+    "history": ""
+  },
+  "Xel-Nirr Ortolis": {
+    "summary": "Les Xel-Nirr Ortolis ont un long passé de guerre, de pillages et de ravages. Ils ne sont que peu appréciés des autres civilisations dans l’Empire Valikma. Certains d’entre eux sont parvenus à s’associer avec d'autres pour diminuer cette animosité à leur encontre.",
+    "tags": "Nomade, agressif et guerrier.",
+    "difficulty": "Difficile",
+    "fact1": {
+      "title": "Nombre de vaisseaux mères",
+      "fact": "5 au maximum"
+    },
+    "fact2": {
+      "title": "Ravitailleur militarisé",
+      "fact": "transporteur de ressource d’énergie militarisé",
+      "advanced": "dispose d’un châssis de transporteur et d’une bonne puissance de feu."
+    },
+    "fact3": {
+      "title": "Capteur solaire",
+      "fact": "Module surchargeant les boucliers d’un vaisseau mère",
+      "advanced": "peut augmenter considérablement le bouclier de vos vaisseaux mères."
+    },
+    "fact4": {
+      "title": "Intercepteur type II",
+      "fact": "vaisseau militaire le plus rapide de tout Altaran",
+      "advanced": "vitesse 50% plus élevée que l’intercepteur classique."
+    },
+    "fact5": {
+      "title": "Sanctuaire d’exil",
+      "fact": "superstructure qui augmente la vitesse de déplacement des vaisseaux mères.",
+      "advanced": "Cette superstructure augmente de jusqu’à 100% la vitesse des vaisseaux mères."
+    },
+    "fact6": {
+      "title": "Capacité ultime",
+      "fact": "augmentation considérable des capacités de personnalisation des stratégies de combat",
+      "advanced": "vous pouvez moduler la stratégie lors d’un combat de jusqu’à 20% supplémentaires."
+    },
+    "technicals": "Lors d’une attaque dans le vide spatial sans module de récupération, vous récupérez les débris pour une valeur maximale de 10%. Si vous avez un module de récupération lors du combat, la génération de débris passe de 40% à 60%.\nLes vaisseaux mères ne peuvent être détruits complètement. Suite à une attaque, si le vaisseau mère atteint un certain pourcentage de sa structure, il sera téléporté à un endroit aléatoirement et ne pourra construire des modules, technologies, vaisseaux, défenses et infanterie tant qu’il ne sera pas réparé. Enfin, il ne peut attaquer, mais il peut se défendre en cas d’agression.\nLes vaisseaux mères disposent de 5 lignes de construction de vaisseaux et 5 lignes de construction d’infanterie. Leur production de base de ressources est plus élevée. Leur coût de construction des modules est plus important.",
+    "history": ""
+  },
+  "Kha'Od": {
+    "summary": "Jeune civilisation portée par l’innovation et le développement technologique. C’est l’une des dernières civilisations à avoir été vaincue par les Valikma pour la constitution de l’Empire.",
+    "tags": "Stratégie, méticuleux et militaire.",
+    "difficulty": "Difficile",
+    "fact1": {
+      "title": "Nombre de vaisseau mère",
+      "fact": "1 au maximum."
+    },
+    "fact2": {
+      "title": "Drone tactique",
+      "fact": "Modèle de chasseur extrêmement peu coûteux.",
+      "advanced": "Fragile mais peu coûteux, très rapide à construire et d’une bonne puissance."
+    },
+    "fact3": {
+      "title": "Station de défense solaire",
+      "fact": "Vaisseau défensif servant à défendre les étoiles. Ne fonctionne pas sur les autres positions.",
+      "advanced": "Sa puissance de feu augmente selon l’importance de l’énergie dégagée par l’étoile."
+    },
+    "fact4": {
+      "title": "Avant-Poste",
+      "fact": "vaisseau qui une fois posé, sert de relais au vaisseau mère et augmente sa vitesse s’il est choisi comme point de destination.",
+      "advanced": "Le vaisseau mère qui se dirige vers un avant-poste se déplace 200% plus vite."
+    },
+    "fact5": {
+      "title": "Extinction",
+      "fact": "Superstructure qui rend votre vaisseau mère indétectable pendant 12h.",
+      "advanced": "Son effet s’applique directement après avoir absorbé une étoile."
+    },
+    "fact6": {
+      "title": "Capacité ultime",
+      "fact": "peut absorber l’énergie des étoiles et s’en servir pour immobiliser des flottes à distance.",
+      "advanced": "votre vaisseau mère peut absorber l’énergie d’une étoile ce qui lui procure des charges énergétiques. Ces charges servent à figer une flotte en mouvement pendant un certain temps."
+    },
+    "technicals": "Le vaisseau mère ne peut être détruit complètement. Suite à une attaque, si le vaisseau mère atteint un certain pourcentage de sa structure, il sera téléporté à un endroit aléatoirement et ne pourra construire des modules, technologies, vaisseaux, défenses et infanterie tant qu’il ne sera pas réparé. Enfin, il ne peut attaquer, mais il peut se défendre en cas d’agression.\nLa production des ressources sur le vaisseau mère est 40% inférieures à la normale, mais sa production d’énergie est 50% supérieure.\nLe vaisseau mère dispose de 25 lignes de construction pour les vaisseaux et 25 lignes pour l’infanterie. Sa production de base est considérable, mais le coût de construction des modules est très élevé.",
+    "history": ""
+  },
+  "Kertsakar": {
+    "summary": "Civilisation la plus survivaliste, elle a toujours connu la dureté de la vie et a appris avec les siècles à se servir de ce défaut et à le transformer en qualité. Elle peste les civilisations vivant dans des mondes habitables trouvant qu’ils sont des êtres faibles.",
+    "tags": "Constructeur, invasion et génocidaire.",
+    "difficulty": "Moyen",
+    "fact1": {
+      "title": "Nombre de colonie",
+      "fact": "1 au maximum."
+    },
+    "fact2": {
+      "title": "L’extracteur de vitalité",
+      "fact": "vaisseau qui élimine la population adverse.",
+      "advanced": "chaque citoyen mort est transformé en ressource de luxe."
+    },
+    "fact3": {
+      "title": "Catalyseur stellaire",
+      "fact": "giga-structure réduisant le coût de construction des bâtiments.",
+      "advanced": "La réduction du coût de construction dépend de l’étoile, pour un bonus de 50% max."
+    },
+    "fact4": {
+      "title": "Terraformeur",
+      "fact": "Structure augmentant les facteurs de production de ressources dans la capitale.",
+      "advanced": "Peut fournir des facteurs de production allant jusqu’à 5 (multipliant la production de ressources par 5)."
+    },
+    "fact5": {
+      "title": "Bombardier de haute intensité",
+      "fact": "vaisseau très puissant contre les défenses.",
+      "advanced": "Voit sa puissance de feu augmentée de 50% lorsqu’il est en position d’attaquant. Ce bonus atteint 100% quand il attaque une planète habitable."
+    },
+    "fact6": {
+      "title": "Capacité ultime",
+      "fact": "déménagement de la colonie possible en réduisant le coût de construction.",
+      "advanced": "Le bâtiment “régisseur” permet de décoloniser la colonie afin de la déplacer vers une autre position. Cette action réduit les coûts de construction de 10% sur la nouvelle position pendant un certain temps. L’effet peut se cumuler sur des déménagements successifs (sans atteindre 100% de réduction)."
+    },
+    "technicals": "La colonie dispose d’une production considérable, mais les coûts de construction des bâtiments augmentent également. Elle dispose également de 25 lignes de construction pour les vaisseaux et 25 lignes de construction pour l’infanterie.\nLa capitale ne subit aucun effet lié à la difficulté d’exploitation dans le système stellaire et la population ne peut mourir en cas de disparition d’une étoile dans le système.\nNe peut coloniser que des planètes telluriques.",
+    "history": ""
+  },
+  "Xol To": {
+    "summary": "Ancien Grand Empire s’étant effronté il y a plusieurs millénaires et perdu dans un conflit permanent entre les Xol To et tous ceux se mettant dans leur territoire pour trouver un nouvel Empereur qui sera créé un Empire pérenne dans le temps.",
+    "tags": "Militaire agressif, stratégie et trou noir.",
+    "difficulty": "Très difficile",
+    "fact1": {
+      "title": "Nombre de colonies",
+      "fact": "minimum 1"
+    },
+    "fact2": {
+      "title": "Distorsionneur spatial",
+      "fact": "permet de traverser un trou noir avec des vaisseaux.",
+      "advanced": "Un temps de rechargement est nécessaire entre 2 activations."
+    },
+    "fact3": {
+      "title": "Superstructure Zekno",
+      "fact": "centre d’amélioration du cuirassé du néant.",
+      "advanced": "les améliorations sont payées avec une ressource très rare."
+    },
+    "fact4": {
+      "title": "Superstructure Kerxo",
+      "fact": "support de vaisseau lors d’un combat.",
+      "advanced": "augmente la robustesse des vaisseaux lors d’un combat."
+    },
+    "fact5": {
+      "title": "Cuirassé du néant",
+      "fact": "vaisseau le plus robuste par rapport à son coût dans tout Altaran.",
+      "advanced": "peut voyager à travers un trou noir, mais ne peut quitter un système à trou noir."
+    },
+    "fact6": {
+      "title": "Capacité ultime",
+      "fact": "peut générer un bouclier de défense sur n’importe quelle position.",
+      "advanced": "Le bâtiment Thermolth ne peut être construit que sur la capitale et permet en absorbant l’énergie du trou noir de générer un bouclier sur n’importe quelle position. Ce bouclier absorbe un pourcentage de dégâts en fonction de l’énergie noire dépensée."
+    },
+    "technicals": "Les colonies Xol To peuvent être détruites, à l’exception de la capitale. Pour chaque colonie que vous possédez, en construire une nouvelle vous coûte plus cher.\nLes Xol To ne peuvent produire sur des systèmes stellaires. Le seul moyen de production s’effectue via les colonies.\nLes colonies Xol To produisent des quantités considérables de ressources, mais ce bonus diminue en fonction du nombre de colonies dans l’Empire du joueur. Les coûts de construction des bâtiments sont également plus élevés.\nLes colonies autres que la capitale peuvent être anéanties lors d’une invasion si l’adversaire en décide ainsi.\nLes colonies disposent de 15 lignes de construction pour les vaisseaux et de 15 pour l’infanterie.",
+    "history": ""
+  }
+}

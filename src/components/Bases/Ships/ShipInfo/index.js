@@ -10,13 +10,15 @@ const ShipInfo = ({
 }) => {
   const frame = useRef();
   useEffect(() => {
+    let frameCurrent;
     if (frame.current) {
+      frameCurrent = frame.current;
       frame.current.style.top = window.pageYOffset + "px";
       frame.current.style.visibility = "visible";
       frame.current.focus();
     }
     return () => {
-      frame.current.style.visibility = "hidden";
+      frameCurrent.style.visibility = "hidden";
     }
   }, [frame]);
 

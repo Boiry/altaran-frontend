@@ -1,0 +1,16 @@
+@use 'src/styles/vars';
+
+.presentation-civilizations-anchor {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-shadow: 0 0 2px vars.$medium-blue;
+  font-weight: bold;
+}
+
+.presentation-civilizations-tip {
+  text-align: center;
+  font-size: 0.8rem;
+  color: vars.$deep-blue;
+  text-shadow: 0 0 3px white;
+}
