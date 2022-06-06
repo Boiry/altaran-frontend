@@ -91,7 +91,7 @@ const Home = ({ id, page }) => {
           <img src={Corner} className="corner corner-top-right" />
           <img src={Corner} className="corner corner-bottom-left" />
           <img src={Corner} className="corner corner-bottom-right" />
-          <h2 className="baseline-text">Le jeu qui tchue !<br />Parce qu'un jeu qui tchue c'est mieux qu'un jeu qui tchue pas, Altaran c'est trop bien, jouez-y ou on vous pend haut et court.</h2>
+          <h2 className="baseline-text">Une galaxie immense peuplée de différentes civilisations se disputant terres et espace dans des batailles mémorables, serez-vous à la hauteur ?</h2>
         </div>
       </header>
 
