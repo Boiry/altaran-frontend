@@ -62,7 +62,7 @@
     "camera-controls": "^1.27.0",
     "classnames": "^2.2.6",
     "earcut": "^2.2.2",
-    "emoji-picker-react": "^3.4.5",
+    "emoji-picker-react": "^3.5.1",
     "i18next": "^21.6.16",
     "postcss-preset-env": "^7.5.0",
     "prop-types": "^15.7.2",

@@ -15,3 +15,7 @@ const rootReactElement = (
 const target = document.getElementById('root');
 const root = createRoot(target);
 root.render(rootReactElement);
+
+if (module.hot) {
+  module.hot.accept();
+}
