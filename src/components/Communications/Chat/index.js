@@ -166,7 +166,7 @@ const Chat = ({
       updateFieldValue(newFieldContent);
       setChosenEmoji(null);
     }
-  })
+  }, [chosenEmoji]);
 
   // Scroll to bottom when new message appears
   useEffect(() => {
